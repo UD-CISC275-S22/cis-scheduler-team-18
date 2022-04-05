@@ -3,7 +3,7 @@
 > react-scripts test "--coverage"
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (35 ms)
+  ✕ renders the course name somewhere (38 ms)
 
   ● renders the course name somewhere
 
@@ -20,12 +20,18 @@ FAIL src/App.test.tsx
           [36m>[39m
             [0mTeam 18 Page[0m
           [36m</header>[39m
+          [36m<div>[39m
+            [0mAbbey Walters[0m
+          [36m</div>[39m
+          [36m<div>[39m
+            [0mBrielle Hina[0m
+          [36m</div>[39m
           [36m<p>[39m
             [0mEdit [0m
             [36m<code>[39m
               [0msrc/App.tsx[0m
             [36m</code>[39m
-            [0m and save. This page will automatically reload. Brielle Hina[0m
+            [0m and save. This page will automatically reload.[0m
           [36m</p>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -58,5 +64,5 @@ All files |     100 |      100 |     100 |     100 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.482 s
+Time:        1.528 s
 Ran all test suites.
