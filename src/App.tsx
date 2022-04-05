@@ -7,7 +7,7 @@ function App(): JSX.Element {
             <header className="App-header">Team 18 Page</header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                automatically reload. Brielle Hina
             </p>
         </div>
     );
