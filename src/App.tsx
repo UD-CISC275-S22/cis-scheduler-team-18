@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { CourseList } from "./CourseList";
 //import plan from "./data/semesterPlan.json";
 //import { Plan } from "./interfaces/plan";
 
@@ -16,6 +17,9 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <div>
+                <CourseList></CourseList>
+            </div>
         </div>
     );
 }
