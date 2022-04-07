@@ -1,9 +1,5 @@
 import React from "react";
 import "./App.css";
-import plan from "./data/semesterPlan.json";
-import { Plan } from "./interfaces/Plan";
-
-const PLAN = plan.map((plan): Plan => ({ ...plan }));
 
 function App(): JSX.Element {
     return (
