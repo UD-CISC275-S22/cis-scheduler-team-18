@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import React from "react";
+//import { Button } from "react-bootstrap";
 import "./App.css";
 import semesterPlan from "./data/semesterPlan.json";
 import { Plan } from "./interfaces/plan";
@@ -12,9 +12,11 @@ const PLANS = semesterPlan.map(
 );
 
 function App(): JSX.Element {
-    const [plans, setPlans] = useState<Plan[]>(PLANS);
-    const [showAddModal, setShowAddModal] = useState(false);
+    const plans = PLANS;
+    //const [plans, setPlans] = useState<Plan[]>(PLANS);
+    //const [showAddModal, setShowAddModal] = useState(false);
 
+    /*
     function editPlan(id: string, newPlan: Plan) {
         setPlans(
             plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
@@ -23,7 +25,7 @@ function App(): JSX.Element {
 
     function deletePlan(id: string) {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
-    }
+    }*/
 
     /*
     function addPlan(newPlan: Plan) {
@@ -36,7 +38,23 @@ function App(): JSX.Element {
     }*/
 
     //const handleCloseAddModal = () => setShowAddModal(false);
-    const handleShowAddModal = () => setShowAddModal(true);
+    //const handleShowAddModal = () => setShowAddModal(true);
+
+    /** Add this later*/
+    /*
+<PlanList
+                    plans={plans}
+                    editPlan={editPlan}
+                    deletePlan={deletePlan}
+                ></PlanList>
+                <Button
+                    variant="success"
+                    className="m-4"
+                    onClick={handleShowAddModal}
+                >
+                    Add New Plan
+                </Button>
+*/
 
     return (
         <div className="App">
@@ -49,20 +67,9 @@ function App(): JSX.Element {
                 automatically reload.
             </p>
             <div>
-                <PlanList
-                    plans={plans}
-                    editPlan={editPlan}
-                    deletePlan={deletePlan}
-                ></PlanList>
+                <PlanList plans={plans}></PlanList>
             </div>
             <div>
-                <Button
-                    variant="success"
-                    className="m-4"
-                    onClick={handleShowAddModal}
-                >
-                    Add New Plan
-                </Button>
                 <p>Add Plan Modal goes here!</p>
             </div>
         </div>

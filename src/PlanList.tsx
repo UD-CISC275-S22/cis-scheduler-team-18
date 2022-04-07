@@ -3,6 +3,9 @@ import { Stack } from "react-bootstrap";
 import { Plan } from "./interfaces/plan";
 //import { PlanView } from "./PlanView";
 
+/*Add this later --> */
+/*
+
 export function PlanList({
     plans,
     deletePlan,
@@ -12,6 +15,10 @@ export function PlanList({
     deletePlan: (id: string) => void;
     editPlan: (id: string, newPlan: Plan) => void;
 }): JSX.Element {
+    return (
+*/
+
+export function PlanList({ plans }: { plans: Plan[] }): JSX.Element {
     return (
         <Stack gap={3}>
             {" "}
