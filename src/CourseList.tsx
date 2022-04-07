@@ -6,7 +6,7 @@ import { Semester } from "./interfaces/semester";
 /**
  * Creates a table that is a list of courses (AKA a single semester)
  */
-export function CourseList(sem: Semester): JSX.Element {
+export function CourseList(semester: Semester): JSX.Element {
     //returns a ListGroup of horizontal ListGroups listing information from each course in a semester
     return (
         <ListGroup>
@@ -17,7 +17,7 @@ export function CourseList(sem: Semester): JSX.Element {
                     <ListGroup.Item>Credits</ListGroup.Item>
                 </ListGroup>
             </ListGroup.Item>
-            {sem.courses.map((course: Course) => (
+            {semester.courses.map((course: Course) => (
                 <ListGroup.Item key={course.id}>
                     <ListGroup horizontal>
                         <ListGroup.Item>{course.courseName}</ListGroup.Item>
