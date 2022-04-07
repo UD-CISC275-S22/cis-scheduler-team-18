@@ -1,3 +1,4 @@
+import Course from "course.ts";
 /** A representation of a Semester for a schedule */
 export interface Semester {
     //a representation of the specific semester
