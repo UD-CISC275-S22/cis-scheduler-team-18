@@ -6,11 +6,8 @@ import { Plan } from "./interfaces/Plan";
 export function PlanList({ plans }: { plans: Plan[] }): JSX.Element {
     return (
         <Stack gap={3}>
-            {plans.map((plan: Plan) => (
-                <div key={plan.id} className="bg-light border m-2 p-2">
-                    <div>PlanView Goes Here</div>
-                </div>
-            ))}
+            {" "}
+            <div>{plans}</div>
         </Stack>
     );
 }
