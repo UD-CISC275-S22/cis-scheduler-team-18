@@ -1,6 +1,6 @@
 import React from "react";
-import { Plan } from "./Plan";
 import { Stack } from "react-bootstrap";
+import { Plan } from "./interfaces/Plan";
 //import { PlanView } from "./PlanView";
 
 export function PlanList({ plans }: { plans: Plan[] }): JSX.Element {
