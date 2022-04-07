@@ -1,15 +1,16 @@
 import React from "react";
-import { Stack } from "react-bootstrap";
-import { Plan } from "./interfaces/plan";
-import { Semester } from "./interfaces/semester";
-import { Course } from "./interfaces/course";
+//import { Stack } from "react-bootstrap";
+//import { Plan } from "./interfaces/plan";
+//import { Semester } from "./interfaces/semester";
+//import { Course } from "./interfaces/course";
 
-export function MultipleSemesterCourses({ plan }: { plan: Plan }): JSX.Element {
+export function MultipleSemesterCourses(): JSX.Element {
+    //I have to create a table with all semesters in a plan and their courses
     return (
         <table>
             <thead>
                 <tr>
-                    <td>This is the title</td>
+                    <td>This is a header</td>
                 </tr>
             </thead>
             <tbody>
@@ -18,6 +19,5 @@ export function MultipleSemesterCourses({ plan }: { plan: Plan }): JSX.Element {
                 </tr>
             </tbody>
         </table>
-
     );
 }
