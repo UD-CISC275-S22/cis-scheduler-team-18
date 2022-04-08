@@ -2,7 +2,7 @@ import React from "react";
 import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
-import "./multipleSemesterTable.css";
+import "../styleSheets/multipleSemesterTable.css";
 
 export function MultipleSemesterTable({ plan }: { plan: Plan }): JSX.Element {
     //this function will return all the courses; organized by semester in a single plan
