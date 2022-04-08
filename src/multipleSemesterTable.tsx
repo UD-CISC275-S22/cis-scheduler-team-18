@@ -12,7 +12,7 @@ export function MultipleSemesterTable({ plan }: { plan: Plan }): JSX.Element {
         <div className="container">
             {SEMESTER.map((sem: Semester) => (
                 <div key={sem.id}>
-                    <h2 className="semester">{sem.id}</h2>
+                    <h4 className="semester">{sem.id}</h4>
                     <table className="table" key={sem.id}>
                         <thead>
                             <th>Course name</th>
