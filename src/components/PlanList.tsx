@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
-import { Plan } from "./interfaces/plan";
+import { Plan } from "../interfaces/plan";
 //import { PlanView } from "./PlanView";
 
 /*Add this later --> */

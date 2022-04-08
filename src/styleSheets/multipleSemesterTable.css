@@ -1,0 +1,20 @@
+.table{
+    display: inline-block;
+    border: 1px solid;
+}
+
+.container{
+    column-gap: 10px;
+    row-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+.body{
+    text-align: center;
+}
+
+.semester{
+    text-align: left;
+}

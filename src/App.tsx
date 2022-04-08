@@ -4,7 +4,9 @@ import "./App.css";
 
 import semesterPlan from "./data/semesterPlan.json";
 import { Plan } from "./interfaces/plan";
-import { PlanList } from "./PlanList";
+import { PlanList } from "./components/PlanList";
+
+import { MultipleSemesterTable } from "./components/multipleSemesterTable";
 
 const PLANS = semesterPlan.map(
     (plan): Plan => ({
@@ -72,6 +74,10 @@ function App(): JSX.Element {
             </div>
             <div>
                 <p>Add Plan Modal goes here!</p>
+            </div>
+            <div>
+                {/*Table with all courses in a plan, separated by semester*/}
+                <MultipleSemesterTable plan={plans[0]}></MultipleSemesterTable>
             </div>
         </div>
     );

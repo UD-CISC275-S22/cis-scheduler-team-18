@@ -3,7 +3,7 @@
         "id": "Top Plan",
         "name": "First Plan",
         "semesters":[{
-            "id": "fall20",
+            "id": "Fall 2020",
             "season": "fall",
             "year": 2020,
             "courses":[
@@ -49,7 +49,7 @@
                 }
             ]
         },{
-            "id": "Spring21",
+            "id": "Spring 2021",
             "season": "spring",
             "year": 2021,
             "courses":[
@@ -95,7 +95,7 @@
                 }
             ]
         },{
-            "id": "Summer21",
+            "id": "Summer 2021",
             "season": "summer",
             "year": 2021,
             "courses":[
@@ -109,7 +109,7 @@
                 }
             ]
         },{
-            "id": "fall21",
+            "id": "Fall 2021",
             "season": "fall",
             "year": 2021,
             "courses":[
@@ -163,7 +163,7 @@
                 }
             ]
         },{
-            "id": "Spring22",
+            "id": "Spring 2022",
             "season": "spring",
             "year": 2022,
             "courses":[
