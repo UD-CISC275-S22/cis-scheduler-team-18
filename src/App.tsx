@@ -76,6 +76,7 @@ function App(): JSX.Element {
                 <p>Add Plan Modal goes here!</p>
             </div>
             <div>
+                {/*Table with all courses in a plan, separated by semester*/}
                 <MultipleSemesterTable plan={plans[0]}></MultipleSemesterTable>
             </div>
         </div>
