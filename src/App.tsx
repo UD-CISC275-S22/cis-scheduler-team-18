@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import { MultipleSemesterCourses } from "./MultipleSemesterCourse";
 
 function App(): JSX.Element {
     return (
@@ -13,9 +12,6 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <div>
-                <MultipleSemesterCourses></MultipleSemesterCourses>
-            </div>
         </div>
     );
 }
