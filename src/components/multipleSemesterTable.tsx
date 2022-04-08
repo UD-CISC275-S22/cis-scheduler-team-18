@@ -1,7 +1,7 @@
 import React from "react";
-import { Plan } from "./interfaces/plan";
-import { Semester } from "./interfaces/semester";
-import { Course } from "./interfaces/course";
+import { Plan } from "../interfaces/plan";
+import { Semester } from "../interfaces/semester";
+import { Course } from "../interfaces/course";
 import "./multipleSemesterTable.css";
 
 export function MultipleSemesterTable({ plan }: { plan: Plan }): JSX.Element {

@@ -4,9 +4,9 @@ import "./App.css";
 
 import semesterPlan from "./data/semesterPlan.json";
 import { Plan } from "./interfaces/plan";
-import { PlanList } from "./PlanList";
+import { PlanList } from "./components/PlanList";
 
-import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { MultipleSemesterTable } from "./components/multipleSemesterTable";
 
 const PLANS = semesterPlan.map(
     (plan): Plan => ({

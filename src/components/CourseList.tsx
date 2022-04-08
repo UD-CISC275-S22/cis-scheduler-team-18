@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { Course } from "./interfaces/course";
-import { Semester } from "./interfaces/semester";
+import { Course } from "../interfaces/course";
+import { Semester } from "../interfaces/semester";
 
 /**
  * Creates a table that is a list of courses (AKA a single semester)
