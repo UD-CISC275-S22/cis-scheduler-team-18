@@ -73,10 +73,10 @@ function App(): JSX.Element {
                 <PlanList plans={plans}></PlanList>
             </div>
             <div>
-                <MultipleSemesterTable plans={plans}></MultipleSemesterTable>
+                <p>Add Plan Modal goes here!</p>
             </div>
             <div>
-                <p>Add Plan Modal goes here!</p>
+                <MultipleSemesterTable plan={plans[0]}></MultipleSemesterTable>
             </div>
         </div>
     );

@@ -2,38 +2,33 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { Plan } from "./interfaces/plan";
 import { Semester } from "./interfaces/semester";
-//import { Plan } from "./interfaces/plan";
 import { Course } from "./interfaces/course";
-export function MultipleSemesterTable({
-    plans
-}: {
-    plans: Plan[];
-}): JSX.Element {
+import { CourseList } from "./CourseList";
+import { Z_ASCII } from "zlib";
+import { SingleSemester } from "./SingleSemester";
+
+export function MultipleSemesterTable({ plan }: { plan: Plan }): JSX.Element {
+    const SEMESTER = plan.semesters.map((sem: Semester) => ({ ...sem }));
     return (
-        <Table>
-            <thead>
-                {plans[0].semesters.map((sem: Semester) => (
-                    <tr key={sem.id}>
-                        <th colSpan={3}>
-                            {sem.season} {sem.year}
-                            <tr>
-                                <th>Course Name</th>
-                                <th>Course Title</th>
-                                <th>Credits</th>
+        <div>
+            {SEMESTER.map((sem: Semester) => (
+                <Table key={sem.id}>
+                    <thead>
+                        <th>Course name</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                    </thead>
+                    <tbody>
+                        {sem.courses.map((course: Course) => (
+                            <tr key={course.id}>
+                                <td>{course.courseName}</td>
+                                <td>{course.courseTitle}</td>
+                                <td>{course.credits}</td>
                             </tr>
-                        </th>
-                    </tr>
-                ))}
-            </thead>
-            <tbody>
-                {plans[0].semesters[0].courses.map((course: Course) => (
-                    <tr key={course.id}>
-                        <td>{course.courseName}</td>
-                        <td>{course.courseTitle}</td>
-                        <td>{course.credits}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </Table>
+                        ))}
+                    </tbody>
+                </Table>
+            ))}
+        </div>
     );
 }
