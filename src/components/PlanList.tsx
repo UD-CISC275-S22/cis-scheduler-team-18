@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
-//import { PlanView } from "./PlanView";
+import { PlanView } from "./PlanView";
 
 /*Add this later --> */
 /*
@@ -25,6 +25,7 @@ export function PlanList({ plans }: { plans: Plan[] }): JSX.Element {
             {plans.map((plan: Plan) => (
                 <div key={plan.id} className="bg-light border m-2 p-2">
                     <div>PlanView here!</div>
+                    <PlanView plan={plan}></PlanView>
                 </div>
             ))}
         </Stack>
