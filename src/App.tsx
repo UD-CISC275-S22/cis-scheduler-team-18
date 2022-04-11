@@ -7,6 +7,7 @@ import { Plan } from "./interfaces/plan";
 import { PlanList } from "./components/PlanList";
 
 import { MultipleSemesterTable } from "./components/multipleSemesterTable";
+import { Welcome } from "./WelcomeMsg";
 
 const PLANS = semesterPlan.map(
     (plan): Plan => ({
@@ -62,13 +63,9 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">Team 18 Page</header>
-            <div>Abbey Walters</div>
-            <div>Brielle Hina</div>
-            <div>Mycah Detorres</div>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+            <div>
+                <Welcome></Welcome>
+            </div>
             <div>
                 <PlanList plans={plans}></PlanList>
             </div>
