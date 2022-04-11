@@ -261,7 +261,7 @@
                     "required": true,
                     "preReq": true,
                     "preReqTo": "CISC181, CISC210",
-                    "PreReqRequired": false,
+                    "preReqRequired": false,
                     "requiredPreReq": "CISC181, CISC210",
                     "option": false,
                     "optionTo": ""
