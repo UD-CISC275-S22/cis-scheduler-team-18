@@ -13,7 +13,12 @@
                     "courseTitle": "Intro to Engineering",
                     "credits": 2,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "CISC108",
@@ -21,7 +26,12 @@
                     "courseTitle": "Intro to Computer Science I",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "MATH241",
@@ -29,7 +39,12 @@
                     "courseTitle": "Analytic Geometry & Calculus A",
                     "credits": 4,
                     "required": true,
-                    "preReq": true
+                    "preReq": true,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "ENGL110",
@@ -37,7 +52,12 @@
                     "courseTitle": "Seminar in Composition",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "AFRA220",
@@ -45,7 +65,12 @@
                     "courseTitle": "Race in Society",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "",
+                    "option": false,
+                    "optionTo": ""
                 }
             ]
         },{
@@ -59,7 +84,12 @@
                     "courseTitle": "Intro to Computer Science II",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq":"CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "CISC210",
@@ -67,7 +97,12 @@
                     "courseTitle": "Intro to Systems Programming",
                     "credits": 3,
                     "required": true,
-                    "preReq": true
+                    "preReq": true, 
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "MATH242",
@@ -75,7 +110,12 @@
                     "courseTitle": "Analytic Geometry & Calculus B",
                     "credits": 4,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "POSC333",
@@ -83,7 +123,12 @@
                     "courseTitle": "Contemporary Political Ideologies",
                     "credits": 3,
                     "required": false,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "WOMS200",
@@ -91,7 +136,12 @@
                     "courseTitle": "Sexualities & Gender Studies",
                     "credits": 3,
                     "required": false,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 }
             ]
         },{
@@ -105,7 +155,12 @@
                     "courseTitle": "Discrete Mathematics I",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 }
             ]
         },{
@@ -119,7 +174,12 @@
                     "courseTitle": "Data Structures",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "CISC206",
@@ -127,7 +187,12 @@
                     "courseTitle": "Machine Organization & Assembly Language",
                     "credits": 3,
                     "required": true,
-                    "preReq": true
+                    "preReq": true,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "GEOL115",
@@ -135,7 +200,12 @@
                     "courseTitle": "Geological Hazards Lab",
                     "credits": 1,
                     "required": true,
-                    "preReq": true
+                    "preReq": true,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "GEOL105",
@@ -143,7 +213,12 @@
                     "courseTitle": "Geological Hazards",
                     "credits": 3,
                     "required": false,
-                    "preReq": true
+                    "preReq": true,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
 
                 },
                 {
@@ -152,14 +227,25 @@
                     "courseTitle": "Analytic Geometry & Calculus C",
                     "credits": 4,
                     "required": false,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },{
                     "id": "WOMS201",
                     "courseName": "WOMS201",
                     "courseTitle": "Intro to Woman & Gender Studies",
                     "credits": 3,
                     "required": false,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
+
                 }
             ]
         },{
@@ -173,7 +259,12 @@
                     "courseTitle": "Intro to Software Engineering",
                     "credits": 3,
                     "required": true,
-                    "preReq": true
+                    "preReq": true,
+                    "preReqTo": "CISC181, CISC210",
+                    "PreReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "MATH349",
@@ -181,7 +272,12 @@
                     "courseTitle": "Elementary Linear Algebra",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "MATH350",
@@ -189,7 +285,12 @@
                     "courseTitle": "Probability Theory & Simulation",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "ENGL410",
@@ -197,7 +298,12 @@
                     "courseTitle": "Technical Writing",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 },
                 {
                     "id": "CISC367",
@@ -205,7 +311,12 @@
                     "courseTitle": "Assistive Technology Seminar",
                     "credits": 3,
                     "required": true,
-                    "preReq": false
+                    "preReq": false,
+                    "preReqTo": "CISC181, CISC210",
+                    "preReqRequired": false,
+                    "requiredPreReq": "CISC181, CISC210",
+                    "option": false,
+                    "optionTo": ""
                 }
             ]
         }
