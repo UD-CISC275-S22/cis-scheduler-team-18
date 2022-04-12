@@ -2,12 +2,19 @@ import React from "react";
 import { Button, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
+import { CourseEdit } from "./CourseEdit";
 
 /**
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
-    const courses: Course[] = [...semester.courses];
+    function OpenCourseEdit({ course }: { course: Course }) {
+        return (
+            <div>
+                <CourseEdit course={course}></CourseEdit>
+            </div>
+        );
+    }
     return (
         <Table>
             <thead>
@@ -17,13 +24,15 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 <th>Edit Course</th>
             </thead>
             <tbody>
-                {courses.map((course: Course) => (
+                {semester.courses.map((course: Course) => (
                     <tr key={course.id}>
                         <td>{course.courseName}</td>
                         <td>{course.courseTitle}</td>
                         <td>{course.credits}</td>
                         <td>
-                            <Button>Edit Course</Button>
+                            <Button onClick={() => OpenCourseEdit({ course })}>
+                                Edit Course
+                            </Button>
                         </td>
                     </tr>
                 ))}

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Form, Modal } from "react-bootstrap";
+import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 
 export function CourseEdit({ course }: { course: Course }): JSX.Element {
     const [code, setCode] = useState<string>(course.courseName);
     const [title, setTitle] = useState<string>(course.courseTitle);
     const [credits, setCredits] = useState<number>(course.credits);
+    const [show, setShow] = useState(true);
+
+    const close = () => setShow(false);
     function changeCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
     }
@@ -16,7 +19,7 @@ export function CourseEdit({ course }: { course: Course }): JSX.Element {
         setCredits(parseInt(event.target.value));
     }
     return (
-        <Modal.Dialog>
+        <Modal show={show} onHide={close} backdrop="static" centered>
             <Modal.Header closeButton>
                 <Modal.Title>Edit Course</Modal.Title>
             </Modal.Header>
@@ -43,7 +46,12 @@ export function CourseEdit({ course }: { course: Course }): JSX.Element {
                         onChange={changeCredits}
                     ></Form.Control>
                 </Form.Group>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={close}>
+                        Close
+                    </Button>
+                </Modal.Footer>
             </Modal.Body>
-        </Modal.Dialog>
+        </Modal>
     );
 }
