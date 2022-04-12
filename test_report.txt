@@ -35,7 +35,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (167 ms)
+  ✕ renders the course name somewhere (255 ms)
 
   ● renders the course name somewhere
 
@@ -67,21 +67,20 @@ FAIL src/App.test.tsx
             [0mTeam 18 Page[0m
           [36m</header>[39m
           [36m<div>[39m
-            [0mAbbey Walters[0m
+            [36m<div>[39m
+              [36m<div[39m
+                [33mstyle[39m=[32m"border: 1px solid blue;"[39m
+              [36m>[39m
+                [0mHello CS Student! Welcome to your scheduler! Here you can create multiple graduation plans to help you decide the best way for you to schedule your classes in future semesters. Click the Add Plan button below to begin.[0m
+              [36m</div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mHide[0m
+              [36m</button>[39m
+            [36m</div>[39m
           [36m</div>[39m
-          [36m<div>[39m
-            [0mBrielle Hina[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mMycah Detorres[0m
-          [36m</div>[39m
-          [36m<p>[39m
-            [0mEdit [0m
-            [36m<code>[39m
-              [0msrc/App.tsx[0m
-            [36m</code>[39m
-            [0m and save. This page will automatically reload.[0m
-          [36m</p>[39m
           [36m<div>[39m
             [36m<div[39m
               [33mclass[39m=[32m"vstack gap-3"[39m
@@ -902,9 +901,10 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   81.25 |       50 |      75 |      80 |                   
- src                        |     100 |      100 |     100 |     100 |                   
+All files                   |      80 |    66.66 |   73.33 |   78.94 |                   
+ src                        |    87.5 |       75 |      80 |    87.5 |                   
   App.tsx                   |     100 |      100 |     100 |     100 |                   
+  WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
  src/components             |      75 |       50 |      70 |   72.72 |                   
   CourseList.tsx            |       0 |      100 |       0 |       0 | 11-20             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
@@ -918,5 +918,5 @@ All files                   |   81.25 |       50 |      75 |      80 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.226 s
+Time:        3.296 s
 Ran all test suites.
