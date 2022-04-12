@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 export function Welcome(): JSX.Element {
     const [visible, setVisible] = useState<boolean>(true);
     function flipVisibility(): void {
