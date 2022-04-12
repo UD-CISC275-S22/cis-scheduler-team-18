@@ -208,6 +208,218 @@
                     "preReq": false
                 }
             ]
+        }   
+        ]
+    },
+    {
+        "id": "Second Plan",
+        "name": "Second Plan",
+        "semesters":[{
+            "id": "Fall 2020",
+            "season": "fall",
+            "year": 2020,
+            "courses":[
+                {
+                    "id": "EGG101",
+                    "courseName": "EGGG101",
+                    "courseTitle": "Intro to Engineering",
+                    "credits": 2,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "CISC108",
+                    "courseName": "CISC108",
+                    "courseTitle": "Intro to Computer Science I",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "MATH241",
+                    "courseName": "MATH241",
+                    "courseTitle": "Analytic Geometry & Calculus A",
+                    "credits": 4,
+                    "required": true,
+                    "preReq": true
+                },
+                {
+                    "id": "ENGL110",
+                    "courseName": "ENGL110",
+                    "courseTitle": "Seminar in Composition",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "AFRA220",
+                    "courseName": "AFRA220",
+                    "courseTitle": "Race in Society",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                }
+            ]
+        },{
+            "id": "Spring 2021",
+            "season": "spring",
+            "year": 2021,
+            "courses":[
+                {
+                    "id": "CISC181",
+                    "courseName": "CISC181",
+                    "courseTitle": "Intro to Computer Science II",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "CISC210",
+                    "courseName": "CISC210",
+                    "courseTitle": "Intro to Systems Programming",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": true
+                },
+                {
+                    "id": "MATH242",
+                    "courseName": "MATH242",
+                    "courseTitle": "Analytic Geometry & Calculus B",
+                    "credits": 4,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "POSC333",
+                    "courseName": "POSC333",
+                    "courseTitle": "Contemporary Political Ideologies",
+                    "credits": 3,
+                    "required": false,
+                    "preReq": false
+                },
+                {
+                    "id": "WOMS200",
+                    "courseName": "WOMS200",
+                    "courseTitle": "Sexualities & Gender Studies",
+                    "credits": 3,
+                    "required": false,
+                    "preReq": false
+                }
+            ]
+        },{
+            "id": "Summer 2021",
+            "season": "summer",
+            "year": 2021,
+            "courses":[
+                {
+                    "id": "MATH210",
+                    "courseName": "MATH210",
+                    "courseTitle": "Discrete Mathematics I",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                }
+            ]
+        },{
+            "id": "Fall 2021",
+            "season": "fall",
+            "year": 2021,
+            "courses":[
+                {
+                    "id": "CISC220",
+                    "courseName": "CISC220",
+                    "courseTitle": "Data Structures",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "CISC206",
+                    "courseName": "CISC260",
+                    "courseTitle": "Machine Organization & Assembly Language",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": true
+                },
+                {
+                    "id": "GEOL115",
+                    "courseName": "GEOL115", 
+                    "courseTitle": "Geological Hazards Lab",
+                    "credits": 1,
+                    "required": true,
+                    "preReq": true
+                },
+                {
+                    "id": "GEOL105",
+                    "courseName": "GEOL105",
+                    "courseTitle": "Geological Hazards",
+                    "credits": 3,
+                    "required": false,
+                    "preReq": true
+
+                },
+                {
+                    "id": "MATH243",
+                    "courseName": "MATH243",
+                    "courseTitle": "Analytic Geometry & Calculus C",
+                    "credits": 4,
+                    "required": false,
+                    "preReq": false
+                },{
+                    "id": "WOMS201",
+                    "courseName": "WOMS201",
+                    "courseTitle": "Intro to Woman & Gender Studies",
+                    "credits": 3,
+                    "required": false,
+                    "preReq": false
+                }
+            ]
+        },{
+            "id": "Spring 2022",
+            "season": "spring",
+            "year": 2022,
+            "courses":[
+                {
+                    "id": "CISC275",
+                    "courseName": "CISC275",
+                    "courseTitle": "Intro to Software Engineering",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": true
+                },
+                {
+                    "id": "MATH349",
+                    "courseName": "MATH349",
+                    "courseTitle": "Elementary Linear Algebra",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "MATH350",
+                    "courseName": "MATH350",
+                    "courseTitle": "Probability Theory & Simulation",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "ENGL410",
+                    "courseName": "ENGL410",
+                    "courseTitle": "Technical Writing",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                },
+                {
+                    "id": "CISC367",
+                    "courseName": "CISC367",
+                    "courseTitle": "Assistive Technology Seminar",
+                    "credits": 3,
+                    "required": true,
+                    "preReq": false
+                }
+            ]
         }
             
         ]

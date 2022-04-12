@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+//import { Container, Row, Col } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { MultipleSemesterTable } from "./multipleSemesterTable";
 //import { PlanEditor } from "./PlanEditor";
@@ -42,6 +42,21 @@ export function PlanView({ plan }: { plan: Plan }): JSX.Element {
     ) : (
         <div>
             <div>
+                <h3>{plan.name}</h3>
+            </div>
+            <div>
+                <MultipleSemesterTable plan={plan}></MultipleSemesterTable>{" "}
+            </div>
+        </div>
+    );
+}
+
+/*
+return editing ? (
+        <div>PlanEditor will go here!!!! {changeEditing}</div>
+    ) : (
+        <div>
+            <div>
                 {" "}
                 <h3>{plan.name}</h3>{" "}
             </div>
@@ -57,3 +72,4 @@ export function PlanView({ plan }: { plan: Plan }): JSX.Element {
         </div>
     );
 }
+*/
