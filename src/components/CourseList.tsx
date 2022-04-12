@@ -7,6 +7,7 @@ import { Semester } from "../interfaces/semester";
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
+    const courses: Course[] = [...semester.courses];
     return (
         <Table>
             <thead>
@@ -16,7 +17,7 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 <th>Edit Course</th>
             </thead>
             <tbody>
-                {semester.courses.map((course: Course) => (
+                {courses.map((course: Course) => (
                     <tr key={course.id}>
                         <td>{course.courseName}</td>
                         <td>{course.courseTitle}</td>
