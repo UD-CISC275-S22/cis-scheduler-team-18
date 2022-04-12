@@ -11,20 +11,15 @@
         at div
         at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:7:41)
         at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
         at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Container.js:24:3
-        at div
-        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:33:28)
+        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:36:5)
         at div
         at div
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at PlanList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanList.tsx:21:28)
+        at PlanList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanList.tsx:22:5)
         at div
         at div
-        at App
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:20:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -35,13 +30,18 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (206 ms)
+  ✕ renders the course name somewhere (211 ms)
 
   ● renders the course name somewhere
 
     TestingLibraryElementError: Found multiple elements with the text: /CISC275/i
 
     Here are the matching elements:
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<td>[39m
+      [0mCISC275[0m
+    [36m</td>[39m
 
     Ignored nodes: comments, <script />, <style />
     [36m<td>[39m
@@ -85,7 +85,6 @@ FAIL src/App.test.tsx
             [36m<div[39m
               [33mclass[39m=[32m"vstack gap-3"[39m
             [36m>[39m
-              [0m [0m
               [36m<div[39m
                 [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
               [36m>[39m
@@ -94,790 +93,143 @@ FAIL src/App.test.tsx
                 [36m</div>[39m
                 [36m<div>[39m
                   [36m<div>[39m
-                    [0m [0m
                     [36m<h3>[39m
                       [0mFirst Plan[0m
                     [36m</h3>[39m
-                    [0m [0m
                   [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"container"[39m
-                  [36m>[39m
+                  [36m<div>[39m
                     [36m<div[39m
-                      [33mclass[39m=[32m"row"[39m
+                      [33mclass[39m=[32m"container"[39m
                     [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"col"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"container"[39m
+                      [36m<div>[39m
+                        [36m<h4[39m
+                          [33mclass[39m=[32m"semester"[39m
                         [36m>[39m
-                          [36m<div>[39m
-                            [36m<h4[39m
-                              [33mclass[39m=[32m"semester"[39m
-                            [36m>[39m
-                              [0mFall 2020[0m
-                            [36m</h4>[39m
-                            [36m<table[39m
-                              [33mclass[39m=[32m"table"[39m
-                            [36m>[39m
-                              [36m<thead>[39m
-                                [36m<th>[39m
-                                  [0mCourse name[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCourse Title[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCredits[0m
-                                [36m</th>[39m
-                              [36m</thead>[39m
-                              [36m<tbody[39m
-                                [33mclass[39m=[32m"body"[39m
-                              [36m>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mEGGG101[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mIntro to Engineering[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m2[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC108[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mIntro to Computer Science I[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mMATH241[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mAnalytic Geometry & Calculus A[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m4[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mENGL110[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mSeminar in Composition[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mAFRA215[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mRace in Society[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                              [36m</tbody>[39m
-                            [36m</table>[39m
-                          [36m</div>[39m
-                          [36m<div>[39m
-                            [36m<h4[39m
-                              [33mclass[39m=[32m"semester"[39m
-                            [36m>[39m
-                              [0mSpring 2021[0m
-                            [36m</h4>[39m
-                            [36m<table[39m
-                              [33mclass[39m=[32m"table"[39m
-                            [36m>[39m
-                              [36m<thead>[39m
-                                [36m<th>[39m
-                                  [0mCourse name[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCourse Title[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCredits[0m
-                                [36m</th>[39m
-                              [36m</thead>[39m
-                              [36m<tbody[39m
-                                [33mclass[39m=[32m"body"[39m
-                              [36m>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC181[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mIntro to Computer Science II[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC210[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mIntro to Systems Programming[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mMATH242[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mAnalytic Geometry & Calculus B[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m4[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mPOSC333[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mContemporary Political Ideologies[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mWOMS200[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mSexualities & Gender Studies[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                              [36m</tbody>[39m
-                            [36m</table>[39m
-                          [36m</div>[39m
-                          [36m<div>[39m
-                            [36m<h4[39m
-                              [33mclass[39m=[32m"semester"[39m
-                            [36m>[39m
-                              [0mSummer 2021[0m
-                            [36m</h4>[39m
-                            [36m<table[39m
-                              [33mclass[39m=[32m"table"[39m
-                            [36m>[39m
-                              [36m<thead>[39m
-                                [36m<th>[39m
-                                  [0mCourse name[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCourse Title[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCredits[0m
-                                [36m</th>[39m
-                              [36m</thead>[39m
-                              [36m<tbody[39m
-                                [33mclass[39m=[32m"body"[39m
-                              [36m>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mMATH210[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mDiscrete Mathematics I[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                              [36m</tbody>[39m
-                            [36m</table>[39m
-                          [36m</div>[39m
-                          [36m<div>[39m
-                            [36m<h4[39m
-                              [33mclass[39m=[32m"semester"[39m
-                            [36m>[39m
-                              [0mFall 2021[0m
-                            [36m</h4>[39m
-                            [36m<table[39m
-                              [33mclass[39m=[32m"table"[39m
-                            [36m>[39m
-                              [36m<thead>[39m
-                                [36m<th>[39m
-                                  [0mCourse name[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCourse Title[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCredits[0m
-                                [36m</th>[39m
-                              [36m</thead>[39m
-                              [36m<tbody[39m
-                                [33mclass[39m=[32m"body"[39m
-                              [36m>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC220[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mData Structures[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC260[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mMachine Organization & Assembly Language[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mGEOL115[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mGeological Hazards Lab[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m1[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mGEOL105[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mGeological Hazards[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mMATH243[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mAnalytic Geometry & Calculus C[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m4[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mWOMS201[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mIntro to Woman & Gender Studies[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                              [36m</tbody>[39m
-                            [36m</table>[39m
-                          [36m</div>[39m
-                          [36m<div>[39m
-                            [36m<h4[39m
-                              [33mclass[39m=[32m"semester"[39m
-                            [36m>[39m
-                              [0mSpring 2022[0m
-                            [36m</h4>[39m
-                            [36m<table[39m
-                              [33mclass[39m=[32m"table"[39m
-                            [36m>[39m
-                              [36m<thead>[39m
-                                [36m<th>[39m
-                                  [0mCourse name[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCourse Title[0m
-                                [36m</th>[39m
-                                [36m<th>[39m
-                                  [0mCredits[0m
-                                [36m</th>[39m
-                              [36m</thead>[39m
-                              [36m<tbody[39m
-                                [33mclass[39m=[32m"body"[39m
-                              [36m>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC275[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mIntro to Software Engineering[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mMATH349[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mElementary Linear Algebra[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mMATH350[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mProbability Theory & Simulation[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mENGL410[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mTechnical Writing[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                                [36m<tr>[39m
-                                  [36m<td>[39m
-                                    [0mCISC367[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0mAssistive Technology Seminar[0m
-                                  [36m</td>[39m
-                                  [36m<td>[39m
-                                    [0m3[0m
-                                  [36m</td>[39m
-                                [36m</tr>[39m
-                              [36m</tbody>[39m
-                            [36m</table>[39m
-                          [36m</div>[39m
-                        [36m</div>[39m
+                          [0mFall 2020[0m
+                        [36m</h4>[39m
+                        [36m<table[39m
+                          [33mclass[39m=[32m"table"[39m
+                        [36m>[39m
+                          [36m<thead>[39m
+                            [36m<th>[39m
+                              [0mCourse name[0m
+                            [36m</th>[39m
+                            [36m<th>[39m
+                              [0mCourse Title[0m
+                            [36m</th>[39m
+                            [36m<th>[39m
+                              [0mCredits[0m
+                            [36m</th>[39m
+                          [36m</thead>[39m
+                          [36m<tbody[39m
+                            [33mclass[39m=[32m"body"[39m
+                          [36m>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mEGGG101[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mIntro to Engineering[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m2[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mCISC108[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mIntro to Computer Science I[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m3[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mMATH241[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mAnalytic Geometry & Calculus A[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m4[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mENGL110[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mSeminar in Composition[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m3[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mAFRA215[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mRace in Society[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m3[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                          [36m</tbody>[39m
+                        [36m</table>[39m
                       [36m</div>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<p>[39m
-              [0mAdd Plan Modal goes here![0m
-            [36m</p>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"container"[39m
-            [36m>[39m
-              [36m<div>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"semester"[39m
-                [36m>[39m
-                  [0mFall 2020[0m
-                [36m</h4>[39m
-                [36m<table[39m
-                  [33mclass[39m=[32m"table"[39m
-                [36m>[39m
-                  [36m<thead>[39m
-                    [36m<th>[39m
-                      [0mCourse name[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCourse Title[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCredits[0m
-                    [36m</th>[39m
-                  [36m</thead>[39m
-                  [36m<tbody[39m
-                    [33mclass[39m=[32m"body"[39m
-                  [36m>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mEGGG101[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mIntro to Engineering[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m2[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC108[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mIntro to Computer Science I[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mMATH241[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mAnalytic Geometry & Calculus A[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m4[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mENGL110[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mSeminar in Composition[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mAFRA215[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mRace in Society[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                  [36m</tbody>[39m
-                [36m</table>[39m
-              [36m</div>[39m
-              [36m<div>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"semester"[39m
-                [36m>[39m
-                  [0mSpring 2021[0m
-                [36m</h4>[39m
-                [36m<table[39m
-                  [33mclass[39m=[32m"table"[39m
-                [36m>[39m
-                  [36m<thead>[39m
-                    [36m<th>[39m
-                      [0mCourse name[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCourse Title[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCredits[0m
-                    [36m</th>[39m
-                  [36m</thead>[39m
-                  [36m<tbody[39m
-                    [33mclass[39m=[32m"body"[39m
-                  [36m>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC181[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mIntro to Computer Science II[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC210[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mIntro to Systems Programming[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mMATH242[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mAnalytic Geometry & Calculus B[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m4[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mPOSC333[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mContemporary Political Ideologies[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mWOMS200[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mSexualities & Gender Studies[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                  [36m</tbody>[39m
-                [36m</table>[39m
-              [36m</div>[39m
-              [36m<div>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"semester"[39m
-                [36m>[39m
-                  [0mSummer 2021[0m
-                [36m</h4>[39m
-                [36m<table[39m
-                  [33mclass[39m=[32m"table"[39m
-                [36m>[39m
-                  [36m<thead>[39m
-                    [36m<th>[39m
-                      [0mCourse name[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCourse Title[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCredits[0m
-                    [36m</th>[39m
-                  [36m</thead>[39m
-                  [36m<tbody[39m
-                    [33mclass[39m=[32m"body"[39m
-                  [36m>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mMATH210[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mDiscrete Mathematics I[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                  [36m</tbody>[39m
-                [36m</table>[39m
-              [36m</div>[39m
-              [36m<div>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"semester"[39m
-                [36m>[39m
-                  [0mFall 2021[0m
-                [36m</h4>[39m
-                [36m<table[39m
-                  [33mclass[39m=[32m"table"[39m
-                [36m>[39m
-                  [36m<thead>[39m
-                    [36m<th>[39m
-                      [0mCourse name[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCourse Title[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCredits[0m
-                    [36m</th>[39m
-                  [36m</thead>[39m
-                  [36m<tbody[39m
-                    [33mclass[39m=[32m"body"[39m
-                  [36m>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC220[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mData Structures[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC260[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mMachine Organization & Assembly Language[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mGEOL115[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mGeological Hazards Lab[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m1[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mGEOL105[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mGeological Hazards[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mMATH243[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mAnalytic Geometry & Calculus C[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m4[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mWOMS201[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mIntro to Woman & Gender Studies[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                  [36m</tbody>[39m
-                [36m</table>[39m
-              [36m</div>[39m
-              [36m<div>[39m
-                [36m<h4[39m
-                  [33mclass[39m=[32m"semester"[39m
-                [36m>[39m
-                  [0mSpring 2022[0m
-                [36m</h4>[39m
-                [36m<table[39m
-                  [33mclass[39m=[32m"table"[39m
-                [36m>[39m
-                  [36m<thead>[39m
-                    [36m<th>[39m
-                      [0mCourse name[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCourse Title[0m
-                    [36m</th>[39m
-                    [36m<th>[39m
-                      [0mCredits[0m
-                    [36m</th>[39m
-                  [36m</thead>[39m
-                  [36m<tbody[39m
-                    [33mclass[39m=[32m"body"[39m
-                  [36m>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC275[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mIntro to Software Engineering[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mMATH349[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mElementary Linear Algebra[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mMATH350[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mProbability Theory & Simulation[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mENGL410[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mTechnical Writing[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                    [36m<tr>[39m
-                      [36m<td>[39m
-                        [0mCISC367[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0mAssistive Technology Seminar[0m
-                      [36m</td>[39m
-                      [36m<td>[39m
-                        [0m3[0m
-                      [36m</td>[39m
-                    [36m</tr>[39m
-                  [36m</tbody>[39m
-                [36m</table>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
+                      [36m<div>[39m
+                        [36m<h4[39m
+                          [33mclass[39m=[32m"semester"[39m
+                        [36m>[39m
+                          [0mSpring 2021[0m
+                        [36m</h4>[39m
+                        [36m<table[39m
+                          [33mclass[39m=[32m"table"[39m
+                        [36m>[39m
+                          [36m<thead>[39m
+                            [36m<th>[39m
+                              [0mCourse name[0m
+                            [36m</th>[39m
+                            [36m<th>[39m
+                              [0mCourse Title[0m
+                            [36m</th>[39m
+                            [36m<th>[39m
+                              [0mCredits[0m
+                            [36m</th>[39m
+                          [36m</thead>[39m
+                          [36m<tbody[39m
+                            [33mclass[39m=[32m"body"[39m
+                          [36m>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mCISC181[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mIntro to Computer Science II[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m3[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mCISC210[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0mIntro to Systems Programming[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [0m3[0m
+                              [36m</td>[39m
+                            [36m</tr>[39m
+                            [36m<tr>[39m
+                              [36m<td>[39m
+                                [0mM...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -901,14 +253,15 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |      80 |    66.66 |   73.33 |   78.94 |                   
- src                        |    87.5 |       75 |      80 |    87.5 |                   
-  App.tsx                   |     100 |      100 |     100 |     100 |                   
+All files                   |   51.61 |       50 |   45.83 |   51.72 |                   
+ src                        |   58.33 |       50 |   44.44 |   63.63 |                   
+  App.tsx                   |      50 |        0 |   33.33 |   57.14 | 24-30             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
- src/components             |      75 |       50 |      70 |   72.72 |                   
+ src/components             |   47.36 |       50 |   46.66 |   44.44 |                   
   CourseList.tsx            |       0 |      100 |       0 |       0 | 11-20             
+  PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-57             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
-  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 37                
+  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 47                
   multipleSemesterTable.tsx |     100 |      100 |     100 |     100 |                   
  src/interfaces             |       0 |        0 |       0 |       0 |                   
   course.ts                 |       0 |        0 |       0 |       0 |                   
@@ -918,5 +271,5 @@ All files                   |      80 |    66.66 |   73.33 |   78.94 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.631 s
+Time:        2.422 s
 Ran all test suites.
