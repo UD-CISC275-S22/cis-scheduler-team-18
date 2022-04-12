@@ -35,7 +35,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (255 ms)
+  ✕ renders the course name somewhere (206 ms)
 
   ● renders the course name somewhere
 
@@ -181,7 +181,7 @@ FAIL src/App.test.tsx
                                 [36m</tr>[39m
                                 [36m<tr>[39m
                                   [36m<td>[39m
-                                    [0mAFRA220[0m
+                                    [0mAFRA215[0m
                                   [36m</td>[39m
                                   [36m<td>[39m
                                     [0mRace in Society[0m
@@ -570,7 +570,7 @@ FAIL src/App.test.tsx
                     [36m</tr>[39m
                     [36m<tr>[39m
                       [36m<td>[39m
-                        [0mAFRA220[0m
+                        [0mAFRA215[0m
                       [36m</td>[39m
                       [36m<td>[39m
                         [0mRace in Society[0m
@@ -918,5 +918,5 @@ All files                   |      80 |    66.66 |   73.33 |   78.94 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.296 s
+Time:        2.631 s
 Ran all test suites.
