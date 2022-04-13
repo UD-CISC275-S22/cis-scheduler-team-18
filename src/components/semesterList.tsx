@@ -3,7 +3,7 @@ import { Stack } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { SemesterView } from "./semesterView";
 
-export function semesterList({
+export function SemesterList({
     semester,
     deleteSemester,
     editSemester
