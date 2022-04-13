@@ -5,15 +5,15 @@ import { Semester } from "../interfaces/semester";
 import { CourseEdit } from "./CourseEdit";
 
 export interface CourseListProps {
-    setCourses: (newCourses: Course[]) => void;
-    courses: Course[];
+    editCourses: (newCourse: Course) => void;
+    editedCourse: Course;
 }
 /**
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
-    function updateCourses(course: Course) {
+    function updateCourses(course: Course): void {
         const newCourses = courses.map((cor: Course) =>
             cor.id === course.id ? course : cor
         );
@@ -34,8 +34,10 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                         <td>{course.courseTitle}</td>
                         <td>{course.credits}</td>
                         <td>
-                            <CourseEdit course={course}></CourseEdit>
-                            {updateCourses(course)}
+                            <CourseEdit
+                                editedCourse={course}
+                                editCourses={updateCourses}
+                            ></CourseEdit>
                         </td>
                     </tr>
                 ))}

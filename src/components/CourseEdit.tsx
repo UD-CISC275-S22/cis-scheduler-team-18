@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import { CourseListProps } from "../components/CourseList";
 
-export function CourseEdit({ course }: { course: Course }): JSX.Element {
-    const [code, setCode] = useState<string>(course.courseName);
-    const [title, setTitle] = useState<string>(course.courseTitle);
-    const [credits, setCredits] = useState<number>(course.credits);
+export function CourseEdit({
+    editCourses,
+    editedCourse
+}: CourseListProps): JSX.Element {
+    const [code, setCode] = useState<string>(editedCourse.courseName);
+    const [title, setTitle] = useState<string>(editedCourse.courseTitle);
+    const [credits, setCredits] = useState<number>(editedCourse.credits);
     const [show, setShow] = useState(false);
 
     const close = () => setShow(false);
@@ -18,6 +22,9 @@ export function CourseEdit({ course }: { course: Course }): JSX.Element {
     }
     function changeCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(parseInt(event.target.value));
+    }
+    function updateInput() {
+        editCourses(editedCourse);
     }
     return (
         <>
@@ -55,7 +62,9 @@ export function CourseEdit({ course }: { course: Course }): JSX.Element {
                         <Button variant="secondary" onClick={close}>
                             Close
                         </Button>
-                        <Button variant="success">Save Changes</Button>
+                        <Button variant="success" onClick={updateInput}>
+                            Save Changes
+                        </Button>
                     </Modal.Footer>
                 </Modal.Body>
             </Modal>
