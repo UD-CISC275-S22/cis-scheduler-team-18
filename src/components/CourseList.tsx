@@ -1,20 +1,19 @@
-import React from "react";
-import { Button, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Modal, Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseEdit } from "./CourseEdit";
 
+export interface CourseListProps {
+    setCourses: (newCourses: Course[]) => void;
+    courses: Course[];
+}
 /**
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
-    function OpenCourseEdit({ course }: { course: Course }) {
-        return (
-            <div>
-                <CourseEdit course={course}></CourseEdit>
-            </div>
-        );
-    }
+    const theCourses = [...semester.courses];
+    const [courses, setCourses] = useState<Course[]>(theCourses);
     return (
         <Table>
             <thead>
@@ -24,15 +23,17 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 <th>Edit Course</th>
             </thead>
             <tbody>
-                {semester.courses.map((course: Course) => (
+                {courses.map((course: Course) => (
                     <tr key={course.id}>
                         <td>{course.courseName}</td>
                         <td>{course.courseTitle}</td>
                         <td>{course.credits}</td>
                         <td>
-                            <Button onClick={() => OpenCourseEdit({ course })}>
-                                Edit Course
-                            </Button>
+                            <CourseEdit
+                                course={course}
+                                setCourses={setCourses}
+                                courses={courses}
+                            ></CourseEdit>
                         </td>
                     </tr>
                 ))}
