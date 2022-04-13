@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
-import { CourseListProps } from "../components/CourseList";
 
-export function CourseEdit(
-    { course }: { course: Course },
-    { props }: CourseListProps
-): JSX.Element {
+export function CourseEdit({ course }: { course: Course }): JSX.Element {
     const [code, setCode] = useState<string>(course.courseName);
     const [title, setTitle] = useState<string>(course.courseTitle);
     const [credits, setCredits] = useState<number>(course.credits);
@@ -22,13 +18,6 @@ export function CourseEdit(
     }
     function changeCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(parseInt(event.target.value));
-    }
-    function updateChanges() {
-        const blah = props.courses;
-        const newCourses = courses.map((cor: Course) =>
-            cor.id === course.id ? course : cor
-        );
-        setCourses(newCourses);
     }
     return (
         <>
@@ -66,9 +55,7 @@ export function CourseEdit(
                         <Button variant="secondary" onClick={close}>
                             Close
                         </Button>
-                        <Button variant="success" onClick={updateChanges}>
-                            Save Changes
-                        </Button>
+                        <Button variant="success">Save Changes</Button>
                     </Modal.Footer>
                 </Modal.Body>
             </Modal>

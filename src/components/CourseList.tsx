@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseEdit } from "./CourseEdit";
@@ -12,8 +12,13 @@ export interface CourseListProps {
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
-    const theCourses = [...semester.courses];
-    const [courses, setCourses] = useState<Course[]>(theCourses);
+    const [courses, setCourses] = useState<Course[]>([...semester.courses]);
+    function updateCourses(course: Course) {
+        const newCourses = courses.map((cor: Course) =>
+            cor.id === course.id ? course : cor
+        );
+        setCourses(newCourses);
+    }
     return (
         <Table>
             <thead>
@@ -29,11 +34,8 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                         <td>{course.courseTitle}</td>
                         <td>{course.credits}</td>
                         <td>
-                            <CourseEdit
-                                course={course}
-                                setCourses={setCourses}
-                                courses={courses}
-                            ></CourseEdit>
+                            <CourseEdit course={course}></CourseEdit>
+                            {updateCourses(course)}
                         </td>
                     </tr>
                 ))}
