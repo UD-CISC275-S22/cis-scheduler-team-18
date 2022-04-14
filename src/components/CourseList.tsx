@@ -20,16 +20,19 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
         );
     }
 
-    /*
     function deleteCourse(id: string) {
         setCourses(
             courses.filter((course: Course): boolean => course.id !== id)
         );
-    }*/
+    }
 
     return (
         <div>
-            <CourseView courses={courses} editCourse={editCourse}></CourseView>
+            <CourseView
+                courses={courses}
+                editCourse={editCourse}
+                deleteCourse={deleteCourse}
+            ></CourseView>
         </div>
     );
 }

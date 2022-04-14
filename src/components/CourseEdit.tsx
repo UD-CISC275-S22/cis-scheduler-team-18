@@ -7,10 +7,12 @@ import { Course } from "../interfaces/course";
  */
 export function CourseEdit({
     course,
-    editCourse
+    editCourse,
+    deleteCourse
 }: {
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
+    deleteCourse: (id: string) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.courseName);
     const [title, setTitle] = useState<string>(course.courseTitle);
@@ -28,6 +30,12 @@ export function CourseEdit({
             courseTitle: title,
             credits: credits
         });
+        close();
+    }
+
+    //deletes the course
+    function remove() {
+        deleteCourse(course.id);
         close();
     }
 
@@ -77,6 +85,9 @@ export function CourseEdit({
                         ></Form.Control>
                     </Form.Group>
                     <Modal.Footer>
+                        <Button variant="danger" onClick={remove}>
+                            Delete Course
+                        </Button>
                         <Button variant="warning" onClick={close}>
                             Cancel
                         </Button>
