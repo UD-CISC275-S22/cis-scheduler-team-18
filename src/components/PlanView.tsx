@@ -1,11 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-//import { Container, Row, Col } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
-import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { Semesterer } from "../semesterer";
 import { PlanEditor } from "./PlanEditor";
-//import { PlanEditor } from "./PlanEditor";
 
 /*
 Add this later!
@@ -18,8 +16,6 @@ export function PlanView({
     deletePlan: (id: string) => void;
     editPlan: (id: string, newPlan: Plan) => void;
 }): JSX.Element {
-
-
     ...
     return editing ? (
         <PlanEditor
@@ -29,7 +25,6 @@ export function PlanView({
             deletePlan={deletePlan}
         ></PlanEditor>
     ) : (
-
 */
 
 export function PlanView({
@@ -62,7 +57,12 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
-                <MultipleSemesterTable plan={plan}></MultipleSemesterTable>{" "}
+                <Semesterer plan={plan}></Semesterer>
+            </div>
+            <div>
+                <Button variant="info" onClick={changePlanEditing}>
+                    Edit Plan
+                </Button>
             </div>
             <div>
                 <Button variant="info" onClick={changePlanEditing}>
