@@ -16,8 +16,6 @@ export function PlanView({
     deletePlan: (id: string) => void;
     editPlan: (id: string, newPlan: Plan) => void;
 }): JSX.Element {
-
-
     ...
     return editing ? (
         <PlanEditor
@@ -27,7 +25,6 @@ export function PlanView({
             deletePlan={deletePlan}
         ></PlanEditor>
     ) : (
-
 */
 
 export function PlanView({
