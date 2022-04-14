@@ -8,20 +8,29 @@
         at thead
         at table
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Table.js:21:3
+        at div
+        at CourseView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseView.tsx:7:5)
+        at div
         at CourseList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseList.tsx:14:30)
         at div
+        at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:9:5)
         at div
-        at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:7:41)
+        at SemesterView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterView.tsx:11:5)
+        at div
+        at SemesterList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterList.tsx:7:5)
         at div
         at div
-        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:36:5)
+        at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:8:30)
+        at div
+        at div
+        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:34:5)
         at div
         at div
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Stack.js:23:7
         at PlanList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanList.tsx:22:5)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:20:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:19:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -32,18 +41,13 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (416 ms)
+  ✕ renders the course name somewhere (482 ms)
 
   ● renders the course name somewhere
 
     TestingLibraryElementError: Found multiple elements with the text: /CISC275/i
 
     Here are the matching elements:
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<td>[39m
-      [0mCISC275[0m
-    [36m</td>[39m
 
     Ignored nodes: comments, <script />, <style />
     [36m<td>[39m
@@ -100,130 +104,110 @@ FAIL src/App.test.tsx
                     [36m</h3>[39m
                   [36m</div>[39m
                   [36m<div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"container"[39m
-                    [36m>[39m
+                    [36m<div>[39m
                       [36m<div>[39m
-                        [36m<h4[39m
-                          [33mclass[39m=[32m"semester"[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"container"[39m
                         [36m>[39m
-                          [0mFall 2020[0m
-                        [36m</h4>[39m
-                        [36m<table[39m
-                          [33mclass[39m=[32m"table"[39m
-                        [36m>[39m
-                          [36m<thead>[39m
-                            [36m<th>[39m
-                              [0mCourse Name[0m
-                            [36m</th>[39m
-                            [36m<th>[39m
-                              [0mCourse Title[0m
-                            [36m</th>[39m
-                            [36m<th>[39m
-                              [0mCredits[0m
-                            [36m</th>[39m
-                            [36m<th>[39m
-                              [0mEdit Course[0m
-                            [36m</th>[39m
-                          [36m</thead>[39m
-                          [36m<tbody>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mEGGG101[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mIntro to Engineering[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m2[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
+                          [36m<div>[39m
+                            [36m<div>[39m
+                              [36m<h4[39m
+                                [33mclass[39m=[32m"semester"[39m
+                              [36m>[39m
+                                [0mfall[0m
+                                [0m [0m
+                                [0m2020[0m
+                              [36m</h4>[39m
+                              [36m<div>[39m
                                 [36m<div>[39m
-                                  [36m<button[39m
-                                    [33mclass[39m=[32m"btn btn-primary"[39m
-                                    [33mtype[39m=[32m"button"[39m
+                                  [36m<table[39m
+                                    [33mclass[39m=[32m"table"[39m
                                   [36m>[39m
-                                    [0m Edit Course[0m
-                                  [36m</button>[39m
-                                [36m</div>[39m
-                              [36m</td>[39m
-                            [36m</tr>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mCISC108[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mIntro to Computer Science I[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m3[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [36m<div>[39m
-                                  [36m<button[39m
-                                    [33mclass[39m=[32m"btn btn-primary"[39m
-                                    [33mtype[39m=[32m"button"[39m
-                                  [36m>[39m
-                                    [0m Edit Course[0m
-                                  [36m</button>[39m
-                                [36m</div>[39m
-                              [36m</td>[39m
-                            [36m</tr>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mMATH241[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mAnalytic Geometry & Calculus A[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m4[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [36m<div>[39m
-                                  [36m<button[39m
-                                    [33mclass[39m=[32m"btn btn-primary"[39m
-                                    [33mtype[39m=[32m"button"[39m
-                                  [36m>[39m
-                                    [0m Edit Course[0m
-                                  [36m</button>[39m
-                                [36m</div>[39m
-                              [36m</td>[39m
-                            [36m</tr>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mENGL110[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mSeminar in Composition[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m3[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [36m<div>[39m
-                                  [36m<button[39m
-                                    [33mclass[39m=[32m"btn btn-primary"[39m
-                                    [33mtype[39m=[32m"button"[39m
-                                  [36m>[39m
-                                    [0m Edit Course[0m
-                                  [36m</button>[39m
-                                [36m</div>[39m
-                              [36m</td>[39m
-                            [36m</tr>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mAFRA215[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mRace in Society[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m3[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [36m<div>[39m
-                   ...
+                                    [36m<thead>[39m
+                                      [36m<th>[39m
+                                        [0mCourse Name[0m
+                                      [36m</th>[39m
+                                      [36m<th>[39m
+                                        [0mCourse Title[0m
+                                      [36m</th>[39m
+                                      [36m<th>[39m
+                                        [0mCredits[0m
+                                      [36m</th>[39m
+                                      [36m<th>[39m
+                                        [0mEdit Course[0m
+                                      [36m</th>[39m
+                                    [36m</thead>[39m
+                                    [36m<tbody>[39m
+                                      [36m<tr>[39m
+                                        [36m<td>[39m
+                                          [0mEGGG101[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0mIntro to Engineering[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0m2[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [36m<div>[39m
+                                            [36m<button[39m
+                                              [33mclass[39m=[32m"btn btn-primary"[39m
+                                              [33mtype[39m=[32m"button"[39m
+                                            [36m>[39m
+                                              [0m Edit Course[0m
+                                            [36m</button>[39m
+                                          [36m</div>[39m
+                                        [36m</td>[39m
+                                      [36m</tr>[39m
+                                      [36m<tr>[39m
+                                        [36m<td>[39m
+                                          [0mCISC108[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0mIntro to Computer Science I[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0m3[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [36m<div>[39m
+                                            [36m<button[39m
+                                              [33mclass[39m=[32m"btn btn-primary"[39m
+                                              [33mtype[39m=[32m"button"[39m
+                                            [36m>[39m
+                                              [0m Edit Course[0m
+                                            [36m</button>[39m
+                                          [36m</div>[39m
+                                        [36m</td>[39m
+                                      [36m</tr>[39m
+                                      [36m<tr>[39m
+                                        [36m<td>[39m
+                                          [0mMATH241[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0mAnalytic Geometry & Calculus A[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0m4[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [36m<div>[39m
+                                            [36m<button[39m
+                                              [33mclass[39m=[32m"btn btn-primary"[39m
+                                              [33mtype[39m=[32m"button"[39m
+                                            [36m>[39m
+                                              [0m Edit Course[0m
+                                            [36m</button>[39m
+                                          [36m</div>[39m
+                                        [36m</td>[39m
+                                      [36m</tr>[39m
+                                      [36m<tr>[39m
+                                        [36m<td>[39m
+                                          [0mENGL110[0m
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0mSeminar in Composition[0m
+                                        [36m</td>[39...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -247,17 +231,22 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   53.19 |       40 |   40.62 |   55.81 |                   
- src                        |   58.33 |       50 |   44.44 |   63.63 |                   
-  App.tsx                   |      50 |        0 |   33.33 |   57.14 | 24-30             
+All files                   |   45.58 |    35.71 |   35.41 |   46.87 |                   
+ src                        |      55 |     37.5 |      40 |   55.55 |                   
+  App.tsx                   |      50 |        0 |   33.33 |   57.14 | 23-29             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
- src/components             |   51.42 |       25 |   39.13 |   53.12 |                   
-  CourseEdit.tsx            |   53.84 |      100 |   14.28 |   63.63 | 17-40             
-  CourseList.tsx            |      50 |        0 |      50 |      50 | 17-20             
+  semesterer.tsx            |      50 |        0 |   33.33 |   42.85 | 16-28             
+ src/components             |   41.66 |    33.33 |   33.33 |   43.47 |                   
+  CourseEdit.tsx            |   46.66 |      100 |    12.5 |   53.84 | 21-43             
+  CourseList.tsx            |      50 |        0 |   33.33 |      50 | 18-20             
+  CourseView.tsx            |     100 |      100 |     100 |     100 |                   
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-57             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
-  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 47                
+  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 45                
   multipleSemesterTable.tsx |     100 |      100 |     100 |     100 |                   
+  semesterEditor.tsx        |       0 |      100 |       0 |       0 | 17-76             
+  semesterList.tsx          |     100 |      100 |     100 |     100 |                   
+  semesterView.tsx          |   66.66 |       50 |      50 |   66.66 | 24                
  src/interfaces             |       0 |        0 |       0 |       0 |                   
   course.ts                 |       0 |        0 |       0 |       0 |                   
   plan.ts                   |       0 |        0 |       0 |       0 |                   
@@ -266,5 +255,5 @@ All files                   |   53.19 |       40 |   40.62 |   55.81 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.774 s
+Time:        3.572 s
 Ran all test suites.
