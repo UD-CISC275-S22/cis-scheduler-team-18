@@ -3,6 +3,7 @@ import { useState } from "react";
 //import { Container, Row, Col } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { Semesterer } from "../semesterer";
 //import { PlanEditor } from "./PlanEditor";
 
 /*
@@ -44,9 +45,9 @@ export function PlanView({ plan }: { plan: Plan }): JSX.Element {
             <div>
                 <h3>{plan.name}</h3>
             </div>
-            <div>
+            {/*<div>
                 <MultipleSemesterTable plan={plan}></MultipleSemesterTable>{" "}
-            </div>
+    </div>*/}
         </div>
     );
 }

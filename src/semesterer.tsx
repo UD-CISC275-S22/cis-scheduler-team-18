@@ -1,7 +1,7 @@
 //App: Plan
 //Semesterer: Semester
 import React, { useState } from "react";
-import semesterPlan from "./data/semesterPlan.json";
+//import semesterPlan from "./data/semesterPlan.json";
 import { Semester } from "./interfaces/semester";
 import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";

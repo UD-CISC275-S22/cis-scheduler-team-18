@@ -75,7 +75,7 @@ function App(): JSX.Element {
                 <p>Add Plan Modal goes here!</p>
             </div>
             <div>
-                <Semesterer></Semesterer>
+                <Semesterer plan={plans[0]}></Semesterer>
             </div>
         </div>
     );

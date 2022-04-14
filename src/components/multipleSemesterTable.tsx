@@ -3,7 +3,7 @@ import React from "react";
 import { Semester } from "../interfaces/semester";
 import "../styleSheets/multipleSemesterTable.css";
 import { CourseList } from "./CourseList";
-//import { Plan } from "../interfaces/plan";
+import { Plan } from "../interfaces/plan";
 
 export function MultipleSemesterTable({
     semester
@@ -21,16 +21,21 @@ export function MultipleSemesterTable({
         <div className="container">
             {SEMESTER.map((sem: Semester) => (
                 <div key={sem.id}>
-                    <h4 className = "semester">
+                    <h4 className="semester">
                         {sem.season} {sem.year}
                     </h4>
                     <CourseList semester={sem}></CourseList>
                 </div>
             ))}
+        </div>
     );
     */
     return (
         <div className="container">
+            <h4 className="semester">
+                {semester.season}
+                {semester.year}
+            </h4>
             <CourseList semester={semester}></CourseList>
         </div>
     );
