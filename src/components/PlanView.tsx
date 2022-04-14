@@ -67,6 +67,11 @@ export function PlanView({
                     Edit Plan
                 </Button>
             </div>
+            <div>
+                <Button variant="info" onClick={changePlanEditing}>
+                    Edit Plan
+                </Button>
+            </div>
         </div>
     );
 }

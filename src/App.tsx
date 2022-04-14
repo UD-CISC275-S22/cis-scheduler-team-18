@@ -74,6 +74,9 @@ function App(): JSX.Element {
             <div>
                 <p>Add Plan Modal will go here!</p>
             </div>
+            <div>
+                <p>Add Plan Modal will go here!</p>
+            </div>
         </div>
     );
 }
