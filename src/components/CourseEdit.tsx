@@ -58,7 +58,7 @@ export function CourseEdit({
                 </Button>
             </div>
             <Modal show={show} onHide={close} backdrop="static" centered>
-                <Modal.Header closeButton>
+                <Modal.Header>
                     <Modal.Title>Edit Course</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

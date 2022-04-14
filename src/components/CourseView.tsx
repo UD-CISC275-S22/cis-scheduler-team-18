@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { CourseEdit } from "./CourseEdit";
+import { CourseInfo } from "./CourseInfo";
 
 /**
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
@@ -36,6 +37,7 @@ export function CourseView({
                                     editCourse={editCourse}
                                     deleteCourse={deleteCourse}
                                 ></CourseEdit>
+                                <CourseInfo course={course}></CourseInfo>
                             </td>
                         </tr>
                     ))}
