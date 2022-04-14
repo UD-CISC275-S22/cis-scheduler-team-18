@@ -1,14 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-//import { Container, Row, Col } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
-//import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { Semesterer } from "../semesterer";
-//import { MultipleSemesterTable } from "./multipleSemesterTable";
-import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { PlanEditor } from "./PlanEditor";
-//import { PlanEditor } from "./PlanEditor";
 
 /*
 Add this later!
