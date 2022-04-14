@@ -6,10 +6,7 @@ import semesterPlan from "./data/semesterPlan.json";
 import { Plan } from "./interfaces/plan";
 import { PlanList } from "./components/PlanList";
 
-//import { MultipleSemesterTable } from "./components/multipleSemesterTable";
 import { Welcome } from "./WelcomeMsg";
-
-import { Semesterer } from "./semesterer";
 
 const PLANS = semesterPlan.map(
     (plan): Plan => ({

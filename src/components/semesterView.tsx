@@ -16,12 +16,18 @@ export function SemesterView({
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
 }): JSX.Element {
+    //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
 
+    //will update the usestate editing
     function changeSemesterEditing() {
         setEditing(!editing);
     }
 
+    //if in editing mode, will call semesterEditor
+    //else, will call semesterTable which will pass in a single semester - this is okay becuase semesterLIST is already mapping
+    //through a list of semesters, meaning we don't have to pass in a whole plan or list of semesters
+    //add edit semester button
     return editing ? (
         <div>
             <SemesterEditor

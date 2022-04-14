@@ -15,7 +15,9 @@ export function SemesterEditor({
 }): JSX.Element {
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);
+    const [year, setYear] = useState<string>(semester.year.toString());
 
+    //will save the changes made
     function save() {
         editSemester(semester.id, {
             ...semester,
@@ -24,6 +26,7 @@ export function SemesterEditor({
         changeSemesterEditing();
     }
 
+    //will cancel the changes being made
     function cancel() {
         changeSemesterEditing();
     }
@@ -33,7 +36,7 @@ export function SemesterEditor({
             <Row>
                 <Col>
                     {/*Year*/}
-                    <Form.Group controlId="formSemesterYear" as={Row}>
+                    <Form.Group controlId="formSemesterSeason" as={Row}>
                         <Form.Label column sm={2}>
                             Semester Season:
                         </Form.Label>
@@ -43,6 +46,21 @@ export function SemesterEditor({
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
                                 ) => setSeason(event.target.value)}
+                            />
+                        </Col>
+                    </Form.Group>
+                    {/*Year*/}
+                    <Form.Group controlId="formSemesterYear" as={Row}>
+                        <Form.Label column sm={2}>
+                            Year:
+                        </Form.Label>
+                        <Col>
+                            <Form.Control
+                                type="number"
+                                value={year}
+                                onChange={(
+                                    event: React.ChangeEvent<HTMLInputElement>
+                                ) => setYear(event.target.value)}
                             />
                         </Col>
                     </Form.Group>

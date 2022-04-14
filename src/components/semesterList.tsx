@@ -1,5 +1,4 @@
 import React from "react";
-//import { Stack } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { SemesterView } from "./semesterView";
 import "../styleSheets/multipleSemesterTable.css";
@@ -13,6 +12,8 @@ export function SemesterList({
     deleteSemester: (id: string) => void;
     editSemester: (id: string, newSemester: Semester) => void;
 }): JSX.Element {
+    //make sure the tables stay in a nice format/gridlike
+    //calls semesterview which will determine if we're in editing mode
     return (
         <div className="container">
             {semesters.map((sem: Semester) => (
