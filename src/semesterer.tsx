@@ -6,12 +6,14 @@ import { Semester } from "./interfaces/semester";
 import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 
-export function Semesterer({ plans }: { plans: Plan[] }): JSX.Element {
-    const [semesters, setSemesters] = useState<Semester[]>(SEMESTERS);
+export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
+    //list of semesters
+    const sems = plan.semesters.map((sem: Semester) => ({ ...sem }));
+    const [semesters, setSemesters] = useState<Semester[]>(sems);
 
     function editSemester(id: string, newSemester: Semester) {
         setSemesters(
-            SEMESTERS.map(
+            semesters.map(
                 (semester: Semester): Semester =>
                     semester.id === id ? newSemester : semester
             )
