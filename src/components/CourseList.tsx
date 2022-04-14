@@ -12,6 +12,7 @@ export interface CourseListProps {
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
+    //returns a ListGroup of horizontal ListGroups listing information from each course in a semester
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     function updateCourses(course: Course): void {
         const newCourses = courses.map((cor: Course) =>
