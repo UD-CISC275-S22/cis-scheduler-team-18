@@ -3,13 +3,10 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 //import { Container, Row, Col } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
-<<<<<<< HEAD
 //import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { Semesterer } from "../semesterer";
-=======
-import { MultipleSemesterTable } from "./multipleSemesterTable";
+//import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { PlanEditor } from "./PlanEditor";
->>>>>>> 1eb78b58662370a8e05fd35967834abfac840322
 //import { PlanEditor } from "./PlanEditor";
 
 /*
