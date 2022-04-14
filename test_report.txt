@@ -30,7 +30,7 @@
         at PlanList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanList.tsx:22:5)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:19:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:21:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -41,7 +41,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (346 ms)
+  ✕ renders the course name somewhere (539 ms)
 
   ● renders the course name somewhere
 
@@ -94,9 +94,6 @@ FAIL src/App.test.tsx
               [36m<div[39m
                 [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
               [36m>[39m
-                [36m<div>[39m
-                  [0mPlanView here![0m
-                [36m</div>[39m
                 [36m<div>[39m
                   [36m<div>[39m
                     [36m<h3>[39m
@@ -207,7 +204,9 @@ FAIL src/App.test.tsx
                                         [36m</td>[39m
                                         [36m<td>[39m
                                           [0mSeminar in Composition[0m
-                                        [36m</td>[39...
+                                        [36m</td>[39m
+                                        [36m<td>[39m
+                                          [0...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -231,12 +230,13 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   45.58 |    35.71 |   35.41 |   46.87 |                   
- src                        |      55 |     37.5 |      40 |   55.55 |                   
-  App.tsx                   |      50 |        0 |   33.33 |   57.14 | 23-29             
+All files                   |   44.31 |    31.25 |   31.03 |   46.34 |                   
+ src                        |   48.27 |       30 |   31.57 |      52 |                   
+  App.tsx                   |   41.17 |        0 |      20 |      50 | 25-39             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
   semesterer.tsx            |      50 |        0 |   33.33 |   42.85 | 16-28             
- src/components             |   41.66 |    33.33 |   33.33 |   43.47 |                   
+ src/components             |   42.37 |    33.33 |   30.76 |   43.85 |                   
+  AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 65-91,110-124     
   CourseEdit.tsx            |   46.66 |      100 |    12.5 |   53.84 | 21-43             
   CourseList.tsx            |      50 |        0 |   33.33 |      50 | 18-20             
   CourseView.tsx            |     100 |      100 |     100 |     100 |                   
@@ -255,5 +255,5 @@ All files                   |   45.58 |    35.71 |   35.41 |   46.87 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.615 s
+Time:        3.606 s
 Ran all test suites.
