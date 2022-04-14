@@ -7,6 +7,8 @@
         at th
         at thead
         at table
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Table.js:21:3
+        at CourseList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseList.tsx:14:30)
         at div
         at div
         at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:7:41)
@@ -30,7 +32,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (211 ms)
+  ✕ renders the course name somewhere (416 ms)
 
   ● renders the course name somewhere
 
@@ -112,7 +114,7 @@ FAIL src/App.test.tsx
                         [36m>[39m
                           [36m<thead>[39m
                             [36m<th>[39m
-                              [0mCourse name[0m
+                              [0mCourse Name[0m
                             [36m</th>[39m
                             [36m<th>[39m
                               [0mCourse Title[0m
@@ -120,10 +122,11 @@ FAIL src/App.test.tsx
                             [36m<th>[39m
                               [0mCredits[0m
                             [36m</th>[39m
+                            [36m<th>[39m
+                              [0mEdit Course[0m
+                            [36m</th>[39m
                           [36m</thead>[39m
-                          [36m<tbody[39m
-                            [33mclass[39m=[32m"body"[39m
-                          [36m>[39m
+                          [36m<tbody>[39m
                             [36m<tr>[39m
                               [36m<td>[39m
                                 [0mEGGG101[0m
@@ -133,6 +136,16 @@ FAIL src/App.test.tsx
                               [36m</td>[39m
                               [36m<td>[39m
                                 [0m2[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [36m<div>[39m
+                                  [36m<button[39m
+                                    [33mclass[39m=[32m"btn btn-primary"[39m
+                                    [33mtype[39m=[32m"button"[39m
+                                  [36m>[39m
+                                    [0m Edit Course[0m
+                                  [36m</button>[39m
+                                [36m</div>[39m
                               [36m</td>[39m
                             [36m</tr>[39m
                             [36m<tr>[39m
@@ -145,6 +158,16 @@ FAIL src/App.test.tsx
                               [36m<td>[39m
                                 [0m3[0m
                               [36m</td>[39m
+                              [36m<td>[39m
+                                [36m<div>[39m
+                                  [36m<button[39m
+                                    [33mclass[39m=[32m"btn btn-primary"[39m
+                                    [33mtype[39m=[32m"button"[39m
+                                  [36m>[39m
+                                    [0m Edit Course[0m
+                                  [36m</button>[39m
+                                [36m</div>[39m
+                              [36m</td>[39m
                             [36m</tr>[39m
                             [36m<tr>[39m
                               [36m<td>[39m
@@ -155,6 +178,16 @@ FAIL src/App.test.tsx
                               [36m</td>[39m
                               [36m<td>[39m
                                 [0m4[0m
+                              [36m</td>[39m
+                              [36m<td>[39m
+                                [36m<div>[39m
+                                  [36m<button[39m
+                                    [33mclass[39m=[32m"btn btn-primary"[39m
+                                    [33mtype[39m=[32m"button"[39m
+                                  [36m>[39m
+                                    [0m Edit Course[0m
+                                  [36m</button>[39m
+                                [36m</div>[39m
                               [36m</td>[39m
                             [36m</tr>[39m
                             [36m<tr>[39m
@@ -167,6 +200,16 @@ FAIL src/App.test.tsx
                               [36m<td>[39m
                                 [0m3[0m
                               [36m</td>[39m
+                              [36m<td>[39m
+                                [36m<div>[39m
+                                  [36m<button[39m
+                                    [33mclass[39m=[32m"btn btn-primary"[39m
+                                    [33mtype[39m=[32m"button"[39m
+                                  [36m>[39m
+                                    [0m Edit Course[0m
+                                  [36m</button>[39m
+                                [36m</div>[39m
+                              [36m</td>[39m
                             [36m</tr>[39m
                             [36m<tr>[39m
                               [36m<td>[39m
@@ -178,58 +221,9 @@ FAIL src/App.test.tsx
                               [36m<td>[39m
                                 [0m3[0m
                               [36m</td>[39m
-                            [36m</tr>[39m
-                          [36m</tbody>[39m
-                        [36m</table>[39m
-                      [36m</div>[39m
-                      [36m<div>[39m
-                        [36m<h4[39m
-                          [33mclass[39m=[32m"semester"[39m
-                        [36m>[39m
-                          [0mSpring 2021[0m
-                        [36m</h4>[39m
-                        [36m<table[39m
-                          [33mclass[39m=[32m"table"[39m
-                        [36m>[39m
-                          [36m<thead>[39m
-                            [36m<th>[39m
-                              [0mCourse name[0m
-                            [36m</th>[39m
-                            [36m<th>[39m
-                              [0mCourse Title[0m
-                            [36m</th>[39m
-                            [36m<th>[39m
-                              [0mCredits[0m
-                            [36m</th>[39m
-                          [36m</thead>[39m
-                          [36m<tbody[39m
-                            [33mclass[39m=[32m"body"[39m
-                          [36m>[39m
-                            [36m<tr>[39m
                               [36m<td>[39m
-                                [0mCISC181[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mIntro to Computer Science II[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m3[0m
-                              [36m</td>[39m
-                            [36m</tr>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mCISC210[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0mIntro to Systems Programming[0m
-                              [36m</td>[39m
-                              [36m<td>[39m
-                                [0m3[0m
-                              [36m</td>[39m
-                            [36m</tr>[39m
-                            [36m<tr>[39m
-                              [36m<td>[39m
-                                [0mM...
+                                [36m<div>[39m
+                   ...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -253,12 +247,13 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   51.61 |       50 |   45.83 |   51.72 |                   
+All files                   |   53.19 |       40 |   40.62 |   55.81 |                   
  src                        |   58.33 |       50 |   44.44 |   63.63 |                   
   App.tsx                   |      50 |        0 |   33.33 |   57.14 | 24-30             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
- src/components             |   47.36 |       50 |   46.66 |   44.44 |                   
-  CourseList.tsx            |       0 |      100 |       0 |       0 | 11-20             
+ src/components             |   51.42 |       25 |   39.13 |   53.12 |                   
+  CourseEdit.tsx            |   53.84 |      100 |   14.28 |   63.63 | 17-40             
+  CourseList.tsx            |      50 |        0 |      50 |      50 | 17-20             
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-57             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
   PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 47                
@@ -271,5 +266,5 @@ All files                   |   51.61 |       50 |   45.83 |   51.72 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.422 s
+Time:        2.774 s
 Ran all test suites.
