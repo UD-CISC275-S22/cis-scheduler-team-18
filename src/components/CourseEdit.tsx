@@ -3,7 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { CourseListProps } from "../components/CourseList";
 
 export function CourseEdit({
-    editCourses,
+    updateCourses,
     editedCourse
 }: CourseListProps): JSX.Element {
     const [code, setCode] = useState<string>(editedCourse.courseName);
@@ -15,16 +15,17 @@ export function CourseEdit({
     const open = () => setShow(true);
     function changeCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
-        editCourse();
+        //editCourse();
     }
     function changeTitle(event: React.ChangeEvent<HTMLInputElement>) {
         setTitle(event.target.value);
-        editCourse();
+        //editCourse();
     }
     function changeCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(parseInt(event.target.value));
-        editCourse();
+        //editCourse();
     }
+    /*
     function editCourse() {
         const newCourse = {
             ...editedCourse,
@@ -34,8 +35,9 @@ export function CourseEdit({
         };
         editedCourse = newCourse;
     }
+    */
     function updateInput() {
-        editCourses(editedCourse);
+        updateCourses(editedCourse);
     }
     return (
         <>

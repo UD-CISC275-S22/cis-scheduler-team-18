@@ -5,7 +5,7 @@ import { Semester } from "../interfaces/semester";
 import { CourseEdit } from "./CourseEdit";
 
 export interface CourseListProps {
-    editCourses: (newCourse: Course) => void;
+    updateCourses: (newCourse: Course) => void;
     editedCourse: Course;
 }
 /**
@@ -36,7 +36,7 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                         <td>
                             <CourseEdit
                                 editedCourse={course}
-                                editCourses={updateCourses}
+                                updateCourses={updateCourses}
                             ></CourseEdit>
                         </td>
                     </tr>
