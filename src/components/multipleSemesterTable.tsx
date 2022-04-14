@@ -3,7 +3,7 @@ import React from "react";
 import { Semester } from "../interfaces/semester";
 import "../styleSheets/multipleSemesterTable.css";
 import { CourseList } from "./CourseList";
-import { Plan } from "../interfaces/plan";
+//import { Plan } from "../interfaces/plan";
 
 export function MultipleSemesterTable({
     semester
@@ -33,8 +33,7 @@ export function MultipleSemesterTable({
     return (
         <div>
             <h4 className="semester">
-                {semester.season}
-                {semester.year}
+                {semester.season} {semester.year}
             </h4>
             <CourseList semester={semester}></CourseList>
         </div>
