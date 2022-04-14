@@ -13,7 +13,7 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
 
     function editSemester(id: string, newSemester: Semester) {
         setSemesters(
-            semesters.map(
+            sems.map(
                 (semester: Semester): Semester =>
                     semester.id === id ? newSemester : semester
             )

@@ -2,6 +2,7 @@ import React from "react";
 //import { Stack } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { SemesterView } from "./semesterView";
+import "../styleSheets/multipleSemesterTable.css";
 
 export function SemesterList({
     semesters,
@@ -13,7 +14,7 @@ export function SemesterList({
     editSemester: (id: string, newSemester: Semester) => void;
 }): JSX.Element {
     return (
-        <div>
+        <div className="container">
             {semesters.map((sem: Semester) => (
                 <SemesterView
                     key={sem.id}

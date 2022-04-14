@@ -31,7 +31,7 @@ export function MultipleSemesterTable({
     );
     */
     return (
-        <div className="container">
+        <div>
             <h4 className="semester">
                 {semester.season}
                 {semester.year}
