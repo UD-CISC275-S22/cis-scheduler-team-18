@@ -1,18 +1,36 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { CourseListProps } from "../components/CourseList";
+import { Course } from "../interfaces/course";
 
 export function CourseEdit({
-    updateCourses,
-    editedCourse
-}: CourseListProps): JSX.Element {
-    const [code, setCode] = useState<string>(editedCourse.courseName);
-    const [title, setTitle] = useState<string>(editedCourse.courseTitle);
-    const [credits, setCredits] = useState<number>(editedCourse.credits);
+    course,
+    editCourse
+}: {
+    course: Course;
+    editCourse: (id: string, newCourse: Course) => void;
+}): JSX.Element {
+    const [code, setCode] = useState<string>(course.courseName);
+    const [title, setTitle] = useState<string>(course.courseTitle);
+    const [credits, setCredits] = useState<number>(course.credits);
     const [show, setShow] = useState(false);
 
     const close = () => setShow(false);
     const open = () => setShow(true);
+
+    function save() {
+        editCourse(course.id, {
+            ...course,
+            courseName: code,
+            courseTitle: title,
+            credits: credits
+        });
+        close();
+    }
+
+    function cancel() {
+        close();
+    }
+
     function changeCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
         //editCourse();
@@ -36,9 +54,10 @@ export function CourseEdit({
         editedCourse = newCourse;
     }
     */
+    /*
     function updateInput() {
         updateCourses(editedCourse);
-    }
+    }*/
     return (
         <>
             <div>
@@ -72,10 +91,10 @@ export function CourseEdit({
                         ></Form.Control>
                     </Form.Group>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={close}>
-                            Close
+                        <Button variant="secondary" onClick={cancel}>
+                            Cancel
                         </Button>
-                        <Button variant="success" onClick={updateInput}>
+                        <Button variant="success" onClick={save}>
                             Save Changes
                         </Button>
                     </Modal.Footer>

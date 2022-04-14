@@ -1,47 +1,36 @@
 import React, { useState } from "react";
-import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
-import { CourseEdit } from "./CourseEdit";
+import { CourseView } from "./CourseView";
 
 export interface CourseListProps {
-    updateCourses: (newCourse: Course) => void;
-    editedCourse: Course;
+    courses: Course[];
+    editCourse: (id: string, newCourse: Course) => void;
+    deleteCourse: (id: string) => void;
 }
 /**
  * Creates a table that is a list of courses (AKA a single semester)
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
-    function updateCourses(course: Course): void {
-        const newCourses = courses.map((cor: Course) =>
-            cor.id === course.id ? course : cor
+    function editCourse(id: string, newCourse: Course): void {
+        setCourses(
+            courses.map((course: Course) =>
+                course.id === id ? newCourse : course
+            )
         );
-        setCourses(newCourses);
     }
+
+    /*
+    function deleteCourse(id: string) {
+        setCourses(
+            courses.filter((course: Course): boolean => course.id !== id)
+        );
+    }*/
+
     return (
-        <Table>
-            <thead>
-                <th>Course Name</th>
-                <th>Course Title</th>
-                <th>Credits</th>
-                <th>Edit Course</th>
-            </thead>
-            <tbody>
-                {courses.map((course: Course) => (
-                    <tr key={course.id}>
-                        <td>{course.courseName}</td>
-                        <td>{course.courseTitle}</td>
-                        <td>{course.credits}</td>
-                        <td>
-                            <CourseEdit
-                                editedCourse={course}
-                                updateCourses={updateCourses}
-                            ></CourseEdit>
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
-        </Table>
+        <div>
+            <CourseView courses={courses} editCourse={editCourse}></CourseView>
+        </div>
     );
 }
