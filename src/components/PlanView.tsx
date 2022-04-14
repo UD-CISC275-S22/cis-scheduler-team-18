@@ -6,6 +6,7 @@ import { Plan } from "../interfaces/plan";
 //import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { Semesterer } from "../semesterer";
 //import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { PlanEditor } from "./PlanEditor";
 //import { PlanEditor } from "./PlanEditor";
 
@@ -65,6 +66,11 @@ export function PlanView({
             </div>
             <div>
                 <Semesterer plan={plan}></Semesterer>
+            </div>
+            <div>
+                <Button variant="info" onClick={changePlanEditing}>
+                    Edit Plan
+                </Button>
             </div>
             <div>
                 <Button variant="info" onClick={changePlanEditing}>
