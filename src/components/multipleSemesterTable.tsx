@@ -21,9 +21,11 @@ export function MultipleSemesterTable({
         <div className="container">
             {SEMESTER.map((sem: Semester) => (
                 <div key={sem.id}>
+
                     <h4 className="semester">
                         {sem.season} {sem.year}
                     </h4>
+                    <h4 className="semester">{sem.id}</h4>
                     <CourseList semester={sem}></CourseList>
                 </div>
             ))}

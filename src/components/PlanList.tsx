@@ -18,13 +18,25 @@ export function PlanList({
     return (
 */
 
-export function PlanList({ plans }: { plans: Plan[] }): JSX.Element {
+export function PlanList({
+    plans,
+    deletePlan,
+    editPlan
+}: {
+    plans: Plan[];
+    deletePlan: (id: string) => void;
+    editPlan: (id: string, newPlan: Plan) => void;
+}): JSX.Element {
     return (
         <Stack gap={3}>
             {plans.map((plan: Plan) => (
                 <div key={plan.id} className="bg-light border m-2 p-2">
                     <div>PlanView here!</div>
-                    <PlanView plan={plan}></PlanView>
+                    <PlanView
+                        plan={plan}
+                        editPlan={editPlan}
+                        deletePlan={deletePlan}
+                    ></PlanView>
                 </div>
             ))}
         </Stack>

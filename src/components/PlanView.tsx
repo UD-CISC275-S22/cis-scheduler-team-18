@@ -1,9 +1,15 @@
 import React from "react";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 //import { Container, Row, Col } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
+<<<<<<< HEAD
 //import { MultipleSemesterTable } from "./multipleSemesterTable";
 import { Semesterer } from "../semesterer";
+=======
+import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { PlanEditor } from "./PlanEditor";
+>>>>>>> 1eb78b58662370a8e05fd35967834abfac840322
 //import { PlanEditor } from "./PlanEditor";
 
 /*
@@ -24,22 +30,37 @@ export function PlanView({
         <PlanEditor
             changeEditing={changeEditing}
             plan={plan}
-            editPlan={editPlan
+            editPlan={editPlan}
             deletePlan={deletePlan}
         ></PlanEditor>
     ) : (
 
 */
 
-export function PlanView({ plan }: { plan: Plan }): JSX.Element {
+export function PlanView({
+    plan,
+    editPlan,
+    deletePlan
+}: {
+    plan: Plan;
+    editPlan: (id: string, newPlan: Plan) => void;
+    deletePlan: (id: string) => void;
+}): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
 
-    function changeEditing() {
+    function changePlanEditing() {
         setEditing(!editing);
     }
 
     return editing ? (
-        <div>PlanEditor will go here!!!! {changeEditing}</div>
+        <div>
+            <PlanEditor
+                changePlanEditing={changePlanEditing}
+                plan={plan}
+                editPlan={editPlan}
+                deletePlan={deletePlan}
+            ></PlanEditor>
+        </div>
     ) : (
         <div>
             <div>
@@ -47,6 +68,11 @@ export function PlanView({ plan }: { plan: Plan }): JSX.Element {
             </div>
             <div>
                 <Semesterer plan={plan}></Semesterer>
+            </div>
+            <div>
+                <Button variant="info" onClick={changePlanEditing}>
+                    Edit Plan
+                </Button>
             </div>
         </div>
     );
