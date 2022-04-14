@@ -21,7 +21,8 @@ export function SemesterEditor({
     function save() {
         editSemester(semester.id, {
             ...semester,
-            season: season
+            season: season,
+            year: parseInt(year) || 0
         });
         changeSemesterEditing();
     }
@@ -35,7 +36,7 @@ export function SemesterEditor({
         <Container>
             <Row>
                 <Col>
-                    {/*Year*/}
+                    {/*Season*/}
                     <Form.Group controlId="formSemesterSeason" as={Row}>
                         <Form.Label column sm={2}>
                             Semester Season:
@@ -52,7 +53,7 @@ export function SemesterEditor({
                     {/*Year*/}
                     <Form.Group controlId="formSemesterYear" as={Row}>
                         <Form.Label column sm={2}>
-                            Year:
+                            Semester Year:
                         </Form.Label>
                         <Col>
                             <Form.Control
