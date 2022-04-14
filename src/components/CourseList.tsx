@@ -3,17 +3,15 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseView } from "./CourseView";
 
-export interface CourseListProps {
-    courses: Course[];
-    editCourse: (id: string, newCourse: Course) => void;
-    deleteCourse: (id: string) => void;
-}
 /**
- * Creates a table that is a list of courses (AKA a single semester)
+ * Returns a table that displays all of the courses in a single semester
+ * This function updates the list of courses in a semester when needed and calls CourseView to display changes
  */
 export function CourseList({ semester }: { semester: Semester }): JSX.Element {
-    //returns a ListGroup of horizontal ListGroups listing information from each course in a semester
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
+    /*
+    Function updates the list of courses to include the changes that the user made in CourseEdit
+    */
     function editCourse(id: string, newCourse: Course): void {
         setCourses(
             courses.map((course: Course) =>

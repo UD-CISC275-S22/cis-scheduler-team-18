@@ -10,27 +10,6 @@ export function CourseView({
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
 }): JSX.Element {
-    //const [editing, setEditing] = useState<boolean>(false);
-
-    /*
-    function changeCourseEditing() {
-        setEditing(!editing);
-    }
-    
-    return editing ? (
-        <div>
-            <CourseEdit
-                changeCourseEditing={changeCourseEditing}
-                course={course}
-                editCourse={editCourse}
-                deleteCourse={deleteCourse}
-            ></CourseEdit>
-        </div>
-    ) : (
-        <div>
-    
-    */
-
     return (
         <div>
             <Table>
