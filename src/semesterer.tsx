@@ -1,4 +1,4 @@
-//App: Plan 
+//App: Plan
 //Semesterer: Semester
 import React, { useState } from "react";
 import semesterPlan from "./data/semesterPlan.json";
@@ -6,10 +6,7 @@ import { Semester } from "./interfaces/semester";
 import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 
-const PLANS = semesterPlan.map((plan): Plan => ({ ...plan }));
-const SEMESTERS = PLANS.semester.map((semester): Semester => ({ ...semester }));
-
-function Semesterer(): JSX.Element {
+export function Semesterer({ plans }: { plans: Plan[] }): JSX.Element {
     const [semesters, setSemesters] = useState<Semester[]>(SEMESTERS);
 
     function editSemester(id: string, newSemester: Semester) {
@@ -28,7 +25,6 @@ function Semesterer(): JSX.Element {
             )
         );
     }
-
     return (
         <div>
             <div>
@@ -39,5 +35,5 @@ function Semesterer(): JSX.Element {
                 ></SemesterList>
             </div>
         </div>
-    )
+    );
 }

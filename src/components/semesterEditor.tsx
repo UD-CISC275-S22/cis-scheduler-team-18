@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Container, Row, Col, Form} from "react-bootstrap";
+import { Button, Container, Row, Col, Form } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 
 export function SemesterEditor({
@@ -14,12 +14,12 @@ export function SemesterEditor({
     deleteSemester: (id: string) => void;
 }): JSX.Element {
     //need useStates for each field that can be changed
-    const [year, setYear] = useState<number>(semester.year);
+    const [season, setSeason] = useState<string>(semester.season);
 
     function save() {
         editSemester(semester.id, {
             ...semester,
-            year: year
+            season: season
         });
         changeSemesterEditing();
     }
@@ -35,14 +35,14 @@ export function SemesterEditor({
                     {/*Year*/}
                     <Form.Group controlId="formSemesterYear" as={Row}>
                         <Form.Label column sm={2}>
-                            Semester Year:
+                            Semester Season:
                         </Form.Label>
                         <Col>
                             <Form.Control
-                                value={year}
+                                value={season}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
-                                ) => setYear(event.target.value)}
+                                ) => setSeason(event.target.value)}
                             />
                         </Col>
                     </Form.Group>

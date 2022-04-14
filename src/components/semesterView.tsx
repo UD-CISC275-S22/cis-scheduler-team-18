@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
-import { SemesterEditor } from "./SemesterEditor";
+import { SemesterEditor } from "../components/semesterEditor";
 import { MultipleSemesterTable } from "../components/multipleSemesterTable";
 
 export function SemesterView({
@@ -32,7 +32,9 @@ export function SemesterView({
     ) : (
         <div>
             <div>
-                <MultipleSemesterTable plan={plan}></MultipleSemesterTable>
+                <MultipleSemesterTable
+                    semester={semester}
+                ></MultipleSemesterTable>
             </div>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>
