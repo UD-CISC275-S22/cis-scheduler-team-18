@@ -23,7 +23,7 @@
         at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:8:30)
         at div
         at div
-        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:34:5)
+        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:31:5)
         at div
         at div
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Stack.js:23:7
@@ -41,7 +41,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (482 ms)
+  ✕ renders the course name somewhere (346 ms)
 
   ● renders the course name somewhere
 
@@ -242,7 +242,7 @@ All files                   |   45.58 |    35.71 |   35.41 |   46.87 |
   CourseView.tsx            |     100 |      100 |     100 |     100 |                   
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-57             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
-  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 45                
+  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 42                
   multipleSemesterTable.tsx |     100 |      100 |     100 |     100 |                   
   semesterEditor.tsx        |       0 |      100 |       0 |       0 | 17-76             
   semesterList.tsx          |     100 |      100 |     100 |     100 |                   
@@ -255,5 +255,5 @@ All files                   |   45.58 |    35.71 |   35.41 |   46.87 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.572 s
+Time:        2.615 s
 Ran all test suites.
