@@ -14,12 +14,14 @@ export function AddSemesterModal({
 }) {
     const [id, setId] = useState<string>("");
     //const [courses, setCourses] = useState<string[]>([]);
+    const [season, setSeason] = useState<string>("");
+    const [year, setYear] = useState<string>("");
 
     function saveChanges() {
         addSemester({
-            id: id,
-            season: "",
-            year: 0,
+            id: season + " " + year,
+            season: season,
+            year: parseInt(year) || 0,
             courses: []
         });
         handleClose();
@@ -31,10 +33,10 @@ export function AddSemesterModal({
                 <Modal.Title>Add a Semester</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {/*Title*/}
-                <Form.Group controlId="formSemesterSeason" as={Row}>
+                {/*ID*/}
+                <Form.Group controlId="formSemesterId" as={Row}>
                     <Form.Label column sm={3}>
-                        Season:
+                        Semester ID:
                     </Form.Label>
                     <Col>
                         <Form.Control
@@ -42,6 +44,34 @@ export function AddSemesterModal({
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => setId(event.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                {/*Title*/}
+                <Form.Group controlId="formSemesterSeason" as={Row}>
+                    <Form.Label column sm={3}>
+                        Season:
+                    </Form.Label>
+                    <Col>
+                        <Form.Control
+                            value={season}
+                            onChange={(
+                                event: React.ChangeEvent<HTMLInputElement>
+                            ) => setSeason(event.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                <Form.Group controlId="formSemesterYear" as={Row}>
+                    <Form.Label column sm={3}>
+                        Year:
+                    </Form.Label>
+                    <Col>
+                        <Form.Control
+                            type="number"
+                            value={year}
+                            onChange={(
+                                event: React.ChangeEvent<HTMLInputElement>
+                            ) => setYear(event.target.value)}
                         />
                     </Col>
                 </Form.Group>

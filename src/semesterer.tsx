@@ -17,7 +17,7 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
     //editSemesters function
     function editSemester(id: string, newSemester: Semester) {
         setSemesters(
-            sems.map(
+            semesters.map(
                 (semester: Semester): Semester =>
                     semester.id === id ? newSemester : semester
             )
