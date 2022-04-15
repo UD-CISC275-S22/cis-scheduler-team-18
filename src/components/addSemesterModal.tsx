@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
-//import { Course } from "../interfaces/course";
+import { Course } from "../interfaces/course";
 
 export function AddSemesterModal({
     show,
@@ -17,12 +17,28 @@ export function AddSemesterModal({
     const [season, setSeason] = useState<string>("");
     const [year, setYear] = useState<string>("");
 
+    const courses = [""];
+
     function saveChanges() {
         addSemester({
             id: season + " " + year,
             season: season,
             year: parseInt(year) || 0,
-            courses: []
+            courses: courses.map(
+                (): Course => ({
+                    id: "Example course",
+                    courseName: "Example Course Name",
+                    courseTitle: "Example Course Title",
+                    credits: 0,
+                    required: false,
+                    preReq: false,
+                    preReqTo: "",
+                    preReqRequired: false,
+                    requiredPreReq: "",
+                    option: false,
+                    optionTo: ""
+                })
+            )
         });
         handleClose();
     }
