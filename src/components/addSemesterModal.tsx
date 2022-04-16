@@ -93,9 +93,11 @@ export function AddSemesterModal({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
+                {/*Close*/}
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
+                {/*Save*/}
                 <Button variant="primary" onClick={saveChanges}>
                     Save Changes
                 </Button>
