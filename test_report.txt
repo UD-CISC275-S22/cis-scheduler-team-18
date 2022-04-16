@@ -15,12 +15,12 @@
         at div
         at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:9:5)
         at div
-        at SemesterView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterView.tsx:11:5)
+        at SemesterView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterView.tsx:10:5)
         at div
         at SemesterList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterList.tsx:7:5)
         at div
         at div
-        at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:8:30)
+        at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:10:30)
         at div
         at div
         at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:31:5)
@@ -41,7 +41,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (539 ms)
+  ✕ renders the course name somewhere (521 ms)
 
   ● renders the course name somewhere
 
@@ -230,12 +230,12 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   44.31 |    31.25 |   31.03 |   46.34 |                   
- src                        |   48.27 |       30 |   31.57 |      52 |                   
+All files                   |   43.51 |    22.72 |   27.94 |      46 |                   
+ src                        |   44.73 |       25 |   26.08 |      50 |                   
   App.tsx                   |   41.17 |        0 |      20 |      50 | 25-39             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
-  semesterer.tsx            |      50 |        0 |   33.33 |   42.85 | 16-28             
- src/components             |   42.37 |    33.33 |   30.76 |   43.85 |                   
+  semesterer.tsx            |   41.17 |        0 |      20 |   42.85 | 19-42             
+ src/components             |   42.85 |       20 |   28.88 |   44.11 |                   
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 65-91,110-124     
   CourseEdit.tsx            |   46.66 |      100 |    12.5 |   53.84 | 21-43             
   CourseList.tsx            |      50 |        0 |   33.33 |      50 | 18-20             
@@ -243,10 +243,11 @@ All files                   |   44.31 |    31.25 |   31.03 |   46.34 |
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-57             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
   PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 42                
+  addSemesterModal.tsx      |   45.45 |        0 |   16.66 |   45.45 | 23-43,62-90       
   multipleSemesterTable.tsx |     100 |      100 |     100 |     100 |                   
-  semesterEditor.tsx        |       0 |      100 |       0 |       0 | 17-76             
+  semesterEditor.tsx        |       0 |        0 |       0 |       0 | 19-85             
   semesterList.tsx          |     100 |      100 |     100 |     100 |                   
-  semesterView.tsx          |   66.66 |       50 |      50 |   66.66 | 24                
+  semesterView.tsx          |   66.66 |       50 |      50 |   66.66 | 23                
  src/interfaces             |       0 |        0 |       0 |       0 |                   
   course.ts                 |       0 |        0 |       0 |       0 |                   
   plan.ts                   |       0 |        0 |       0 |       0 |                   
@@ -255,5 +256,5 @@ All files                   |   44.31 |    31.25 |   31.03 |   46.34 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.606 s
+Time:        3.896 s
 Ran all test suites.
