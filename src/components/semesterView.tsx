@@ -31,6 +31,7 @@ export function SemesterView({
     return editing ? (
         <div>
             <SemesterEditor
+                show={editing}
                 changeSemesterEditing={changeSemesterEditing}
                 semester={semester}
                 editSemester={editSemester}
