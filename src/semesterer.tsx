@@ -33,6 +33,7 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
         );
     }
 
+    //will add a new semester
     function addSemester(newSemester: Semester) {
         const existing = semesters.find(
             (sem: Semester): boolean => sem.id === newSemester.id
@@ -42,6 +43,7 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
     //will call semesterList
