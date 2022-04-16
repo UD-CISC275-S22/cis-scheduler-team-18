@@ -4,7 +4,6 @@ import { Button } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { SemesterEditor } from "../components/semesterEditor";
 import { MultipleSemesterTable } from "../components/multipleSemesterTable";
-//import { CourseList } from "./CourseList";
 import "../styleSheets/multipleSemesterTable.css";
 
 export function SemesterView({
