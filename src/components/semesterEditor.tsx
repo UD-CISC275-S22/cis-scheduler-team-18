@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Container, Row, Col, Form, Modal } from "react-bootstrap";
+import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 
 export function SemesterEditor({
@@ -34,9 +34,6 @@ export function SemesterEditor({
     function cancel() {
         changeSemesterEditing();
     }
-
-    //const close = () => setShow(false);
-    //const open = () => setShow(true);
 
     return (
         <Modal show={show} onHide={changeSemesterEditing} animation={false}>
@@ -75,12 +72,15 @@ export function SemesterEditor({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
+                {/*Save*/}
                 <Button variant="success" onClick={save} className="me-4">
                     Save
                 </Button>
+                {/*Cancel*/}
                 <Button variant="warning" onClick={cancel} className="me-5">
                     Cancel
                 </Button>
+                {/*Delete*/}
                 <Button
                     onClick={() => deleteSemester(semester.id)}
                     variant="danger"
