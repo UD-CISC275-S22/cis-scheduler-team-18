@@ -28,13 +28,11 @@ export function SemesterEditor({
             year: parseInt(year) || 0
         });
         changeSemesterEditing();
-        close();
     }
 
     //will cancel the changes being made
     function cancel() {
         changeSemesterEditing();
-        close();
     }
 
     //const close = () => setShow(false);
