@@ -41,7 +41,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (521 ms)
+  ✕ renders the course name somewhere (471 ms)
 
   ● renders the course name somewhere
 
@@ -230,11 +230,11 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   43.51 |    22.72 |   27.94 |      46 |                   
- src                        |   44.73 |       25 |   26.08 |      50 |                   
+All files                   |   42.34 |    22.72 |   26.76 |   44.66 |                   
+ src                        |   41.46 |       25 |   23.07 |   45.71 |                   
   App.tsx                   |   41.17 |        0 |      20 |      50 | 25-39             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
-  semesterer.tsx            |   41.17 |        0 |      20 |   42.85 | 19-42             
+  semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 19-49,72          
  src/components             |   42.85 |       20 |   28.88 |   44.11 |                   
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 65-91,110-124     
   CourseEdit.tsx            |   46.66 |      100 |    12.5 |   53.84 | 21-43             
@@ -256,5 +256,5 @@ All files                   |   43.51 |    22.72 |   27.94 |      46 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.896 s
+Time:        3.364 s
 Ran all test suites.
