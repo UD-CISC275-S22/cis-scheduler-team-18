@@ -43,6 +43,14 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    function clearSemesters(id: string) {
+        setSemesters(
+            semesters.filter(
+                (semester: Semester): boolean => semester.id === id
+            )
+        );
+    }
+
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
@@ -55,6 +63,17 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                 ></SemesterList>
+            </div>
+            <div>
+                <Button
+                    variant="danger"
+                    className="m-4"
+                    onClick={() =>
+                        clearSemesters("4da3fa04-5724-4223-a8ba-40f4a296b3b3")
+                    }
+                >
+                    Clear All Semesters
+                </Button>
             </div>
             <div>
                 <Button
