@@ -7,6 +7,7 @@ import { Course } from "../interfaces/course";
 export function CourseInfo({ course }: { course: Course }): JSX.Element {
     const [show, setShow] = useState(false);
 
+    //for opening/closing popup
     const close = () => setShow(false);
     const open = () => setShow(true);
     return (
@@ -15,7 +16,7 @@ export function CourseInfo({ course }: { course: Course }): JSX.Element {
                 Course Info
             </Button>
 
-            <Modal show={show} onHide={close}>
+            <Modal show={show} onHide={close} centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Course Information</Modal.Title>
                 </Modal.Header>

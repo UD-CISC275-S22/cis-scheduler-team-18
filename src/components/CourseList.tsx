@@ -25,6 +25,9 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
             courses.filter((course: Course): boolean => course.id !== id)
         );
     }
+    function addCourse(id: string, newCourse: Course): void {
+        setCourses([...courses, newCourse]);
+    }
 
     return (
         <div>
