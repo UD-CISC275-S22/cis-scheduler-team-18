@@ -27,9 +27,9 @@ export function CourseView({
                 </thead>
                 <tbody>
                     {courses.map((course: Course) => (
-                        <tr key={course.id}>
-                            <td>{course.courseName}</td>
-                            <td>{course.courseTitle}</td>
+                        <tr key={course.code}>
+                            <td>{course.code}</td>
+                            <td>{course.name}</td>
                             <td>{course.credits}</td>
                             <td>
                                 <CourseEdit
