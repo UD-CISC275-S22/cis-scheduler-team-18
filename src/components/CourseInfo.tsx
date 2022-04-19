@@ -23,30 +23,38 @@ export function CourseInfo({ course }: { course: Course }): JSX.Element {
                 <Modal.Body>
                     <p>
                         <div>
-                            Course Code: <span>{course.courseName}</span>
+                            Course Code: <span>{course.code}</span>
                         </div>
                         <div>
-                            Course Title: <span>{course.courseTitle}</span>
+                            Course Title: <span>{course.name}</span>
                         </div>
                         <div>
                             Credits: <span>{course.credits}</span>
                         </div>
-                        <div>
+                        {/*<div>
                             Required Course?:{" "}
                             <span>{course.required ? "Yes" : "No"}</span>
-                        </div>
+    </div>*/}
                         <div>
-                            {course.preReq
-                                ? "Prerequisite For:" + course.preReqRequired
+                            {course.preReq.length > 0
+                                ? "Prerequisite For:" + course.preReq
                                 : "Not a prerequisite for any courses"}
                         </div>
-                        <div>
+                        {/*<div>
                             {course.preReqRequired
                                 ? "RESTRICTION must take:" +
                                   course.requiredPreReq
                                 : "No prerequisites"}
+                            </div>*/}
+                        <div>
+                            Course Description: <span>{course.descr}</span>
                         </div>
-                        <div>ADD COURSE DESCRIPTION</div>
+                        <div>
+                            Course Offered: <span>{course.typ}</span>
+                        </div>
+                        <div>
+                            Breadth Group: <span>{course.breadth}</span>{" "}
+                        </div>
                     </p>
                 </Modal.Body>
             </Modal>
