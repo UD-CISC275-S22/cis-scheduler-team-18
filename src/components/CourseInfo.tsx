@@ -55,6 +55,9 @@ export function CourseInfo({ course }: { course: Course }): JSX.Element {
                         <div>
                             Breadth Group: <span>{course.breadth}</span>{" "}
                         </div>
+                        <div>
+                            Restrictions: <span>{course.restrict}</span>
+                        </div>
                     </p>
                 </Modal.Body>
             </Modal>
