@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
+import { CourseAdd } from "./CourseAdd";
 import { CourseView } from "./CourseView";
 
 /**
@@ -25,7 +26,7 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
             courses.filter((course: Course): boolean => course.id !== id)
         );
     }
-    function addCourse(id: string, newCourse: Course): void {
+    function addCourse(newCourse: Course): void {
         setCourses([...courses, newCourse]);
     }
 
@@ -36,6 +37,7 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
             ></CourseView>
+            <CourseAdd addCourse={addCourse}></CourseAdd>
         </div>
     );
 }
