@@ -9,9 +9,9 @@
         at table
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Table.js:21:3
         at div
-        at CourseView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseView.tsx:7:5)
+        at CourseView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseView.tsx:11:5)
         at div
-        at CourseList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseList.tsx:15:30)
+        at CourseList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseList.tsx:12:30)
         at div
         at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:9:5)
         at div
@@ -41,7 +41,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (431 ms)
+  ✕ renders the course name somewhere (544 ms)
 
   ● renders the course name somewhere
 
@@ -148,12 +148,18 @@ FAIL src/App.test.tsx
                                         [36m<td>[39m
                                           [36m<div>[39m
                                             [36m<button[39m
-                                              [33mclass[39m=[32m"btn btn-primary"[39m
+                                              [33mclass[39m=[32m"btn btn-info"[39m
                                               [33mtype[39m=[32m"button"[39m
                                             [36m>[39m
-                                              [0m Edit Course[0m
+                                              [0mEdit Course[0m
                                             [36m</button>[39m
                                           [36m</div>[39m
+                                          [36m<button[39m
+                                            [33mclass[39m=[32m"btn btn-secondary"[39m
+                                            [33mtype[39m=[32m"button"[39m
+                                          [36m>[39m
+                                            [0mCourse Info[0m
+                                          [36m</button>[39m
                                         [36m</td>[39m
                                       [36m</tr>[39m
                                       [36m<tr>[39m
@@ -169,12 +175,18 @@ FAIL src/App.test.tsx
                                         [36m<td>[39m
                                           [36m<div>[39m
                                             [36m<button[39m
-                                              [33mclass[39m=[32m"btn btn-primary"[39m
+                                              [33mclass[39m=[32m"btn btn-info"[39m
                                               [33mtype[39m=[32m"button"[39m
                                             [36m>[39m
-                                              [0m Edit Course[0m
+                                              [0mEdit Course[0m
                                             [36m</button>[39m
                                           [36m</div>[39m
+                                          [36m<button[39m
+                                            [33mclass[39m=[32m"btn btn-secondary"[39m
+                                            [33mtype[39m=[32m"button"[39m
+                                          [36m>[39m
+                                            [0mCourse Info[0m
+                                          [36m</button>[39m
                                         [36m</td>[39m
                                       [36m</tr>[39m
                                       [36m<tr>[39m
@@ -190,23 +202,9 @@ FAIL src/App.test.tsx
                                         [36m<td>[39m
                                           [36m<div>[39m
                                             [36m<button[39m
-                                              [33mclass[39m=[32m"btn btn-primary"[39m
+                                              [33mclass[39m=[32m"btn btn-info"[39m
                                               [33mtype[39m=[32m"button"[39m
-                                            [36m>[39m
-                                              [0m Edit Course[0m
-                                            [36m</button>[39m
-                                          [36m</div>[39m
-                                        [36m</td>[39m
-                                      [36m</tr>[39m
-                                      [36m<tr>[39m
-                                        [36m<td>[39m
-                                          [0mENGL110[0m
-                                        [36m</td>[39m
-                                        [36m<td>[39m
-                                          [0mSeminar in Composition[0m
-                                        [36m</td>[39m
-                                        [36m<td>[39m
-                                          [0...
+                                            [36m...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -230,15 +228,17 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |   41.96 |    22.72 |   26.38 |   44.23 |                   
+All files                   |   42.65 |    39.28 |   23.86 |    45.8 |                   
  src                        |   41.46 |       25 |   23.07 |   45.71 |                   
   App.tsx                   |   41.17 |        0 |      20 |      50 | 25-39             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
   semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 19-49,72          
- src/components             |   42.25 |       20 |   28.26 |   43.47 |                   
+ src/components             |   43.13 |       50 |   24.19 |   45.83 |                   
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 65-91,110-124     
-  CourseEdit.tsx            |   46.66 |      100 |    12.5 |   53.84 | 21-43             
-  CourseList.tsx            |      40 |        0 |      25 |      40 | 19-27             
+  CourseAdd.tsx             |   47.61 |      100 |      10 |   52.63 | 21-54             
+  CourseEdit.tsx            |   43.75 |      100 |    12.5 |      50 | 27-50             
+  CourseInfo.tsx            |   66.66 |      100 |   33.33 |     100 |                   
+  CourseList.tsx            |      25 |        0 |   14.28 |      25 | 18-35             
   CourseView.tsx            |     100 |      100 |     100 |     100 |                   
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-57             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
@@ -256,5 +256,5 @@ All files                   |   41.96 |    22.72 |   26.38 |   44.23 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.953 s
+Time:        2.936 s
 Ran all test suites.
