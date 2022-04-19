@@ -10,9 +10,9 @@ export function CourseAdd({
     //use state for each element needed to make a new course
     const [code, setCode] = useState("NEW101");
     const [title, setTitle] = useState("NEW COURSE");
-    const [credits, setCredits] = useState(0);
+    const [credits, setCredits] = useState("0");
     const [required, setRequired] = useState(false);
-    const [isPreReq, setIsPreReq] = useState(false);
+    const [isPreReq, setIsPreReq] = useState("");
     const [hasPreReq, setHasPreReq] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -24,13 +24,13 @@ export function CourseAdd({
         setTitle(event.target.value);
     }
     function addCredits(event: React.ChangeEvent<HTMLInputElement>) {
-        setCredits(parseInt(event.target.value));
+        setCredits(event.target.value);
     }
     function addRequired(event: React.ChangeEvent<HTMLInputElement>) {
         setRequired(event.target.checked);
     }
     function addIsPreReq(event: React.ChangeEvent<HTMLInputElement>) {
-        setIsPreReq(event.target.checked);
+        setIsPreReq(event.target.value);
     }
     function addHasPreReq(event: React.ChangeEvent<HTMLInputElement>) {
         setHasPreReq(event.target.checked);
@@ -38,17 +38,14 @@ export function CourseAdd({
     //this function creates a new Course with the current given information and puts it in the course list
     function makeCourse() {
         const newCourse: Course = {
-            id: code,
-            courseName: code,
-            courseTitle: title,
+            code: code,
+            name: title,
+            descr: "",
             credits: credits,
-            required: required,
             preReq: isPreReq,
-            preReqRequired: hasPreReq,
-            preReqTo: "",
-            requiredPreReq: "",
-            option: false,
-            optionTo: ""
+            restrict: "",
+            breadth: "",
+            typ: ""
         };
         addCourse(newCourse);
         close();
