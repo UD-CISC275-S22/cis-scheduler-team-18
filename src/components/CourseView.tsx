@@ -2,35 +2,20 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { CourseEdit } from "./CourseEdit";
+import { CourseInfo } from "./CourseInfo";
 
+/**
+ * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
+ */
 export function CourseView({
     courses,
-    editCourse
+    editCourse,
+    deleteCourse
 }: {
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
+    deleteCourse: (id: string) => void;
 }): JSX.Element {
-    //const [editing, setEditing] = useState<boolean>(false);
-
-    /*
-    function changeCourseEditing() {
-        setEditing(!editing);
-    }
-    
-    return editing ? (
-        <div>
-            <CourseEdit
-                changeCourseEditing={changeCourseEditing}
-                course={course}
-                editCourse={editCourse}
-                deleteCourse={deleteCourse}
-            ></CourseEdit>
-        </div>
-    ) : (
-        <div>
-    
-    */
-
     return (
         <div>
             <Table>
@@ -50,7 +35,9 @@ export function CourseView({
                                 <CourseEdit
                                     course={course}
                                     editCourse={editCourse}
+                                    deleteCourse={deleteCourse}
                                 ></CourseEdit>
+                                <CourseInfo course={course}></CourseInfo>
                             </td>
                         </tr>
                     ))}

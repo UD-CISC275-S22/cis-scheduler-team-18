@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 
+/**
+ * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information
+ */
 export function CourseEdit({
     course,
-    editCourse
+    editCourse,
+    deleteCourse
 }: {
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
+    deleteCourse: (id: string) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.courseName);
     const [title, setTitle] = useState<string>(course.courseTitle);
     const [credits, setCredits] = useState<number>(course.credits);
     const [show, setShow] = useState(false);
 
+    //Open Close and Save functions for popup
     const close = () => setShow(false);
     const open = () => setShow(true);
 
@@ -27,44 +33,32 @@ export function CourseEdit({
         close();
     }
 
-    function cancel() {
+    //deletes the course
+    function remove() {
+        deleteCourse(course.id);
         close();
     }
 
+    //functions to call usestate for each variable to be changed in text boxes
     function changeCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
-        //editCourse();
     }
     function changeTitle(event: React.ChangeEvent<HTMLInputElement>) {
         setTitle(event.target.value);
-        //editCourse();
     }
     function changeCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(parseInt(event.target.value));
-        //editCourse();
     }
-    /*
-    function editCourse() {
-        const newCourse = {
-            ...editedCourse,
-            courseName: code,
-            courseTitle: title,
-            credits: credits
-        };
-        editedCourse = newCourse;
-    }
-    */
-    /*
-    function updateInput() {
-        updateCourses(editedCourse);
-    }*/
+
     return (
         <>
             <div>
-                <Button onClick={open}> Edit Course</Button>
+                <Button variant="info" onClick={open}>
+                    Edit Course
+                </Button>
             </div>
             <Modal show={show} onHide={close} backdrop="static" centered>
-                <Modal.Header closeButton>
+                <Modal.Header>
                     <Modal.Title>Edit Course</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -91,7 +85,10 @@ export function CourseEdit({
                         ></Form.Control>
                     </Form.Group>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={cancel}>
+                        <Button variant="danger" onClick={remove}>
+                            Delete Course
+                        </Button>
+                        <Button variant="warning" onClick={close}>
                             Cancel
                         </Button>
                         <Button variant="success" onClick={save}>
