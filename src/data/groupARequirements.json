@@ -1,10 +1,48 @@
 [
     {
-        "code": "CISC181, CISC210",
-        "name": "", 
-        "descr": "", 
-        "preReq": "", 
-        "breadth": "", 
+        "code": "WOMS201",
+        "name": "Intro to Woman & Gender Studies",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "WOMS201",
+        "name": "Intro to Woman & Gender Studies",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "WOMS201",
+        "name": "Intro to Woman & Gender Studies",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "WOMS201",
+        "name": "Intro to Woman & Gender Studies",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "WOMS201",
+        "name": "Intro to Woman & Gender Studies",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
         "typ": ""
     }
 ]
