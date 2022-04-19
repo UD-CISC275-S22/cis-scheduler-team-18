@@ -189,7 +189,7 @@
                     "code": "WOMS201",
                     "name": "Intro to Woman & Gender Studies",
                     "descr": "",
-                    "credits": 3,
+                    "credits": "3",
                     "preReq": "",
                     "restrict": "",
                     "breadth": "",
@@ -256,8 +256,8 @@
         }   
         ]
     },{
-        "id": "Top Plan",
-        "name": "First Plan",
+        "id": "Next Plan",
+        "name": "Second Plan",
         "semesters":[{
             "id": "Fall 2020",
             "season": "fall",
@@ -445,7 +445,7 @@
                     "code": "WOMS201",
                     "name": "Intro to Woman & Gender Studies",
                     "descr": "",
-                    "credits": 3,
+                    "credits": "3",
                     "preReq": "",
                     "restrict": "",
                     "breadth": "",
