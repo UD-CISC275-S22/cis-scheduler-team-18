@@ -17,7 +17,7 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
     function editCourse(id: string, newCourse: Course): void {
         setCourses(
             courses.map((course: Course) =>
-                course.id === id ? newCourse : course
+                course.code === id ? newCourse : course
             )
         );
     }
@@ -28,7 +28,7 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
 
     function deleteCourse(id: string) {
         setCourses(
-            courses.filter((course: Course): boolean => course.id !== id)
+            courses.filter((course: Course): boolean => course.code !== id)
         );
     }
     function addCourse(newCourse: Course): void {
