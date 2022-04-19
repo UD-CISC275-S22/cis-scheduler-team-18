@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseAdd } from "./CourseAdd";
@@ -21,6 +22,10 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
         );
     }
 
+    function clearCourses() {
+        setCourses([]);
+    }
+
     function deleteCourse(id: string) {
         setCourses(
             courses.filter((course: Course): boolean => course.id !== id)
@@ -38,6 +43,9 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 deleteCourse={deleteCourse}
             ></CourseView>
             <CourseAdd addCourse={addCourse}></CourseAdd>
+            <Button variant="danger" onClick={clearCourses}>
+                Clear All Courses
+            </Button>
         </div>
     );
 }
