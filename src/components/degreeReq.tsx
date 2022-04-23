@@ -3,8 +3,11 @@ import React from "react";
 import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
+import coreReqs from "../data/coreMajorRequirements.json";
+import { networkInterfaces } from "os";
 
 export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
+    const coreMajorReqs = coreReqs.map((course): Course => ({ ...course }));
     //make sure there is at least one group A Requirement
     //plan > semester > courses
     let missingRequirements: string[] = [""];
@@ -79,6 +82,77 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
                 "University Breadth: Group D: A&S Math, Nat Sci & Technology"
             ];
         }
+    }
+
+    function findEnglOpt(sem: Semester): void {
+        //should find either engl312 or engl410
+        const foundEngl = sem.courses.filter(
+            (course: Course): boolean =>
+                course.code === "ENGL312" || course.code === "ENGL410"
+        );
+
+        if (foundEngl.length === 0) {
+            missingRequirements = [
+                ...missingRequirements,
+                "ENGL312 or ENGL410"
+            ];
+        }
+    }
+
+    function findMathOpt(sem: Semester): void {
+        //should find either MATH205/MATH350
+        const foundMath = sem.courses.filter(
+            (course: Course): boolean =>
+                course.code === "MATH205" || course.code === "MATH350"
+        );
+
+        if (foundMath.length === 0) {
+            missingRequirements = [
+                ...missingRequirements,
+                "MATH205 or MATH350"
+            ];
+        }
+    }
+
+    function capstone(sem: Semester): void {
+        //should find either CISC498/UNIV401
+        const foundCap1 = sem.courses.filter(
+            (course: Course): boolean =>
+                course.code === "CISC498" || course.code == "UNIV401"
+        );
+        if (foundCap1.length !== 0 && foundCap1[0].code === "CISC498") {
+            //find CISC499
+            const foundCISC499 = sem.courses.filter(
+                (course: Course) => course.code === "CISC499"
+            );
+            if (foundCISC499.length === 0) {
+                missingRequirements = [...missingRequirements, "CISC499"];
+            }
+        }
+
+        if (foundCap1.length !== 0 && foundCap1[0].code === "UNIV401") {
+            //find UNIV402
+            const foundUNIV402 = sem.courses.filter(
+                (course: Course) => course.code === "UNIV402"
+            );
+            if (foundUNIV402.length === 0) {
+                missingRequirements = [...missingRequirements, "UNIV402"];
+            }
+        }
+
+        if (foundCap1.length === 0) {
+            missingRequirements = [...missingRequirements, "Capstone", "DLE"];
+        }
+    }
+
+    function checkCoreReqs(sem: Semester) {
+        //includes returns true if an array contains a specified value
+        //an array of coreREqs that are in the plan
+        const coreFound = sem.courses.filter((course: Course) =>
+            coreMajorReqs.includes(course)
+        );
+
+        //now, add what's not included to missing requirements
     }
     return <div className="boxed">This text is in an enclosed box</div>;
 }
