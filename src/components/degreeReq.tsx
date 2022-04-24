@@ -6,10 +6,6 @@ import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
 
 export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
-    //todo: check core major reqs
-    //check science reqs
-    //check engineering breadths
-    //check tech electives
     const coreMajorReqs = coreReqs.map((course): Course => ({ ...course }));
     //make sure there is at least one group A Requirement
     //plan > semester > courses
@@ -151,6 +147,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
     function checkCoreReqs(sem: Semester) {
         //includes returns true if an array contains a specified value
         //an array of coreREqs that are in the plan
+        //to do
         const coreFound = sem.courses.filter((course: Course) =>
             coreMajorReqs.includes(course)
         );
@@ -159,7 +156,30 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
     }
 
     function checkTechElect(sem: Semester){
-        //cisc410, 
+        //existing data file
+        //to do
+    }
+
+    function checkScienceReq(sem: Semester){
+        //existing data file
+        //to do
+    }
+
+    function checkEngineeringBreadths(sem: Semester){
+        //no data file needed
+        //to do
+    }
+
+    function countCredits(sem: Semester){
+        //to do
+    }
+
+    function checkDLE(sem: Semester){
+        //to do
+    }
+
+    function checkMultiCultural(sem: Semester){
+        //to do
     }
     return <div className="boxed">This text is in an enclosed box</div>;
 }
