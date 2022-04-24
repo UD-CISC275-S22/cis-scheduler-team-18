@@ -4,9 +4,12 @@ import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
-import { networkInterfaces } from "os";
 
 export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
+    //todo: check core major reqs
+    //check science reqs
+    //check engineering breadths
+    //check tech electives
     const coreMajorReqs = coreReqs.map((course): Course => ({ ...course }));
     //make sure there is at least one group A Requirement
     //plan > semester > courses
@@ -153,6 +156,10 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         );
 
         //now, add what's not included to missing requirements
+    }
+
+    function checkTechElect(sem: Semester){
+        //cisc410, 
     }
     return <div className="boxed">This text is in an enclosed box</div>;
 }
