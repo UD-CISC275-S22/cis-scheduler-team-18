@@ -44,10 +44,6 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //this is going to keep track of all the missing requirements
     let missingRequirements: string[] = [""];
 
-    //this is just a test to make sure everything is printing out right
-    //delete this after it works
-    missingRequirements = [...missingRequirements, "Test"];
-
     function checkBreadths(classes: Course[]): void {
         //find all theh breadth requirements in a semester
         const groupA = classes.filter((course: Course): boolean =>
