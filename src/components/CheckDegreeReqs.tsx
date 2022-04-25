@@ -196,8 +196,24 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
     }
+
+    function checkDLE(classes: Course[]) {
+        const dleCodes = DLE.map((course: Course): string => course.code);
+
+        const findDLE = classes.filter((course: Course): boolean =>
+            dleCodes.includes(course.code)
+        );
+
+        if (findDLE.length === 0) {
+            missingRequirements = [
+                ...missingRequirements,
+                "University Requirement: DLE"
+            ];
+        }
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
+    plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
