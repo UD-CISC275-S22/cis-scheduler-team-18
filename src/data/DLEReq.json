@@ -1539,8 +1539,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "KAAP457",
+        "name": "Athletic Training Practicum IV",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1548,8 +1548,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "KAAP458",
+        "name": "Athletic Training Practicum V",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1557,8 +1557,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "KAAP459",
+        "name": "Athletic Training Practicum VI",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1566,8 +1566,80 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "LAMS464",
+        "name": "Internship in Latin American Studies",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LARC332",
+        "name": "Landscape Architecture Symposium I",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LARC364",
+        "name": "Landscape Architecture Internship",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LARC456",
+        "name": "Studio 6: Senior Design",
+        "descr": "",
+        "credits": "6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LEAD268",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LEAD340",
+        "name": "Leadership Internship",
+        "descr": "",
+        "credits": "3-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LEAD390",
+        "name": "Teaching Assistant",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LEAD468",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "LEAD490",
+        "name": "Senior Capstone",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1575,8 +1647,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "LING353",
+        "name": "Introduction to Speech and Hearing Science",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1584,8 +1656,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "LING471",
+        "name": "Discovering Human Language",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1593,8 +1665,17 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MAST407",
+        "name": "Research Experience in Biodiversity",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MAST421",
+        "name": "Coastal Field Biology",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1602,8 +1683,17 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MAST432",
+        "name": "Environmental Feild Robotics",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MAST443",
+        "name": "Field Studies Coral Reef Environments",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1611,8 +1701,44 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MAST468",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MCST464",
+        "name": "Material Culture Studies Internship",
+        "descr": "",
+        "credits": "3-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MEEG401",
+        "name": "Senior Design",
+        "descr": "",
+        "credits": "6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MEEG402",
+        "name": "Senior Design FSAE",
+        "descr": "",
+        "credits": "6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MISY364",
+        "name": "Management Information Systems in Practice",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1620,8 +1746,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MISY375",
+        "name": "GET Immersion Experience Internship",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1629,8 +1755,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MISY420",
+        "name": "Global IT Enabled Innovation and Change",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1638,8 +1764,35 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MLSC105",
+        "name": "Introduction to Leadership I",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MLSC106",
+        "name": "Introduction to Leadership II",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MLSC205",
+        "name": "Basic Leadership I",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MLSC206",
+        "name": "Basic Leaderhship II",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1647,8 +1800,53 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MLSC305",
+        "name": "Applied Leadership I",
+        "descr": "",
+        "credits": "2",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MLSC306",
+        "name": "Applied Leadership II",
+        "descr": "",
+        "credits": "2",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MLSC405",
+        "name": "Advanced Leadership I",
+        "descr": "",
+        "credits": "2",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MLSC406",
+        "name": "Advanced Leadership II",
+        "descr": "",
+        "credits": "2",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MMSC410",
+        "name": "Genetic Counseling Practicum",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MMSC444",
+        "name": "Biotechnology Practicum IV",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1656,8 +1854,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC455",
+        "name": "Forensic Science Practicum",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1665,8 +1863,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC462",
+        "name": "Interdisciploinary Healthcare Perspectives",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1674,8 +1872,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC473",
+        "name": "Clinical Chemistry Practicum",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1683,8 +1881,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC474",
+        "name": "Honors Clinical Chemistry Practicum",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1692,8 +1890,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC475",
+        "name": "Clinical Hematology Practicum",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1701,8 +1899,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC476",
+        "name": "Honors Clinical Hematology Practicum",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1710,8 +1908,8 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC477",
+        "name": "Clinical Microbiology and Immunology Practicum",
         "descr": "",
         "credits": "3",
         "preReq": "",
@@ -1719,8 +1917,809 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS201",
-        "name": "Intro to Woman & Gender Studies",
+        "code": "MMSC478",
+        "name": "Honors Clinical Microbiology and Immunology Practicum",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MMSC479",
+        "name": "Clinical Immunohematology Practicum",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MMSC481",
+        "name": "HNRS Clinical Immunohematology Practicum",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MSEG401",
+        "name": "Design of Materials and Their Application",
+        "descr": "",
+        "credits": "6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MSST464",
+        "name": "Museum Studies Internship",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MUSC401",
+        "name": "Senior Recital",
+        "descr": "",
+        "credits": "0",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MUSC423",
+        "name": "Private Study Capstone for Advanced Composition",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MUSC457",
+        "name": "Private Study for Applied Music VII",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MUSC458",
+        "name": "Private Study for Applied Music VII",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MUSC464",
+        "name": "Internship",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MUSC499",
+        "name": "Music Portfolio Capstone Project",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NSCI368",
+        "name": "Research",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NSCI468",
+        "name": "Advanced Research",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NTDT350",
+        "name": "Nutrition and Older Adults",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NTDT460",
+        "name": "Community Nutrition",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS353",
+        "name": "Nursing Care of Adults Practicum I",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS355",
+        "name": "Psychiatric Mental Health Nursing Practicum",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS357",
+        "name": "Nursing Care of Children Practicum",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS375",
+        "name": "Nursing care of Adults II",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS443",
+        "name": "BRN Role Practicum",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS453",
+        "name": "Clinical Applications Adult Health Nursing I",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS457",
+        "name": "Clinical Applications: Maternal Child Nursing",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS459",
+        "name": "Clinical Applications: Psychosocail Nursing",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS478",
+        "name": "Honors: Care of Populations",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "NURS485",
+        "name": "Integrative Practicum - Capstone Preceptorship",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PHIL338",
+        "name": "Religion at the Crossroads of Culture",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PHYS468",
+        "name": "Introduction to Research",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PLSC364",
+        "name": "Plant Science and Sustainable Food System Internship",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PLSC405",
+        "name": "Environmental Forensics and Society",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC423",
+        "name": "Congress",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC447",
+        "name": "National Agenda",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC464",
+        "name": "Internship in Political Science and International Relations",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC468",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC469",
+        "name": "Social Justice Practicum",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC471",
+        "name": "Polling Research and Analysis",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC475",
+        "name": "Model United Nations",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "POSC498",
+        "name": "Capstone Internship",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PSYC365",
+        "name": "Psychology Field Placement",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PSYC365",
+        "name": "Research Seminar",
+        "descr": "",
+        "credits": "3-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PSYC369",
+        "name": "Research Seminar",
+        "descr": "",
+        "credits": "3-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PSYC405",
+        "name": "Advanced Research Methods",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "PSYC468",
+        "name": "Thesis Research",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SCEN105",
+        "name": "Science on the Scene",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SCEN111",
+        "name": "Revolutionary Science",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SCEN117",
+        "name": "Citizen Science",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SCEN119",
+        "name": "Transforming Solar Energy",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SOCI368",
+        "name": "Independent Research",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SOCI410",
+        "name": "Health Services Practicum and Seminar",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SOCI441",
+        "name": "Social Welfare Practicum and Seminar",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SOCI449",
+        "name": "Sociology of Art and Culture",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SOCI464",
+        "name": "Internship",
+        "descr": "",
+        "credits": "1-4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SOCI471",
+        "name": "Disasters, Vulnerability & Development",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SPAN318",
+        "name": "Spanish Service Learning",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "SPTM420",
+        "name": "Applied Sport Event Management",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "THEA408",
+        "name": "Theatre Practicum for Minors",
+        "descr": "",
+        "credits": "1-4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UAPP268",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UAPP300",
+        "name": "Public Policy Field Experience",
+        "descr": "",
+        "credits": "1-9",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UAPP390",
+        "name": "Teaching Assistant",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UAPP468",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "1-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV118",
+        "name": "Learning, Serving, Giving Back",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV240",
+        "name": "Peer Tutor Practicum I",
+        "descr": "",
+        "credits": "0-1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV260",
+        "name": "Experiential Teaching",
+        "descr": "",
+        "credits": "0-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV262",
+        "name": "Experiential Teaching",
+        "descr": "",
+        "credits": "0-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV268",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "0-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV301",
+        "name": "Peer Practicum I",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV302",
+        "name": "Peer Practicum II",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV303",
+        "name": "Peer Practicum III",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV304",
+        "name": "Peer Practicum IV",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV305",
+        "name": "Peer Practicum V",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV320",
+        "name": "Contemporary Issues for Resident Assistants I",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV321",
+        "name": "Contemporary Issues for Resident Assistants II",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV322",
+        "name": "Contemporary Issues for Resident Assistants III",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV340",
+        "name": "Peer Tutor Practicum II",
+        "descr": "",
+        "credits": "0-1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV360",
+        "name": "Experiential Teaching",
+        "descr": "",
+        "credits": "0-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV361",
+        "name": "Service-Learning",
+        "descr": "",
+        "credits": "0",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV362",
+        "name": "Experiential Learning",
+        "descr": "",
+        "credits": "0-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV364",
+        "name": "Experiential Internship",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV365",
+        "name": "Engaging for Change: Co-curricular Immersion and Community Engagement",
+        "descr": "",
+        "credits": "1-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV368",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "0-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV370",
+        "name": "Study Abroad Winter/Summer",
+        "descr": "",
+        "credits": "0",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV371",
+        "name": "Domestic Travel Study",
+        "descr": "",
+        "credits": "0",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV372",
+        "name": "International Exchange",
+        "descr": "",
+        "credits": "0",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV373",
+        "name": "Study Abroad Fall/Spring",
+        "descr": "",
+        "credits": "0",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV401",
+        "name": "Senior Thesis",
+        "descr": "",
+        "credits": "2-4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV402",
+        "name": "Senior Thesis",
+        "descr": "",
+        "credits": "2-4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV440",
+        "name": "Peer Tutor Practicum III",
+        "descr": "",
+        "credits": "0-1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV460",
+        "name": "Experiential Teaching",
+        "descr": "",
+        "credits": "0-3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV462",
+        "name": "Experiential Learning",
+        "descr": "",
+        "credits": "0-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "UNIV468",
+        "name": "Undergraduate Research",
+        "descr": "",
+        "credits": "0-6",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "WOMS498",
+        "name": "Internship in Women's Studies",
         "descr": "",
         "credits": "3",
         "preReq": "",
