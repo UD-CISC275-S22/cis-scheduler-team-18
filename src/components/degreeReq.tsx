@@ -183,7 +183,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
     return (
         <div>
             {missingRequirements.map((req: string) => {
-                <div>{req}</div>;
+                <span>{req}</span>;
             })}
         </div>
     );
