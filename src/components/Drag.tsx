@@ -66,14 +66,14 @@ export function Drag(): JSX.Element {
                     <div>
                         {allCourses.map((course: Course) => (
                             <div
-                                key={course.id}
-                                className={course.id}
+                                key={course.code}
+                                className={course.code}
                                 onDragStart={(event) =>
-                                    dragStartHandler(event, course.courseName)
+                                    dragStartHandler(event, course.name)
                                 }
                                 draggable={true}
                             >
-                                <h2>{course.courseName}</h2>
+                                <h2>{course.name}</h2>
                             </div>
                         ))}
                     </div>
