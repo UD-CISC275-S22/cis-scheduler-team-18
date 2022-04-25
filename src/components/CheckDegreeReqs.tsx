@@ -7,9 +7,7 @@ import coreReqs from "../data/coreMajorRequirements.json";
 import techReqs from "../data/techElect.json";
 import scienceReq from "../data/scienceRequirement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
-import englOpt from "../data/englOption.json";
 import DLEReq from "../data/DLEReq.json";
-import mathOpt from "../data/mathOpt.json";
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //files: coreMajorRequirements, DLEReq, englOption, multiculturalReq, scienceRequirement, techElect, mathOption
@@ -23,12 +21,6 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
 
     //DLEReqs: an array of Course Objects that are DLE options -- ANY OF THESE CAN BE TAKEN (3 credits)
     const DLE = DLEReq.map((course: Course): Course => ({ ...course }));
-
-    //ENGLOPT: ONE of the two of these classes need to be taken
-    const ENGL = englOpt.map((course: Course): Course => ({ ...course }));
-
-    //MATHOPT: ONE of the two of these classes need to be taken
-    const MATH = mathOpt.map((course: Course): Course => ({ ...course }));
 
     //multiculturalREQ: ONE of these classes need to be taken (3 credits)
     const MULTICULTURAL = multiCultReq.map(
