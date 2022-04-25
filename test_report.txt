@@ -23,14 +23,14 @@
         at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:10:30)
         at div
         at div
-        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:31:5)
+        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:32:5)
         at div
         at div
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Stack.js:23:7
         at PlanList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanList.tsx:22:5)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:22:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:23:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -40,8 +40,92 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
+  console.error
+    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
+        at div
+        at div
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:23:31)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+
+  console.error
+    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
+        at div
+        at div
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:23:31)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+
+  console.error
+    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
+        at div
+        at div
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:23:31)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+
+  console.error
+    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
+        at div
+        at div
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:23:31)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
+
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (597 ms)
+  ✕ renders the course name somewhere (779 ms)
 
   ● renders the course name somewhere
 
@@ -137,7 +221,7 @@ FAIL src/App.test.tsx
                                     [36m<tbody>[39m
                                       [36m<tr>[39m
                                         [36m<td>[39m
-                                          [0mEGGG101[0m
+                                          [0mEGG101[0m
                                         [36m</td>[39m
                                         [36m<td>[39m
                                           [0mIntro to Engineering[0m
@@ -204,7 +288,7 @@ FAIL src/App.test.tsx
                                             [36m<button[39m
                                               [33mclass[39m=[32m"btn btn-info"[39m
                                               [33mtype[39m=[32m"button"[39m
-                                            [36m...
+                                            [36m>...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -228,14 +312,14 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------------|---------|----------|---------|---------|-------------------
-All files                   |    43.2 |    36.66 |   24.74 |      46 |                   
+All files                   |   43.03 |    26.92 |   25.26 |   45.89 |                   
  src                        |   41.46 |       25 |   23.07 |   45.71 |                   
-  App.tsx                   |   41.17 |        0 |      20 |      50 | 26-40             
+  App.tsx                   |   41.17 |        0 |      20 |      50 | 27-41             
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                 
-  semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 19-49,72          
- src/components             |    43.8 |    44.44 |   25.35 |   46.08 |                   
-  AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 66-92,111-125     
-  CourseAdd.tsx             |   47.61 |      100 |      10 |   52.63 | 21-54             
+  semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 21-51,74          
+ src/components             |   43.58 |    28.57 |   26.08 |   45.94 |                   
+  AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 66-89,108-122     
+  CourseAdd.tsx             |   47.05 |      100 |    12.5 |   53.33 | 21-51             
   CourseEdit.tsx            |   43.75 |      100 |    12.5 |      50 | 27-50             
   CourseInfo.tsx            |   66.66 |      100 |   33.33 |     100 |                   
   CourseList.tsx            |      25 |        0 |   14.28 |      25 | 18-35             
@@ -243,8 +327,8 @@ All files                   |    43.2 |    36.66 |   24.74 |      46 |
   Drag.tsx                  |   47.36 |        0 |   33.33 |   47.36 | 28,37-43,59,72-87 
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-59             
   PlanList.tsx              |     100 |      100 |     100 |     100 |                   
-  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 44                
-  addSemesterModal.tsx      |   45.45 |        0 |   16.66 |   45.45 | 23-43,62-90       
+  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 45                
+  addSemesterModal.tsx      |   45.45 |        0 |   16.66 |   45.45 | 23-40,59-87       
   multipleSemesterTable.tsx |     100 |      100 |     100 |     100 |                   
   semesterEditor.tsx        |       0 |        0 |       0 |       0 | 19-85             
   semesterList.tsx          |     100 |      100 |     100 |     100 |                   
@@ -257,5 +341,5 @@ All files                   |    43.2 |    36.66 |   24.74 |      46 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.113 s
+Time:        4.318 s
 Ran all test suites.
