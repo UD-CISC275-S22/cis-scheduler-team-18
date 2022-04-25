@@ -13,7 +13,7 @@ import { AddPlanModal } from "./components/AddPlanModal";
 import { Drag } from "./components/Drag";
 
 const PLANS = semesterPlan.map(
-    (plan): Plan => ({
+    (plan: Plan): Plan => ({
         ...plan
     })
 );

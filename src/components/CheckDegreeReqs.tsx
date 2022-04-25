@@ -10,7 +10,6 @@ import multiCultReq from "../data/multiCulturalReq.json";
 import englOpt from "../data/englOption.json";
 import DLEReq from "../data/DLEReq.json";
 import mathOpt from "../data/mathOpt.json";
-import { SemesterEditor } from "./semesterEditor";
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //files: coreMajorRequirements, DLEReq, englOption, multiculturalReq, scienceRequirement, techElect, mathOption
@@ -49,27 +48,27 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //delete this after it works
     missingRequirements = [...missingRequirements, "Test"];
 
-    function checkBreadths(sem: Semester): void {
+    function checkBreadths(classes: Course[]): void {
         //find all theh breadth requirements in a semester
-        const groupA = sem.courses.filter((course: Course): boolean =>
+        const groupA = classes.filter((course: Course): boolean =>
             course.breadth.includes(
                 "GROUP A" || "GROUPA" || "group A" || "group a"
             )
         );
 
-        const groupB = sem.courses.filter((course: Course): boolean =>
+        const groupB = classes.filter((course: Course): boolean =>
             course.breadth.includes(
                 "GROUP B" || "GROUPB" || "group B" || "group b"
             )
         );
 
-        const groupC = sem.courses.filter((course: Course): boolean =>
+        const groupC = classes.filter((course: Course): boolean =>
             course.breadth.includes(
                 "GROUP C" || "GROUPC" || "group C" || "group c"
             )
         );
 
-        const groupD = sem.courses.filter((course: Course): boolean =>
+        const groupD = classes.filter((course: Course): boolean =>
             course.breadth.includes(
                 "GROUP D" || "GROUPD" || "group D" || "group d"
             )
@@ -178,11 +177,31 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
-    plan.semesters.map((sem: Semester) => checkBreadths(sem));
+    function checkMultiCultural(classes: Course[]) {
+        const multiCodes = MULTICULTURAL.map(
+            (course: Course): string => course.code
+        );
+        //MULTICULTURAL: An array of courses that qualify as a multicultural course
+        //do the includes thing, but check to see if multicultural includes a course
+
+        //this is an array of all the multiCodes that include the course code
+        const findMulti = classes.filter((course: Course): boolean =>
+            multiCodes.includes(course.code)
+        );
+
+        if (findMulti.length === 0) {
+            missingRequirements = [
+                ...missingRequirements,
+                "University Requirement: Multicultural"
+            ];
+        }
+    }
+    plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
+    plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
-                <div key="req">{req}</div>
+                <div key={req}>{req}</div>
             ))}
         </div>
     );
