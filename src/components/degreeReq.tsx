@@ -6,11 +6,10 @@ import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
 
 export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
-    const coreMajorReqs = coreReqs.map((course): Course => ({ ...course }));
-    //make sure there is at least one group A Requirement
-    //plan > semester > courses
+    //this is going to keep track of all the missing requirements
     let missingRequirements: string[] = [""];
 
+    //make sure there's at least 1 group A requirement - for university req
     function checkGroupA(sem: Semester): void {
         //map through the semester's courses
         //change it to check "GROUP A"
@@ -32,6 +31,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //make sure there's at least one GROUP B breadth - for university
     function checkGroupB(sem: Semester): void {
         const found = sem.courses.map((course: Course): number =>
             course.breadth.indexOf("GROUP B")
@@ -49,6 +49,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //make sure there's at least one group C req - University breadth
     function checkGroupC(sem: Semester): void {
         const found = sem.courses.map((course: Course): number =>
             course.breadth.indexOf("Group C")
@@ -66,6 +67,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //make sure there's at least one group d - university breadth
     function checkGroupD(sem: Semester): void {
         const found = sem.courses.map((course: Course): number =>
             course.breadth.indexOf("Group D")
@@ -83,6 +85,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //will check to see if engl312/engl410 is present
     function findEnglOpt(sem: Semester): void {
         //should find either engl312 or engl410
         const foundEngl = sem.courses.filter(
@@ -98,6 +101,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //will determine if math350/math205 is present
     function findMathOpt(sem: Semester): void {
         //should find either MATH205/MATH350
         const foundMath = sem.courses.filter(
@@ -113,6 +117,7 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    //will determine if there is a capstone found
     function capstone(sem: Semester): void {
         //should find either CISC498/UNIV401
         const foundCap1 = sem.courses.filter(
@@ -140,46 +145,46 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
 
         if (foundCap1.length === 0) {
-            missingRequirements = [...missingRequirements, "Capstone", "DLE"];
+            missingRequirements = [...missingRequirements, "Capstone"];
         }
     }
 
     function checkCoreReqs(sem: Semester) {
-        //includes returns true if an array contains a specified value
-        //an array of coreREqs that are in the plan
         //to do
-        const coreFound = sem.courses.filter((course: Course) =>
-            coreMajorReqs.includes(course)
-        );
-
-        //now, add what's not included to missing requirements
+        //data file
     }
 
-    function checkTechElect(sem: Semester){
+    function checkTechElect(sem: Semester) {
         //existing data file
         //to do
     }
 
-    function checkScienceReq(sem: Semester){
+    function checkScienceReq(sem: Semester) {
         //existing data file
         //to do
     }
 
-    function checkEngineeringBreadths(sem: Semester){
+    function checkEngineeringBreadths(sem: Semester) {
         //no data file needed
         //to do
     }
 
-    function countCredits(sem: Semester){
+    function countCredits(sem: Semester) {
         //to do
     }
 
-    function checkDLE(sem: Semester){
+    function checkDLE(sem: Semester) {
         //to do
     }
 
-    function checkMultiCultural(sem: Semester){
+    function checkMultiCultural(sem: Semester) {
         //to do
     }
-    return <div className="boxed">This text is in an enclosed box</div>;
+    return (
+        <div>
+            {missingRequirements.map((req: string) => {
+                <div>{req}</div>;
+            })}
+        </div>
+    );
 }
