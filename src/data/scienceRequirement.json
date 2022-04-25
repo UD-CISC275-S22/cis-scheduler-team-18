@@ -2,128 +2,128 @@
     {
         "code": "PHYS207", 
         "name": "Fundamentals of Physics I",
-        "descr": "",
+        "descr": "First course in a sequence with PHYS 208 that provides an introduction to physics for those in physical sciences and engineering. Emphasis on Newton's laws of motion and conservation principles. These are applied to motion in a gravitational field, and to rotation of a rigid body. Integrates conceptual understanding with extensive problem solving.",
         "credits": "4",
         "preReq": "PHYS208",
-        "restrict": "",
-        "breadth": "", 
-        "typ": ""
+        "restrict": "One year of high school calculus is recommended. Students who have received credit in PHYS203 are not eligible to take this course without permission",
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology", 
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "PHYS208",
         "name": "Fundamentals of Physics II",
-        "descr": "", 
+        "descr": "Second course in a sequence with PHYS 207 that provides an introduction to physics for those in the physical sciences and engineering. Emphasis on electro- and magnetostatics in terms of forces, fields and potentials, with some elements of circuit theory. Furthermore, magnetic induction and Maxwell's equations in integral form are introduced. Integrates conceptual understanding with extensive problem solving.", 
         "credits": "4",
         "preReq": "",
         "restrict": "", 
-        "breadth": "", 
-        "typ": ""
+        "breadth": "GROUP D: A&S Math, Nat Sci & Tech w Lab", 
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "CHEM103",
         "name": "General Chemistry",
-        "descr": "",
+        "descr": "Matter, the changes that matter undergoes, and the laws governing these changes, with greater emphasis on atomic and molecular structure, chemicalbonding, and energy relationships. Properties of gases, liquids, solids and solutions.",
         "credits": "3",
         "preReq": "CHEM133, CHEM104, CHEM134",
-        "restrict": "", 
-        "breadth": "",
-        "typ": ""
+        "restrict": "For majors in the physical and natural sciecnes, mathematics and engineering. One year of high school chemistry strongly recommended", 
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "CHEM133",
         "name": "General Chemistry Lab",
-        "descr": "",
+        "descr": "Laboratory topics and techniques covered include: stoichiometry, gases, liquids, solids, atomic and molecular structure, chemical reactions in solution, and properties of solutions. 42h lab experiments.",
         "credits": "1",
         "preReq": "",
         "restrict": "", 
-        "breadth": "", 
-        "typ": ""
+        "breadth": "GROUP D LAB: A&S Math, Nat Sci & Tech w Lab", 
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "CHEM104",
         "name": "General Chemistry",
-        "descr": "", 
+        "descr": "Continuation and application of CHEM 103 with additional emphasis on chemical spontaneity, equilibrium, rates of reactions, electrochemistry and organic chemistry. ", 
         "credits": "3",
         "preReq": "",
-        "restrict": "", 
-        "breadth": "",
-        "typ": ""
+        "restrict": "For majors in the physical and natural sciences, mathematics and engineering", 
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "CHEM134",
         "name": "General Chemistry Lab",
-        "descr": "",
+        "descr": "This laboratory course is the second in a two-semester sequence designed (and required) for science and engineering majors. Covers thermodynamics, kinetics, equilibrium among gases, liquids and solids, equilibrium in solution, acids and bases, electrochemistry, and nuclear chemistry.  Topics touched on briefly include transition elements and types and nomenclature of organic compounds. Descriptive chemistry of representative elements is interspersed throughout the course.  42h laboratory experiments.",
         "credits": "1",
         "preReq": "",
         "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "breadth": "GROUP D LAB: A&S Math, Nat Sci & Tech w Lab",
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "CHEM107",
         "name": "General Chemistry for life Sciences I",
-        "descr": "",
+        "descr": "Principles of chemistry, with applications to biology and other life sciences. Includes weekly laboratory work and discussion sections.",
         "credits": "4", 
         "preReq": "CHEM108",
-        "restrict": "",
-        "breadth": "",
+        "restrict": "For majors, primarily in the biological, agricultural, and health sciences, as well as biomedical engineering, whose plan of study requires both CHEM107 and BISC207. One year of high school chemistry STRONGLY recommended",
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
         "typ": ""
     },{
         "code": "CHEM108",
         "name": "General Chemistry for Life Sciences II",
-        "descr": "",
+        "descr": "Principles of chemistry, with applications to biology and the other life sciences. Includes weekly laboratory work and discussion section meeting.",
         "credits": "4",
         "preReq": "",
-        "restrict": "",
-        "breadth": "",
+        "restrict": "For majors, primarily in the biological, agricultural, and health sciences, as well as biomedical engineering, whose plan of study requires both CHEM108 and BISC208",
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
         "typ": ""
     },{
         "code": "BISC207",
         "name": "Introductory Biology I",
-        "descr": "",
+        "descr": "Molecular basis of life. Structure and function of cells, including signal transduction pathways. Energy transformations. Classical Mendelian genetics and the flow of information from DNA to RNA to proteins. Laboratory focuses on the testing of hypotheses, data analysis and scientific writing.",
         "credits": "4",
         "preReq": "BISC208",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "restrict": "Students who received credit in BISC205 are not eligible to take this course without permission",
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "BISC208",
         "name": "Introductory Biology II",
-        "descr": "",
+        "descr": "Mechanisms of evolution. Physiology of multicellular plants and animals. Principles of ecology with emphasis on the biology of populations. Laboratory focuses on testing of hypotheses, data analysis and scientific writing. Animal and plant anatomy also studied.",
         "credits": "4",
         "preReq": "", 
         "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
+        "typ": "Fall, Winter, Spring, Summer"
     },{
         "code": "GEOL105",
         "name": "Geological Hazards and Their Human Impact",
-        "descr": "",
+        "descr": "Geological processes and events that adversely affect humans and civilization. Methods for predicting and dealing with geological hazards. May be taken with a 1 credit lab, GEOL 115.",
         "credits": "3",
         "preReq": "GEOL107",
         "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "breadth": "GROUP D: A&S Math, Nat Sci & Technology",
+        "typ": "Fall, Summer, and Spring"
     },{
         "code": "GEOL115",
         "name": "Geological Hazards Lab",
-        "descr": "",
+        "descr": "Laboratory investigation of environmental geological processes and their impact on society: earthquakes, volcanoes, coastal hazards, rivers and streams, groundwater. Identification of earth materials and study of earth processes using topographical, geological and tectonic maps.",
         "credits": "1",
         "preReq": "GEOL107",
         "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "breadth": "GROUP D LAB: A&S Math, Nat Sci & Tech w Lab",
+        "typ": "Fall, Summer, and Spring"
     },{
         "code": "GEOL107",
         "name": "Geology of Dynamic Earth",
-        "descr": "",
+        "descr": "Principles of physical geology and its application in interpreting earth processes. Laboratory covers identification of earth materials and the interpretation of topographic and geologic maps.",
         "credits": "4",
         "preReq": "GEOL110",
         "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "breadth": "GROUP D LAB: A&S Math, Nat Sci & Tech w Lab",
+        "typ": "Fall"
     },{
         "code": "GEOL110",
         "name": "Earth's Evolving Systems",
-        "descr": "",
+        "descr": "History of the earth and its biota. Origins, evolution and mass extinctionsof major groups of organisms as demonstrated by the earth’s fossil record. Laboratory covers identification of basic fossil groups and exercises in interpreting Earth history.",
         "credits": "4",
         "preReq": "",
         "restrict": "",
-        "breadth": "",
-        "typ": ""
+        "breadth": "GROUP D: A&S MAth, Nat Sci & Technology",
+        "typ": "Spring"
     }
 ]
