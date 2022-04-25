@@ -9,6 +9,8 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //this is going to keep track of all the missing requirements
     let missingRequirements: string[] = [""];
 
+    missingRequirements = [...missingRequirements, "Test"];
+
     //make sure there's at least 1 group A requirement - for university req
     function checkGroupA(sem: Semester): void {
         //map through the semester's courses
@@ -181,10 +183,10 @@ export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
         //to do
     }
     return (
-        <div>
-            {missingRequirements.map((req: string) => {
-                <span>{req}</span>;
-            })}
+        <div className="boxed">
+            {missingRequirements.map((req: string) => (
+                <div key="req">{req}</div>
+            ))}
         </div>
     );
 }

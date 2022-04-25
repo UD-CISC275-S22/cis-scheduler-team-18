@@ -66,7 +66,7 @@ export function PlanView({
                 </Button>
             </div>
             <div>
-                <DegreeReq></DegreeReq>
+                <DegreeReq plan={plan}></DegreeReq>
             </div>
         </div>
     );
