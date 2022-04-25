@@ -4,12 +4,13 @@ import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
-//import techReqs from "../data/techElect.json";
+import techReqs from "../data/techElect.json";
 import scienceReq from "../data/scienceRequirement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
 import englOpt from "../data/englOption.json";
 import DLEReq from "../data/DLEReq.json";
 import mathOpt from "../data/mathOpt.json";
+import { SemesterEditor } from "./semesterEditor";
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //files: coreMajorRequirements, DLEReq, englOption, multiculturalReq, scienceRequirement, techElect, mathOption
@@ -38,184 +39,146 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //science requirement: a sequence is needed + additional (12 credits in total)
     const SCIENCE = scienceReq.map((course: Course): Course => ({ ...course }));
 
-    //to do: figure out how to make one function call everything to create the missingRequirements string
+    //techElect: 6 credits any 2 of these
+    const TECHELECT = techReqs.map((course: Course): Course => ({ ...course }));
+
     //this is going to keep track of all the missing requirements
     let missingRequirements: string[] = [""];
 
     //this is just a test to make sure everything is printing out right
+    //delete this after it works
     missingRequirements = [...missingRequirements, "Test"];
 
-    //make sure there's at least 1 group A requirement - for university req
-    function checkGroupA(sem: Semester): void {
-        //map through the semester's courses
-        //change it to check "GROUP A"
-        //String.indexOf() method --> returns the index of the first occurrence of the specified substring
-        //inside the calling string object, if it's not found, it returns -1
-        const found = sem.courses.map((course: Course): number =>
-            course.breadth.indexOf("GROUP A")
+    function checkBreadths(sem: Semester): void {
+        //find all theh breadth requirements in a semester
+        const groupA = sem.courses.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP A" || "GROUPA" || "group A" || "group a"
+            )
         );
 
-        const foundGroupA = found.filter(
-            (index: number): boolean => index !== -1
+        const groupB = sem.courses.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP B" || "GROUPB" || "group B" || "group b"
+            )
         );
 
-        if (foundGroupA.length === 0) {
+        const groupC = sem.courses.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP C" || "GROUPC" || "group C" || "group c"
+            )
+        );
+
+        const groupD = sem.courses.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP D" || "GROUPD" || "group D" || "group d"
+            )
+        );
+        let groupACredits = 0;
+        let groupBCredits = 0;
+        let groupCCredits = 0;
+        let groupDCredits = 0;
+        for (const cred of groupA) {
+            groupACredits += parseInt(cred.credits);
+        }
+
+        for (const cred of groupB) {
+            groupBCredits += parseInt(cred.credits);
+        }
+
+        for (const cred of groupC) {
+            groupCCredits += parseInt(cred.credits);
+        }
+
+        for (const cred of groupD) {
+            groupDCredits += parseInt(cred.credits);
+        }
+
+        //what do we need
+        //at least 3 credits in group A, group B, group C, group D
+
+        if (groupACredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
-                "University Breadth: Group A: Creative Arts & Humanities"
+                "University Breadth: Group A"
             ];
         }
-    }
 
-    //make sure there's at least one GROUP B breadth - for university
-    function checkGroupB(sem: Semester): void {
-        const found = sem.courses.map((course: Course): number =>
-            course.breadth.indexOf("GROUP B")
-        );
-
-        const foundGroupB = found.filter(
-            (index: number): boolean => index !== -1
-        );
-
-        if (foundGroupB.length === 0) {
+        if (groupBCredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
-                "University Breadth: Group B: A&S History & Cultural Change"
+                "University Breadth: Group B"
             ];
         }
-    }
 
-    //make sure there's at least one group C req - University breadth
-    function checkGroupC(sem: Semester): void {
-        const found = sem.courses.map((course: Course): number =>
-            course.breadth.indexOf("Group C")
-        );
-
-        const foundGroupC = found.filter(
-            (index: number): boolean => index !== -1
-        );
-
-        if (foundGroupC.length === 0) {
+        if (groupCCredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
-                "University Breadth: Group C: A&S Social & Behavioral Sciences"
+                "University Breadth: Group C"
             ];
         }
-    }
 
-    //make sure there's at least one group d - university breadth
-    function checkGroupD(sem: Semester): void {
-        const found = sem.courses.map((course: Course): number =>
-            course.breadth.indexOf("Group D")
-        );
-
-        const foundGroupD = found.filter(
-            (index: number): boolean => index !== -1
-        );
-
-        if (foundGroupD.length === 0) {
+        if (groupDCredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
-                "University Breadth: Group D: A&S Math, Nat Sci & Technology"
+                "University Breadth: Group D"
             ];
         }
-    }
 
-    //will check to see if engl312/engl410 is present
-    function findEnglOpt(sem: Semester): void {
-        //should find either engl312 or engl410
-        const foundEngl = sem.courses.filter(
-            (course: Course): boolean =>
-                course.code === "ENGL312" || course.code === "ENGL410"
-        );
-
-        if (foundEngl.length === 0) {
+        //9 additional breadths NOT group D
+        const totalCreds =
+            groupACredits + groupBCredits + groupCCredits + groupDCredits;
+        //test for coe breadths
+        if (totalCreds < 21 || totalCreds - groupDCredits < 18) {
             missingRequirements = [
                 ...missingRequirements,
-                "ENGL312 or ENGL410"
+                "College of Engineering Breadths: 9 Credits Necessary"
             ];
-        }
-    }
-
-    //will determine if math350/math205 is present
-    function findMathOpt(sem: Semester): void {
-        //should find either MATH205/MATH350
-        const foundMath = sem.courses.filter(
-            (course: Course): boolean =>
-                course.code === "MATH205" || course.code === "MATH350"
-        );
-
-        if (foundMath.length === 0) {
-            missingRequirements = [
-                ...missingRequirements,
-                "MATH205 or MATH350"
-            ];
-        }
-    }
-
-    //will determine if there is a capstone found
-    function capstone(sem: Semester): void {
-        //should find either CISC498/UNIV401
-        const foundCap1 = sem.courses.filter(
-            (course: Course): boolean =>
-                course.code === "CISC498" || course.code == "UNIV401"
-        );
-        if (foundCap1.length !== 0 && foundCap1[0].code === "CISC498") {
-            //find CISC499
-            const foundCISC499 = sem.courses.filter(
-                (course: Course) => course.code === "CISC499"
+        } else if (totalCreds >= 21 && totalCreds - groupDCredits >= 18) {
+            //test for 6 credits being upper level
+            //to do: need to implement upper foreign language courses
+            const upperLevelA = groupA.filter((course: Course): boolean =>
+                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
             );
-            if (foundCISC499.length === 0) {
-                missingRequirements = [...missingRequirements, "CISC499"];
+            const upperLevelB = groupB.filter((course: Course): boolean =>
+                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
+            );
+            const upperLevelC = groupC.filter((course: Course): boolean =>
+                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
+            );
+            const upperLevelD = groupD.filter((course: Course): boolean =>
+                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
+            );
+
+            let upperACredit = 0;
+            let upperBCredit = 0;
+            let upperCCredit = 0;
+            let upperDCredit = 0;
+            for (const cred of upperLevelA) {
+                upperACredit += parseInt(cred.credits);
+            }
+            for (const cred of upperLevelB) {
+                upperBCredit += parseInt(cred.credits);
+            }
+            for (const cred of upperLevelC) {
+                upperCCredit += parseInt(cred.credits);
+            }
+            for (const cred of upperLevelD) {
+                upperDCredit += parseInt(cred.credits);
+            }
+            const totalUpperCred =
+                upperACredit + upperBCredit + upperCCredit + upperDCredit;
+
+            if (totalUpperCred < 6) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "College of Engineering Breadth: 6 Upper Level Credits Necessary"
+                ];
             }
         }
-
-        if (foundCap1.length !== 0 && foundCap1[0].code === "UNIV401") {
-            //find UNIV402
-            const foundUNIV402 = sem.courses.filter(
-                (course: Course) => course.code === "UNIV402"
-            );
-            if (foundUNIV402.length === 0) {
-                missingRequirements = [...missingRequirements, "UNIV402"];
-            }
-        }
-
-        if (foundCap1.length === 0) {
-            missingRequirements = [...missingRequirements, "Capstone"];
-        }
     }
 
-    function checkCoreReqs(sem: Semester) {
-        //to do
-        //data file
-    }
-
-    function checkTechElect(sem: Semester) {
-        //existing data file
-        //to do
-    }
-
-    function checkScienceReq(sem: Semester) {
-        //existing data file
-        //to do
-    }
-
-    function checkEngineeringBreadths(sem: Semester) {
-        //no data file needed
-        //to do
-    }
-
-    function countCredits(sem: Semester) {
-        //to do
-    }
-
-    function checkDLE(sem: Semester) {
-        //to do
-    }
-
-    function checkMultiCultural(sem: Semester) {
-        //to do
-    }
+    plan.semesters.map((sem: Semester) => checkBreadths(sem));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
