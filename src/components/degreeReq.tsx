@@ -4,11 +4,21 @@ import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
+import techReqs from "../data/techElect.json";
+import scienceReq from "../data/scienceRequirement.json";
+import multiCultReq from "../data/multiCulturalReq.json";
+import enlgOpt from "../data/englOption.json";
+import DLEReq from "../data/DLEReq.json";
 
 export function DegreeReq({ plan }: { plan: Plan }): JSX.Element {
+    //files: coreMajorRequirements, DLEReq, englOption, multiculturalReq, scienceRequirement, techElect, mathOption
+
+
+    //to do: figure out how to make one function call everything to create the missingRequirements string
     //this is going to keep track of all the missing requirements
     let missingRequirements: string[] = [""];
 
+    //this is just a test to make sure everything is printing out right
     missingRequirements = [...missingRequirements, "Test"];
 
     //make sure there's at least 1 group A requirement - for university req
