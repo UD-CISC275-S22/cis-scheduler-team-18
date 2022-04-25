@@ -211,9 +211,54 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
     }
+
+    function checkCapstone(classes: Course[]) {
+        //can either be CISC498 + CISC499 or UNIV401 + UNIV 402
+        const CISC = classes.find(
+            (course: Course): boolean =>
+                course.code === "CISC498" || course.code === "CISC 499"
+        );
+
+        const UNIV = classes.find(
+            (course: Course): boolean =>
+                course.code === "UNIV401" || course.code === "UNIV 401"
+        );
+
+        if (CISC) {
+            const CISC2 = classes.find(
+                (course: Course): boolean =>
+                    course.code === "CISC499" || course.code === "CISC 499"
+            );
+
+            if (!CISC2) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "Capstone Requirement: CISC499"
+                ];
+            }
+        } else if (UNIV) {
+            const UNIV2 = classes.find(
+                (course: Course): boolean =>
+                    course.code === "UNIV402" || course.code === "UNIV 402"
+            );
+
+            if (!UNIV2) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "Capstone Requirement: UNIV402"
+                ];
+            }
+        } else {
+            missingRequirements = [
+                ...missingRequirements,
+                "Capstone Requirement: CISC498 and CISC499 or UNIV401 and UNIV402"
+            ];
+        }
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
+    plan.semesters.map((sem: Semester) => checkCapstone(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
