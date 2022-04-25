@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
+import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
-//import { DegreeReq } from "./degreeReq";
 
 /*
 Add this later!
@@ -68,6 +68,9 @@ export function PlanView({
                 <Button variant="info" onClick={changePlanEditing}>
                     Edit Plan
                 </Button>
+            </div>
+            <div>
+                <CheckDegreeReq plan={plan}></CheckDegreeReq>
             </div>
         </div>
     );
