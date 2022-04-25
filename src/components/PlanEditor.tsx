@@ -15,6 +15,7 @@ export function PlanEditor({
 }): JSX.Element {
     const [name, setName] = useState<string>(plan.name);
 
+    //will save changed made
     function save() {
         editPlan(plan.id, {
             ...plan,
@@ -23,6 +24,7 @@ export function PlanEditor({
         changePlanEditing();
     }
 
+    //will cancel the changes being made
     function cancel() {
         changePlanEditing();
     }

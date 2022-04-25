@@ -37,12 +37,16 @@ export function PlanView({
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
 }): JSX.Element {
+    //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
 
+    //will update the usestate editing
     function changePlanEditing() {
         setEditing(!editing);
     }
 
+    //if in editing mode, will PlanEditor
+    //else, will call Semesterer
     return editing ? (
         <div>
             <PlanEditor

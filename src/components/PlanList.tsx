@@ -27,6 +27,8 @@ export function PlanList({
     deletePlan: (id: string) => void;
     editPlan: (id: string, newPlan: Plan) => void;
 }): JSX.Element {
+    //make sure the plans stay in a nice format
+    //calls PlanView which will determine if we're in editing mode
     return (
         <Stack gap={3}>
             {plans.map((plan: Plan) => (

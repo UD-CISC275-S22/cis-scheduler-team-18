@@ -10,6 +10,7 @@ import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
 import { Course } from "./interfaces/course";
+import { Drag } from "./components/Drag";
 
 const PLANS = semesterPlan.map(
     (plan): Plan => ({
@@ -86,6 +87,9 @@ function App(): JSX.Element {
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
                 ></AddPlanModal>
+            </div>
+            <div>
+                <Drag></Drag>
             </div>
         </div>
     );

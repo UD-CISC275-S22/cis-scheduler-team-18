@@ -61,6 +61,7 @@ export function AddPlanModal({
 
     const courses = [""];
 
+    //creates a new plan
     function saveChanges() {
         addPlan({
             id: id,
