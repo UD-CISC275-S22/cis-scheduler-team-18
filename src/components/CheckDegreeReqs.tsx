@@ -251,10 +251,48 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
     }
+
+    function checkMath(classes: Course[]) {
+        const MATH205 = classes.find(
+            (course: Course): boolean =>
+                course.code === "MATH205" || course.code === "MATH 205"
+        );
+        const MATH350 = classes.find(
+            (course: Course): boolean =>
+                course.code === "MATH350" || course.code === "MATH 350"
+        );
+
+        if (!MATH205 && !MATH350) {
+            missingRequirements = [
+                ...missingRequirements,
+                "MATH205 or MATH350"
+            ];
+        }
+    }
+
+    function checkEngl(classes: Course[]) {
+        const ENGL312 = classes.find(
+            (course: Course): boolean =>
+                course.code === "ENGL312" || course.code === "ENGL 312"
+        );
+        const ENGL410 = classes.find(
+            (course: Course): boolean =>
+                course.code === "ENGL410" || course.code === "ENGL 410"
+        );
+
+        if (!ENGL312 && !ENGL410) {
+            missingRequirements = [
+                ...missingRequirements,
+                "ENGL312 or ENGL410"
+            ];
+        }
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
     plan.semesters.map((sem: Semester) => checkCapstone(sem.courses));
+    plan.semesters.map((sem: Semester) => checkMath(sem.courses));
+    plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
