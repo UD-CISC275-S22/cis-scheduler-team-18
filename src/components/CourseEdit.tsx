@@ -19,6 +19,13 @@ export function CourseEdit({
     const [credits, setCredits] = useState<string>(course.credits);
     const [show, setShow] = useState(false);
 
+    //saves original course information
+    const saveDataKey = course.descr;
+    const prevData = localStorage.getItem(saveDataKey);
+    if (prevData === null) {
+        localStorage.setItem(saveDataKey, JSON.stringify(course));
+    }
+
     //Open Close and Save functions for popup
     const close = () => setShow(false);
     const open = () => setShow(true);
@@ -39,6 +46,8 @@ export function CourseEdit({
         close();
     }
 
+    //reverts course imformation to original
+
     //functions to call usestate for each variable to be changed in text boxes
     function changeCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
@@ -50,6 +59,17 @@ export function CourseEdit({
         setCredits(event.target.value);
     }
 
+    //returns the course information back to its original information
+    function revert() {
+        const original = localStorage.getItem(course.descr);
+        let tempCourse = course;
+        if (original !== null) {
+            tempCourse = JSON.parse(original);
+        }
+        setCode(tempCourse.code);
+        setTitle(tempCourse.name);
+        setCredits(tempCourse.credits);
+    }
     return (
         <>
             <div>
@@ -79,6 +99,7 @@ export function CourseEdit({
                     <Form.Group controlId="formCredits">
                         <Form.Label>Change Course Credits:</Form.Label>
                         <Form.Control
+                            type="number"
                             value={credits}
                             onChange={changeCredits}
                         ></Form.Control>
@@ -87,6 +108,7 @@ export function CourseEdit({
                         <Button variant="danger" onClick={remove}>
                             Delete Course
                         </Button>
+                        <Button onClick={revert}>Revert to original</Button>
                         <Button variant="warning" onClick={close}>
                             Cancel
                         </Button>
