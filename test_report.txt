@@ -125,7 +125,7 @@
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (539 ms)
+  ✕ renders the course name somewhere (521 ms)
 
   ● renders the course name somewhere
 
@@ -312,16 +312,16 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                              
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
-All files                   |   49.06 |    31.55 |   39.89 |   49.51 |                                                                                                                                
+All files                   |   48.75 |    31.87 |   39.68 |   49.16 |                                                                                                                                
  src                        |   41.46 |       25 |   23.07 |   45.71 |                                                                                                                                
   App.tsx                   |   41.17 |        0 |      20 |      50 | 27-41                                                                                                                          
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                                                                                                              
   semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 21-51,74                                                                                                                       
- src/components             |   49.87 |    31.92 |   42.59 |   49.86 |                                                                                                                                
+ src/components             |    49.5 |    32.25 |   42.33 |   49.48 |                                                                                                                                
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 66-89,108-122                                                                                                                  
   CheckDegreeReqs.tsx       |   52.57 |    32.16 |   54.83 |   51.51 | 28,150,158,166,174,189-226,247,282-288,294-300,324,342,397-422,426,451,470,477-488,495-513,541-695,711,713,715,717,719,721,723 
   CourseAdd.tsx             |   47.05 |      100 |    12.5 |   53.33 | 21-51                                                                                                                          
-  CourseEdit.tsx            |   43.75 |      100 |    12.5 |      50 | 27-50                                                                                                                          
+  CourseEdit.tsx            |   40.74 |       50 |   11.11 |      44 | 34-71                                                                                                                          
   CourseInfo.tsx            |   66.66 |      100 |   33.33 |     100 |                                                                                                                                
   CourseList.tsx            |      25 |        0 |   14.28 |      25 | 18-35                                                                                                                          
   CourseView.tsx            |     100 |      100 |     100 |     100 |                                                                                                                                
@@ -342,5 +342,5 @@ All files                   |   49.06 |    31.55 |   39.89 |   49.51 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.832 s
+Time:        3.792 s
 Ran all test suites.
