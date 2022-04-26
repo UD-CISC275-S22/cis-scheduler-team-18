@@ -10,6 +10,7 @@ import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
 import { Drag } from "./components/Drag";
+//import { Card } from "./components/Card";
 
 const PLANS = semesterPlan.map(
     (plan): Plan => ({
@@ -87,6 +88,7 @@ function App(): JSX.Element {
                     addPlan={addPlan}
                 ></AddPlanModal>
             </div>
+
             <div>
                 <Drag></Drag>
             </div>
