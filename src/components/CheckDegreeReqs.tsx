@@ -504,6 +504,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     checkAllReqs(COURSES);
     return (
         <div className="boxed">
+            <h3>Missing Requirements</h3>
             {missingRequirements.map((req: string) => (
                 <div key={req}>{req}</div>
             ))}
