@@ -9,9 +9,20 @@ import scienceReq from "../data/scienceRequirement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
 
-export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
-    //files: coreMajorRequirements, DLEReq, englOption, multiculturalReq, scienceRequirement, techElect, mathOption
+//TO DO:
+//implement a check for upper level language courses
+//implement a button to choose your concentration, and then check that
+//get a list of courses
 
+export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
+    const SEMS = plan.semesters.map((sem: Semester): Semester => ({ ...sem }));
+    let COURSES: Course[] = [];
+    for (const sem of SEMS) {
+        const courselist = sem.courses.map(
+            (course: Course): Course => ({ ...course })
+        );
+        COURSES = COURSES.concat(courselist);
+    }
     //core requirements: an array of Course Objects that are the coreReqs -- THESE NEED TO BE TAKEN
     const CORES = coreReqs.map(
         (course: Course): Course => ({
@@ -477,21 +488,20 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
-    function checkAllReqs(plan: Plan) {
-        plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
-        plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
-        plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
-        plan.semesters.map((sem: Semester) => checkCapstone(sem.courses));
-        plan.semesters.map((sem: Semester) => checkMath(sem.courses));
-        plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
-        plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
-        plan.semesters.map((sem: Semester) => checkTechElect(sem.courses));
-        plan.semesters.map((sem: Semester) => checkScienceSeq(sem.courses));
-        plan.semesters.map((sem: Semester) => addCredits(sem.courses));
-
+    function checkAllReqs(classes: Course[]) {
+        checkBreadths(classes);
+        checkMultiCultural(classes);
+        checkDLE(classes);
+        checkCapstone(classes);
+        checkMath(classes);
+        checkEngl(classes);
+        checkCoreCourses(classes);
+        checkTechElect(classes);
+        checkScienceSeq(classes);
+        addCredits(classes);
     }
 
-    checkAllReqs(plan);
+    checkAllReqs(COURSES);
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
