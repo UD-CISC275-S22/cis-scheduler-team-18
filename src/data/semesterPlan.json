@@ -8,7 +8,7 @@
             "year": 2020,
             "courses":[
                 {
-                    "code": "EGG101",
+                    "code": "EGGG101",
                     "name": "Intro to Engineering",
                     "descr": "Introduction to profession, including disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering. Prepares students for success through integration of: technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences.",
                     "credits": "2",
@@ -264,7 +264,7 @@
             "year": 2020,
             "courses":[
                 {
-                    "code": "EGG101",
+                    "code": "EGGG101",
                     "name": "Intro to Engineering",
                     "descr": "Introduction to profession, including disciplines of chemical, civil, computer, electrical, environmental, and mechanical engineering. Prepares students for success through integration of: technical problem solving and engineering design, ethical decision-making, teamwork, and communicating to diverse audiences.",
                     "credits": "2",

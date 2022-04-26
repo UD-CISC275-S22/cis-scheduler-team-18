@@ -1,0 +1,102 @@
+[
+    {
+        "code": "BISC207",
+        "name": "Introductory Biology I",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "BISC208",
+        "name": "Introductory Biology II",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "BISC401",
+        "name": "Molecular Biology of the Cell",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CHEM103",
+        "name": "General Chemistry",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CHEM133",
+        "name": "General Chemistry Lab",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CHEM104",
+        "name": "General Chemistry",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CHEM134",
+        "name": "General Chemistry Lab",
+        "descr": "",
+        "credits": "1",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC372",
+        "name": "Parallel Computing",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC436",
+        "name": "Computational Biology and Bioinformatics",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MATH242",
+        "name": "Analytic Geometry and Calculus B",
+        "descr": "",
+        "credits": "4",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "MATH349",
+        "name": "Elementary Linear Algebra",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    }
+]
