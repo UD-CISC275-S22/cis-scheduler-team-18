@@ -26,17 +26,14 @@ export function AddSemesterModal({
             year: parseInt(year) || 0,
             courses: courses.map(
                 (): Course => ({
-                    id: "Example course",
-                    courseName: "Example Course Name",
-                    courseTitle: "Example Course Title",
-                    credits: 0,
-                    required: false,
-                    preReq: false,
-                    preReqTo: "",
-                    preReqRequired: false,
-                    requiredPreReq: "",
-                    option: false,
-                    optionTo: ""
+                    code: "Example course",
+                    name: "Example Course Title",
+                    descr: "",
+                    credits: "",
+                    preReq: "",
+                    restrict: "",
+                    breadth: "",
+                    typ: ""
                 })
             )
         });

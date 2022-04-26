@@ -8,6 +8,8 @@ import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
 
 export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
+    //list of degree requirements: base plan, cs BS major
+
     //list of semesters
     const sems = plan.semesters.map((sem: Semester) => ({ ...sem }));
     //the useState for the semesters so that everything will stay changed

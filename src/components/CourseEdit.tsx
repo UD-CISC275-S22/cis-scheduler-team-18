@@ -14,9 +14,9 @@ export function CourseEdit({
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
 }): JSX.Element {
-    const [code, setCode] = useState<string>(course.courseName);
-    const [title, setTitle] = useState<string>(course.courseTitle);
-    const [credits, setCredits] = useState<number>(course.credits);
+    const [code, setCode] = useState<string>(course.code);
+    const [title, setTitle] = useState<string>(course.name);
+    const [credits, setCredits] = useState<string>(course.credits);
     const [show, setShow] = useState(false);
 
     //Open Close and Save functions for popup
@@ -24,10 +24,10 @@ export function CourseEdit({
     const open = () => setShow(true);
 
     function save() {
-        editCourse(course.id, {
+        editCourse(course.code, {
             ...course,
-            courseName: code,
-            courseTitle: title,
+            code: code,
+            name: title,
             credits: credits
         });
         close();
@@ -35,7 +35,7 @@ export function CourseEdit({
 
     //deletes the course
     function remove() {
-        deleteCourse(course.id);
+        deleteCourse(course.code);
         close();
     }
 
@@ -47,7 +47,7 @@ export function CourseEdit({
         setTitle(event.target.value);
     }
     function changeCredits(event: React.ChangeEvent<HTMLInputElement>) {
-        setCredits(parseInt(event.target.value));
+        setCredits(event.target.value);
     }
 
     return (
@@ -76,10 +76,9 @@ export function CourseEdit({
                             onChange={changeTitle}
                         ></Form.Control>
                     </Form.Group>
-                    <Form.Group controlId="formTitle">
-                        <Form.Label>Change Course Title:</Form.Label>
+                    <Form.Group controlId="formCredits">
+                        <Form.Label>Change Course Credits:</Form.Label>
                         <Form.Control
-                            type="number"
                             value={credits}
                             onChange={changeCredits}
                         ></Form.Control>

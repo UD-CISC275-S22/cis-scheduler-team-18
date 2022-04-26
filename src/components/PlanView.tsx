@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
 import { PlanEditor } from "./PlanEditor";
+//import { DegreeReq } from "./degreeReq";
 
 /*
 Add this later!

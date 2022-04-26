@@ -73,17 +73,14 @@ export function AddPlanModal({
                     year: 2020,
                     courses: courses.map(
                         (): Course => ({
-                            id: "filler Course",
-                            courseName: "Example Course Name",
-                            courseTitle: "Example Course Title",
-                            credits: 0,
-                            required: false,
-                            preReq: false,
-                            preReqTo: "",
-                            preReqRequired: false,
-                            requiredPreReq: "",
-                            option: false,
-                            optionTo: ""
+                            code: "filler Course",
+                            name: "Example Course Title",
+                            descr: "",
+                            credits: "0",
+                            preReq: "",
+                            restrict: "",
+                            breadth: "",
+                            typ: ""
                         })
                     )
                 })

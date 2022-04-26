@@ -1,15 +1,149 @@
 import React, { useState } from "react";
-//import { Course } from "../interfaces/course";
-//import groupARequirements from "../data/groupARequirements.json";
+import { Course } from "../interfaces/course";
+import coreMajorRequirements from "../data/coreMajorRequirements.json";
 import { Col, Row } from "react-bootstrap";
+import techElect from "../data/techElect.json";
+
+let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
+
+let startRight = techElect.map((course): Course => ({ ...course }));
+
+const saveDataKey = "MY-PAGE-DATA";
+const previousData = localStorage.getItem(saveDataKey);
+if (previousData !== null) {
+    startLeft = JSON.parse(previousData);
+}
+
+if (previousData !== null) {
+    startRight = JSON.parse(previousData);
+}
+
+export function Drag(): JSX.Element {
+    // The content of the target box
+    const [left, setLeft] = useState<Course[]>(startLeft);
+    const [right, setRight] = useState<Course[]>(startRight);
+
+    // This function will be triggered when you start dragging
+    const dragStartHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        data: Course
+    ) => {
+        event.dataTransfer.setData("text", JSON.stringify(data));
+    };
+
+    function deleteLeft(id: string) {
+        setLeft(left.filter((course: Course): boolean => course.code !== id));
+    }
+
+    function deleteRight(id: string) {
+        setRight(right.filter((course: Course): boolean => course.code !== id));
+    }
+
+    // This function will be triggered when dropping
+
+    const dropHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        newCourse: Course
+    ) => {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        const existing = left.find(
+            (course: Course): boolean => course === newCourse
+        );
+        if (existing === undefined) {
+            setRight([...right, JSON.parse(data)]);
+            deleteLeft(newCourse.code);
+        }
+    };
+
+    const dropHandler2 = (
+        event: React.DragEvent<HTMLDivElement>,
+        newCourse: Course
+    ) => {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        const existing = right.find(
+            (course: Course): boolean => course === newCourse
+        );
+        if (existing === undefined) {
+            setLeft([...right, JSON.parse(data)]);
+            deleteRight(newCourse.code);
+        }
+    };
+
+    // This makes the third box become droppable
+    const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+    };
+
+    return (
+        <div className="container">
+            <Row>
+                <Col>
+                    <div onDragOver={allowDrop}>Drop the Thing here!</div>
+                </Col>
+                <Col>
+                    <div
+                        key="theStart"
+                        className="box4"
+                        style={{
+                            backgroundColor: "green",
+                            display: "inline-block"
+                        }}
+                        onDragOver={allowDrop}
+                    >
+                        {left.map((course: Course) => (
+                            <div
+                                key={course.code}
+                                className={course.code}
+                                onDragStart={(event) =>
+                                    dragStartHandler(event, course)
+                                }
+                                draggable={true}
+                                onDragOver={allowDrop}
+                                onDrop={(event) => dropHandler2(event, course)}
+                            >
+                                <h2>{course.name}</h2>
+                            </div>
+                        ))}
+                    </div>
+                </Col>
+                <Col>
+                    <h2>Drop Something Here</h2>
+                    <hr></hr>
+                    <div
+                        key="hi"
+                        className="box3"
+                        style={{
+                            backgroundColor: "red",
+                            display: "inline-block"
+                        }}
+                    >
+                        {right.map((course: Course) => (
+                            <div
+                                key={course.code}
+                                className={course.code}
+                                onDragStart={(event) =>
+                                    dragStartHandler(event, course)
+                                }
+                                draggable={true}
+                                onDragOver={allowDrop}
+                                onDrop={(event) => dropHandler(event, course)}
+                            >
+                                <h2>{course.name}</h2>
+                            </div>
+                        ))}
+                    </div>
+                    <hr></hr>
+                </Col>
+            </Row>
+        </div>
+    );
+}
+
+//This works ish -->>>>>>>>>>>>>>>>>>>>
 
 /*
-const COURSES = groupARequirements.map(
-    (course): Course => ({
-        ...course
-    })
-);*/
-
 const COURSES = [
     "first",
     "second",
@@ -138,6 +272,7 @@ export function Drag(): JSX.Element {
         </div>
     );
 }
+*/
 
 /*
 import React, { useState } from "react";
@@ -603,14 +738,14 @@ export function Drag(): JSX.Element {
                     <div>
                         {allCourses.map((course: Course) => (
                             <div
-                                key={course.id}
-                                className={course.id}
+                                key={course.code}
+                                className={course.code}
                                 onDragStart={(event) =>
-                                    dragStartHandler(event, course.courseName)
+                                    dragStartHandler(event, course.name)
                                 }
                                 draggable={true}
                             >
-                                <h2>{course.courseName}</h2>
+                                <h2>{course.name}</h2>
                             </div>
                         ))}
                     </div>
