@@ -8,6 +8,8 @@ import techReqs from "../data/techElect.json";
 import scienceReq from "../data/scienceRequirement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
+import { useState } from "react";
+import { Form } from "react-bootstrap";
 
 //TO DO:
 //implement a check for upper level language courses
@@ -15,6 +17,12 @@ import DLEReq from "../data/DLEReq.json";
 //get a list of courses
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
+    //will be used to chose a concentration
+    const [concentrat, setConcentrat] = useState<string>("");
+    function updateConcentrat(event: React.ChangeEvent<HTMLSelectElement>) {
+        setConcentrat(event.target.value);
+    }
+
     const SEMS = plan.semesters.map((sem: Semester): Semester => ({ ...sem }));
     let COURSES: Course[] = [];
     for (const sem of SEMS) {
@@ -23,6 +31,8 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         );
         COURSES = COURSES.concat(courselist);
     }
+
+    const [courses] = useState<Course[]>(COURSES);
     //core requirements: an array of Course Objects that are the coreReqs -- THESE NEED TO BE TAKEN
     const CORES = coreReqs.map(
         (course: Course): Course => ({
@@ -501,9 +511,45 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         addCredits(classes);
     }
 
-    checkAllReqs(COURSES);
+    checkAllReqs(courses);
     return (
         <div className="boxed">
+            <Form.Group controlId="selectedConcentrat">
+                <Form.Label>Select your Concentration</Form.Label>
+                <Form.Select value={concentrat} onChange={updateConcentrat}>
+                    <option
+                        key="Concentrat1"
+                        value="Artificial Intelligence and Robotics"
+                    >
+                        Artificial Intelligence and Robotics
+                    </option>
+                    <option key="Concentrat2" value="Bioinformatics">
+                        Bioinformatics
+                    </option>
+                    <option key="Concentrat3" value="Cybersecurity">
+                        CyberSecurity
+                    </option>
+                    <option key="Concentrat4" value="Data Science">
+                        Data Science
+                    </option>
+                    <option
+                        key="Concentrat5"
+                        value="High Performance Computing"
+                    >
+                        High Performance Computing
+                    </option>
+                    <option
+                        key="Concentrat6"
+                        value="Systems and Networks Concentration"
+                    >
+                        Systems and Networks
+                    </option>
+                    <option key="Concentrat7" value="Theory and Computation">
+                        Theory and Computation
+                    </option>
+                </Form.Select>
+            </Form.Group>
+            <h6>You have selected: {concentrat}</h6>
             <h3>Missing Requirements</h3>
             {missingRequirements.map((req: string) => (
                 <div key={req}>{req}</div>
