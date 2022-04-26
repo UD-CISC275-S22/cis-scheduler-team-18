@@ -317,6 +317,140 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
     }
+    function checkScienceSeq(classes: Course[]) {
+        const scienceCodes = SCIENCE.map(
+            (course: Course): string => course.code
+        );
+
+        const findScience = classes.filter((course: Course): boolean =>
+            scienceCodes.includes(course.code)
+        );
+
+        if (findScience.length === 1) {
+            //if it's PHYS207
+            if (findScience[0].code === "PHYS207") {
+                missingRequirements = [...missingRequirements, "PHYS208"];
+            }
+            if (
+                findScience[0].code === "CHEM103" ||
+                findScience[0].code === "CHEM133"
+            ) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "CHEM104 + CHEM134"
+                ];
+            }
+            if (findScience[0].code === "CHEM107") {
+                missingRequirements = [...missingRequirements, "CHEM108"];
+            }
+            if (findScience[0].code === "BISC207") {
+                missingRequirements = [...missingRequirements, "BISC208"];
+            }
+            if (
+                findScience[0].code === "GEOL105" ||
+                findScience[0].code === "GEOL115"
+            ) {
+                missingRequirements = [...missingRequirements, "GEOL107"];
+            }
+            if (findScience[0].code === "GEOL107") {
+                missingRequirements = [...missingRequirements, "GEOL110"];
+            }
+        }
+        if (findScience.length === 0) {
+            missingRequirements = [
+                ...missingRequirements,
+                "Science Sequence Requirement",
+                "4 Credits Additional Science"
+            ];
+        }
+        if (findScience.length === 2) {
+            if (
+                ((findScience[0].code === "PHYS207" ||
+                    findScience[0].code === "PHYS208") &&
+                    (findScience[1].code === "PHYS208" ||
+                        findScience[1].code === "PHYS207")) ||
+                ((findScience[0].code === "CHEM107" ||
+                    findScience[0].code === "CHEM108") &&
+                    (findScience[1].code === "CHEM107" ||
+                        findScience[1].code === "CHEM108")) ||
+                ((findScience[0].code === "GEOL107" ||
+                    findScience[0].code === "GEOL110") &&
+                    (findScience[1].code === "GEOL107" ||
+                        findScience[1].code === "GEOL110")) ||
+                ((findScience[0].code === "BISC207" ||
+                    findScience[0].code === "BISC208") &&
+                    (findScience[1].code === "BISC207" ||
+                        findScience[1].code === "BISC208"))
+            ) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "Major Requirement: 4 additional Lab science Credits"
+                ];
+            }
+            if (
+                (findScience[0].code === "GEOL105" ||
+                    findScience[0].code === "GEOL115") &&
+                (findScience[1].code === "GEOL105" ||
+                    findScience[1].code === "GEOL115")
+            ) {
+                missingRequirements = [...missingRequirements, "GEOL107"];
+            }
+            if (
+                (findScience[0].code === "CHEM103" ||
+                    findScience[0].code === "CHEM133") &&
+                (findScience[1].code === "CHEM103" ||
+                    findScience[1].code === "CHEM134")
+            ) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "CHEM104 + CHEM134"
+                ];
+            }
+        }
+        if (findScience.length === 3) {
+            if (
+                (findScience[0].code === "GEOL105" ||
+                    findScience[0].code === "GEOL115" ||
+                    findScience[0].code === "GEOL107") &&
+                (findScience[1].code === "GEOL105" ||
+                    findScience[1].code === "GEOL115" ||
+                    findScience[1].code === "GEOL107") &&
+                (findScience[2].code === "GEOL105" ||
+                    findScience[2].code === "GEOL115" ||
+                    findScience[2].code === "GEOL107")
+            ) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "Major Requirement: 4 additional Lab science Credits"
+                ];
+            }
+        }
+        if (findScience.length === 4) {
+            if (
+                (findScience[0].code === "CHEM103" ||
+                    findScience[0].code === "CHEM133" ||
+                    findScience[0].code === "CHEM104" ||
+                    findScience[0].code === "CHEM134") &&
+                (findScience[1].code === "CHEM103" ||
+                    findScience[1].code === "CHEM133" ||
+                    findScience[1].code === "GHEM104" ||
+                    findScience[1].code === "CHEM134") &&
+                (findScience[2].code === "CHEM103" ||
+                    findScience[2].code === "CHEM133" ||
+                    findScience[2].code === "CHEM104" ||
+                    findScience[2].code === "CHEM134") &&
+                (findScience[3].code === "CHEM103" ||
+                    findScience[3].code === "CHEM133" ||
+                    findScience[3].code === "CHEM104" ||
+                    findScience[3].code === "CHEM134")
+            ) {
+                missingRequirements = [
+                    ...missingRequirements,
+                    "Major Requirement: 4 additional Lab science Credits"
+                ];
+            }
+        }
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
@@ -325,6 +459,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
     plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
     plan.semesters.map((sem: Semester) => checkTechElect(sem.courses));
+    plan.semesters.map((sem: Semester) => checkScienceSeq(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
