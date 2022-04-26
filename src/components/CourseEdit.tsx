@@ -1,4 +1,3 @@
-import { stringify } from "querystring";
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
