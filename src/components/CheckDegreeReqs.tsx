@@ -300,6 +300,23 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
 
         missingRequirements = missingRequirements.concat(missingCourses);
     }
+
+    function checkTechElect(classes: Course[]) {
+        const techElectCodes = TECHELECT.map(
+            (course: Course): string => course.code
+        );
+
+        const findTechElect = classes.filter((course: Course): boolean =>
+            techElectCodes.includes(course.code)
+        );
+
+        if (findTechElect.length < 2) {
+            missingRequirements = [
+                ...missingRequirements,
+                "Major Requirement: Tech Electives - CISC301+ (6 credits)"
+            ];
+        }
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
@@ -307,6 +324,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     plan.semesters.map((sem: Semester) => checkMath(sem.courses));
     plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
     plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
+    plan.semesters.map((sem: Semester) => checkTechElect(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
