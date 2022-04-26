@@ -10,11 +10,17 @@ import multiCultReq from "../data/multiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
+import ai from "../data/ai.json";
+import bioInformatics from "../data/bioinformatics.json";
+import cybersecurity from "../data/cybersecurity.json";
+import dataScience from "../data/dataScience.json";
+import highPerformance from "../data/highPerf.json";
+import systemsNetwork from "../data/systemsNetworks.json";
+import theoryandComp from "../data/TheoryandComputation.json";
 
 //TO DO:
 //implement a check for upper level language courses
 //implement a button to choose your concentration, and then check that
-//get a list of courses
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //will be used to chose a concentration
@@ -56,6 +62,39 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
 
     //this is going to keep track of all the missing requirements
     let missingRequirements: string[] = [""];
+
+    //ai concentration
+    const AI = ai.map((course: Course): Course => ({ ...course }));
+
+    //bioInform concentrat
+    const BIOINFORMATICS = bioInformatics.map(
+        (course: Course): Course => ({ ...course })
+    );
+
+    //cyberSecurity concentrat
+    const CYBERSECURITY = cybersecurity.map(
+        (course: Course): Course => ({ ...course })
+    );
+
+    //dataScience
+    const DATASICENCE = dataScience.map(
+        (course: Course): Course => ({ ...course })
+    );
+
+    //highPerformance
+    const HIGHPERFORMANCE = highPerformance.map(
+        (course: Course): Course => ({ ...course })
+    );
+
+    //systemsNetwork
+    const SYSTEMSNETWORK = systemsNetwork.map(
+        (course: Course): Course => ({ ...course })
+    );
+
+    //theoryandComp
+    const THEORYANDCOMP = theoryandComp.map(
+        (course: Course): Course => ({ ...course })
+    );
 
     function checkBreadths(classes: Course[]): void {
         //find all the breadth requirements in a semester
@@ -498,6 +537,170 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
+    function checkAIConcent(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const AICodes = AI.map((course: Course): string => course.code);
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = AICodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function checkbioInfConcentrat(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const bioInfCodes = BIOINFORMATICS.map(
+            (course: Course): string => course.code
+        );
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = bioInfCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function checkCyberSecConcent(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const cyberCodes = CYBERSECURITY.map(
+            (course: Course): string => course.code
+        );
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = cyberCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function checkDataScienceConcent(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const dataScienceCodes = DATASICENCE.map(
+            (course: Course): string => course.code
+        );
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = dataScienceCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function checkHighPerfConcent(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const highPerfCodes = HIGHPERFORMANCE.map(
+            (course: Course): string => course.code
+        );
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = highPerfCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function checkSystemsNetConcent(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const systemCodes = SYSTEMSNETWORK.map(
+            (course: Course): string => course.code
+        );
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = systemCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function checkTheoryConcent(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const theoryCodes = THEORYANDCOMP.map(
+            (course: Course): string => course.code
+        );
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = theoryCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
+
+    function doNothing() {
+        const hello = "hello";
+        console.log(hello);
+    }
+
     function checkAllReqs(classes: Course[]) {
         checkBreadths(classes);
         checkMultiCultural(classes);
@@ -509,6 +712,22 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         checkTechElect(classes);
         checkScienceSeq(classes);
         addCredits(classes);
+
+        if (concentrat === "Artificial Intelligence and Robotics") {
+            checkAIConcent(classes);
+        } else if (concentrat === "Bioinformatics") {
+            checkbioInfConcentrat(classes);
+        } else if (concentrat === "Cybersecurity") {
+            checkCyberSecConcent(classes);
+        } else if (concentrat === "Data Science") {
+            checkDataScienceConcent(classes);
+        } else if (concentrat === "High Performance Computing") {
+            checkHighPerfConcent(classes);
+        } else if (concentrat === "Systems and Networks") {
+            checkSystemsNetConcent(classes);
+        } else if (concentrat === "Theory and Computation") {
+            checkTheoryConcent(classes);
+        }
     }
 
     checkAllReqs(courses);
@@ -538,10 +757,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
                     >
                         High Performance Computing
                     </option>
-                    <option
-                        key="Concentrat6"
-                        value="Systems and Networks Concentration"
-                    >
+                    <option key="Concentrat6" value="Systems and Networks">
                         Systems and Networks
                     </option>
                     <option key="Concentrat7" value="Theory and Computation">
