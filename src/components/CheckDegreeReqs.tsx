@@ -37,7 +37,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     let missingRequirements: string[] = [""];
 
     function checkBreadths(classes: Course[]): void {
-        //find all theh breadth requirements in a semester
+        //find all the breadth requirements in a semester
         const groupA = classes.filter((course: Course): boolean =>
             course.breadth.includes(
                 "GROUP A" || "GROUPA" || "group A" || "group a"
@@ -61,22 +61,24 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
                 "GROUP D" || "GROUPD" || "group D" || "group d"
             )
         );
+        //making a variable to hold teh amount of credits each breadth has
         let groupACredits = 0;
         let groupBCredits = 0;
         let groupCCredits = 0;
         let groupDCredits = 0;
+        //add credits in groupA
         for (const cred of groupA) {
             groupACredits += parseInt(cred.credits);
         }
-
+        //add credits in groupB
         for (const cred of groupB) {
             groupBCredits += parseInt(cred.credits);
         }
-
+        //add credits in groupC
         for (const cred of groupC) {
             groupCCredits += parseInt(cred.credits);
         }
-
+        //add credits in groupD
         for (const cred of groupD) {
             groupDCredits += parseInt(cred.credits);
         }
@@ -84,6 +86,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         //what do we need
         //at least 3 credits in group A, group B, group C, group D
 
+        //missing group a
         if (groupACredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
@@ -91,6 +94,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
 
+        //missing group b
         if (groupBCredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
@@ -98,6 +102,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
 
+        //missing group c
         if (groupCCredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
@@ -105,6 +110,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
 
+        //missing group d
         if (groupDCredits < 3) {
             missingRequirements = [
                 ...missingRequirements,
@@ -119,11 +125,12 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         if (totalCreds < 21 || totalCreds - groupDCredits < 18) {
             missingRequirements = [
                 ...missingRequirements,
-                "College of Engineering Breadths: 9 Credits Necessary"
+                "College of Engineering Breadths: 9 Credits Necessary NOT Group D"
             ];
         } else if (totalCreds >= 21 && totalCreds - groupDCredits >= 18) {
             //test for 6 credits being upper level
             //to do: need to implement upper foreign language courses
+            //not a perfect theorem
             const upperLevelA = groupA.filter((course: Course): boolean =>
                 course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
             );
@@ -136,7 +143,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             const upperLevelD = groupD.filter((course: Course): boolean =>
                 course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
             );
-
+            //counts the credits for the upper level breadths
             let upperACredit = 0;
             let upperBCredit = 0;
             let upperCCredit = 0;
@@ -469,16 +476,22 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
     }
-    plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
-    plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
-    plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
-    plan.semesters.map((sem: Semester) => checkCapstone(sem.courses));
-    plan.semesters.map((sem: Semester) => checkMath(sem.courses));
-    plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
-    plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
-    plan.semesters.map((sem: Semester) => checkTechElect(sem.courses));
-    plan.semesters.map((sem: Semester) => checkScienceSeq(sem.courses));
-    plan.semesters.map((sem: Semester) => addCredits(sem.courses));
+
+    function checkAllReqs(plan: Plan) {
+        plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
+        plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
+        plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
+        plan.semesters.map((sem: Semester) => checkCapstone(sem.courses));
+        plan.semesters.map((sem: Semester) => checkMath(sem.courses));
+        plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
+        plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
+        plan.semesters.map((sem: Semester) => checkTechElect(sem.courses));
+        plan.semesters.map((sem: Semester) => checkScienceSeq(sem.courses));
+        plan.semesters.map((sem: Semester) => addCredits(sem.courses));
+
+    }
+
+    checkAllReqs(plan);
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
