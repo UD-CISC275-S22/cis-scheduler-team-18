@@ -279,12 +279,34 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
     }
+
+    function checkCoreCourses(classes: Course[]) {
+        //an array of the codes of all the core requirements in the data file
+        const coreCodes = CORES.map((course: Course): string => course.code);
+        const classesCodes = classes.map(
+            (course: Course): string => course.code
+        );
+
+        //this will find all the missing courses
+        //will filter through the input classes and test to see which course codes aren't included in coreCodes
+        //findMissingCourses: an array of all the courses not in the input classes
+        const findMissingCourses = coreCodes.filter(
+            (course: string): boolean => !classesCodes.includes(course)
+        );
+        //now, we need to add each find missing course to missingrequirements
+        const missingCourses = findMissingCourses.map(
+            (course: string): string => course
+        );
+
+        missingRequirements = missingRequirements.concat(missingCourses);
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
     plan.semesters.map((sem: Semester) => checkCapstone(sem.courses));
     plan.semesters.map((sem: Semester) => checkMath(sem.courses));
     plan.semesters.map((sem: Semester) => checkEngl(sem.courses));
+    plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
