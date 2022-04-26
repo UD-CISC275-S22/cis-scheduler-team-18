@@ -451,6 +451,24 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             }
         }
     }
+
+    function addCredits(classes: Course[]) {
+        const classCredit = classes.map(
+            (course: Course): number => parseInt(course.credits) || 0
+        );
+
+        const totalCredit = classCredit.reduce(
+            (sum: number, num: number) => sum + num,
+            0
+        );
+
+        if (totalCredit < 124) {
+            missingRequirements = [
+                ...missingRequirements,
+                "124 Credits Needed"
+            ];
+        }
+    }
     plan.semesters.map((sem: Semester) => checkBreadths(sem.courses));
     plan.semesters.map((sem: Semester) => checkMultiCultural(sem.courses));
     plan.semesters.map((sem: Semester) => checkDLE(sem.courses));
@@ -460,6 +478,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     plan.semesters.map((sem: Semester) => checkCoreCourses(sem.courses));
     plan.semesters.map((sem: Semester) => checkTechElect(sem.courses));
     plan.semesters.map((sem: Semester) => checkScienceSeq(sem.courses));
+    plan.semesters.map((sem: Semester) => addCredits(sem.courses));
     return (
         <div className="boxed">
             {missingRequirements.map((req: string) => (
