@@ -1,7 +1,7 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
-import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
+//import { SemesterEditor } from "../components/semesterEditor";
 
 export function ReadOnlySemesters({
     semesters
@@ -9,14 +9,18 @@ export function ReadOnlySemesters({
     semesters: Semester[];
 }): JSX.Element {
     return (
-        <ListGroup as="ol" numbered>
-            {semesters.map((sem: Semester) => (
-                <ListGroup.Item as="li" key={sem.id}>
-                    <div>
-                        {sem.season} {sem.year}
-                    </div>
-                </ListGroup.Item>
-            ))}
-        </ListGroup>
+        <div>
+            <ListGroup as="ol" numbered>
+                {semesters.map((sem: Semester) => (
+                    <ListGroup.Item as="li" key={sem.id}>
+                        <div>
+                            <div>
+                                {sem.season} {sem.year}
+                            </div>
+                        </div>
+                    </ListGroup.Item>
+                ))}
+            </ListGroup>
+        </div>
     );
 }
