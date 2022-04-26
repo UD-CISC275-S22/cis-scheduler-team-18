@@ -66,7 +66,7 @@ export function Drag(): JSX.Element {
             (course: Course): boolean => course === newCourse
         );
         if (existing === undefined) {
-            setLeft([...right, JSON.parse(data)]);
+            setLeft([...left, JSON.parse(data)]);
             deleteRight(newCourse.code);
         }
     };
@@ -80,9 +80,6 @@ export function Drag(): JSX.Element {
         <div className="container">
             <Row>
                 <Col>
-                    <div onDragOver={allowDrop}>Drop the Thing here!</div>
-                </Col>
-                <Col>
                     <div
                         key="theStart"
                         className="box4"
@@ -90,7 +87,6 @@ export function Drag(): JSX.Element {
                             backgroundColor: "green",
                             display: "inline-block"
                         }}
-                        onDragOver={allowDrop}
                     >
                         {left.map((course: Course) => (
                             <div
