@@ -20,7 +20,6 @@ import theoryandComp from "../data/TheoryandComputation.json";
 
 //TO DO:
 //implement a check for upper level language courses
-//implement a button to choose your concentration, and then check that
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //will be used to chose a concentration
@@ -694,11 +693,6 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         );
 
         missingRequirements = missingRequirements.concat(missingCourses);
-    }
-
-    function doNothing() {
-        const hello = "hello";
-        console.log(hello);
     }
 
     function checkAllReqs(classes: Course[]) {
