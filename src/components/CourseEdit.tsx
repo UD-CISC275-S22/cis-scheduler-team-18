@@ -1,3 +1,4 @@
+import { stringify } from "querystring";
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
@@ -20,8 +21,11 @@ export function CourseEdit({
     const [show, setShow] = useState(false);
 
     //saves original course information
-    const saveDataKey = course.code;
+    const saveDataKey = course.descr;
     const prevData = localStorage.getItem(saveDataKey);
+    if (prevData === null) {
+        localStorage.setItem(saveDataKey, JSON.stringify(course));
+    }
 
     //Open Close and Save functions for popup
     const close = () => setShow(false);
@@ -57,7 +61,16 @@ export function CourseEdit({
     }
 
     //returns the course information back to its original information
-
+    function revert() {
+        const original = localStorage.getItem(course.descr);
+        let tempCourse = course;
+        if (original !== null) {
+            tempCourse = JSON.parse(original);
+        }
+        setCode(tempCourse.code);
+        setTitle(tempCourse.name);
+        setCredits(tempCourse.credits);
+    }
     return (
         <>
             <div>
@@ -96,13 +109,13 @@ export function CourseEdit({
                         <Button variant="danger" onClick={remove}>
                             Delete Course
                         </Button>
+                        <Button onClick={revert}>Revert to original</Button>
                         <Button variant="warning" onClick={close}>
                             Cancel
                         </Button>
                         <Button variant="success" onClick={save}>
                             Save Changes
                         </Button>
-                        <Button>revert to original</Button>
                     </Modal.Footer>
                 </Modal.Body>
             </Modal>
