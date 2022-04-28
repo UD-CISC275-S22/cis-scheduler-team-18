@@ -25,7 +25,7 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
             )
         );
         //need to update plan
-        plan = { ...plan, semesters: semesters };
+        //plan = { ...plan, semesters: semesters };
     }
 
     //deleteSemester function
