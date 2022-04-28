@@ -11,15 +11,13 @@ export function SemesterEditor({
     changeSemesterEditing,
     semester,
     editSemester,
-    deleteSemester,
-    plan
+    deleteSemester
 }: {
     show: boolean;
     changeSemesterEditing: () => void;
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    plan: Plan;
 }): JSX.Element {
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);
@@ -34,6 +32,12 @@ export function SemesterEditor({
             year: parseInt(year) || 0
         });
         changeSemesterEditing();
+        //maybe add an update plan in here
+        updatePlanSemesters(semester.id, {
+            ...semester,
+            season: season,
+            year: parseInt(year) || 0
+        });
     }
 
     //will cancel the changes being made

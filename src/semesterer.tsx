@@ -24,6 +24,8 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     semester.id === id ? newSemester : semester
             )
         );
+        //need to update plan
+        plan = { ...plan, semesters: semesters };
     }
 
     //deleteSemester function

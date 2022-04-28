@@ -30,6 +30,7 @@ export function CourseEdit({
             name: title,
             credits: credits
         });
+        //maybe add update semester here?
         close();
     }
 
