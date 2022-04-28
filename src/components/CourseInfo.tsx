@@ -31,21 +31,13 @@ export function CourseInfo({ course }: { course: Course }): JSX.Element {
                         <div>
                             Credits: <span>{course.credits}</span>
                         </div>
-                        {/*<div>
-                            Required Course?:{" "}
-                            <span>{course.required ? "Yes" : "No"}</span>
-    </div>*/}
+
                         <div>
                             {course.preReq.length > 0
                                 ? "Prerequisite For:" + course.preReq
                                 : "Not a prerequisite for any courses"}
                         </div>
-                        {/*<div>
-                            {course.preReqRequired
-                                ? "RESTRICTION must take:" +
-                                  course.requiredPreReq
-                                : "No prerequisites"}
-                            </div>*/}
+
                         <div>
                             Course Description: <span>{course.descr}</span>
                         </div>
