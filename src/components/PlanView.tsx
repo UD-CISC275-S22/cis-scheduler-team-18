@@ -48,10 +48,6 @@ export function PlanView({
         setEditing(!editing);
     }
 
-    function updatePlan(plan: Plan, sem: Semester) {
-        plan.semesters = [...plan.semesters, sem];
-    }
-
     //if in editing mode, will PlanEditor
     //else, will call Semesterer
     return editing ? (
