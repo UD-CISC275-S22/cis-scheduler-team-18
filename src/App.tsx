@@ -40,15 +40,23 @@ function App(): JSX.Element {
         }
     }
 
-    function updateEditedSemester(planId: string, semesters: Semester[]) {
-        setPlans(
-            plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planId
-                        ? { ...plan, semesters: semesters }
-                        : plan
-            )
+    function updateSemesterChanges(planId: string, semesters: Semester[]) {
+        //search for the planID's
+        const existing = plans.find(
+            (plan: Plan): boolean => plan.id === planId
         );
+
+        if (existing !== undefined) {
+            //set plan's semesters to equal semesters
+            setPlans(
+                plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: semesters }
+                            : plan
+                )
+            );
+        }
     }
 
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -81,7 +89,7 @@ function App(): JSX.Element {
                     plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
-                    updateEditedSem={updateEditedSemester}
+                    updateEditedSem={updateSemesterChanges}
                 ></PlanList>
             </div>
             <div>
