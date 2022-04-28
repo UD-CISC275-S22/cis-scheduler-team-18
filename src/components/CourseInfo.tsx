@@ -25,53 +25,88 @@ export function CourseInfo({ course }: { course: Course }): JSX.Element {
 
     //prints degree requirements this coure fufills
     function degreeReq(): string {
+        let requirements = "";
         //core requirements: an array of Course Objects that are the coreReqs -- THESE NEED TO BE TAKEN
-        const CORES = coreReqs.map(
-            (course: Course): Course => ({
-                ...course
-            })
-        );
+        const CORES = coreReqs.map((course: Course): string => course.code);
+        if (CORES.includes(course.code)) {
+            requirements = "CS Core Course";
+        }
         //DLEReqs: an array of Course Objects that are DLE options -- ANY OF THESE CAN BE TAKEN (3 credits)
-        const DLE = DLEReq.map((course: Course): Course => ({ ...course }));
+        const DLE = DLEReq.map((course: Course): string => course.code);
+        if (DLE.includes(course.code)) {
+            requirements = requirements + "\nDiscovery Learning Experience";
+        }
         //multiculturalREQ: ONE of these classes need to be taken (3 credits)
         const MULTICULTURAL = multiCultReq.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
+        if (MULTICULTURAL.includes(course.code)) {
+            requirements = requirements + "\nMulticultural";
+        }
         //science requirement: a sequence is needed + additional (12 credits in total)
-        const SCIENCE = scienceReq.map(
-            (course: Course): Course => ({ ...course })
-        );
+        const SCIENCE = scienceReq.map((course: Course): string => course.code);
+        if (SCIENCE.includes(course.code)) {
+            requirements = requirements + "\nLab Science";
+        }
         //techElect: 6 credits any 2 of these
-        const TECHELECT = techReqs.map(
-            (course: Course): Course => ({ ...course })
-        );
+        const TECHELECT = techReqs.map((course: Course): string => course.code);
+        if (TECHELECT.includes(course.code)) {
+            requirements = requirements + "\nTech Elective";
+        }
         //ai concentration
-        const AI = ai.map((course: Course): Course => ({ ...course }));
+        const AI = ai.map((course: Course): string => course.code);
+        if (AI.includes(course.code)) {
+            requirements = requirements + "\nAI Concentration Course";
+        }
         //bioInform concentrat
         const BIOINFORMATICS = bioInformatics.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
+        if (BIOINFORMATICS.includes(course.code)) {
+            requirements =
+                requirements + "\nBioinformatics Concentration Course";
+        }
         //cyberSecurity concentrat
         const CYBERSECURITY = cybersecurity.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
+        if (CYBERSECURITY.includes(course.code)) {
+            requirements =
+                requirements + "\nCybersecurity Concentration Course";
+        }
         //dataScience
         const DATASICENCE = dataScience.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
+        if (DATASICENCE.includes(course.code)) {
+            requirements = requirements + "\nData Science Concentration Course";
+        }
         //highPerformance
         const HIGHPERFORMANCE = highPerformance.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
+        if (HIGHPERFORMANCE.includes(course.code)) {
+            requirements =
+                requirements +
+                "\nHigh Performance Computing Concentration Course";
+        }
         //systemsNetwork
         const SYSTEMSNETWORK = systemsNetwork.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
+        if (SYSTEMSNETWORK.includes(course.code)) {
+            requirements =
+                requirements + "\nSystems Network Concentration Course";
+        }
         //theoryandComp
         const THEORYANDCOMP = theoryandComp.map(
-            (course: Course): Course => ({ ...course })
+            (course: Course): string => course.code
         );
-        return "hello";
+        if (THEORYANDCOMP.includes(course.code)) {
+            requirements =
+                requirements + "\nTheory and Computation Concentration Course";
+        }
+        return requirements;
     }
     return (
         <>
