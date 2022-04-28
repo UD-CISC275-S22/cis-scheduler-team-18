@@ -55,6 +55,8 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
         );
     }
 
+    //maybe implement an update semester from course function here
+
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
