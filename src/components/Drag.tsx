@@ -4,8 +4,13 @@ import coreMajorRequirements from "../data/coreMajorRequirements.json";
 import { Col, Row } from "react-bootstrap";
 import techElect from "../data/techElect.json";
 
-let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
+/*
+Make one course drag and droppable
+be able to drop it into pool
+Be able to drag it from pool back into any semester
+*/
 
+let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
 let startRight = techElect.map((course): Course => ({ ...course }));
 
 const saveDataKey = "MY-PAGE-DATA";
@@ -23,6 +28,10 @@ export function Drag(): JSX.Element {
     const [left, setLeft] = useState<Course[]>(startLeft);
     const [right, setRight] = useState<Course[]>(startRight);
 
+    const [testing, setTest] = useState<string>("Initial thing");
+
+    const [pool, setPool] = useState<Course[]>();
+
     // This function will be triggered when you start dragging
     const dragStartHandler = (
         event: React.DragEvent<HTMLDivElement>,
@@ -31,12 +40,23 @@ export function Drag(): JSX.Element {
         event.dataTransfer.setData("text", JSON.stringify(data));
     };
 
-    function deleteLeft(id: string) {
-        setLeft(left.filter((course: Course): boolean => course.code !== id));
+    function deleteLeft(newCourse: Course) {
+        //setLeft(left.filter((course: Course): boolean => course !== newCourse));
+        //setLeft([...left, left[4]]);
+        setLeft(
+            left.filter(
+                (course: Course): boolean => course.name !== newCourse.name
+            )
+        );
     }
 
-    function deleteRight(id: string) {
-        setRight(right.filter((course: Course): boolean => course.code !== id));
+    function deleteRight(newCourse: Course) {
+        //setRight(right.filter((course: Course): boolean => course.code !== id));
+        setRight(
+            startRight.filter(
+                (course: Course): boolean => course.name !== newCourse.name
+            )
+        );
     }
 
     // This function will be triggered when dropping
@@ -52,7 +72,7 @@ export function Drag(): JSX.Element {
         );
         if (existing === undefined) {
             setRight([...right, JSON.parse(data)]);
-            deleteLeft(newCourse.code);
+            deleteLeft(JSON.parse(data));
         }
     };
 
@@ -67,17 +87,41 @@ export function Drag(): JSX.Element {
         );
         if (existing === undefined) {
             setLeft([...left, JSON.parse(data)]);
-            deleteRight(newCourse.code);
+            deleteRight(JSON.parse(data));
         }
     };
+
+    /*
+    const dropHandlerPool = (
+        event: React.DragEvent<HTMLDivElement>,
+        newCourse: Course
+    ) => {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        setPool([...pool, JSON.parse(data)]);
+    };*/
 
     // This makes the third box become droppable
     const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
     };
 
+    function yes() {
+        setTest("Hiiiiiii");
+    }
+
     return (
         <div className="container">
+            <Row
+                style={{
+                    backgroundColor: "pink",
+                    display: "inline-block"
+                }}
+                onDragOver={allowDrop}
+                //onDrop={dropHandlerPool}
+            >
+                {testing}
+            </Row>
             <Row>
                 <Col>
                     <div

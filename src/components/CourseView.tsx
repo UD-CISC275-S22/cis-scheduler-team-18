@@ -16,6 +16,33 @@ export function CourseView({
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
 }): JSX.Element {
+    const dragStartHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        data: Course
+    ) => {
+        event.dataTransfer.setData("text", JSON.stringify(data));
+    };
+
+    /*
+    const dropHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        newCourse: Course
+    ) => {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        const existing = left.find(
+            (course: Course): boolean => course === newCourse
+        );
+        if (existing === undefined) {
+            setRight([...right, JSON.parse(data)]);
+            deleteLeft(newCourse.code);
+        }
+    };*/
+
+    const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+    };
+
     return (
         <div>
             <Table>
@@ -27,7 +54,16 @@ export function CourseView({
                 </thead>
                 <tbody>
                     {courses.map((course: Course) => (
-                        <tr key={course.code}>
+                        <tr
+                            key={course.code}
+                            className={course.code}
+                            onDragStart={(event) =>
+                                dragStartHandler(event, course)
+                            }
+                            draggable={true}
+                            onDragOver={allowDrop}
+                            //onDrop={(event) => dropHandler2(event, course)}
+                        >
                             <td>{course.code}</td>
                             <td>{course.name}</td>
                             <td>{course.credits}</td>
