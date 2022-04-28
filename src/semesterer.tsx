@@ -7,7 +7,13 @@ import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
 
-export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
+export function Semesterer({
+    plan,
+    updateEditedSem
+}: {
+    plan: Plan;
+    updateEditedSem: (planId: string, semesters: Semester[]) => void;
+}): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
     //list of semesters
@@ -26,6 +32,7 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
         );
         //need to update plan
         //plan = { ...plan, semesters: semesters };
+        updateEditedSem(plan.id, semesters);
     }
 
     //deleteSemester function

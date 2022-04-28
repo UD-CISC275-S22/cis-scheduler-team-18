@@ -8,6 +8,7 @@ import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
 import { Drag } from "./components/Drag";
+import { Semester } from "./interfaces/semester";
 
 const PLANS = semesterPlan.map(
     (plan: Plan): Plan => ({
@@ -37,6 +38,17 @@ function App(): JSX.Element {
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
         }
+    }
+
+    function updateEditedSemester(planId: string, semesters: Semester[]) {
+        setPlans(
+            plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planId
+                        ? { ...plan, semesters: semesters }
+                        : plan
+            )
+        );
     }
 
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -69,6 +81,7 @@ function App(): JSX.Element {
                     plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
+                    updateEditedSem={updateEditedSemester}
                 ></PlanList>
             </div>
             <div>
