@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-//import { Button } from "react-bootstrap";
 import "./App.css";
 
 import semesterPlan from "./data/semesterPlan.json";
 import { Plan } from "./interfaces/plan";
 import { PlanList } from "./components/PlanList";
-//import coursesCat from "./data/catalog.json";
 import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
-//import { Course } from "./interfaces/course";
 import { Drag } from "./components/Drag";
 
 const PLANS = semesterPlan.map(
