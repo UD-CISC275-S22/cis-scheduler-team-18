@@ -32,13 +32,11 @@ export function PlanView({
 export function PlanView({
     plan,
     editPlan,
-    deletePlan,
-    updateEditedSem
+    deletePlan
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
-    updateEditedSem: (planId: string, semesters: Semester[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -65,10 +63,7 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
-                <Semesterer
-                    plan={plan}
-                    updateEditedSem={updateEditedSem}
-                ></Semesterer>
+                <Semesterer plan={plan}></Semesterer>
             </div>
             <div>
                 <Button variant="info" onClick={changePlanEditing}>

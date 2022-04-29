@@ -8,13 +8,7 @@ import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
 import { Course } from "./interfaces/course";
 
-export function Semesterer({
-    plan,
-    updateEditedSem
-}: {
-    plan: Plan;
-    updateEditedSem: (planId: string, semesters: Semester[]) => void;
-}): JSX.Element {
+export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
     //list of semesters
@@ -31,9 +25,6 @@ export function Semesterer({
                     semester.id === id ? newSemester : semester
             )
         );
-        //need to update plan
-        //plan = { ...plan, semesters: semesters };
-        updateEditedSem(plan.id, semesters);
     }
 
     //deleteSemester function
@@ -53,7 +44,6 @@ export function Semesterer({
         if (existing === undefined) {
             setSemesters([...semesters, newSemester]);
         }
-        updateEditedSem(plan.id, semesters);
     }
 
     function clearSemesters(id: string) {

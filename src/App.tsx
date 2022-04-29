@@ -89,7 +89,6 @@ function App(): JSX.Element {
                     plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
-                    updateEditedSem={updateSemesterChanges}
                 ></PlanList>
             </div>
             <div>
