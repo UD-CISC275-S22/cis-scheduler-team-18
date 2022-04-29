@@ -5,15 +5,18 @@ import { Semester } from "../interfaces/semester";
 import { SemesterEditor } from "../components/semesterEditor";
 import { MultipleSemesterTable } from "../components/multipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
+import { Course } from "../interfaces/course";
 
 export function SemesterView({
     semester,
     editSemester,
-    deleteSemester
+    deleteSemester,
+    updateCourses
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
+    updateCourses: (semId: string, Courses: Course[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -39,7 +42,10 @@ export function SemesterView({
         </div>
     ) : (
         <div>
-            <MultipleSemesterTable semester={semester}></MultipleSemesterTable>
+            <MultipleSemesterTable
+                semester={semester}
+                updateCourses={updateCourses}
+            ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>
                     Edit Semester

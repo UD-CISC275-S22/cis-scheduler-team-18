@@ -6,6 +6,7 @@ import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
+import { Course } from "./interfaces/course";
 
 export function Semesterer({
     plan,
@@ -52,6 +53,7 @@ export function Semesterer({
         if (existing === undefined) {
             setSemesters([...semesters, newSemester]);
         }
+        updateEditedSem(plan.id, semesters);
     }
 
     function clearSemesters(id: string) {
@@ -63,6 +65,19 @@ export function Semesterer({
     }
 
     //maybe implement an update semester from course function here
+    function updateCourses(semId: string, Courses: Course[]) {
+        //useState: semesters
+        //we're going to have to set semesters
+        //find the semId string, and change courses
+        setSemesters(
+            semesters.map(
+                (sem: Semester): Semester =>
+                    sem.id === semId ? { ...sem, courses: Courses } : sem
+            )
+        );
+
+        //then, we're going to need to call something to update the plan
+    }
 
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -75,6 +90,7 @@ export function Semesterer({
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
+                    updateCourses={updateCourses}
                 ></SemesterList>
             </div>
             <div>
