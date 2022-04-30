@@ -226,6 +226,8 @@ function App(): JSX.Element {
                     editPlan={editPlan}
                     deletePlan={deletePlan}
                     updateCoursePlan={updateCoursePlan}
+                    updateEditedCourse={updateEditedCourse}
+                    updateEditedSemester={updateEditedSemester}
                 ></PlanList>
             </div>
             <div>

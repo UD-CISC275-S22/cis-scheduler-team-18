@@ -11,7 +11,9 @@ import { Course } from "./interfaces/course";
 export function Semesterer({
     plan,
     updateSemesterPlan,
-    updateCoursePlan
+    updateCoursePlan,
+    updateEditedSemester,
+    updateEditedCourse
 }: {
     plan: Plan;
     updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
@@ -19,6 +21,20 @@ export function Semesterer({
         planId: string,
         semesterId: string,
         newCourse: Course
+    ) => Plan[];
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
     ) => Plan[];
 }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
@@ -79,6 +95,8 @@ export function Semesterer({
                     deleteSemester={deleteSemester}
                     updateCoursePlan={updateCoursePlan}
                     planId={plan.id}
+                    updateEditedSemester={updateEditedSemester}
+                    updateEditedCourse={updateEditedCourse}
                 ></SemesterList>
             </div>
             <div>

@@ -8,7 +8,8 @@ import { Plan } from "../interfaces/plan";
 export function MultipleSemesterTable({
     planId,
     semester,
-    updateCoursePlan
+    updateCoursePlan,
+    updateEditedCourse
 }: {
     planId: string;
     semester: Semester;
@@ -16,6 +17,14 @@ export function MultipleSemesterTable({
         planId: string,
         semesterId: string,
         newCourse: Course
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
     ) => Plan[];
 }): JSX.Element {
     //this function will return all the courses; organized by semester in a single plan
@@ -49,6 +58,7 @@ export function MultipleSemesterTable({
                 planId={planId}
                 semester={semester}
                 updateCoursePlan={updateCoursePlan}
+                updateEditedCourse={updateEditedCourse}
             ></CourseList>
         </div>
     );

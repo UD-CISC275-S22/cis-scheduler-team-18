@@ -13,7 +13,8 @@ import { Plan } from "../interfaces/plan";
 export function CourseList({
     semester,
     planId,
-    updateCoursePlan
+    updateCoursePlan,
+    updateEditedCourse
 }: {
     semester: Semester;
     planId: string;
@@ -21,6 +22,14 @@ export function CourseList({
         planId: string,
         semesterId: string,
         newCourse: Course
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
     ) => Plan[];
 }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
@@ -51,9 +60,12 @@ export function CourseList({
     return (
         <div>
             <CourseView
+                planId={planId}
+                semId={semester.id}
                 courses={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
+                updateEditedCourse={updateEditedCourse}
             ></CourseView>
             <CourseAdd
                 planId={planId}

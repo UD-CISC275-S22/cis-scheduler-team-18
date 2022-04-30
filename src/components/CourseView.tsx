@@ -3,18 +3,32 @@ import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
+import { Plan } from "../interfaces/plan";
 
 /**
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
  */
 export function CourseView({
+    planId,
+    semId,
     courses,
     editCourse,
-    deleteCourse
+    deleteCourse,
+    updateEditedCourse
 }: {
+    planId: string;
+    semId: string;
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => Plan[];
 }): JSX.Element {
     return (
         <div>
@@ -33,9 +47,12 @@ export function CourseView({
                             <td>{course.credits}</td>
                             <td>
                                 <CourseEdit
+                                    planId={planId}
+                                    semId={semId}
                                     course={course}
                                     editCourse={editCourse}
                                     deleteCourse={deleteCourse}
+                                    updateEditedCourse={updateEditedCourse}
                                 ></CourseEdit>
                                 <CourseInfo course={course}></CourseInfo>
                             </td>

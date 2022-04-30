@@ -13,7 +13,9 @@ export function SemesterView({
     editSemester,
     deleteSemester,
     updateCoursePlan,
-    planId
+    planId,
+    updateEditedSemester,
+    updateEditedCourse
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
@@ -24,6 +26,20 @@ export function SemesterView({
         newCourse: Course
     ) => Plan[];
     planId: string;
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => Plan[];
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -40,11 +56,13 @@ export function SemesterView({
     return editing ? (
         <div>
             <SemesterEditor
+                planId={planId}
                 show={editing}
                 changeSemesterEditing={changeSemesterEditing}
                 semester={semester}
                 editSemester={editSemester}
                 deleteSemester={deleteSemester}
+                updateEditedSemester={updateEditedSemester}
             ></SemesterEditor>
         </div>
     ) : (
@@ -53,6 +71,7 @@ export function SemesterView({
                 planId={planId}
                 semester={semester}
                 updateCoursePlan={updateCoursePlan}
+                updateEditedCourse={updateEditedCourse}
             ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>
