@@ -62,11 +62,12 @@ function App(): JSX.Element {
                     : { ...plan }
         );
 
+        setPlans(addedSem);
+
         return addedSem;
     }
 
-    function addCourse(
-        plans: Plan[],
+    function updateCoursePlan(
         planID: string,
         semesterId: string,
         newCourse: Course
@@ -99,6 +100,8 @@ function App(): JSX.Element {
                         : { ...plan }
             );
         }
+
+        setPlans(updatePlan);
 
         return updatePlan;
     }

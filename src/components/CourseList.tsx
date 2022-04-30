@@ -9,7 +9,7 @@ import { CourseView } from "./CourseView";
  * Returns a table that displays all of the courses in a single semester
  * This function updates the list of courses in a semester when needed and calls CourseView to display changes
  */
-export function CourseList({ semester }: { semester: Semester }): JSX.Element {
+export function CourseList({ semester, planId, updateCoursePlan }: { semester: Semester; planId: string; updateCoursePlan: (planId: string, semesterId: string; newCourse: Course) => Plan[] }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     /*
     Function updates the list of courses to include the changes that the user made in CourseEdit
@@ -42,7 +42,12 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
             ></CourseView>
-            <CourseAdd addCourse={addCourse}></CourseAdd>
+            <CourseAdd
+                planId={planId}
+                semesterId={semester.id}
+                addCourse={addCourse}
+                updateCoursePlan={updateCoursePlan}
+            ></CourseAdd>
             <Button variant="danger" onClick={clearCourses}>
                 Clear All Courses
             </Button>
