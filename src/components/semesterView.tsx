@@ -6,17 +6,24 @@ import { SemesterEditor } from "../components/semesterEditor";
 import { MultipleSemesterTable } from "../components/multipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
 import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
 
 export function SemesterView({
     semester,
     editSemester,
     deleteSemester,
-    updateCourses
+    updateCoursePlan,
+    planId
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    updateCourses: (semId: string, Courses: Course[]) => void;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
+    planId: string;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -43,8 +50,9 @@ export function SemesterView({
     ) : (
         <div>
             <MultipleSemesterTable
+                planId={planId}
                 semester={semester}
-                updateCourses={updateCourses}
+                updateCoursePlan={updateCoursePlan}
             ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>

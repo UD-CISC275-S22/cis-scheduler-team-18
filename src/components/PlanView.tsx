@@ -6,6 +6,7 @@ import { Semesterer } from "../semesterer";
 import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
 import { Semester } from "../interfaces/semester";
+import { Course } from "../interfaces/course";
 
 /*
 Add this later!
@@ -33,12 +34,18 @@ export function PlanView({
     plan,
     editPlan,
     deletePlan,
-    updateSemesterPlan
+    updateSemesterPlan,
+    updateCoursePlan
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
     updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -68,6 +75,7 @@ export function PlanView({
                 <Semesterer
                     plan={plan}
                     updateSemesterPlan={updateSemesterPlan}
+                    updateCoursePlan={updateCoursePlan}
                 ></Semesterer>
             </div>
             <div>

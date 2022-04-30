@@ -10,10 +10,16 @@ import { Course } from "./interfaces/course";
 
 export function Semesterer({
     plan,
-    updateSemesterPlan
+    updateSemesterPlan,
+    updateCoursePlan
 }: {
     plan: Plan;
     updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
 }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
@@ -60,21 +66,6 @@ export function Semesterer({
         );
     }
 
-    //maybe implement an update semester from course function here
-    function updateCourses(semId: string, Courses: Course[]) {
-        //useState: semesters
-        //we're going to have to set semesters
-        //find the semId string, and change courses
-        setSemesters(
-            semesters.map(
-                (sem: Semester): Semester =>
-                    sem.id === semId ? { ...sem, courses: Courses } : sem
-            )
-        );
-
-        //then, we're going to need to call something to update the plan
-    }
-
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
@@ -86,7 +77,8 @@ export function Semesterer({
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
-                    updateCourses={updateCourses}
+                    updateCoursePlan={updateCoursePlan}
+                    planId={plan.id}
                 ></SemesterList>
             </div>
             <div>

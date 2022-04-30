@@ -4,12 +4,25 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseAdd } from "./CourseAdd";
 import { CourseView } from "./CourseView";
+import { Plan } from "../interfaces/plan";
 
 /**
  * Returns a table that displays all of the courses in a single semester
  * This function updates the list of courses in a semester when needed and calls CourseView to display changes
  */
-export function CourseList({ semester, planId, updateCoursePlan }: { semester: Semester; planId: string; updateCoursePlan: (planId: string, semesterId: string; newCourse: Course) => Plan[] }): JSX.Element {
+export function CourseList({
+    semester,
+    planId,
+    updateCoursePlan
+}: {
+    semester: Semester;
+    planId: string;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
+}): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     /*
     Function updates the list of courses to include the changes that the user made in CourseEdit
