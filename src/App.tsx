@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useState } from "react";
 import "./App.css";
 
@@ -172,7 +173,12 @@ function App(): JSX.Element {
                 const editedCourse = currCourses.map(
                     (course: Course): Course =>
                         course.code === courseCode
-                            ? { ...course, code: newCode, name: newName }
+                            ? {
+                                  ...course,
+                                  code: newCode,
+                                  name: newName,
+                                  credits: newCredits
+                              }
                             : { ...course }
                 );
 
