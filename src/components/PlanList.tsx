@@ -2,7 +2,6 @@ import React from "react";
 import { Stack } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { PlanView } from "./PlanView";
-import { Semester } from "../interfaces/semester";
 
 /*Add this later --> */
 /*

@@ -9,6 +9,8 @@ import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
 import { Drag } from "./components/Drag";
 import { Semester } from "./interfaces/semester";
+import { Course } from "./interfaces/course";
+import { SemesterList } from "./components/semesterList";
 
 const PLANS = semesterPlan.map(
     (plan: Plan): Plan => ({
@@ -31,36 +33,42 @@ function App(): JSX.Element {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
-    function addPlan(newPlan: Plan) {
+    /*function addPlan(newPlan: Plan) {
         const existing = plans.find(
             (plan: Plan): boolean => plan.id === newPlan.id
         );
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
         }
-    }
-
-    function updateSemesterChanges(planId: string, semesters: Semester[]) {
-        //search for the planID's
-        const existing = plans.find(
-            (plan: Plan): boolean => plan.id === planId
-        );
-
-        if (existing !== undefined) {
-            //set plan's semesters to equal semesters
-            setPlans(
-                plans.map(
-                    (plan: Plan): Plan =>
-                        plan.id === planId
-                            ? { ...plan, semesters: semesters }
-                            : plan
-                )
-            );
-        }
-    }
+    }*/
 
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
+
+    //mimicking Tome example to implement
+    function addPlan(plans: Plan[], newPlan: Plan): Plan[] {
+        //adds the new plan to plans
+        //implement this with a button by using the lambda function: 
+        //() => setPlans(addPlan(plans, newPlan))
+        return [...plans, newPlan];
+    }
+
+    function addSemester(planId: string, newSemester: Semester) {
+        //find if the semester already exists
+        const existing = plans.map((plan: Plan) =>
+            plan.semesters.find(
+                (sem: Semester): boolean => sem.id === newSemester.id
+            )
+        );
+
+    function addCourse(
+        planID: string,
+        semesterId: string,
+        newCourse: Course
+    ){
+        //find if the course already exists
+
+    }
 
     /** Add this later*/
     /*
