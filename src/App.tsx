@@ -55,6 +55,7 @@ function App(): JSX.Element {
     }
 
     function updateSemesterPlan(planId: string, newSemester: Semester): Plan[] {
+        //will update "plans" when a new semester is added
         const addedSem = plans.map(
             (plan: Plan): Plan =>
                 plan.id === planId
@@ -68,6 +69,7 @@ function App(): JSX.Element {
     }
 
     function updateCoursePlan(
+        //will update "plans" when a new course is added
         planID: string,
         semesterId: string,
         newCourse: Course
@@ -107,6 +109,7 @@ function App(): JSX.Element {
     }
 
     function updateEditedSemester(
+        //will update "plans", when a semester is edited
         planId: string,
         semId: string,
         newSeason: string,
@@ -145,6 +148,7 @@ function App(): JSX.Element {
     }
 
     function updateEditedCourse(
+        //will update 'plans' when a course is edited
         planId: string,
         semId: string,
         courseCode: string,
