@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
 
 export function AddSemesterModal({
+    planId,
     show,
     handleClose,
-    addSemester
+    addSemester,
+    updateSemesterPlan
 }: {
+    planId: string;
     show: boolean;
     handleClose: () => void;
     addSemester: (newSemester: Semester) => void;
+    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
 }) {
     const [id, setId] = useState<string>("");
     //const [courses, setCourses] = useState<string[]>([]);
@@ -38,6 +43,23 @@ export function AddSemesterModal({
             )
         });
         handleClose();
+        updateSemesterPlan(planId, {
+            id: season + " " + year,
+            season: season,
+            year: parseInt(year) || 0,
+            courses: courses.map(
+                (): Course => ({
+                    code: "Example course",
+                    name: "Example Course Title",
+                    descr: "",
+                    credits: "",
+                    preReq: "",
+                    restrict: "",
+                    breadth: "",
+                    typ: ""
+                })
+            )
+        });
     }
 
     return (

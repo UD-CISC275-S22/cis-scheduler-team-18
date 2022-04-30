@@ -8,7 +8,13 @@ import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
 import { Course } from "./interfaces/course";
 
-export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
+export function Semesterer({
+    plan,
+    updateSemesterPlan
+}: {
+    plan: Plan;
+    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+}): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
     //list of semesters
@@ -103,9 +109,11 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     Add Semester
                 </Button>
                 <AddSemesterModal
+                    planId={plan.id}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addSemester={addSemester}
+                    updateSemesterPlan={updateSemesterPlan}
                 ></AddSemesterModal>
             </div>
         </div>

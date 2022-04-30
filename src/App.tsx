@@ -10,7 +10,6 @@ import { AddPlanModal } from "./components/AddPlanModal";
 import { Drag } from "./components/Drag";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
-import { SemesterList } from "./components/semesterList";
 
 const PLANS = semesterPlan.map(
     (plan: Plan): Plan => ({
@@ -33,41 +32,75 @@ function App(): JSX.Element {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
-    /*function addPlan(newPlan: Plan) {
+    function addPlan(newPlan: Plan) {
         const existing = plans.find(
             (plan: Plan): boolean => plan.id === newPlan.id
         );
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
         }
-    }*/
+    }
 
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
     //mimicking Tome example to implement
-    function addPlan(plans: Plan[], newPlan: Plan): Plan[] {
+    //don't think I'll necessarily need this one
+    function updatePlan(plans: Plan[], newPlan: Plan): Plan[] {
         //adds the new plan to plans
-        //implement this with a button by using the lambda function: 
+        //implement this with a button by using the lambda function:
         //() => setPlans(addPlan(plans, newPlan))
+        setPlans([...plans, newPlan]);
         return [...plans, newPlan];
     }
 
-    function addSemester(planId: string, newSemester: Semester) {
-        //find if the semester already exists
-        const existing = plans.map((plan: Plan) =>
-            plan.semesters.find(
-                (sem: Semester): boolean => sem.id === newSemester.id
-            )
+    function updateSemesterPlan(planId: string, newSemester: Semester): Plan[] {
+        const addedSem = plans.map(
+            (plan: Plan): Plan =>
+                plan.id === planId
+                    ? { ...plan, semesters: [...plan.semesters, newSemester] }
+                    : { ...plan }
         );
 
+        return addedSem;
+    }
+
     function addCourse(
+        plans: Plan[],
         planID: string,
         semesterId: string,
         newCourse: Course
-    ){
-        //find if the course already exists
+    ): Plan[] {
+        //maybe: map through the plans, to find the semester
+        //first, find the plan, then map through the plan's semesters
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planID
+        );
 
+        let updatePlan = { ...plans };
+        //get the semesters
+        if (currPlan !== undefined) {
+            const currSems = currPlan.semesters.map(
+                (sem: Semester): Semester => sem
+            );
+
+            //add the course to the list of semesters
+            const addedCourse = currSems.map(
+                (sem: Semester): Semester =>
+                    sem.id === semesterId
+                        ? { ...sem, courses: [...sem.courses, newCourse] }
+                        : { ...sem }
+            );
+
+            updatePlan = plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planID
+                        ? { ...plan, semesters: addedCourse }
+                        : { ...plan }
+            );
+        }
+
+        return updatePlan;
     }
 
     /** Add this later*/
@@ -94,6 +127,7 @@ function App(): JSX.Element {
             </div>
             <div>
                 <PlanList
+                    updateSemesterPlan={updateSemesterPlan}
                     plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
@@ -108,9 +142,11 @@ function App(): JSX.Element {
                     Add New Plan
                 </Button>
                 <AddPlanModal
+                    plans={plans}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
+                    updatePlan={updatePlan}
                 ></AddPlanModal>
             </div>
             <div>
