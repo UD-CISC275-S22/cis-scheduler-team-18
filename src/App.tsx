@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React, { useState } from "react";
 import "./App.css";
 
@@ -168,18 +167,20 @@ function App(): JSX.Element {
                 const currCourses = currSem.courses.map(
                     (course: Course): Course => course
                 );
-
+                const newCourse: Course = {
+                    code: newCode,
+                    name: newName,
+                    credits: newCredits,
+                    descr: "",
+                    preReq: "",
+                    restrict: "",
+                    breadth: "",
+                    typ: ""
+                };
                 //add edited fields to the course
                 const editedCourse = currCourses.map(
                     (course: Course): Course =>
-                        course.code === courseCode
-                            ? {
-                                  ...course,
-                                  code: newCode,
-                                  name: newName,
-                                  credits: newCredits
-                              }
-                            : { ...course }
+                        course.code === courseCode ? newCourse : { ...course }
                 );
 
                 const updateSemester = currPlan.semesters.map(
