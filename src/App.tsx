@@ -106,6 +106,44 @@ function App(): JSX.Element {
         return updatePlan;
     }
 
+    function updateEditedSemester(
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ): Plan[] {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSems = currPlan.semesters.map(
+                (sem: Semester): Semester => sem
+            );
+
+            //add the edited fields to semester
+            const editedSem = currSems.map(
+                (sem: Semester): Semester =>
+                    sem.id === semId
+                        ? { ...sem, season: newSeason, year: newYear }
+                        : { ...sem }
+            );
+
+            updatePlan = plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planId
+                        ? { ...plan, semesters: editedSem }
+                        : { ...plan }
+            );
+        }
+
+        setPlans(updatePlan);
+
+        return updatePlan;
+    }
+
     /** Add this later*/
     /*
 <PlanList
