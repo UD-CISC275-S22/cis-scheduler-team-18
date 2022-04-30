@@ -144,6 +144,59 @@ function App(): JSX.Element {
         return updatePlan;
     }
 
+    function updateEditedCourse(
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ): Plan[] {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+
+                //add edited fields to the course
+                const editedCourse = currCourses.map(
+                    (course: Course): Course =>
+                        course.code === courseCode
+                            ? { ...course, code: newCode, name: newName }
+                            : { ...course }
+                );
+
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: editedCourse }
+                            : { ...sem }
+                );
+
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+
+        setPlans(updatePlan);
+
+        return updatePlan;
+    }
+
     /** Add this later*/
     /*
 <PlanList
