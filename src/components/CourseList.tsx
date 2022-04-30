@@ -4,12 +4,34 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseAdd } from "./CourseAdd";
 import { CourseView } from "./CourseView";
+import { Plan } from "../interfaces/plan";
 
 /**
  * Returns a table that displays all of the courses in a single semester
  * This function updates the list of courses in a semester when needed and calls CourseView to display changes
  */
-export function CourseList({ semester }: { semester: Semester }): JSX.Element {
+export function CourseList({
+    semester,
+    planId,
+    updateCoursePlan,
+    updateEditedCourse
+}: {
+    semester: Semester;
+    planId: string;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => Plan[];
+}): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     /*
     Function updates the list of courses to include the changes that the user made in CourseEdit
@@ -38,11 +60,19 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
     return (
         <div>
             <CourseView
+                planId={planId}
+                semId={semester.id}
                 courses={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
+                updateEditedCourse={updateEditedCourse}
             ></CourseView>
-            <CourseAdd addCourse={addCourse}></CourseAdd>
+            <CourseAdd
+                planId={planId}
+                semesterId={semester.id}
+                addCourse={addCourse}
+                updateCoursePlan={updateCoursePlan}
+            ></CourseAdd>
             <Button variant="danger" onClick={clearCourses}>
                 Clear All Courses
             </Button>

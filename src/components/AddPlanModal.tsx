@@ -6,13 +6,17 @@ import { Semester } from "../interfaces/semester";
 //import { EditableQuestionList } from "./EditableQuestionList";
 
 export function AddPlanModal({
+    plans,
     show,
     handleClose,
-    addPlan
+    addPlan,
+    updatePlan
 }: {
+    plans: Plan[];
     show: boolean;
     handleClose: () => void;
     addPlan: (newPlan: Plan) => void;
+    updatePlan: (plans: Plan[], newPlan: Plan) => Plan[];
 }) {
     const [id, setId] = useState<string>("");
     const [name, setName] = useState<string>("");
@@ -87,6 +91,29 @@ export function AddPlanModal({
             )
         });
         handleClose();
+        updatePlan(plans, {
+            id: id,
+            name: name,
+            semesters: semesters.map(
+                (): Semester => ({
+                    id: "filler Sem",
+                    season: "Summer",
+                    year: 2020,
+                    courses: courses.map(
+                        (): Course => ({
+                            code: "filler Course",
+                            name: "Example Course Title",
+                            descr: "",
+                            credits: "0",
+                            preReq: "",
+                            restrict: "",
+                            breadth: "",
+                            typ: ""
+                        })
+                    )
+                })
+            )
+        });
     }
 
     return (

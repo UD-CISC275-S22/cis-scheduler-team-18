@@ -6,8 +6,37 @@ import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
+import { Course } from "./interfaces/course";
 
-export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
+export function Semesterer({
+    plan,
+    updateSemesterPlan,
+    updateCoursePlan,
+    updateEditedSemester,
+    updateEditedCourse
+}: {
+    plan: Plan;
+    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => Plan[];
+}): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
     //list of semesters
@@ -64,6 +93,10 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
+                    updateCoursePlan={updateCoursePlan}
+                    planId={plan.id}
+                    updateEditedSemester={updateEditedSemester}
+                    updateEditedCourse={updateEditedCourse}
                 ></SemesterList>
             </div>
             <div>
@@ -86,9 +119,11 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     Add Semester
                 </Button>
                 <AddSemesterModal
+                    planId={plan.id}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addSemester={addSemester}
+                    updateSemesterPlan={updateSemesterPlan}
                 ></AddSemesterModal>
             </div>
         </div>

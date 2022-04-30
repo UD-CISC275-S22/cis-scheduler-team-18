@@ -36,8 +36,6 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         );
         COURSES = COURSES.concat(courselist);
     }
-
-    const [courses] = useState<Course[]>(COURSES);
     //core requirements: an array of Course Objects that are the coreReqs -- THESE NEED TO BE TAKEN
     const CORES = coreReqs.map(
         (course: Course): Course => ({
@@ -724,7 +722,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         }
     }
 
-    checkAllReqs(courses);
+    checkAllReqs(COURSES);
     return (
         <div className="boxed">
             <Form.Group controlId="selectedConcentrat">

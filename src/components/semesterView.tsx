@@ -5,15 +5,41 @@ import { Semester } from "../interfaces/semester";
 import { SemesterEditor } from "../components/semesterEditor";
 import { MultipleSemesterTable } from "../components/multipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
+import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
 
 export function SemesterView({
     semester,
     editSemester,
-    deleteSemester
+    deleteSemester,
+    updateCoursePlan,
+    planId,
+    updateEditedSemester,
+    updateEditedCourse
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
+    planId: string;
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => Plan[];
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -30,16 +56,23 @@ export function SemesterView({
     return editing ? (
         <div>
             <SemesterEditor
+                planId={planId}
                 show={editing}
                 changeSemesterEditing={changeSemesterEditing}
                 semester={semester}
                 editSemester={editSemester}
                 deleteSemester={deleteSemester}
+                updateEditedSemester={updateEditedSemester}
             ></SemesterEditor>
         </div>
     ) : (
         <div>
-            <MultipleSemesterTable semester={semester}></MultipleSemesterTable>
+            <MultipleSemesterTable
+                planId={planId}
+                semester={semester}
+                updateCoursePlan={updateCoursePlan}
+                updateEditedCourse={updateEditedCourse}
+            ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>
                     Edit Semester

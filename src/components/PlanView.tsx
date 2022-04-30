@@ -5,6 +5,8 @@ import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
 import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
+import { Semester } from "../interfaces/semester";
+import { Course } from "../interfaces/course";
 
 /*
 Add this later!
@@ -31,11 +33,35 @@ export function PlanView({
 export function PlanView({
     plan,
     editPlan,
-    deletePlan
+    deletePlan,
+    updateSemesterPlan,
+    updateCoursePlan,
+    updateEditedCourse,
+    updateEditedSemester
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
+    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => Plan[];
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => Plan[];
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => Plan[];
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -62,7 +88,13 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
-                <Semesterer plan={plan}></Semesterer>
+                <Semesterer
+                    plan={plan}
+                    updateSemesterPlan={updateSemesterPlan}
+                    updateCoursePlan={updateCoursePlan}
+                    updateEditedSemester={updateEditedSemester}
+                    updateEditedCourse={updateEditedCourse}
+                ></Semesterer>
             </div>
             <div>
                 <Button variant="info" onClick={changePlanEditing}>
