@@ -17,19 +17,38 @@ const PLANS = semesterPlan.map(
     })
 );
 
+let loadedData = PLANS;
+
+const saveDataKey = "TEAM-18-PAGE-DATA";
+
+const previousData = localStorage.getItem(saveDataKey);
+
+if (previousData !== null) {
+    loadedData = JSON.parse(previousData);
+}
+
 function App(): JSX.Element {
     //const plans = PLANS;
     const [plans, setPlans] = useState<Plan[]>(PLANS);
     const [showAddModal, setShowAddModal] = useState(false);
+    const [data, setData] = useState<Plan[]>(loadedData);
+
+    function saveData() {
+        localStorage.setItem(saveDataKey, JSON.stringify(data));
+    }
 
     function editPlan(id: string, newPlan: Plan) {
         setPlans(
             plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
         );
+        setData(plans);
+        saveData();
     }
 
     function deletePlan(id: string) {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
+        setData(plans);
+        saveData();
     }
 
     function addPlan(newPlan: Plan) {
@@ -38,6 +57,8 @@ function App(): JSX.Element {
         );
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
+            setData(plans);
+            saveData();
         }
     }
 
@@ -51,6 +72,7 @@ function App(): JSX.Element {
         //implement this with a button by using the lambda function:
         //() => setPlans(addPlan(plans, newPlan))
         setPlans([...plans, newPlan]);
+        setData([...data, newPlan]);
         return [...plans, newPlan];
     }
 
@@ -64,7 +86,7 @@ function App(): JSX.Element {
         );
 
         setPlans(addedSem);
-
+        setData(addedSem);
         return addedSem;
     }
 
@@ -104,7 +126,7 @@ function App(): JSX.Element {
         }
 
         setPlans(updatePlan);
-
+        setData(updatePlan);
         return updatePlan;
     }
 
@@ -143,7 +165,7 @@ function App(): JSX.Element {
         }
 
         setPlans(updatePlan);
-
+        setData(updatePlan);
         return updatePlan;
     }
 
@@ -204,10 +226,9 @@ function App(): JSX.Element {
         }
 
         setPlans(updatePlan);
-
+        setData(updatePlan);
         return updatePlan;
     }
-
     /** Add this later*/
     /*
 <PlanList
@@ -230,10 +251,11 @@ function App(): JSX.Element {
             <div>
                 <Welcome></Welcome>
             </div>
+            <Button onClick={saveData}>Save all Changes</Button>
             <div>
                 <PlanList
                     updateSemesterPlan={updateSemesterPlan}
-                    plans={plans}
+                    plans={data}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
                     updateCoursePlan={updateCoursePlan}
@@ -250,7 +272,7 @@ function App(): JSX.Element {
                     Add New Plan
                 </Button>
                 <AddPlanModal
-                    plans={plans}
+                    plans={data}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
