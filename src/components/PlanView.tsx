@@ -7,6 +7,7 @@ import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
+import "../styleSheets/plan.css";
 
 /*
 Add this later!
