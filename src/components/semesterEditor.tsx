@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
-import { ReadOnlyCourses } from "../components/ReadOnlyCourses";
 //change semester to plan
 
 export function SemesterEditor({
@@ -82,8 +81,6 @@ export function SemesterEditor({
                         />
                     </Col>
                 </Form.Group>
-                {/*Courses*/}
-                <ReadOnlyCourses courses={semester.courses}></ReadOnlyCourses>
             </Modal.Body>
             <Modal.Footer>
                 {/*Save*/}

@@ -44,12 +44,14 @@ function App(): JSX.Element {
         setPlans(
             plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
         );
-        setData(plans);
+        setData(
+            plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
+        );
     }
 
     function deletePlan(id: string) {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
-        setData(plans);
+        setData(plans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
     function addPlan(newPlan: Plan) {
@@ -58,7 +60,7 @@ function App(): JSX.Element {
         );
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
-            setData(plans);
+            setData([...data, newPlan]);
         }
     }
 
