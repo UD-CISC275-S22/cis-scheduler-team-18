@@ -17,8 +17,10 @@ const PLANS = semesterPlan.map(
     })
 );
 
+//to load between pages
 let loadedData = PLANS;
 
+//unique data key
 const saveDataKey = "TEAM-18-PAGE-DATA";
 
 const previousData = localStorage.getItem(saveDataKey);
@@ -33,6 +35,7 @@ function App(): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
     const [data, setData] = useState<Plan[]>(loadedData);
 
+    //this will save all the made changes
     function saveData() {
         localStorage.setItem(saveDataKey, JSON.stringify(data));
     }
@@ -63,7 +66,7 @@ function App(): JSX.Element {
     const handleShowAddModal = () => setShowAddModal(true);
 
     //mimicking Tome example to implement
-    function updateSemesterPlan(planId: string, newSemester: Semester): Plan[] {
+    function updateSemesterPlan(planId: string, newSemester: Semester) {
         //will update "plans" when a new semester is added
         const addedSem = plans.map(
             (plan: Plan): Plan =>
@@ -74,7 +77,6 @@ function App(): JSX.Element {
 
         setPlans(addedSem);
         setData(addedSem);
-        return addedSem;
     }
 
     function updateCoursePlan(
@@ -82,7 +84,7 @@ function App(): JSX.Element {
         planID: string,
         semesterId: string,
         newCourse: Course
-    ): Plan[] {
+    ) {
         //maybe: map through the plans, to find the semester
         //first, find the plan, then map through the plan's semesters
         const currPlan = plans.find(
@@ -114,7 +116,6 @@ function App(): JSX.Element {
 
         setPlans(updatePlan);
         setData(updatePlan);
-        return updatePlan;
     }
 
     function updateEditedSemester(
@@ -123,7 +124,7 @@ function App(): JSX.Element {
         semId: string,
         newSeason: string,
         newYear: number
-    ): Plan[] {
+    ) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
@@ -153,7 +154,6 @@ function App(): JSX.Element {
 
         setPlans(updatePlan);
         setData(updatePlan);
-        return updatePlan;
     }
 
     function updateEditedCourse(
@@ -164,7 +164,7 @@ function App(): JSX.Element {
         newCode: string,
         newName: string,
         newCredits: string
-    ): Plan[] {
+    ) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
@@ -214,7 +214,6 @@ function App(): JSX.Element {
 
         setPlans(updatePlan);
         setData(updatePlan);
-        return updatePlan;
     }
     /** Add this later*/
     /*
