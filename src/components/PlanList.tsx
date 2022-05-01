@@ -32,7 +32,7 @@ export function PlanList({
     plans: Plan[];
     deletePlan: (id: string) => void;
     editPlan: (id: string, newPlan: Plan) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -40,18 +40,18 @@ export function PlanList({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
     updateEditedSemester: (
         planId: string,
         semId: string,
         newSeason: string,
         newYear: number
-    ) => Plan[];
+    ) => void;
     updateCoursePlan: (
         planId: string,
         semesterId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     //make sure the plans stay in a nice format
     //calls PlanView which will determine if we're in editing mode

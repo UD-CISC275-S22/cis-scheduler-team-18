@@ -17,19 +17,41 @@ const PLANS = semesterPlan.map(
     })
 );
 
+//to load between pages
+let loadedData = PLANS;
+
+//unique data key
+const saveDataKey = "TEAM-18-PAGE-DATA";
+
+const previousData = localStorage.getItem(saveDataKey);
+
+if (previousData !== null) {
+    loadedData = JSON.parse(previousData);
+}
+
 function App(): JSX.Element {
     //const plans = PLANS;
     const [plans, setPlans] = useState<Plan[]>(PLANS);
     const [showAddModal, setShowAddModal] = useState(false);
+    const [data, setData] = useState<Plan[]>(loadedData);
+
+    //this will save all the made changes
+    function saveData() {
+        localStorage.setItem(saveDataKey, JSON.stringify(data));
+    }
 
     function editPlan(id: string, newPlan: Plan) {
         setPlans(
+            plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
+        );
+        setData(
             plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
         );
     }
 
     function deletePlan(id: string) {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
+        setData(plans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
     function addPlan(newPlan: Plan) {
@@ -38,6 +60,7 @@ function App(): JSX.Element {
         );
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
+            setData([...data, newPlan]);
         }
     }
 
@@ -45,16 +68,7 @@ function App(): JSX.Element {
     const handleShowAddModal = () => setShowAddModal(true);
 
     //mimicking Tome example to implement
-    //don't think I'll necessarily need this one
-    function updatePlan(plans: Plan[], newPlan: Plan): Plan[] {
-        //adds the new plan to plans
-        //implement this with a button by using the lambda function:
-        //() => setPlans(addPlan(plans, newPlan))
-        setPlans([...plans, newPlan]);
-        return [...plans, newPlan];
-    }
-
-    function updateSemesterPlan(planId: string, newSemester: Semester): Plan[] {
+    function updateSemesterPlan(planId: string, newSemester: Semester) {
         //will update "plans" when a new semester is added
         const addedSem = plans.map(
             (plan: Plan): Plan =>
@@ -64,8 +78,7 @@ function App(): JSX.Element {
         );
 
         setPlans(addedSem);
-
-        return addedSem;
+        setData(addedSem);
     }
 
     function updateCoursePlan(
@@ -73,7 +86,7 @@ function App(): JSX.Element {
         planID: string,
         semesterId: string,
         newCourse: Course
-    ): Plan[] {
+    ) {
         //maybe: map through the plans, to find the semester
         //first, find the plan, then map through the plan's semesters
         const currPlan = plans.find(
@@ -104,8 +117,7 @@ function App(): JSX.Element {
         }
 
         setPlans(updatePlan);
-
-        return updatePlan;
+        setData(updatePlan);
     }
 
     function updateEditedSemester(
@@ -114,7 +126,7 @@ function App(): JSX.Element {
         semId: string,
         newSeason: string,
         newYear: number
-    ): Plan[] {
+    ) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
@@ -143,8 +155,7 @@ function App(): JSX.Element {
         }
 
         setPlans(updatePlan);
-
-        return updatePlan;
+        setData(updatePlan);
     }
 
     function updateEditedCourse(
@@ -155,7 +166,7 @@ function App(): JSX.Element {
         newCode: string,
         newName: string,
         newCredits: string
-    ): Plan[] {
+    ) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
@@ -204,10 +215,8 @@ function App(): JSX.Element {
         }
 
         setPlans(updatePlan);
-
-        return updatePlan;
+        setData(updatePlan);
     }
-
     /** Add this later*/
     /*
 <PlanList
@@ -230,6 +239,7 @@ function App(): JSX.Element {
             <div>
                 <Welcome></Welcome>
             </div>
+            <Button onClick={saveData}>Save all Changes</Button>
             <div>
                 <PlanList
                     updateSemesterPlan={updateSemesterPlan}
@@ -250,11 +260,9 @@ function App(): JSX.Element {
                     Add New Plan
                 </Button>
                 <AddPlanModal
-                    plans={plans}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
-                    updatePlan={updatePlan}
                 ></AddPlanModal>
             </div>
             <div>

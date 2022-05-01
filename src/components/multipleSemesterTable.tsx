@@ -3,7 +3,6 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import "../styleSheets/multipleSemesterTable.css";
 import { CourseList } from "./CourseList";
-import { Plan } from "../interfaces/plan";
 
 export function MultipleSemesterTable({
     planId,
@@ -17,7 +16,7 @@ export function MultipleSemesterTable({
         planId: string,
         semesterId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -25,7 +24,7 @@ export function MultipleSemesterTable({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     //this function will return all the courses; organized by semester in a single plan
     //im changing this to be a single semester passed in.

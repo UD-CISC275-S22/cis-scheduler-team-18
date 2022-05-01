@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container, Row, Col, Form } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
-import { ReadOnlySemesters } from "../components/ReadOnlySemester";
 
 export function PlanEditor({
     changePlanEditing,
@@ -48,10 +47,6 @@ export function PlanEditor({
                             />
                         </Col>
                     </Form.Group>
-                    {/*Semester*/}
-                    <ReadOnlySemesters
-                        semesters={plan.semesters}
-                    ></ReadOnlySemesters>
                     {/* Save/Cancel */}
                     <Button onClick={save} variant="success" className="me-4">
                         Save

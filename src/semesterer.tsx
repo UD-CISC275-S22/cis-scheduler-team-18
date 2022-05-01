@@ -7,6 +7,7 @@ import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
 import { Course } from "./interfaces/course";
+import "./styleSheets/plan.css";
 
 export function Semesterer({
     plan,
@@ -16,18 +17,18 @@ export function Semesterer({
     updateEditedCourse
 }: {
     plan: Plan;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
     updateCoursePlan: (
         planId: string,
         semesterId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
     updateEditedSemester: (
         planId: string,
         semId: string,
         newSeason: string,
         newYear: number
-    ) => Plan[];
+    ) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -35,7 +36,7 @@ export function Semesterer({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 

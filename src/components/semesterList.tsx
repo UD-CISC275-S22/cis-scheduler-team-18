@@ -3,7 +3,6 @@ import { Semester } from "../interfaces/semester";
 import { SemesterView } from "./semesterView";
 import "../styleSheets/multipleSemesterTable.css";
 import { Course } from "../interfaces/course";
-import { Plan } from "../interfaces/plan";
 
 export function SemesterList({
     semesters,
@@ -21,14 +20,14 @@ export function SemesterList({
         planId: string,
         semId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
     planId: string;
     updateEditedSemester: (
         planId: string,
         semId: string,
         newSeason: string,
         newYear: number
-    ) => Plan[];
+    ) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -36,7 +35,7 @@ export function SemesterList({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     //make sure the tables stay in a nice format/gridlike
     //calls semesterview which will determine if we're in editing mode

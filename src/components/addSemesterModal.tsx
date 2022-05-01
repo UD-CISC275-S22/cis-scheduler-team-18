@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
-import { Plan } from "../interfaces/plan";
 
 export function AddSemesterModal({
     planId,
@@ -15,7 +14,7 @@ export function AddSemesterModal({
     show: boolean;
     handleClose: () => void;
     addSemester: (newSemester: Semester) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
 }) {
     const [id, setId] = useState<string>("");
     //const [courses, setCourses] = useState<string[]>([]);
