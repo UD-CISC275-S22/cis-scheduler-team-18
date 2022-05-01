@@ -89,29 +89,6 @@ export function AddPlanModal({
             )
         });
         handleClose();
-        updatePlan(plans, {
-            id: id,
-            name: name,
-            semesters: semesters.map(
-                (): Semester => ({
-                    id: "filler Sem",
-                    season: "Summer",
-                    year: 2020,
-                    courses: courses.map(
-                        (): Course => ({
-                            code: "filler Course",
-                            name: "Example Course Title",
-                            descr: "",
-                            credits: "0",
-                            preReq: "",
-                            restrict: "",
-                            breadth: "",
-                            typ: ""
-                        })
-                    )
-                })
-            )
-        });
     }
 
     return (
