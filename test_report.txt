@@ -9,28 +9,28 @@
         at table
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Table.js:21:3
         at div
-        at CourseView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseView.tsx:12:5)
+        at CourseView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseView.tsx:11:5)
         at div
-        at CourseList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseList.tsx:14:5)
+        at CourseList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseList.tsx:13:5)
         at div
-        at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:9:5)
+        at MultipleSemesterTable (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/multipleSemesterTable.tsx:8:5)
         at div
-        at SemesterView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterView.tsx:12:5)
+        at SemesterView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterView.tsx:11:5)
         at div
-        at SemesterList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterList.tsx:9:5)
-        at div
-        at div
-        at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:12:5)
+        at SemesterList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/semesterList.tsx:8:5)
         at div
         at div
-        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:34:5)
+        at Semesterer (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/semesterer.tsx:13:5)
+        at div
+        at div
+        at PlanView (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanView.tsx:35:5)
         at div
         at div
         at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Stack.js:23:7
         at PlanList (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/PlanList.tsx:24:5)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:22:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -51,7 +51,7 @@
         at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:22:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -72,7 +72,7 @@
         at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:22:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -93,7 +93,7 @@
         at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:22:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -114,7 +114,7 @@
         at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
         at div
         at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:22:31)
+        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -125,7 +125,7 @@
       at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (517 ms)
+  ✕ renders the course name somewhere (703 ms)
 
   ● renders the course name somewhere
 
@@ -171,6 +171,12 @@ FAIL src/App.test.tsx
               [36m</button>[39m
             [36m</div>[39m
           [36m</div>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"btn btn-primary"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mSave all Changes[0m
+          [36m</button>[39m
           [36m<div>[39m
             [36m<div[39m
               [33mclass[39m=[32m"vstack gap-3"[39m
@@ -286,9 +292,7 @@ FAIL src/App.test.tsx
                                         [36m<td>[39m
                                           [36m<div>[39m
                                             [36m<button[39m
-                                              [33mclass[39m=[32m"btn btn-info"[39m
-                                              [33mtype[39m=[32m"button"[39m
-                                            [36m...
+             ...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -312,30 +316,28 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                              
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
-All files                   |    42.8 |     28.4 |   34.72 |   42.91 |                                                                                                                                
- src                        |    19.1 |     8.33 |   13.04 |   19.27 |                                                                                                                                
-  App.tsx                   |   10.76 |        0 |    6.66 |   11.29 | 26-40,53-208                                                                                                                   
+All files                   |   43.53 |    28.35 |   35.37 |   43.77 |                                                                                                                                
+ src                        |   22.22 |       10 |    12.5 |   22.82 |                                                                                                                                
+  App.tsx                   |      16 |     3.12 |    6.25 |    16.9 | 29,40-63,73-218                                                                                                                
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                                                                                                              
-  semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 50-80,107                                                                                                                      
- src/components             |   47.93 |    31.67 |   40.58 |   47.85 |                                                                                                                                
-  AddPlanModal.tsx          |   35.71 |      100 |    12.5 |   35.71 | 70-103,135-149                                                                                                                 
+  semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 51-81,108                                                                                                                      
+ src/components             |   48.76 |    31.67 |   42.07 |   48.71 |                                                                                                                                
+  AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 66-89,108-122                                                                                                                  
   CheckDegreeReqs.tsx       |   52.39 |    32.16 |   54.83 |   51.33 | 28,148,156,164,172,187-224,245,280-286,292-298,322,340,395-420,424,449,468,475-486,493-511,539-693,709,711,713,715,717,719,721 
-  CourseAdd.tsx             |   44.44 |      100 |    12.5 |      50 | 33-64                                                                                                                          
+  CourseAdd.tsx             |   44.44 |      100 |    12.5 |      50 | 32-63                                                                                                                          
   CourseEdit.tsx            |   39.28 |       50 |   11.11 |    42.3 | 47-86                                                                                                                          
   CourseInfo.tsx            |   66.66 |      100 |   33.33 |     100 |                                                                                                                                
-  CourseList.tsx            |      25 |        0 |   14.28 |      25 | 40-57                                                                                                                          
+  CourseList.tsx            |      25 |        0 |   14.28 |      25 | 39-56                                                                                                                          
   CourseView.tsx            |     100 |      100 |     100 |     100 |                                                                                                                                
   Drag.tsx                  |   47.36 |        0 |   33.33 |   47.36 | 28,37-43,59,72-87                                                                                                              
-  PlanEditor.tsx            |       0 |      100 |       0 |       0 | 17-64                                                                                                                          
+  PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-59                                                                                                                          
   PlanList.tsx              |     100 |      100 |     100 |     100 |                                                                                                                                
-  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 71                                                                                                                             
-  ReadOnlyCourses.tsx       |       0 |      100 |       0 |       0 | 10-13                                                                                                                          
-  ReadOnlySemester.tsx      |       0 |      100 |       0 |       0 | 11-15                                                                                                                          
-  addSemesterModal.tsx      |   38.46 |        0 |   14.28 |   38.46 | 28-51,81-109                                                                                                                   
+  PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 72                                                                                                                             
+  addSemesterModal.tsx      |   38.46 |        0 |   14.28 |   38.46 | 27-50,80-108                                                                                                                   
   multipleSemesterTable.tsx |     100 |      100 |     100 |     100 |                                                                                                                                
-  semesterEditor.tsx        |       0 |        0 |       0 |       0 | 31-100                                                                                                                         
+  semesterEditor.tsx        |       0 |        0 |       0 |       0 | 29-96                                                                                                                          
   semesterList.tsx          |     100 |      100 |     100 |     100 |                                                                                                                                
-  semesterView.tsx          |   66.66 |       50 |      50 |   66.66 | 49                                                                                                                             
+  semesterView.tsx          |   66.66 |       50 |      50 |   66.66 | 48                                                                                                                             
  src/interfaces             |       0 |        0 |       0 |       0 |                                                                                                                                
   course.ts                 |       0 |        0 |       0 |       0 |                                                                                                                                
   plan.ts                   |       0 |        0 |       0 |       0 |                                                                                                                                
@@ -344,5 +346,5 @@ All files                   |    42.8 |     28.4 |   34.72 |   42.91 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.765 s
+Time:        4.916 s
 Ran all test suites.
