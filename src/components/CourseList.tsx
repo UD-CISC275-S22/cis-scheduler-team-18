@@ -4,7 +4,6 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseAdd } from "./CourseAdd";
 import { CourseView } from "./CourseView";
-import { Plan } from "../interfaces/plan";
 
 /**
  * Returns a table that displays all of the courses in a single semester
@@ -22,7 +21,7 @@ export function CourseList({
         planId: string,
         semesterId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -30,7 +29,7 @@ export function CourseList({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     /*

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 //import { Semester } from "../interfaces/semester";
-import { Plan } from "../interfaces/plan";
 
 export function CourseAdd({
     addCourse,
@@ -15,7 +14,7 @@ export function CourseAdd({
         planId: string,
         semesterId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
     planId: string;
     semesterId: string;
 }): JSX.Element {

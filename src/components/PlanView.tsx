@@ -42,12 +42,12 @@ export function PlanView({
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => Plan[];
+    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
     updateCoursePlan: (
         planId: string,
         semesterId: string,
         newCourse: Course
-    ) => Plan[];
+    ) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -55,13 +55,13 @@ export function PlanView({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
     updateEditedSemester: (
         planId: string,
         semId: string,
         newSeason: string,
         newYear: number
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
-import { Plan } from "../interfaces/plan";
+
 /**
  * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information
  */
@@ -25,7 +25,7 @@ export function CourseEdit({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
     const [title, setTitle] = useState<string>(course.name);

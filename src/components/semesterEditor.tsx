@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { ReadOnlyCourses } from "../components/ReadOnlyCourses";
-import { Plan } from "../interfaces/plan";
 //change semester to plan
 
 export function SemesterEditor({
@@ -25,7 +24,7 @@ export function SemesterEditor({
         semId: string,
         newSeason: string,
         newYear: number
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);

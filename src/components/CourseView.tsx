@@ -3,7 +3,6 @@ import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
-import { Plan } from "../interfaces/plan";
 
 /**
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
@@ -28,7 +27,7 @@ export function CourseView({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => Plan[];
+    ) => void;
 }): JSX.Element {
     return (
         <div>
