@@ -9,14 +9,12 @@ export function AddPlanModal({
     plans,
     show,
     handleClose,
-    addPlan,
-    updatePlan
+    addPlan
 }: {
     plans: Plan[];
     show: boolean;
     handleClose: () => void;
     addPlan: (newPlan: Plan) => void;
-    updatePlan: (plans: Plan[], newPlan: Plan) => Plan[];
 }) {
     const [id, setId] = useState<string>("");
     const [name, setName] = useState<string>("");

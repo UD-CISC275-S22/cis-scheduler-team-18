@@ -42,13 +42,11 @@ function App(): JSX.Element {
             plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
         );
         setData(plans);
-        saveData();
     }
 
     function deletePlan(id: string) {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
         setData(plans);
-        saveData();
     }
 
     function addPlan(newPlan: Plan) {
@@ -58,7 +56,6 @@ function App(): JSX.Element {
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
             setData(plans);
-            saveData();
         }
     }
 
@@ -66,16 +63,6 @@ function App(): JSX.Element {
     const handleShowAddModal = () => setShowAddModal(true);
 
     //mimicking Tome example to implement
-    //don't think I'll necessarily need this one
-    function updatePlan(plans: Plan[], newPlan: Plan): Plan[] {
-        //adds the new plan to plans
-        //implement this with a button by using the lambda function:
-        //() => setPlans(addPlan(plans, newPlan))
-        setPlans([...plans, newPlan]);
-        setData([...data, newPlan]);
-        return [...plans, newPlan];
-    }
-
     function updateSemesterPlan(planId: string, newSemester: Semester): Plan[] {
         //will update "plans" when a new semester is added
         const addedSem = plans.map(
@@ -276,7 +263,6 @@ function App(): JSX.Element {
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
-                    updatePlan={updatePlan}
                 ></AddPlanModal>
             </div>
             <div>
