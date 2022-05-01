@@ -6,12 +6,10 @@ import { Semester } from "../interfaces/semester";
 //import { EditableQuestionList } from "./EditableQuestionList";
 
 export function AddPlanModal({
-    plans,
     show,
     handleClose,
     addPlan
 }: {
-    plans: Plan[];
     show: boolean;
     handleClose: () => void;
     addPlan: (newPlan: Plan) => void;

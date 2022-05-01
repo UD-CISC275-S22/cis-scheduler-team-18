@@ -259,7 +259,6 @@ function App(): JSX.Element {
                     Add New Plan
                 </Button>
                 <AddPlanModal
-                    plans={data}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
