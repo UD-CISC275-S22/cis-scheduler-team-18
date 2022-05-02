@@ -14,7 +14,8 @@ export function SemesterView({
     updateCoursePlan,
     planId,
     updateEditedSemester,
-    updateEditedCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
@@ -38,6 +39,11 @@ export function SemesterView({
         newCode: string,
         newName: string,
         newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
     ) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
@@ -71,6 +77,7 @@ export function SemesterView({
                 semester={semester}
                 updateCoursePlan={updateCoursePlan}
                 updateEditedCourse={updateEditedCourse}
+                updateDeletedCourse={updateDeletedCourse}
             ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>

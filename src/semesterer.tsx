@@ -14,7 +14,8 @@ export function Semesterer({
     updateSemesterPlan,
     updateCoursePlan,
     updateEditedSemester,
-    updateEditedCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
     plan: Plan;
     updateSemesterPlan: (planId: string, newSemester: Semester) => void;
@@ -36,6 +37,11 @@ export function Semesterer({
         newCode: string,
         newName: string,
         newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
     ) => void;
 }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
@@ -98,6 +104,7 @@ export function Semesterer({
                     planId={plan.id}
                     updateEditedSemester={updateEditedSemester}
                     updateEditedCourse={updateEditedCourse}
+                    updateDeletedCourse={updateDeletedCourse}
                 ></SemesterList>
             </div>
             <div>

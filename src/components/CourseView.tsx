@@ -13,7 +13,8 @@ export function CourseView({
     courses,
     editCourse,
     deleteCourse,
-    updateEditedCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
     planId: string;
     semId: string;
@@ -27,6 +28,11 @@ export function CourseView({
         newCode: string,
         newName: string,
         newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
     ) => void;
 }): JSX.Element {
     return (
@@ -52,6 +58,7 @@ export function CourseView({
                                     editCourse={editCourse}
                                     deleteCourse={deleteCourse}
                                     updateEditedCourse={updateEditedCourse}
+                                    updateDeletedCourse={updateDeletedCourse}
                                 ></CourseEdit>
                                 <CourseInfo course={course}></CourseInfo>
                             </td>

@@ -13,7 +13,8 @@ export function CourseList({
     semester,
     planId,
     updateCoursePlan,
-    updateEditedCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
     semester: Semester;
     planId: string;
@@ -29,6 +30,11 @@ export function CourseList({
         newCode: string,
         newName: string,
         newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
     ) => void;
 }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
@@ -65,6 +71,7 @@ export function CourseList({
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
                 updateEditedCourse={updateEditedCourse}
+                updateDeletedCourse={updateDeletedCourse}
             ></CourseView>
             <CourseAdd
                 planId={planId}

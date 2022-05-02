@@ -11,7 +11,8 @@ export function CourseEdit({
     course,
     editCourse,
     deleteCourse,
-    updateEditedCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
     planId: string;
     semId: string;
@@ -25,6 +26,11 @@ export function CourseEdit({
         newCode: string,
         newName: string,
         newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
     ) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
@@ -58,8 +64,8 @@ export function CourseEdit({
     //deletes the course
     function remove() {
         deleteCourse(course.code);
+        updateDeletedCourse(planId, semId, course.code);
         close();
-        updateEditedCourse(planId, semId, course.code, code, title, credits);
     }
 
     //reverts course imformation to original

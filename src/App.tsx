@@ -218,7 +218,11 @@ function App(): JSX.Element {
         setData(updatePlan);
     }
 
-    function deletedCourse(planId: string, semId: string, courseCode: string) {
+    function updateDeletedCourse(
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
@@ -290,6 +294,7 @@ function App(): JSX.Element {
                     updateCoursePlan={updateCoursePlan}
                     updateEditedCourse={updateEditedCourse}
                     updateEditedSemester={updateEditedSemester}
+                    updateDeletedCourse={updateDeletedCourse}
                 ></PlanList>
             </div>
             <div>
