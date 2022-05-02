@@ -59,6 +59,7 @@ export function CourseEdit({
     function remove() {
         deleteCourse(course.code);
         close();
+        updateEditedCourse(planId, semId, course.code, code, title, credits);
     }
 
     //reverts course imformation to original

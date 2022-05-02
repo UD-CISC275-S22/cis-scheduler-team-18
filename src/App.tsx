@@ -198,12 +198,35 @@ function App(): JSX.Element {
                         course.code === courseCode ? newCourse : { ...course }
                 );
 
-                const updateSemester = currPlan.semesters.map(
-                    (sem: Semester): Semester =>
-                        sem.id === semId
-                            ? { ...sem, courses: editedCourse }
-                            : { ...sem }
+                //find the course
+                const findCourse = currCourses.find(
+                    (course: Course): boolean => course.code === courseCode
                 );
+
+                let deletedCourse: Course[];
+
+                let updateSemester: Semester[];
+
+                //update a deleted course
+                if (findCourse === undefined) {
+                    deletedCourse = currCourses.filter(
+                        (course: Course): boolean => course.code !== courseCode
+                    );
+
+                    updateSemester = currPlan.semesters.map(
+                        (sem: Semester): Semester =>
+                            sem.id === semId
+                                ? { ...sem, courses: deletedCourse }
+                                : { ...sem }
+                    );
+                } else {
+                    updateSemester = currPlan.semesters.map(
+                        (sem: Semester): Semester =>
+                            sem.id === semId
+                                ? { ...sem, courses: editedCourse }
+                                : { ...sem }
+                    );
+                }
 
                 updatePlan = plans.map(
                     (plan: Plan): Plan =>
