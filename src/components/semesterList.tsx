@@ -11,7 +11,8 @@ export function SemesterList({
     updateCoursePlan,
     planId,
     updateEditedSemester,
-    updateEditedCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
     semesters: Semester[];
     deleteSemester: (id: string) => void;
@@ -36,6 +37,11 @@ export function SemesterList({
         newName: string,
         newCredits: string
     ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) => void;
 }): JSX.Element {
     //make sure the tables stay in a nice format/gridlike
     //calls semesterview which will determine if we're in editing mode
@@ -51,6 +57,7 @@ export function SemesterList({
                     planId={planId}
                     updateEditedCourse={updateEditedCourse}
                     updateEditedSemester={updateEditedSemester}
+                    updateDeletedCourse={updateDeletedCourse}
                 ></SemesterView>
             ))}
         </div>

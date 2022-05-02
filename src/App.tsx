@@ -217,6 +217,51 @@ function App(): JSX.Element {
         setPlans(updatePlan);
         setData(updatePlan);
     }
+
+    function updateDeletedCourse(
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== courseCode
+                );
+
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
+
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+
+        setPlans(updatePlan);
+        setData(updatePlan);
+    }
     /** Add this later*/
     /*
 <PlanList
@@ -249,6 +294,7 @@ function App(): JSX.Element {
                     updateCoursePlan={updateCoursePlan}
                     updateEditedCourse={updateEditedCourse}
                     updateEditedSemester={updateEditedSemester}
+                    updateDeletedCourse={updateDeletedCourse}
                 ></PlanList>
             </div>
             <div>
