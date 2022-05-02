@@ -198,35 +198,53 @@ function App(): JSX.Element {
                         course.code === courseCode ? newCourse : { ...course }
                 );
 
-                //find the course
-                const findCourse = currCourses.find(
-                    (course: Course): boolean => course.code === courseCode
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: editedCourse }
+                            : { ...sem }
                 );
 
-                let deletedCourse: Course[];
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
 
-                let updateSemester: Semester[];
+        setPlans(updatePlan);
+        setData(updatePlan);
+    }
 
-                //update a deleted course
-                if (findCourse === undefined) {
-                    deletedCourse = currCourses.filter(
-                        (course: Course): boolean => course.code !== courseCode
-                    );
+    function deletedCourse(planId: string, semId: string, courseCode: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
 
-                    updateSemester = currPlan.semesters.map(
-                        (sem: Semester): Semester =>
-                            sem.id === semId
-                                ? { ...sem, courses: deletedCourse }
-                                : { ...sem }
-                    );
-                } else {
-                    updateSemester = currPlan.semesters.map(
-                        (sem: Semester): Semester =>
-                            sem.id === semId
-                                ? { ...sem, courses: editedCourse }
-                                : { ...sem }
-                    );
-                }
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== courseCode
+                );
+
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
 
                 updatePlan = plans.map(
                     (plan: Plan): Plan =>
