@@ -9,8 +9,8 @@ import { PlanList } from "./components/PlanList";
 import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
-//import { Course } from "./interfaces/course";
 import { Drag } from "./components/Drag";
+//import { Course } from "./interfaces/course";
 //import { Card } from "./components/Card";
 
 const PLANS = semesterPlan.map(
@@ -68,12 +68,17 @@ function App(): JSX.Element {
             <div>
                 <Welcome></Welcome>
             </div>
-            <div>
-                <PlanList
-                    plans={plans}
-                    editPlan={editPlan}
-                    deletePlan={deletePlan}
-                ></PlanList>
+            <div className="App-container">
+                <div className="App-left">
+                    <PlanList
+                        plans={plans}
+                        editPlan={editPlan}
+                        deletePlan={deletePlan}
+                    ></PlanList>
+                </div>
+                <div>
+                    <Drag></Drag>
+                </div>
             </div>
             <div>
                 <Button
@@ -88,10 +93,6 @@ function App(): JSX.Element {
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
                 ></AddPlanModal>
-            </div>
-
-            <div>
-                <Drag></Drag>
             </div>
         </div>
     );

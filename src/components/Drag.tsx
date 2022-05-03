@@ -1,17 +1,13 @@
+//Yeah this works
+
 import React, { useState } from "react";
 import { Course } from "../interfaces/course";
 import coreMajorRequirements from "../data/coreMajorRequirements.json";
 import { Col, Row } from "react-bootstrap";
-import techElect from "../data/techElect.json";
-
-/*
-Make one course drag and droppable
-be able to drop it into pool
-Be able to drag it from pool back into any semester
-*/
+import scienceRequirement from "../data/scienceRequirement.json";
 
 let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
-let startRight = techElect.map((course): Course => ({ ...course }));
+let startRight = scienceRequirement.map((course): Course => ({ ...course }));
 
 const saveDataKey = "MY-PAGE-DATA";
 const previousData = localStorage.getItem(saveDataKey);
@@ -28,9 +24,7 @@ export function Drag(): JSX.Element {
     const [left, setLeft] = useState<Course[]>(startLeft);
     const [right, setRight] = useState<Course[]>(startRight);
 
-    const [testing, setTest] = useState<string>("Initial thing");
-
-    const [pool, setPool] = useState<Course[]>();
+    const [pool, setPool] = useState<Course[]>([]);
 
     // This function will be triggered when you start dragging
     const dragStartHandler = (
@@ -53,7 +47,7 @@ export function Drag(): JSX.Element {
     function deleteRight(newCourse: Course) {
         //setRight(right.filter((course: Course): boolean => course.code !== id));
         setRight(
-            startRight.filter(
+            right.filter(
                 (course: Course): boolean => course.name !== newCourse.name
             )
         );
@@ -68,7 +62,7 @@ export function Drag(): JSX.Element {
         event.preventDefault();
         const data = event.dataTransfer.getData("text");
         const existing = left.find(
-            (course: Course): boolean => course === newCourse
+            (course: Course): boolean => course.name === newCourse.name
         );
         if (existing === undefined) {
             setRight([...right, JSON.parse(data)]);
@@ -83,7 +77,7 @@ export function Drag(): JSX.Element {
         event.preventDefault();
         const data = event.dataTransfer.getData("text");
         const existing = right.find(
-            (course: Course): boolean => course === newCourse
+            (course: Course): boolean => course.name === newCourse.name
         );
         if (existing === undefined) {
             setLeft([...left, JSON.parse(data)]);
@@ -91,36 +85,42 @@ export function Drag(): JSX.Element {
         }
     };
 
-    /*
-    const dropHandlerPool = (
-        event: React.DragEvent<HTMLDivElement>,
-        newCourse: Course
-    ) => {
+    const dropHandlerPool = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
         const data = event.dataTransfer.getData("text");
         setPool([...pool, JSON.parse(data)]);
-    };*/
+        //deleteCourseFromSem(JSON.parse(data));
+    };
 
     // This makes the third box become droppable
     const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
     };
 
-    function yes() {
-        setTest("Hiiiiiii");
-    }
-
     return (
         <div className="container">
-            <Row
-                style={{
-                    backgroundColor: "pink",
-                    display: "inline-block"
-                }}
-                onDragOver={allowDrop}
-                //onDrop={dropHandlerPool}
-            >
-                {testing}
+            <Row>
+                <div
+                    style={{
+                        backgroundColor: "pink",
+                        display: "inline-block"
+                    }}
+                    onDragOver={allowDrop}
+                    onDrop={(event) => dropHandlerPool(event)}
+                >
+                    {pool.map((course: Course) => (
+                        <div
+                            key={course.code}
+                            className={course.code}
+                            onDragStart={(event) =>
+                                dragStartHandler(event, course)
+                            }
+                            draggable={true}
+                        >
+                            <h2> {course.name} </h2>
+                        </div>
+                    ))}
+                </div>
             </Row>
             <Row>
                 <Col>

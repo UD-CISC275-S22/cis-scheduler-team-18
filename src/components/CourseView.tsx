@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import { Semester } from "../interfaces/semester";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
 
@@ -10,37 +11,39 @@ import { CourseInfo } from "./CourseInfo";
 export function CourseView({
     courses,
     editCourse,
-    deleteCourse
+    deleteCourse,
+    addCourse
 }: {
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
+    addCourse: (newCourse: Course) => void;
+    setCourses: (courseList: Course[]) => void;
+    semester: Semester;
 }): JSX.Element {
     const dragStartHandler = (
         event: React.DragEvent<HTMLDivElement>,
         data: Course
     ) => {
-        event.dataTransfer.setData("text", JSON.stringify(data));
+        const courseCopy = { ...data };
+        event.dataTransfer.setData("text", JSON.stringify(courseCopy));
     };
 
-    /*
-    const dropHandler = (
-        event: React.DragEvent<HTMLDivElement>,
-        newCourse: Course
-    ) => {
+    const dropHandlerTable = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
         const data = event.dataTransfer.getData("text");
-        const existing = left.find(
-            (course: Course): boolean => course === newCourse
-        );
-        if (existing === undefined) {
-            setRight([...right, JSON.parse(data)]);
-            deleteLeft(newCourse.code);
-        }
-    };*/
+        addCourse(JSON.parse(data));
+    };
 
     const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
+    };
+
+    const dragEndHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        myCourseId: string
+    ) => {
+        deleteCourse(myCourseId);
     };
 
     return (
@@ -52,7 +55,10 @@ export function CourseView({
                     <th>Credits</th>
                     <th>Edit Course</th>
                 </thead>
-                <tbody>
+                <tbody
+                    key="tableBody"
+                    onDrop={(event) => dropHandlerTable(event)}
+                >
                     {courses.map((course: Course) => (
                         <tr
                             key={course.code}
@@ -62,6 +68,9 @@ export function CourseView({
                             }
                             draggable={true}
                             onDragOver={allowDrop}
+                            onDragEnd={(event) =>
+                                dragEndHandler(event, course.code)
+                            }
                             //onDrop={(event) => dropHandler2(event, course)}
                         >
                             <td>{course.code}</td>

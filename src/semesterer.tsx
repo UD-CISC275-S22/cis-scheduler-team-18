@@ -6,6 +6,7 @@ import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
+import { Drag } from "./components/Drag";
 
 export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
@@ -58,13 +59,16 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
     const handleShowAddModal = () => setShowAddModal(true);
     //will call semesterList
     return (
-        <div>
-            <div>
+        <div className="mySems">
+            <div className="mySemList">
                 <SemesterList
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                 ></SemesterList>
+            </div>
+            <div className="myDrag">
+                <Drag></Drag>
             </div>
             <div>
                 <Button

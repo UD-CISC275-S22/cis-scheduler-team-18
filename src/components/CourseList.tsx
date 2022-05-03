@@ -22,15 +22,16 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
         );
     }
 
-    function clearCourses() {
-        setCourses([]);
-    }
-
     function deleteCourse(id: string) {
         setCourses(
             courses.filter((course: Course): boolean => course.code !== id)
         );
     }
+
+    function clearCourses() {
+        setCourses([]);
+    }
+
     function addCourse(newCourse: Course): void {
         setCourses([...courses, newCourse]);
     }
@@ -41,6 +42,9 @@ export function CourseList({ semester }: { semester: Semester }): JSX.Element {
                 courses={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
+                addCourse={addCourse}
+                setCourses={setCourses}
+                semester={semester}
             ></CourseView>
             <CourseAdd addCourse={addCourse}></CourseAdd>
             <Button variant="danger" onClick={clearCourses}>
