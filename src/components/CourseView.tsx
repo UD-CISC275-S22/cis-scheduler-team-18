@@ -9,17 +9,34 @@ import { CourseInfo } from "./CourseInfo";
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
  */
 export function CourseView({
+    planId,
+    semId,
     courses,
     editCourse,
     deleteCourse,
     addCourse
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
+    planId: string;
+    semId: string;
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
     addCourse: (newCourse: Course) => void;
-    setCourses: (courseList: Course[]) => void;
-    semester: Semester;
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) => void;
 }): JSX.Element {
     const dragStartHandler = (
         event: React.DragEvent<HTMLDivElement>,
@@ -78,9 +95,13 @@ export function CourseView({
                             <td>{course.credits}</td>
                             <td>
                                 <CourseEdit
+                                    planId={planId}
+                                    semId={semId}
                                     course={course}
                                     editCourse={editCourse}
                                     deleteCourse={deleteCourse}
+                                    updateEditedCourse={updateEditedCourse}
+                                    updateDeletedCourse={updateDeletedCourse}
                                 ></CourseEdit>
                                 <CourseInfo course={course}></CourseInfo>
                             </td>

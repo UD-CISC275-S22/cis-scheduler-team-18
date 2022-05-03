@@ -1,0 +1,66 @@
+[
+    {
+        "code": "CISC361",
+        "name": "Operating Systems",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC372",
+        "name": "Parallel Computing",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },    {
+        "code": "CISC304",
+        "name": "Logic for Programming",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC450",
+        "name": "Computer Networks I",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC464",
+        "name": "Introduction to Network Security",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CPEG465",
+        "name": "Introduction to Cybersecurity",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CPEG494",
+        "name": "Systems Hardening and Protection",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    }
+]

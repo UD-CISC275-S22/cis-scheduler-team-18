@@ -1,14 +1,36 @@
 import React from "react";
-//import { Plan } from "../interfaces/plan";
+import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import "../styleSheets/multipleSemesterTable.css";
 import { CourseList } from "./CourseList";
-//import { Plan } from "../interfaces/plan";
 
 export function MultipleSemesterTable({
-    semester
+    planId,
+    semester,
+    updateCoursePlan,
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
+    planId: string;
     semester: Semester;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => void;
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) => void;
 }): JSX.Element {
     //this function will return all the courses; organized by semester in a single plan
     //im changing this to be a single semester passed in.
@@ -37,7 +59,13 @@ export function MultipleSemesterTable({
             <h4 className="semester">
                 {semester.season} {semester.year}
             </h4>
-            <CourseList semester={semester}></CourseList>
+            <CourseList
+                planId={planId}
+                semester={semester}
+                updateCoursePlan={updateCoursePlan}
+                updateEditedCourse={updateEditedCourse}
+                updateDeletedCourse={updateDeletedCourse}
+            ></CourseList>
         </div>
     );
 }

@@ -6,18 +6,44 @@ import { Course } from "../interfaces/course";
  * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information
  */
 export function CourseEdit({
+    planId,
+    semId,
     course,
     editCourse,
-    deleteCourse
+    deleteCourse,
+    updateEditedCourse,
+    updateDeletedCourse
 }: {
+    planId: string;
+    semId: string;
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
     const [title, setTitle] = useState<string>(course.name);
     const [credits, setCredits] = useState<string>(course.credits);
     const [show, setShow] = useState(false);
+
+    //saves original course information
+    const saveDataKey = course.descr;
+    const prevData = localStorage.getItem(saveDataKey);
+    if (prevData === null) {
+        localStorage.setItem(saveDataKey, JSON.stringify(course));
+    }
 
     //Open Close and Save functions for popup
     const close = () => setShow(false);
@@ -30,14 +56,19 @@ export function CourseEdit({
             name: title,
             credits: credits
         });
+        //maybe add update semester here?
         close();
+        updateEditedCourse(planId, semId, course.code, code, title, credits);
     }
 
     //deletes the course
     function remove() {
         deleteCourse(course.code);
+        updateDeletedCourse(planId, semId, course.code);
         close();
     }
+
+    //reverts course imformation to original
 
     //functions to call usestate for each variable to be changed in text boxes
     function changeCode(event: React.ChangeEvent<HTMLInputElement>) {
@@ -50,6 +81,17 @@ export function CourseEdit({
         setCredits(event.target.value);
     }
 
+    //returns the course information back to its original information
+    function revert() {
+        const original = localStorage.getItem(course.descr);
+        let tempCourse = course;
+        if (original !== null) {
+            tempCourse = JSON.parse(original);
+        }
+        setCode(tempCourse.code);
+        setTitle(tempCourse.name);
+        setCredits(tempCourse.credits);
+    }
     return (
         <>
             <div>
@@ -79,6 +121,7 @@ export function CourseEdit({
                     <Form.Group controlId="formCredits">
                         <Form.Label>Change Course Credits:</Form.Label>
                         <Form.Control
+                            type="number"
                             value={credits}
                             onChange={changeCredits}
                         ></Form.Control>
@@ -87,6 +130,7 @@ export function CourseEdit({
                         <Button variant="danger" onClick={remove}>
                             Delete Course
                         </Button>
+                        <Button onClick={revert}>Revert to original</Button>
                         <Button variant="warning" onClick={close}>
                             Cancel
                         </Button>

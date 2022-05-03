@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+//import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
-    addCourse
+    addCourse,
+    updateCoursePlan,
+    planId,
+    semesterId
 }: {
     addCourse: (newCourse: Course) => void;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => void;
+    planId: string;
+    semesterId: string;
 }): JSX.Element {
     //use state for each element needed to make a new course
     const [code, setCode] = useState("NEW101");
@@ -48,6 +59,7 @@ export function CourseAdd({
             typ: ""
         };
         addCourse(newCourse);
+        updateCoursePlan(planId, semesterId, newCourse);
         close();
     }
     //for Modal

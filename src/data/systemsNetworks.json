@@ -1,0 +1,48 @@
+[
+    {
+        "code": "CISC360",
+        "name": "Computer Architecture",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC361",
+        "name": "Operating Systems",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC372",
+        "name": "Parallel Computing",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC450",
+        "name": "Computer Networks I",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC471",
+        "name": "Compiler Design",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    }
+]

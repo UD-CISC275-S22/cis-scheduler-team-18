@@ -6,9 +6,44 @@ import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
-import { Drag } from "./components/Drag";
+import { Course } from "./interfaces/course";
+import "./styleSheets/plan.css";
 
-export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
+export function Semesterer({
+    plan,
+    updateSemesterPlan,
+    updateCoursePlan,
+    updateEditedSemester,
+    updateEditedCourse,
+    updateDeletedCourse
+}: {
+    plan: Plan;
+    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => void;
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => void;
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) => void;
+}): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
     //list of semesters
@@ -65,10 +100,12 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
+                    updateCoursePlan={updateCoursePlan}
+                    planId={plan.id}
+                    updateEditedSemester={updateEditedSemester}
+                    updateEditedCourse={updateEditedCourse}
+                    updateDeletedCourse={updateDeletedCourse}
                 ></SemesterList>
-            </div>
-            <div className="myDrag">
-                <Drag></Drag>
             </div>
             <div>
                 <Button
@@ -90,9 +127,11 @@ export function Semesterer({ plan }: { plan: Plan }): JSX.Element {
                     Add Semester
                 </Button>
                 <AddSemesterModal
+                    planId={plan.id}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addSemester={addSemester}
+                    updateSemesterPlan={updateSemesterPlan}
                 ></AddSemesterModal>
             </div>
         </div>

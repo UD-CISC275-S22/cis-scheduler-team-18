@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
+//change semester to plan
 
 export function SemesterEditor({
+    planId,
     show,
     changeSemesterEditing,
     semester,
     editSemester,
-    deleteSemester
+    deleteSemester,
+    updateEditedSemester
 }: {
+    planId: string;
     show: boolean;
     changeSemesterEditing: () => void;
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => void;
 }): JSX.Element {
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);
@@ -28,6 +38,7 @@ export function SemesterEditor({
             year: parseInt(year) || 0
         });
         changeSemesterEditing();
+        updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
     }
 
     //will cancel the changes being made

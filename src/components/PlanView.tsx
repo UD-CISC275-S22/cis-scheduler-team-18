@@ -3,8 +3,11 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
+import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
-//import { DegreeReq } from "./degreeReq";
+import { Semester } from "../interfaces/semester";
+import { Course } from "../interfaces/course";
+import "../styleSheets/plan.css";
 
 /*
 Add this later!
@@ -31,11 +34,41 @@ export function PlanView({
 export function PlanView({
     plan,
     editPlan,
-    deletePlan
+    deletePlan,
+    updateSemesterPlan,
+    updateCoursePlan,
+    updateEditedCourse,
+    updateEditedSemester,
+    updateDeletedCourse
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
+    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
+    updateCoursePlan: (
+        planId: string,
+        semesterId: string,
+        newCourse: Course
+    ) => void;
+    updateEditedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) => void;
+    updateEditedSemester: (
+        planId: string,
+        semId: string,
+        newSeason: string,
+        newYear: number
+    ) => void;
+    updateDeletedCourse: (
+        planId: string,
+        semId: string,
+        courseCode: string
+    ) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -62,12 +95,22 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
-                <Semesterer plan={plan}></Semesterer>
+                <Semesterer
+                    plan={plan}
+                    updateSemesterPlan={updateSemesterPlan}
+                    updateCoursePlan={updateCoursePlan}
+                    updateEditedSemester={updateEditedSemester}
+                    updateEditedCourse={updateEditedCourse}
+                    updateDeletedCourse={updateDeletedCourse}
+                ></Semesterer>
             </div>
             <div>
                 <Button variant="info" onClick={changePlanEditing}>
                     Edit Plan
                 </Button>
+            </div>
+            <div>
+                <CheckDegreeReq plan={plan}></CheckDegreeReq>
             </div>
         </div>
     );
