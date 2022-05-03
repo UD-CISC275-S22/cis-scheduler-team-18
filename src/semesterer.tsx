@@ -94,8 +94,8 @@ export function Semesterer({
     const handleShowAddModal = () => setShowAddModal(true);
     //will call semesterList
     return (
-        <div>
-            <div>
+        <div className="mySems">
+            <div className="mySemList">
                 <SemesterList
                     semesters={semesters}
                     editSemester={editSemester}

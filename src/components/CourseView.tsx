@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import { Semester } from "../interfaces/semester";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
 
@@ -13,6 +14,7 @@ export function CourseView({
     courses,
     editCourse,
     deleteCourse,
+    addCourse
     updateEditedCourse,
     updateDeletedCourse
 }: {
@@ -21,6 +23,7 @@ export function CourseView({
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
+    addCourse: (newCourse: Course) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -35,6 +38,31 @@ export function CourseView({
         courseCode: string
     ) => void;
 }): JSX.Element {
+    const dragStartHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        data: Course
+    ) => {
+        const courseCopy = { ...data };
+        event.dataTransfer.setData("text", JSON.stringify(courseCopy));
+    };
+
+    const dropHandlerTable = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        addCourse(JSON.parse(data));
+    };
+
+    const allowDrop = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+    };
+
+    const dragEndHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        myCourseId: string
+    ) => {
+        deleteCourse(myCourseId);
+    };
+
     return (
         <div>
             <Table>
@@ -44,9 +72,24 @@ export function CourseView({
                     <th>Credits</th>
                     <th>Edit Course</th>
                 </thead>
-                <tbody>
+                <tbody
+                    key="tableBody"
+                    onDrop={(event) => dropHandlerTable(event)}
+                >
                     {courses.map((course: Course) => (
-                        <tr key={course.code}>
+                        <tr
+                            key={course.code}
+                            className={course.code}
+                            onDragStart={(event) =>
+                                dragStartHandler(event, course)
+                            }
+                            draggable={true}
+                            onDragOver={allowDrop}
+                            onDragEnd={(event) =>
+                                dragEndHandler(event, course.code)
+                            }
+                            //onDrop={(event) => dropHandler2(event, course)}
+                        >
                             <td>{course.code}</td>
                             <td>{course.name}</td>
                             <td>{course.credits}</td>

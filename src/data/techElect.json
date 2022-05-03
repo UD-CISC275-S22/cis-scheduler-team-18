@@ -8,16 +8,8 @@
         "restrict": "Requires familiarity with computing (e.g., programming language). Students may not receive credit for both MATH353 and MATH426",
         "breadth": "",
         "typ": ""
-    },{
-        "code": "CISC411",
-        "name": "Computational Mathematics II",
-        "descr": "Eigenvalue and singular-value decompositions; power and Krylov subspace iterations; global interpolation and quadrature; methods for boundary-value problems and Poisson’s equation; implicit solvers for stiff problems; method of lines for partial differential equations; diffusion and advection problems.",
-        "credits": "3",
-        "preReq": "",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
-    },{
+    },
+    {
         "code": "CISC304",
         "name": "Logic for Programming",
         "descr": "Propositional and predicate logic for general reasoning and advanced applications in knowledge representation in artificial intelligence and database, program correctness and programming semantics. Models, resolution, logic programming, and natural deduction.",

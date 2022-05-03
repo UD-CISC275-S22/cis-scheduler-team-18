@@ -49,15 +49,16 @@ export function CourseList({
         );
     }
 
-    function clearCourses() {
-        setCourses([]);
-    }
-
     function deleteCourse(id: string) {
         setCourses(
             courses.filter((course: Course): boolean => course.code !== id)
         );
     }
+
+    function clearCourses() {
+        setCourses([]);
+    }
+
     function addCourse(newCourse: Course): void {
         setCourses([...courses, newCourse]);
     }
@@ -70,6 +71,7 @@ export function CourseList({
                 courses={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
+                addCourse={addCourse}
                 updateEditedCourse={updateEditedCourse}
                 updateDeletedCourse={updateDeletedCourse}
             ></CourseView>
