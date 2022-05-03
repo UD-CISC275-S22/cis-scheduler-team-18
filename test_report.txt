@@ -40,92 +40,8 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-  console.error
-    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-        at div
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
-        at div
-        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
-        at div
-        at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
-
-  console.error
-    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-        at div
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
-        at div
-        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
-        at div
-        at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
-
-  console.error
-    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-        at div
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
-        at div
-        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
-        at div
-        at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
-
-  console.error
-    Warning: Encountered two children with the same key, `WOMS201`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
-        at div
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
-        at div
-        at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Row.js:22:3
-        at div
-        at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:19:35)
-        at div
-        at div
-        at App (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/App.tsx:34:31)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
-      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
-      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
-      at updateHostComponent (node_modules/react-dom/cjs/react-dom.development.js:17632:3)
-
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (538 ms)
+  ✕ renders the course name somewhere (547 ms)
 
   ● renders the course name somewhere
 
@@ -191,8 +107,12 @@ FAIL src/App.test.tsx
                     [36m</h3>[39m
                   [36m</div>[39m
                   [36m<div>[39m
-                    [36m<div>[39m
-                      [36m<div>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"mySems"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"mySemList"[39m
+                      [36m>[39m
                         [36m<div[39m
                           [33mclass[39m=[32m"container"[39m
                         [36m>[39m
@@ -225,7 +145,10 @@ FAIL src/App.test.tsx
                                       [36m</th>[39m
                                     [36m</thead>[39m
                                     [36m<tbody>[39m
-                                      [36m<tr>[39m
+                                      [36m<tr[39m
+                                        [33mclass[39m=[32m"EGGG101"[39m
+                                        [33mdraggable[39m=[32m"true"[39m
+                                      [36m>[39m
                                         [36m<td>[39m
                                           [0mEGGG101[0m
                                         [36m</td>[39m
@@ -252,7 +175,10 @@ FAIL src/App.test.tsx
                                           [36m</button>[39m
                                         [36m</td>[39m
                                       [36m</tr>[39m
-                                      [36m<tr>[39m
+                                      [36m<tr[39m
+                                        [33mclass[39m=[32m"CISC108"[39m
+                                        [33mdraggable[39m=[32m"true"[39m
+                                      [36m>[39m
                                         [36m<td>[39m
                                           [0mCISC108[0m
                                         [36m</td>[39m
@@ -279,20 +205,9 @@ FAIL src/App.test.tsx
                                           [36m</button>[39m
                                         [36m</td>[39m
                                       [36m</tr>[39m
-                                      [36m<tr>[39m
-                                        [36m<td>[39m
-                                          [0mMATH241[0m
-                                        [36m</td>[39m
-                                        [36m<td>[39m
-                                          [0mAnalytic Geometry & Calculus A[0m
-                                        [36m</td>[39m
-                                        [36m<td>[39m
-                                          [0m4[0m
-                                        [36m</td>[39m
-                                        [36m<td>[39m
-                                          [36m<div>[39m
-                                            [36m<button[39m
-             ...
+                                      [36m<tr[39m
+                                        [33mclass[39m=[32m"MATH241"[39m
+                                        [33md...
 
        5 | test("renders the course name somewhere", () => {
        6 |     render(<App />);
@@ -316,20 +231,20 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                              
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
-All files                   |   42.03 |     27.5 |   34.24 |    42.2 |                                                                                                                                
+All files                   |   41.09 |    27.63 |   32.08 |   40.99 |                                                                                                                                
  src                        |   18.96 |     8.33 |    10.9 |   19.26 |                                                                                                                                
   App.tsx                   |   13.04 |      2.5 |    5.12 |   13.63 | 29,40-63,73-263                                                                                                                
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                                                                                                              
   semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 57-87,115                                                                                                                      
- src/components             |   48.64 |    31.67 |   42.07 |   48.59 |                                                                                                                                
+ src/components             |   46.78 |    31.71 |   38.37 |   46.43 |                                                                                                                                
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 66-89,108-122                                                                                                                  
   CheckDegreeReqs.tsx       |   52.39 |    32.16 |   54.83 |   51.33 | 28,148,156,164,172,187-224,245,280-286,292-298,322,340,395-420,424,449,468,475-486,493-511,539-693,709,711,713,715,717,719,721 
   CourseAdd.tsx             |   44.44 |      100 |    12.5 |      50 | 32-63                                                                                                                          
   CourseEdit.tsx            |   37.93 |       50 |   11.11 |   40.74 | 53-93                                                                                                                          
   CourseInfo.tsx            |   66.66 |      100 |   33.33 |     100 |                                                                                                                                
-  CourseList.tsx            |      25 |        0 |   14.28 |      25 | 45-62                                                                                                                          
-  CourseView.tsx            |     100 |      100 |     100 |     100 |                                                                                                                                
-  Drag.tsx                  |   47.36 |        0 |   33.33 |   47.36 | 28,37-43,59,72-87                                                                                                              
+  CourseList.tsx            |      25 |        0 |   14.28 |      25 | 45-63                                                                                                                          
+  CourseView.tsx            |    37.5 |      100 |   22.22 |    37.5 | 44-45,49-51,55,62,76,83-88                                                                                                     
+  Drag.tsx                  |   37.25 |       25 |   21.73 |   34.69 | 15,19,34-51,62-69,77-84,89-91,97,109-116,140-144,167-171                                                                       
   PlanEditor.tsx            |       0 |      100 |       0 |       0 | 16-59                                                                                                                          
   PlanList.tsx              |     100 |      100 |     100 |     100 |                                                                                                                                
   PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 78                                                                                                                             
@@ -346,5 +261,5 @@ All files                   |   42.03 |     27.5 |   34.24 |    42.2 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.853 s
+Time:        4.123 s
 Ran all test suites.
