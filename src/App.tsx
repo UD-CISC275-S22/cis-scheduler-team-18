@@ -21,7 +21,7 @@ const PLANS = semesterPlan.map(
 let loadedData = PLANS;
 
 //unique data key
-const saveDataKey = "TEAM-18-PAGE-DATA";
+const saveDataKey = "TEAM-18-DATA";
 
 const previousData = localStorage.getItem(saveDataKey);
 
@@ -288,7 +288,7 @@ function App(): JSX.Element {
             <div>
                 <PlanList
                     updateSemesterPlan={updateSemesterPlan}
-                    plans={plans}
+                    plans={data}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
                     updateCoursePlan={updateCoursePlan}

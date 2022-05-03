@@ -728,6 +728,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             <Form.Group controlId="selectedConcentrat">
                 <Form.Label>Select your Concentration</Form.Label>
                 <Form.Select value={concentrat} onChange={updateConcentrat}>
+                    <option></option>
                     <option
                         key="Concentrat1"
                         value="Artificial Intelligence and Robotics"
