@@ -37,15 +37,9 @@ export function CourseAdd({
     function addCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(event.target.value);
     }
-    //function addRequired(event: React.ChangeEvent<HTMLInputElement>) {
-    //    setRequired(event.target.checked);
-    //}
     function addIsPreReq(event: React.ChangeEvent<HTMLInputElement>) {
         setIsPreReq(event.target.value);
     }
-    //function addHasPreReq(event: React.ChangeEvent<HTMLInputElement>) {
-    //    setHasPreReq(event.target.checked);
-    //}
     //this function creates a new Course with the current given information and puts it in the course list
     function makeCourse() {
         const newCourse: Course = {
@@ -109,27 +103,6 @@ export function CourseAdd({
                             onChange={addIsPreReq}
                         ></Form.Control>
                     </Form.Group>
-                    {/*<Form.Check
-                        type="checkbox"
-                        id="is-required-check"
-                        label="Required Course?"
-                        checked={required}
-                        onChange={addRequired}
-    />*/}
-                    {/*<Form.Check
-                        type="checkbox"
-                        id="is-preReq"
-                        label="Is this course a pre req?"
-                        checked={isPreReq}
-                        onChange={addIsPreReq}
-                    />
-                    <Form.Check
-                        type="checkbox"
-                        id="has-preReq"
-                        label="Does this course have a pre req?"
-                        checked={hasPreReq}
-                        onChange={addHasPreReq}
-/>*/}
                     <Modal.Footer>
                         <Button variant="warning" onClick={close}>
                             Cancel
