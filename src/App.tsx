@@ -312,7 +312,7 @@ function App(): JSX.Element {
                 ></AddPlanModal>
             </div>
             <div>
-              <Drag></Drag>
+                <Drag></Drag>
             </div>
         </div>
     );
