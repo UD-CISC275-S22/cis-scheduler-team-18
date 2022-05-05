@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import catalog from "../data/catalog.json";
 //import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
@@ -22,14 +23,18 @@ export function CourseAdd({
     const [code, setCode] = useState("NEW101");
     const [title, setTitle] = useState("NEW COURSE");
     const [credits, setCredits] = useState("0");
-    //const [required, setRequired] = useState(false);
     const [isPreReq, setIsPreReq] = useState("");
-    //const [hasPreReq, setHasPreReq] = useState(false);
     const [show, setShow] = useState(false);
 
     //update functions
     function addCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
+        const found = findCourse(code);
+        if (found !== null) {
+            setTitle(found.name);
+            setCredits(found.credits);
+            setIsPreReq(found.preReq);
+        }
     }
     function addTitle(event: React.ChangeEvent<HTMLInputElement>) {
         setTitle(event.target.value);
@@ -42,19 +47,47 @@ export function CourseAdd({
     }
     //this function creates a new Course with the current given information and puts it in the course list
     function makeCourse() {
-        const newCourse: Course = {
-            code: code,
-            name: title,
-            descr: "",
-            credits: credits,
-            preReq: isPreReq,
-            restrict: "",
-            breadth: "",
-            typ: ""
-        };
-        addCourse(newCourse);
-        updateCoursePlan(planId, semesterId, newCourse);
-        close();
+        const found = findCourse(code);
+        if (found !== null) {
+            addCourse(found);
+            updateCoursePlan(planId, semesterId, found);
+            close();
+        } else {
+            const newCourse: Course = {
+                code: code,
+                name: title,
+                descr: "",
+                credits: credits,
+                preReq: isPreReq,
+                restrict: "",
+                breadth: "",
+                typ: ""
+            };
+            addCourse(newCourse);
+            updateCoursePlan(planId, semesterId, newCourse);
+            close();
+        }
+    }
+    //gets course information from catalog based on a course id
+    function findCourse(id: string) {
+        const codeArr = Array.from(id);
+        const letterCodeArr = codeArr.filter(
+            (str: string): boolean => isNaN(parseInt(str)) && str !== " "
+        );
+        const numCodeArr = codeArr.filter(
+            (str: string): boolean => !isNaN(parseInt(str))
+        );
+        const letterCode = letterCodeArr.join("");
+        const numCode = numCodeArr.join("");
+        if (letterCode in catalog) {
+            const log = JSON.parse(JSON.stringify(catalog));
+            const possCourses = log[letterCode];
+            const found = possCourses.filter((course: Course): boolean =>
+                course.code.includes(numCode)
+            );
+            return found[0];
+        }
+        return null;
     }
     //for Modal
     const close = () => setShow(false);
