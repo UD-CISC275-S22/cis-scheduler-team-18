@@ -47,13 +47,21 @@ export function CourseAdd({
     }
     //this function creates a new Course with the current given information and puts it in the course list
     function makeCourse() {
+        let newCourse: Course;
         const found = findCourse(code);
         if (found !== null) {
-            addCourse(found);
-            updateCoursePlan(planId, semesterId, found);
-            close();
+            newCourse = {
+                code: found.code,
+                name: found.name,
+                descr: found.descr,
+                credits: found.credits,
+                preReq: found.preReq,
+                restrict: found.restrict,
+                breadth: found.breadth,
+                typ: found.typ
+            };
         } else {
-            const newCourse: Course = {
+            newCourse = {
                 code: code,
                 name: title,
                 descr: "",
@@ -63,12 +71,13 @@ export function CourseAdd({
                 breadth: "",
                 typ: ""
             };
-            addCourse(newCourse);
-            updateCoursePlan(planId, semesterId, newCourse);
-            close();
         }
+        addCourse(newCourse);
+        updateCoursePlan(planId, semesterId, newCourse);
+        close();
     }
     //gets course information from catalog based on a course id
+    //FIX RETURN VALUE
     function findCourse(id: string) {
         const codeArr = Array.from(id);
         const letterCodeArr = codeArr.filter(
@@ -77,17 +86,18 @@ export function CourseAdd({
         const numCodeArr = codeArr.filter(
             (str: string): boolean => !isNaN(parseInt(str))
         );
-        const letterCode = letterCodeArr.join("");
+        const letterCode = letterCodeArr.join("").toUpperCase();
         const numCode = numCodeArr.join("");
-        if (letterCode in catalog) {
+        if (letterCode in Object.keys(catalog)) {
             const log = JSON.parse(JSON.stringify(catalog));
-            const possCourses = log[letterCode];
-            const found = possCourses.filter((course: Course): boolean =>
-                course.code.includes(numCode)
+            const possCourses: Course[] = log[letterCode];
+            const found: Course[] = possCourses.filter(
+                (course: Course): boolean => course.code.includes(numCode)
             );
             return found[0];
+        } else {
+            return null;
         }
-        return null;
     }
     //for Modal
     const close = () => setShow(false);
