@@ -27,6 +27,30 @@ describe("MultipleSemester Component Tests", () => {
         });
         expect(editSem).toBeInTheDocument();
     });
+    test("There's a Save Changes and Cancel Button", () => {
+        const switchButton = screen.getByRole("button", {
+            name: /Edit Semester/i
+        });
+        switchButton.click();
+        const seasonBox = screen.getByRole("button", {
+            name: /Save Changes/i
+        });
+        const yearBox = screen.getByRole("button", {
+            name: /Cancel/i
+        });
+        expect(seasonBox).toBeInTheDocument();
+        expect(yearBox).toBeInTheDocument();
+    });
+    test("There's a Delete Button", () => {
+        const switchButton = screen.getByRole("button", {
+            name: /Edit Semester/i
+        });
+        switchButton.click();
+        const deleteBtn = screen.getByRole("button", {
+            name: /Delete Semester/i
+        });
+        expect(deleteBtn).toBeInTheDocument();
+    })
     test("Editing the Semester Season and Year Saves", () => {
         const switchButton = screen.getByRole("button", {
             name: /Edit Semester/i
@@ -56,5 +80,16 @@ describe("MultipleSemester Component Tests", () => {
         });
         saveBox.click();
         expect(screen.getByText(/testing 00/i)).toBeInTheDocument();
+    });
+    test("You can Delete a semester", () => {
+        const switchButton = screen.getByRole("button", {
+            name: /Edit Semester/i
+        });
+        switchButton.click();
+        const deleteBtn = screen.getByRole("button", {
+            name: /Delete Semester/i
+        });
+        deleteBtn.click();
+        expect(sem).not.toBeInTheDocument();
     });
 });
