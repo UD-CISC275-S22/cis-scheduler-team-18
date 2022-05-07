@@ -11,4 +11,11 @@ describe("MultipleSemester Component tests", () => {
     beforeEach(() => {
         render(<SemesterView />);
     });
+    test("There is an Edit Semester Button", () => {
+        const editSemBtn = screen.getByRole("button", {
+            name: /Edit Semester/i
+        });
+        expect(editSemBtn).toBeInTheDocument();
+    });
+    
 });
