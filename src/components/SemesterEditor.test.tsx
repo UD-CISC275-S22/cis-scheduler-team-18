@@ -50,7 +50,7 @@ describe("MultipleSemester Component Tests", () => {
             name: /Delete Semester/i
         });
         expect(deleteBtn).toBeInTheDocument();
-    })
+    });
     test("Editing the Semester Season and Year Saves", () => {
         const switchButton = screen.getByRole("button", {
             name: /Edit Semester/i
