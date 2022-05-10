@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import catalog from "../data/catalog.json";
 //import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
@@ -22,14 +23,18 @@ export function CourseAdd({
     const [code, setCode] = useState("NEW101");
     const [title, setTitle] = useState("NEW COURSE");
     const [credits, setCredits] = useState("0");
-    //const [required, setRequired] = useState(false);
     const [isPreReq, setIsPreReq] = useState("");
-    //const [hasPreReq, setHasPreReq] = useState(false);
     const [show, setShow] = useState(false);
 
     //update functions
     function addCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
+        const found = findCourse(event.target.value);
+        if (found !== undefined) {
+            setTitle(found.name);
+            setCredits(found.credits);
+            setIsPreReq(found.preReq);
+        }
     }
     function addTitle(event: React.ChangeEvent<HTMLInputElement>) {
         setTitle(event.target.value);
@@ -37,30 +42,83 @@ export function CourseAdd({
     function addCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(event.target.value);
     }
-    //function addRequired(event: React.ChangeEvent<HTMLInputElement>) {
-    //    setRequired(event.target.checked);
-    //}
     function addIsPreReq(event: React.ChangeEvent<HTMLInputElement>) {
         setIsPreReq(event.target.value);
     }
-    //function addHasPreReq(event: React.ChangeEvent<HTMLInputElement>) {
-    //    setHasPreReq(event.target.checked);
-    //}
     //this function creates a new Course with the current given information and puts it in the course list
     function makeCourse() {
-        const newCourse: Course = {
-            code: code,
-            name: title,
-            descr: "",
-            credits: credits,
-            preReq: isPreReq,
-            restrict: "",
-            breadth: "",
-            typ: ""
-        };
+        let newCourse: Course;
+        const found = findCourse(code);
+        if (found !== undefined) {
+            newCourse = {
+                code: found.code,
+                name: found.name,
+                descr: found.descr,
+                credits: found.credits,
+                preReq: found.preReq,
+                restrict: found.restrict,
+                breadth: found.breadth,
+                typ: found.typ
+            };
+        } else {
+            newCourse = {
+                code: code,
+                name: title,
+                descr: "",
+                credits: credits,
+                preReq: isPreReq,
+                restrict: "",
+                breadth: "",
+                typ: ""
+            };
+        }
         addCourse(newCourse);
         updateCoursePlan(planId, semesterId, newCourse);
         close();
+    }
+    //gets course information from catalog based on a course id
+    function findCourse(id: string) {
+        const codeArr = Array.from(id);
+        const letterCodeArr = codeArr.filter(
+            (str: string): boolean => isNaN(parseInt(str)) && str !== " "
+        );
+        const numCodeArr = codeArr.filter(
+            (str: string): boolean => !isNaN(parseInt(str))
+        );
+        const letterCode = letterCodeArr.join("").toUpperCase();
+        const numCode = numCodeArr.join("");
+        const realCode = letterCode + " " + numCode;
+        const log = JSON.parse(JSON.stringify(catalog));
+        const poss: Course = log[letterCode][realCode];
+        const found: Course = {
+            code: poss.code,
+            name: poss.name,
+            descr: poss.descr,
+            credits: poss.credits,
+            preReq: poss.preReq,
+            restrict: poss.restrict,
+            breadth: poss.breadth,
+            typ: poss.typ
+        };
+        return found;
+
+        /*
+        const codeArr = Array.from(id);
+        const letterCodeArr = codeArr.filter(
+            (str: string): boolean => isNaN(parseInt(str)) && str !== " "
+        );
+        const numCodeArr = codeArr.filter(
+            (str: string): boolean => !isNaN(parseInt(str))
+        );
+        const letterCode = letterCodeArr.join("").toUpperCase();
+        const numCode = numCodeArr.join("");
+        const realCode = letterCode + numCode;
+        const log = JSON.parse(JSON.stringify(catalog));
+        const found: Course[] = log.filter((course: Course): boolean =>
+            course.code.includes(realCode)
+        );
+        return found[0];
+        */
     }
     //for Modal
     const close = () => setShow(false);
@@ -109,27 +167,6 @@ export function CourseAdd({
                             onChange={addIsPreReq}
                         ></Form.Control>
                     </Form.Group>
-                    {/*<Form.Check
-                        type="checkbox"
-                        id="is-required-check"
-                        label="Required Course?"
-                        checked={required}
-                        onChange={addRequired}
-    />*/}
-                    {/*<Form.Check
-                        type="checkbox"
-                        id="is-preReq"
-                        label="Is this course a pre req?"
-                        checked={isPreReq}
-                        onChange={addIsPreReq}
-                    />
-                    <Form.Check
-                        type="checkbox"
-                        id="has-preReq"
-                        label="Does this course have a pre req?"
-                        checked={hasPreReq}
-                        onChange={addHasPreReq}
-/>*/}
                     <Modal.Footer>
                         <Button variant="warning" onClick={close}>
                             Cancel
