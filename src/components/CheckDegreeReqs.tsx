@@ -1,4 +1,4 @@
-import "../styleSheets/DegreeReqs.css";
+import "../styleSheets/degreeReqs.css";
 import React from "react";
 import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
