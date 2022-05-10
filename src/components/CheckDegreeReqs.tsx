@@ -1,21 +1,21 @@
-import "../styleSheets/degreeReqs.css";
+import "../styleSheets/DegreeReqs.css";
 import React from "react";
 import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
-import coreReqs from "../data/coreMajorRequirements.json";
-import techReqs from "../data/techElect.json";
-import scienceReq from "../data/scienceRequirement.json";
-import multiCultReq from "../data/multiCulturalReq.json";
+import coreReqs from "../data/CoreMajorRequirements.json";
+import techReqs from "../data/TechElect.json";
+import scienceReq from "../data/ScienceRequirement.json";
+import multiCultReq from "../data/MultiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
-import ai from "../data/ai.json";
-import bioInformatics from "../data/bioinformatics.json";
-import cybersecurity from "../data/cybersecurity.json";
-import dataScience from "../data/dataScience.json";
-import highPerformance from "../data/highPerf.json";
-import systemsNetwork from "../data/systemsNetworks.json";
+import ai from "../data/Ai.json";
+import bioInformatics from "../data/Bioinformatics.json";
+import cybersecurity from "../data/Cybersecurity.json";
+import dataScience from "../data/DataScience.json";
+import highPerformance from "../data/HighPerf.json";
+import systemsNetwork from "../data/SystemsNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
 
 //TO DO:
