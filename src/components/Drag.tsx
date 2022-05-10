@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import { Course } from "../interfaces/course";
-import coreMajorRequirements from "../data/coreMajorRequirements.json";
+import coreMajorRequirements from "../data/CoreMajorRequirements.json";
 import { Col, Row } from "react-bootstrap";
-import scienceRequirement from "../data/scienceRequirement.json";
+import scienceRequirement from "../data/ScienceRequirement.json";
 
 let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
 let startRight = scienceRequirement.map((course): Course => ({ ...course }));
