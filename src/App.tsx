@@ -11,20 +11,17 @@ import { Drag } from "./components/Drag";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
 
+//extract plans from data
 const PLANS = semesterPlan.map(
     (plan: Plan): Plan => ({
         ...plan
     })
 );
 
-//to load between pages
+//load between pages
 let loadedData = PLANS;
-
-//unique data key
 const saveDataKey = "TEAM-18-DATA";
-
 const previousData = localStorage.getItem(saveDataKey);
-
 if (previousData !== null) {
     loadedData = JSON.parse(previousData);
 }
