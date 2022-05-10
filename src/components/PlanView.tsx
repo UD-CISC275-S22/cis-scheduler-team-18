@@ -35,16 +35,16 @@ export function PlanView({
     plan,
     editPlan,
     deletePlan,
-    updateSemesterPlan,
     updateCoursePlan,
     updateEditedCourse,
     updateEditedSemester,
-    updateDeletedCourse
+    updateDeletedCourse,
+    plans,
+    setPlans
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
     updateCoursePlan: (
         planId: string,
         semesterId: string,
@@ -69,6 +69,8 @@ export function PlanView({
         semId: string,
         courseCode: string
     ) => void;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -97,7 +99,8 @@ export function PlanView({
             <div>
                 <Semesterer
                     plan={plan}
-                    updateSemesterPlan={updateSemesterPlan}
+                    plans={plans}
+                    setPlans={setPlans}
                     updateCoursePlan={updateCoursePlan}
                     updateEditedSemester={updateEditedSemester}
                     updateEditedCourse={updateEditedCourse}

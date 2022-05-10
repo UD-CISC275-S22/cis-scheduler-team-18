@@ -2,19 +2,22 @@ import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
 
 export function AddSemesterModal({
     planId,
     show,
     handleClose,
     addSemester,
-    updateSemesterPlan
+    plans,
+    setPlans
 }: {
     planId: string;
     show: boolean;
     handleClose: () => void;
     addSemester: (newSemester: Semester) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
 }) {
     const [id, setId] = useState<string>("");
     //const [courses, setCourses] = useState<string[]>([]);
@@ -42,7 +45,11 @@ export function AddSemesterModal({
             )
         });
         handleClose();
-        updateSemesterPlan(planId, {
+        updatePlan(planId);
+    }
+
+    function updatePlan(planId: string) {
+        const newSemester = {
             id: season + " " + year,
             season: season,
             year: parseInt(year) || 0,
@@ -58,7 +65,15 @@ export function AddSemesterModal({
                     typ: ""
                 })
             )
-        });
+        };
+
+        const addedSem = plans.map(
+            (plan: Plan): Plan =>
+                plan.id === planId
+                    ? { ...plan, semesters: [...plan.semesters, newSemester] }
+                    : { ...plan }
+        );
+        setPlans(addedSem);
     }
 
     return (

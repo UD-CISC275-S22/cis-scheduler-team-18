@@ -25,17 +25,15 @@ const previousData = localStorage.getItem(saveDataKey);
 if (previousData !== null) {
     loadedData = JSON.parse(previousData);
 }
+function saveData() {
+    localStorage.setItem(saveDataKey, JSON.stringify(data));
+}
 
 function App(): JSX.Element {
     //const plans = PLANS;
     const [plans, setPlans] = useState<Plan[]>(PLANS);
     const [showAddModal, setShowAddModal] = useState(false);
     const [data, setData] = useState<Plan[]>(loadedData);
-
-    //this will save all the made changes
-    function saveData() {
-        localStorage.setItem(saveDataKey, JSON.stringify(data));
-    }
 
     function editPlan(id: string, newPlan: Plan) {
         setPlans(
@@ -63,20 +61,6 @@ function App(): JSX.Element {
 
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
-
-    //mimicking Tome example to implement
-    function updateSemesterPlan(planId: string, newSemester: Semester) {
-        //will update "plans" when a new semester is added
-        const addedSem = plans.map(
-            (plan: Plan): Plan =>
-                plan.id === planId
-                    ? { ...plan, semesters: [...plan.semesters, newSemester] }
-                    : { ...plan }
-        );
-
-        setPlans(addedSem);
-        setData(addedSem);
-    }
 
     function updateCoursePlan(
         //will update "plans" when a new course is added
@@ -284,7 +268,7 @@ function App(): JSX.Element {
             <Button onClick={saveData}>Save all Changes</Button>
             <div>
                 <PlanList
-                    updateSemesterPlan={updateSemesterPlan}
+                    setPlans={setPlans}
                     plans={data}
                     editPlan={editPlan}
                     deletePlan={deletePlan}

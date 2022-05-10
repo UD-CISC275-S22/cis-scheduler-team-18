@@ -22,18 +22,18 @@ export function PlanList({
 
 export function PlanList({
     plans,
+    setPlans,
     deletePlan,
     editPlan,
-    updateSemesterPlan,
     updateCoursePlan,
     updateEditedCourse,
     updateEditedSemester,
     updateDeletedCourse
 }: {
     plans: Plan[];
+    setPlans: (p: Plan[]) => void;
     deletePlan: (id: string) => void;
     editPlan: (id: string, newPlan: Plan) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -66,7 +66,8 @@ export function PlanList({
             {plans.map((plan: Plan) => (
                 <div key={plan.id} className="bg-light border m-2 p-2">
                     <PlanView
-                        updateSemesterPlan={updateSemesterPlan}
+                        plans={plans}
+                        setPlans={setPlans}
                         plan={plan}
                         editPlan={editPlan}
                         deletePlan={deletePlan}

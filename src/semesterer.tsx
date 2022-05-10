@@ -1,5 +1,3 @@
-//App: Plan
-//Semesterer: Semester
 import React, { useState } from "react";
 import { Semester } from "./interfaces/semester";
 import { Plan } from "./interfaces/plan";
@@ -11,14 +9,14 @@ import "./styleSheets/plan.css";
 
 export function Semesterer({
     plan,
-    updateSemesterPlan,
     updateCoursePlan,
     updateEditedSemester,
     updateEditedCourse,
-    updateDeletedCourse
+    updateDeletedCourse,
+    plans,
+    setPlans
 }: {
     plan: Plan;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
     updateCoursePlan: (
         planId: string,
         semesterId: string,
@@ -43,6 +41,8 @@ export function Semesterer({
         semId: string,
         courseCode: string
     ) => void;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
@@ -131,7 +131,8 @@ export function Semesterer({
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addSemester={addSemester}
-                    updateSemesterPlan={updateSemesterPlan}
+                    plans={plans}
+                    setPlans={setPlans}
                 ></AddSemesterModal>
             </div>
         </div>
