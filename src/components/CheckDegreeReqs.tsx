@@ -22,13 +22,14 @@ import theoryandComp from "../data/TheoryandComputation.json";
 //implement a check for upper level language courses
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
-    //will be used to chose a concentration
+    //will be used to choose a concentration
     const [concentrat, setConcentrat] = useState<string>("");
     function updateConcentrat(event: React.ChangeEvent<HTMLSelectElement>) {
         setConcentrat(event.target.value);
     }
-
+    //all semesters in the plan
     const SEMS = plan.semesters.map((sem: Semester): Semester => ({ ...sem }));
+    //all courses in a plan
     let COURSES: Course[] = [];
     for (const sem of SEMS) {
         const courselist = sem.courses.map(
@@ -43,7 +44,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         })
     );
 
-    //DLEReqs: an array of Course Objects that are DLE options -- ANY OF THESE CAN BE TAKEN (3 credits)
+    //DLEReqs: an array of Course Objects that are DLE options -- ANY ONE OF THESE CAN BE TAKEN (3 credits)
     const DLE = DLEReq.map((course: Course): Course => ({ ...course }));
 
     //multiculturalREQ: ONE of these classes need to be taken (3 credits)
@@ -118,27 +119,34 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
                 "GROUP D" || "GROUPD" || "group D" || "group d"
             )
         );
-        //making a variable to hold teh amount of credits each breadth has
-        let groupACredits = 0;
-        let groupBCredits = 0;
-        let groupCCredits = 0;
-        let groupDCredits = 0;
         //add credits in groupA
-        for (const cred of groupA) {
-            groupACredits += parseInt(cred.credits);
-        }
+        const groupACredArr = groupA.map((course: Course): number =>
+            parseInt(course.credits)
+        );
+        const groupACredits = groupACredArr.reduce(
+            (sum: number, cred: number) => sum + cred
+        );
         //add credits in groupB
-        for (const cred of groupB) {
-            groupBCredits += parseInt(cred.credits);
-        }
+        const groupBCredArr = groupB.map((course: Course): number =>
+            parseInt(course.credits)
+        );
+        const groupBCredits = groupBCredArr.reduce(
+            (sum: number, cred: number) => sum + cred
+        );
         //add credits in groupC
-        for (const cred of groupC) {
-            groupCCredits += parseInt(cred.credits);
-        }
+        const groupCCredArr = groupC.map((course: Course): number =>
+            parseInt(course.credits)
+        );
+        const groupCCredits = groupCCredArr.reduce(
+            (sum: number, cred: number) => sum + cred
+        );
         //add credits in groupD
-        for (const cred of groupD) {
-            groupDCredits += parseInt(cred.credits);
-        }
+        const groupDCredArr = groupB.map((course: Course): number =>
+            parseInt(course.credits)
+        );
+        const groupDCredits = groupDCredArr.reduce(
+            (sum: number, cred: number) => sum + cred
+        );
 
         //what do we need
         //at least 3 credits in group A, group B, group C, group D
@@ -187,7 +195,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         } else if (totalCreds >= 21 && totalCreds - groupDCredits >= 18) {
             //test for 6 credits being upper level
             //to do: need to implement upper foreign language courses
-            //not a perfect theorem
+            //not a perfect theorem - think of something better for this
             const upperLevelA = groupA.filter((course: Course): boolean =>
                 course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
             );
@@ -201,24 +209,40 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
                 course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
             );
             //counts the credits for the upper level breadths
-            let upperACredit = 0;
-            let upperBCredit = 0;
-            let upperCCredit = 0;
-            let upperDCredit = 0;
-            for (const cred of upperLevelA) {
-                upperACredit += parseInt(cred.credits);
-            }
-            for (const cred of upperLevelB) {
-                upperBCredit += parseInt(cred.credits);
-            }
-            for (const cred of upperLevelC) {
-                upperCCredit += parseInt(cred.credits);
-            }
-            for (const cred of upperLevelD) {
-                upperDCredit += parseInt(cred.credits);
-            }
+            //a
+            const groupACredArray = upperLevelA.map((course: Course): number =>
+                parseInt(course.credits)
+            );
+            const uppperACred = groupACredArray.reduce(
+                (sum: number, cred: number) => sum + cred
+            );
+
+            //b
+            const groupBCredArray = upperLevelB.map((course: Course): number =>
+                parseInt(course.credits)
+            );
+            const uppperBCred = groupBCredArray.reduce(
+                (sum: number, cred: number) => sum + cred
+            );
+
+            //c
+            const groupCCredArray = upperLevelC.map((course: Course): number =>
+                parseInt(course.credits)
+            );
+            const uppperCCred = groupCCredArray.reduce(
+                (sum: number, cred: number) => sum + cred
+            );
+
+            //d
+            const groupDCredArray = upperLevelD.map((course: Course): number =>
+                parseInt(course.credits)
+            );
+            const uppperDCred = groupDCredArray.reduce(
+                (sum: number, cred: number) => sum + cred
+            );
+
             const totalUpperCred =
-                upperACredit + upperBCredit + upperCCredit + upperDCredit;
+                uppperACred + uppperBCred + uppperCCred + uppperDCred;
 
             if (totalUpperCred < 6) {
                 missingRequirements = [
