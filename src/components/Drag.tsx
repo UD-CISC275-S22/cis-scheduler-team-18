@@ -2,14 +2,24 @@
 
 import React, { useState } from "react";
 import { Course } from "../interfaces/course";
+import { Form } from "react-bootstrap";
 import coreMajorRequirements from "../data/coreMajorRequirements.json";
-import { Col, Row } from "react-bootstrap";
+import DLEReq from "../data/DLEReq.json";
+import highPerf from "../data/highPerf.json";
+import multiCulturalReq from "../data/multiCulturalReq.json";
 import scienceRequirement from "../data/scienceRequirement.json";
+import techElect from "../data/techElect.json";
 
-let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
-let startRight = scienceRequirement.map((course): Course => ({ ...course }));
+type ChangeEvent = React.ChangeEvent<
+    HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
+>;
 
-const saveDataKey = "MY-PAGE-DATA";
+//let startLeft = coreMajorRequirements.map((course): Course => ({ ...course }));
+//let startRight = scienceRequirement.map((course): Course => ({ ...course }));
+
+//const saveDataKey = "MY-PAGE-DATA";
+
+/*
 const previousData = localStorage.getItem(saveDataKey);
 if (previousData !== null) {
     startLeft = JSON.parse(previousData);
@@ -17,12 +27,26 @@ if (previousData !== null) {
 
 if (previousData !== null) {
     startRight = JSON.parse(previousData);
-}
+}*/
+
+const startCourseList = [
+    ...coreMajorRequirements,
+    ...DLEReq,
+    ...highPerf,
+    ...multiCulturalReq,
+    ...scienceRequirement,
+    ...techElect
+];
+
+//const newStartCourseList = [...new Set(startCourseList)];
 
 export function Drag(): JSX.Element {
     // The content of the target box
-    const [left, setLeft] = useState<Course[]>(startLeft);
-    const [right, setRight] = useState<Course[]>(startRight);
+
+    //const [left, setLeft] = useState<Course[]>(startLeft);
+    //const [right, setRight] = useState<Course[]>(startRight);
+
+    const [choice, setChoice] = useState<string>();
 
     const [pool, setPool] = useState<Course[]>([]);
 
@@ -34,6 +58,7 @@ export function Drag(): JSX.Element {
         event.dataTransfer.setData("text", JSON.stringify(data));
     };
 
+    /*
     function deleteLeft(newCourse: Course) {
         //setLeft(left.filter((course: Course): boolean => course !== newCourse));
         //setLeft([...left, left[4]]);
@@ -51,10 +76,11 @@ export function Drag(): JSX.Element {
                 (course: Course): boolean => course.name !== newCourse.name
             )
         );
-    }
+    }*/
 
     // This function will be triggered when dropping
 
+    /*
     const dropHandler = (
         event: React.DragEvent<HTMLDivElement>,
         newCourse: Course
@@ -83,7 +109,7 @@ export function Drag(): JSX.Element {
             setLeft([...left, JSON.parse(data)]);
             deleteRight(JSON.parse(data));
         }
-    };
+    };*/
 
     const dropHandlerPool = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
@@ -97,86 +123,57 @@ export function Drag(): JSX.Element {
         event.preventDefault();
     };
 
+    const dragEndHandler = (
+        event: React.DragEvent<HTMLDivElement>,
+        myCourseId: string
+    ) => {
+        setPool(
+            pool.filter((course: Course): boolean => course.code !== myCourseId)
+        );
+    };
+
+    function updateChoice(event: ChangeEvent) {
+        setChoice(event.target.value);
+        const myCourse = startCourseList.filter(
+            (course: Course): boolean => event.target.value === course.code
+        );
+        setPool([...pool, ...myCourse]);
+    }
+
     return (
-        <div className="container">
-            <Row>
-                <div
-                    style={{
-                        backgroundColor: "pink",
-                        display: "inline-block"
-                    }}
-                    onDragOver={allowDrop}
-                    onDrop={(event) => dropHandlerPool(event)}
-                >
-                    {pool.map((course: Course) => (
-                        <div
-                            key={course.code}
-                            className={course.code}
-                            onDragStart={(event) =>
-                                dragStartHandler(event, course)
-                            }
-                            draggable={true}
-                        >
-                            <h2> {course.name} </h2>
-                        </div>
-                    ))}
-                </div>
-            </Row>
-            <Row>
-                <Col>
-                    <div
-                        key="theStart"
-                        className="box4"
-                        style={{
-                            backgroundColor: "green",
-                            display: "inline-block"
-                        }}
-                    >
-                        {left.map((course: Course) => (
-                            <div
-                                key={course.code}
-                                className={course.code}
-                                onDragStart={(event) =>
-                                    dragStartHandler(event, course)
-                                }
-                                draggable={true}
-                                onDragOver={allowDrop}
-                                onDrop={(event) => dropHandler2(event, course)}
-                            >
-                                <h2>{course.name}</h2>
-                            </div>
+        <div>
+            <div
+                style={{
+                    backgroundColor: "pink",
+                    height: "999px",
+                    width: "340px"
+                }}
+                onDragOver={allowDrop}
+                onDrop={(event) => dropHandlerPool(event)}
+            >
+                <h2>Pool: </h2>
+                <Form.Group className="mb-3">
+                    <Form.Select value={choice} onChange={updateChoice}>
+                        {startCourseList.map((course: Course) => (
+                            <option key={course.code}>{course.code}</option>
                         ))}
-                    </div>
-                </Col>
-                <Col>
-                    <h2>Drop Something Here</h2>
-                    <hr></hr>
+                        ;
+                    </Form.Select>
+                </Form.Group>
+                {pool.map((course: Course) => (
                     <div
-                        key="hi"
-                        className="box3"
-                        style={{
-                            backgroundColor: "red",
-                            display: "inline-block"
-                        }}
+                        key={course.code}
+                        className={course.code}
+                        onDragStart={(event) => dragStartHandler(event, course)}
+                        draggable={true}
+                        onDragEnd={(event) =>
+                            dragEndHandler(event, course.code)
+                        }
                     >
-                        {right.map((course: Course) => (
-                            <div
-                                key={course.code}
-                                className={course.code}
-                                onDragStart={(event) =>
-                                    dragStartHandler(event, course)
-                                }
-                                draggable={true}
-                                onDragOver={allowDrop}
-                                onDrop={(event) => dropHandler(event, course)}
-                            >
-                                <h2>{course.name}</h2>
-                            </div>
-                        ))}
+                        <h3> {course.code + ": " + course.name} </h3>
                     </div>
-                    <hr></hr>
-                </Col>
-            </Row>
+                ))}
+            </div>
         </div>
     );
 }
