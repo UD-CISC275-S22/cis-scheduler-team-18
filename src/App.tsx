@@ -62,44 +62,6 @@ function App(): JSX.Element {
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
-    function updateCoursePlan(
-        //will update "plans" when a new course is added
-        planID: string,
-        semesterId: string,
-        newCourse: Course
-    ) {
-        //maybe: map through the plans, to find the semester
-        //first, find the plan, then map through the plan's semesters
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planID
-        );
-
-        let updatePlan = { ...plans };
-        //get the semesters
-        if (currPlan !== undefined) {
-            const currSems = currPlan.semesters.map(
-                (sem: Semester): Semester => sem
-            );
-
-            //add the course to the list of semesters
-            const addedCourse = currSems.map(
-                (sem: Semester): Semester =>
-                    sem.id === semesterId
-                        ? { ...sem, courses: [...sem.courses, newCourse] }
-                        : { ...sem }
-            );
-
-            updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planID
-                        ? { ...plan, semesters: addedCourse }
-                        : { ...plan }
-            );
-        }
-
-        setPlans(updatePlan);
-        setData(updatePlan);
-    }
 
     function updateEditedSemester(
         //will update "plans", when a semester is edited
@@ -269,10 +231,9 @@ function App(): JSX.Element {
             <div>
                 <PlanList
                     setPlans={setPlans}
-                    plans={data}
+                    plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
-                    updateCoursePlan={updateCoursePlan}
                     updateEditedCourse={updateEditedCourse}
                     updateEditedSemester={updateEditedSemester}
                     updateDeletedCourse={updateDeletedCourse}

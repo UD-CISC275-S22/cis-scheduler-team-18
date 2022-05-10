@@ -6,25 +6,22 @@ import { SemesterEditor } from "./SemesterEditor";
 import { MultipleSemesterTable } from "./MultipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
 import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
 
 export function SemesterView({
     semester,
     editSemester,
     deleteSemester,
-    updateCoursePlan,
     planId,
     updateEditedSemester,
     updateEditedCourse,
-    updateDeletedCourse
+    updateDeletedCourse,
+    plans,
+    setPlans
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
     planId: string;
     updateEditedSemester: (
         planId: string,
@@ -45,6 +42,8 @@ export function SemesterView({
         semId: string,
         courseCode: string
     ) => void;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -73,9 +72,10 @@ export function SemesterView({
     ) : (
         <div>
             <MultipleSemesterTable
+                plans={plans}
+                setPlans={setPlans}
                 planId={planId}
                 semester={semester}
-                updateCoursePlan={updateCoursePlan}
                 updateEditedCourse={updateEditedCourse}
                 updateDeletedCourse={updateDeletedCourse}
             ></MultipleSemesterTable>

@@ -3,21 +3,20 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import "../styleSheets/multipleSemesterTable.css";
 import { CourseList } from "./CourseList";
+import { Plan } from "../interfaces/plan";
 
 export function MultipleSemesterTable({
     planId,
     semester,
-    updateCoursePlan,
     updateEditedCourse,
-    updateDeletedCourse
+    updateDeletedCourse,
+    plans,
+    setPlans
 }: {
     planId: string;
     semester: Semester;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -60,9 +59,10 @@ export function MultipleSemesterTable({
                 {semester.season} {semester.year}
             </h4>
             <CourseList
+                plans={plans}
+                setPlans={setPlans}
                 planId={planId}
                 semester={semester}
-                updateCoursePlan={updateCoursePlan}
                 updateEditedCourse={updateEditedCourse}
                 updateDeletedCourse={updateDeletedCourse}
             ></CourseList>

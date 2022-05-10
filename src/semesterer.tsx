@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Semester } from "./interfaces/semester";
 import { Plan } from "./interfaces/plan";
-import { SemesterList } from "./components/SemesterList";
+import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/AddSemesterModal";
 import { Course } from "./interfaces/course";
@@ -9,7 +9,6 @@ import "./styleSheets/plan.css";
 
 export function Semesterer({
     plan,
-    updateCoursePlan,
     updateEditedSemester,
     updateEditedCourse,
     updateDeletedCourse,
@@ -17,11 +16,6 @@ export function Semesterer({
     setPlans
 }: {
     plan: Plan;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
     updateEditedSemester: (
         planId: string,
         semId: string,
@@ -97,10 +91,11 @@ export function Semesterer({
         <div className="mySems">
             <div className="mySemList">
                 <SemesterList
+                    plans={plans}
+                    setPlans={setPlans}
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
-                    updateCoursePlan={updateCoursePlan}
                     planId={plan.id}
                     updateEditedSemester={updateEditedSemester}
                     updateEditedCourse={updateEditedCourse}

@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import catalog from "../data/catalog.json";
+import { Semester } from "../interfaces/semester";
+import { Plan } from "../interfaces/plan";
 //import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
     addCourse,
-    updateCoursePlan,
     planId,
-    semesterId
+    semesterId,
+    plans,
+    setPlans
 }: {
     addCourse: (newCourse: Course) => void;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
     planId: string;
     semesterId: string;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     //use state for each element needed to make a new course
     const [code, setCode] = useState("NEW101");
@@ -73,8 +73,38 @@ export function CourseAdd({
             };
         }
         addCourse(newCourse);
-        updateCoursePlan(planId, semesterId, newCourse);
         close();
+        updatePlans(planId, semesterId, newCourse);
+    }
+
+    function updatePlans(planId: string, semId: string, newCourse: Course) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSems = currPlan.semesters.map(
+                (sem: Semester): Semester => sem
+            );
+
+            const addedCourse = currSems.map(
+                (sem: Semester): Semester =>
+                    sem.id === semId
+                        ? { ...sem, courses: [...sem.courses, newCourse] }
+                        : { ...sem }
+            );
+
+            updatePlan = plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planId
+                        ? { ...plan, semesters: addedCourse }
+                        : { ...plan }
+            );
+        }
+
+        setPlans(updatePlan);
     }
     //gets course information from catalog based on a course id
     function findCourse(id: string) {
