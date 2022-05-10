@@ -30,7 +30,7 @@ export function CourseAdd({
     function addCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
         const found = findCourse(code);
-        if (found !== null) {
+        if (found !== undefined) {
             setTitle(found.name);
             setCredits(found.credits);
             setIsPreReq(found.preReq);
@@ -49,7 +49,7 @@ export function CourseAdd({
     function makeCourse() {
         let newCourse: Course;
         const found = findCourse(code);
-        if (found !== null) {
+        if (found !== undefined) {
             newCourse = {
                 code: found.code,
                 name: found.name,
@@ -77,7 +77,6 @@ export function CourseAdd({
         close();
     }
     //gets course information from catalog based on a course id
-    //FIX RETURN VALUE
     function findCourse(id: string) {
         const codeArr = Array.from(id);
         const letterCodeArr = codeArr.filter(
@@ -88,16 +87,38 @@ export function CourseAdd({
         );
         const letterCode = letterCodeArr.join("").toUpperCase();
         const numCode = numCodeArr.join("");
-        if (letterCode in Object.keys(catalog)) {
-            const log = JSON.parse(JSON.stringify(catalog));
-            const possCourses: Course[] = log[letterCode];
-            const found: Course[] = possCourses.filter(
-                (course: Course): boolean => course.code.includes(numCode)
-            );
-            return found[0];
-        } else {
-            return null;
-        }
+        const realCode = letterCode + " " + numCode;
+        const log = JSON.parse(JSON.stringify(catalog));
+        const poss: Course = log[letterCode][realCode];
+        const found: Course = {
+            code: poss.code,
+            name: poss.name,
+            descr: poss.descr,
+            credits: poss.credits,
+            preReq: poss.preReq,
+            restrict: poss.restrict,
+            breadth: poss.breadth,
+            typ: poss.typ
+        };
+        return found;
+
+        /*
+        const codeArr = Array.from(id);
+        const letterCodeArr = codeArr.filter(
+            (str: string): boolean => isNaN(parseInt(str)) && str !== " "
+        );
+        const numCodeArr = codeArr.filter(
+            (str: string): boolean => !isNaN(parseInt(str))
+        );
+        const letterCode = letterCodeArr.join("").toUpperCase();
+        const numCode = numCodeArr.join("");
+        const realCode = letterCode + numCode;
+        const log = JSON.parse(JSON.stringify(catalog));
+        const found: Course[] = log.filter((course: Course): boolean =>
+            course.code.includes(realCode)
+        );
+        return found[0];
+        */
     }
     //for Modal
     const close = () => setShow(false);
