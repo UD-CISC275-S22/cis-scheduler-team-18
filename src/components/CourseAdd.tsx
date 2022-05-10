@@ -29,7 +29,7 @@ export function CourseAdd({
     //update functions
     function addCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
-        const found = findCourse(code);
+        const found = findCourse(event.target.value);
         if (found !== undefined) {
             setTitle(found.name);
             setCredits(found.credits);
