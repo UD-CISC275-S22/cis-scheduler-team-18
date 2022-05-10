@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
-import { SemesterEditor } from "../components/semesterEditor";
-import { MultipleSemesterTable } from "../components/multipleSemesterTable";
+import { SemesterEditor } from "./SemesterEditor";
+import { MultipleSemesterTable } from "./MultipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
 import { Course } from "../interfaces/course";
 

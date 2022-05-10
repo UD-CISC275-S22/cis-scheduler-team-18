@@ -6,7 +6,7 @@
 //save changes
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { AddSemesterModal } from "./addSemesterModal";
+import { AddSemesterModal } from "./AddSemesterModal";
 
 describe("MultipleSemester Component tests", () => {
     beforeEach(() => {

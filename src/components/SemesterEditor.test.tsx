@@ -4,7 +4,7 @@
 //you can cancel (not save changes)
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { SemesterEditor } from "./semesterEditor";
+import { SemesterEditor } from "./SemesterEditor";
 import userEvent from "@testing-library/user-event";
 
 describe("MultipleSemester Component Tests", () => {

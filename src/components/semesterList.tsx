@@ -1,6 +1,6 @@
 import React from "react";
 import { Semester } from "../interfaces/semester";
-import { SemesterView } from "./semesterView";
+import { SemesterView } from "./SemesterView";
 import "../styleSheets/multipleSemesterTable.css";
 import { Course } from "../interfaces/course";
 

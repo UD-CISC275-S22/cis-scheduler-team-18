@@ -4,7 +4,7 @@
 //do the multiple semesters have courses?
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { SemesterView } from "./semesterView";
+import { SemesterView } from "./SemesterView";
 
 describe("MultipleSemester Component tests", () => {
     beforeEach(() => {

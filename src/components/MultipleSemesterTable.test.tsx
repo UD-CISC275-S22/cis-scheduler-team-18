@@ -3,7 +3,7 @@
 //will it display multiple tables?
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { MultipleSemesterTable } from "./MultipleSemesterTable";
 
 describe("MultipleSemester Component tests", () => {
     beforeEach(() => {
