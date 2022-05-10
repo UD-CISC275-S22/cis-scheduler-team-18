@@ -41,7 +41,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (572 ms)
+  ✕ renders the course name somewhere (695 ms)
 
   ● renders the course name somewhere
 
@@ -231,15 +231,15 @@ FAIL src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                              
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------
-All files                   |   45.21 |     32.1 |   35.57 |   44.82 |                                                                                                                                
+All files                   |   43.79 |    31.47 |   35.15 |   43.34 |                                                                                                                                
  src                        |   18.96 |     8.33 |    10.9 |   19.26 |                                                                                                                                
   App.tsx                   |   13.04 |      2.5 |    5.12 |   13.63 | 29,40-63,73-263                                                                                                                
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                                                                                                              
   semesterer.tsx            |      35 |        0 |   15.38 |   35.29 | 57-87,115                                                                                                                      
- src/components             |   51.29 |    36.65 |   42.42 |   50.62 |                                                                                                                                
+ src/components             |   49.32 |    35.79 |   41.79 |    48.6 |                                                                                                                                
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 66-89,108-122                                                                                                                  
   CheckDegreeReqs.tsx       |   52.39 |    32.16 |   54.83 |   51.33 | 28,148,156,164,172,187-224,245,280-286,292-298,322,340,395-420,424,449,468,475-486,493-511,539-693,709,711,713,715,717,719,721 
-  CourseAdd.tsx             |   44.44 |      100 |    12.5 |      50 | 32-57                                                                                                                          
+  CourseAdd.tsx             |   21.05 |        0 |    9.09 |   22.22 | 31-103                                                                                                                         
   CourseEdit.tsx            |   37.93 |       50 |   11.11 |   40.74 | 53-93                                                                                                                          
   CourseInfo.tsx            |   89.28 |    84.61 |    87.5 |   91.83 | 37,59,74,98                                                                                                                    
   CourseList.tsx            |      25 |        0 |   14.28 |      25 | 45-63                                                                                                                          
@@ -261,5 +261,5 @@ All files                   |   45.21 |     32.1 |   35.57 |   44.82 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.256 s
+Time:        5.03 s
 Ran all test suites.
