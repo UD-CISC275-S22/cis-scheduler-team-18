@@ -68,7 +68,7 @@ export function SemesterEditor({
             );
 
             updatePlan = plans.map(
-                (plan: plan): Plan =>
+                (plan: Plan): Plan =>
                     plan.id === PLAN.id
                         ? { ...plan, semesters: editedSem }
                         : { ...plan }
