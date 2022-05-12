@@ -13,7 +13,6 @@ export function SemesterView({
     editSemester,
     deleteSemester,
     plan,
-    updateDeletedCourse,
     plans,
     setPlans
 }: {
@@ -21,11 +20,6 @@ export function SemesterView({
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
     plan: Plan;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
 }): JSX.Element {
@@ -61,7 +55,6 @@ export function SemesterView({
                 setPlans={setPlans}
                 plan={plan}
                 semester={semester}
-                updateDeletedCourse={updateDeletedCourse}
             ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>

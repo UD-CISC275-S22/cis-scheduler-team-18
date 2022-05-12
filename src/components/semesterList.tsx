@@ -10,7 +10,6 @@ export function SemesterList({
     deleteSemester,
     editSemester,
     plan,
-    updateDeletedCourse,
     plans,
     setPlans
 }: {
@@ -18,11 +17,6 @@ export function SemesterList({
     deleteSemester: (id: string) => void;
     editSemester: (id: string, newSemester: Semester) => void;
     plan: Plan;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
 }): JSX.Element {
@@ -39,7 +33,6 @@ export function SemesterList({
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                     plan={plan}
-                    updateDeletedCourse={updateDeletedCourse}
                 ></SemesterView>
             ))}
         </div>

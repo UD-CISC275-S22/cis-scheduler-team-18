@@ -1,3 +1,4 @@
+import { stringify } from "querystring";
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
@@ -15,7 +16,6 @@ export function CourseEdit({
     course,
     editCourse,
     deleteCourse,
-    updateDeletedCourse
 }: {
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
@@ -24,11 +24,6 @@ export function CourseEdit({
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
     const [title, setTitle] = useState<string>(course.name);
@@ -55,17 +50,17 @@ export function CourseEdit({
         });
         //maybe add update semester here?
         close();
-        updatePlans(planId, semId, course.code, code, title, credits);
+        updateEditPlans(planId, semId, course.code, code, title, credits);
     }
 
     //deletes the course
     function remove() {
         deleteCourse(course.code);
-        updateDeletedCourse(planId, semId, course.code);
+        updateDelPlans(planId, semId, course.code);
         close();
     }
 
-    function updatePlans(
+    function updateEditPlans(
         planId: string,
         semId: string,
         courseCode: string,
@@ -120,6 +115,39 @@ export function CourseEdit({
             }
         }
 
+        setPlans(updatePlan);
+    }
+
+    function updateDelPlans(planId: string, semId: string, courseCode: string){
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== courseCode
+                );
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
         setPlans(updatePlan);
     }
 

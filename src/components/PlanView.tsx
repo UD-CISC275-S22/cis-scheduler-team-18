@@ -13,18 +13,12 @@ export function PlanView({
     plan,
     editPlan,
     deletePlan,
-    updateDeletedCourse,
     plans,
     setPlans
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
 }): JSX.Element {
@@ -57,7 +51,6 @@ export function PlanView({
                     plan={plan}
                     plans={plans}
                     setPlans={setPlans}
-                    updateDeletedCourse={updateDeletedCourse}
                 ></Semesterer>
             </div>
             <div>
@@ -71,26 +64,3 @@ export function PlanView({
         </div>
     );
 }
-
-/*
-return editing ? (
-        <div>PlanEditor will go here!!!! {changeEditing}</div>
-    ) : (
-        <div>
-            <div>
-                {" "}
-                <h3>{plan.name}</h3>{" "}
-            </div>
-            <Container>
-                <Row>
-                    <Col>
-                        <MultipleSemesterTable
-                            plan={plan}
-                        ></MultipleSemesterTable>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    );
-}
-*/

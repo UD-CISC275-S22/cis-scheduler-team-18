@@ -9,16 +9,10 @@ import "./styleSheets/plan.css";
 
 export function Semesterer({
     plan,
-    updateDeletedCourse,
     plans,
     setPlans
 }: {
     plan: Plan;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
 }): JSX.Element {
@@ -81,7 +75,6 @@ export function Semesterer({
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                     plan={plan}
-                    updateDeletedCourse={updateDeletedCourse}
                 ></SemesterList>
             </div>
             <div>

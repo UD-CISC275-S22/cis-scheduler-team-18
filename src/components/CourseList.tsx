@@ -13,17 +13,11 @@ import { Plan } from "../interfaces/plan";
 export function CourseList({
     semester,
     plan,
-    updateDeletedCourse,
     plans,
     setPlans
 }: {
     semester: Semester;
     plan: Plan;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
 }): JSX.Element {
@@ -62,7 +56,6 @@ export function CourseList({
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
                 addCourse={addCourse}
-                updateDeletedCourse={updateDeletedCourse}
                 plans={plans}
                 setPlans={setPlans}
             ></CourseView>
