@@ -9,33 +9,10 @@ import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
 import "../styleSheets/plan.css";
 
-/*
-Add this later!
-export function PlanView({
-    plan,
-    deletePlan,
-    editPlan
-}: {
-    plan: Plan;
-    deletePlan: (id: string) => void;
-    editPlan: (id: string, newPlan: Plan) => void;
-}): JSX.Element {
-    ...
-    return editing ? (
-        <PlanEditor
-            changeEditing={changeEditing}
-            plan={plan}
-            editPlan={editPlan}
-            deletePlan={deletePlan}
-        ></PlanEditor>
-    ) : (
-*/
-
 export function PlanView({
     plan,
     editPlan,
     deletePlan,
-    updateEditedCourse,
     updateDeletedCourse,
     plans,
     setPlans
@@ -43,14 +20,6 @@ export function PlanView({
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
     updateDeletedCourse: (
         planId: string,
         semId: string,
@@ -88,7 +57,6 @@ export function PlanView({
                     plan={plan}
                     plans={plans}
                     setPlans={setPlans}
-                    updateEditedCourse={updateEditedCourse}
                     updateDeletedCourse={updateDeletedCourse}
                 ></Semesterer>
             </div>

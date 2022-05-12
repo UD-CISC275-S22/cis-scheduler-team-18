@@ -62,66 +62,6 @@ function App(): JSX.Element {
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
-    function updateEditedCourse(
-        //will update 'plans' when a course is edited
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) {
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planId
-        );
-
-        let updatePlan = { ...plans };
-
-        if (currPlan !== undefined) {
-            const currSem = currPlan.semesters.find(
-                (sem: Semester): boolean => sem.id === semId
-            );
-
-            if (currSem !== undefined) {
-                const currCourses = currSem.courses.map(
-                    (course: Course): Course => course
-                );
-                const newCourse: Course = {
-                    code: newCode,
-                    name: newName,
-                    credits: newCredits,
-                    descr: "",
-                    preReq: "",
-                    restrict: "",
-                    breadth: "",
-                    typ: ""
-                };
-                //add edited fields to the course
-                const editedCourse = currCourses.map(
-                    (course: Course): Course =>
-                        course.code === courseCode ? newCourse : { ...course }
-                );
-
-                const updateSemester = currPlan.semesters.map(
-                    (sem: Semester): Semester =>
-                        sem.id === semId
-                            ? { ...sem, courses: editedCourse }
-                            : { ...sem }
-                );
-
-                updatePlan = plans.map(
-                    (plan: Plan): Plan =>
-                        plan.id === planId
-                            ? { ...plan, semesters: updateSemester }
-                            : { ...plan }
-                );
-            }
-        }
-
-        setPlans(updatePlan);
-        setData(updatePlan);
-    }
-
     function updateDeletedCourse(
         planId: string,
         semId: string,
@@ -166,21 +106,6 @@ function App(): JSX.Element {
         setPlans(updatePlan);
         setData(updatePlan);
     }
-    /** Add this later*/
-    /*
-<PlanList
-                    plans={plans}
-                    editPlan={editPlan}
-                    deletePlan={deletePlan}
-                ></PlanList>
-                <Button
-                    variant="success"
-                    className="m-4"
-                    onClick={handleShowAddModal}
-                >
-                    Add New Plan
-                </Button>
-*/
 
     return (
         <div className="App">
@@ -195,7 +120,6 @@ function App(): JSX.Element {
                     plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
-                    updateEditedCourse={updateEditedCourse}
                     updateDeletedCourse={updateDeletedCourse}
                 ></PlanList>
             </div>

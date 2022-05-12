@@ -10,7 +10,6 @@ export function SemesterList({
     deleteSemester,
     editSemester,
     plan,
-    updateEditedCourse,
     updateDeletedCourse,
     plans,
     setPlans
@@ -19,14 +18,6 @@ export function SemesterList({
     deleteSemester: (id: string) => void;
     editSemester: (id: string, newSemester: Semester) => void;
     plan: Plan;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
     updateDeletedCourse: (
         planId: string,
         semId: string,
@@ -48,7 +39,6 @@ export function SemesterList({
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                     plan={plan}
-                    updateEditedCourse={updateEditedCourse}
                     updateDeletedCourse={updateDeletedCourse}
                 ></SemesterView>
             ))}

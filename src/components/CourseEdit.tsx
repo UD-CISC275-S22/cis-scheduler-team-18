@@ -1,32 +1,29 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
+import { Semester } from "../interfaces/semester";
 
 /**
  * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information
  */
 export function CourseEdit({
     planId,
+    plans,
+    setPlans,
     semId,
     course,
     editCourse,
     deleteCourse,
-    updateEditedCourse,
     updateDeletedCourse
 }: {
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
     planId: string;
     semId: string;
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
     updateDeletedCourse: (
         planId: string,
         semId: string,
@@ -58,7 +55,7 @@ export function CourseEdit({
         });
         //maybe add update semester here?
         close();
-        updateEditedCourse(planId, semId, course.code, code, title, credits);
+        updatePlans(planId, semId, course.code, code, title, credits);
     }
 
     //deletes the course
@@ -66,6 +63,64 @@ export function CourseEdit({
         deleteCourse(course.code);
         updateDeletedCourse(planId, semId, course.code);
         close();
+    }
+
+    function updatePlans(
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCode: string,
+        newName: string,
+        newCredits: string
+    ) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                const newCourse: Course = {
+                    code: newCode,
+                    name: newName,
+                    credits: newCredits,
+                    descr: "",
+                    preReq: "",
+                    restrict: "",
+                    breadth: "",
+                    typ: ""
+                };
+                //add edited fields to the course
+                const editedCourse = currCourses.map(
+                    (course: Course): Course =>
+                        course.code === courseCode ? newCourse : { ...course }
+                );
+
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: editedCourse }
+                            : { ...sem }
+                );
+
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+
+        setPlans(updatePlan);
     }
 
     //reverts course imformation to original

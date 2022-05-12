@@ -13,7 +13,6 @@ export function SemesterView({
     editSemester,
     deleteSemester,
     plan,
-    updateEditedCourse,
     updateDeletedCourse,
     plans,
     setPlans
@@ -22,14 +21,6 @@ export function SemesterView({
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
     plan: Plan;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
     updateDeletedCourse: (
         planId: string,
         semId: string,
@@ -70,7 +61,6 @@ export function SemesterView({
                 setPlans={setPlans}
                 plan={plan}
                 semester={semester}
-                updateEditedCourse={updateEditedCourse}
                 updateDeletedCourse={updateDeletedCourse}
             ></MultipleSemesterTable>
             <div>
