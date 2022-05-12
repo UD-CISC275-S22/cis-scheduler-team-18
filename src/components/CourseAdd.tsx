@@ -22,27 +22,42 @@ export function CourseAdd({
     const [code, setCode] = useState("NEW101");
     const [title, setTitle] = useState("NEW COURSE");
     const [credits, setCredits] = useState("0");
-    const [isPreReq, setIsPreReq] = useState("");
     const [show, setShow] = useState(false);
+    const [codeExists, setCodeExists] = useState(false);
+    const [titleExists, setTitleExists] = useState(false);
+    const [creditsExists, setCreditsExists] = useState(false);
 
     //update functions
     function addCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
         const found = findCourse(event.target.value);
         if (found !== undefined) {
+            setCodeExists(true);
             setTitle(found.name);
             setCredits(found.credits);
-            setIsPreReq(found.preReq);
+            setTitleExists(true);
+            setCreditsExists(true);
+        } else {
+            setCodeExists(false);
         }
     }
     function addTitle(event: React.ChangeEvent<HTMLInputElement>) {
         setTitle(event.target.value);
+        const found = findCourse(code);
+        if (found.name !== event.target.value) {
+            setTitleExists(false);
+        } else {
+            setTitleExists(true);
+        }
     }
     function addCredits(event: React.ChangeEvent<HTMLInputElement>) {
         setCredits(event.target.value);
-    }
-    function addIsPreReq(event: React.ChangeEvent<HTMLInputElement>) {
-        setIsPreReq(event.target.value);
+        const found = findCourse(code);
+        if (found.credits !== event.target.value) {
+            setCreditsExists(false);
+        } else {
+            setCreditsExists(true);
+        }
     }
     //this function creates a new Course with the current given information and puts it in the course list
     function makeCourse() {
@@ -51,9 +66,9 @@ export function CourseAdd({
         if (found !== undefined) {
             newCourse = {
                 code: found.code,
-                name: found.name,
+                name: title,
                 descr: found.descr,
-                credits: found.credits,
+                credits: credits,
                 preReq: found.preReq,
                 restrict: found.restrict,
                 breadth: found.breadth,
@@ -65,7 +80,7 @@ export function CourseAdd({
                 name: title,
                 descr: "",
                 credits: credits,
-                preReq: isPreReq,
+                preReq: "",
                 restrict: "",
                 breadth: "",
                 typ: ""
@@ -74,6 +89,28 @@ export function CourseAdd({
         addCourse(newCourse);
         updateCoursePlan(planId, semesterId, newCourse);
         close();
+    }
+    function printWarnings(): string {
+        if (!codeExists) {
+            return "Warning: Course does not exist in course catalog";
+        } else {
+            if (creditsExists && titleExists) {
+                return "";
+            } else {
+                let warnings = "Warning: ";
+                if (!titleExists) {
+                    warnings =
+                        warnings +
+                        "Course title does not match title for this course in the catalog";
+                }
+                if (!creditsExists) {
+                    warnings =
+                        warnings +
+                        "\nNumber of credits do not match the number of credits for this course in the catalog";
+                }
+                return warnings;
+            }
+        }
     }
     //gets course information from catalog based on a course id
     function findCourse(id: string) {
@@ -137,17 +174,12 @@ export function CourseAdd({
                     <Form.Group controlId="formCredits">
                         <Form.Label>Credits:</Form.Label>
                         <Form.Control
+                            type="number"
                             value={credits}
                             onChange={addCredits}
                         ></Form.Control>
                     </Form.Group>
-                    <Form.Group controlId="formPreReq">
-                        <Form.Label>PreReq To: </Form.Label>
-                        <Form.Control
-                            value={isPreReq}
-                            onChange={addIsPreReq}
-                        ></Form.Control>
-                    </Form.Group>
+                    <div style={{ color: "red" }}>{printWarnings()}</div>
                     <Modal.Footer>
                         <Button variant="warning" onClick={close}>
                             Cancel
