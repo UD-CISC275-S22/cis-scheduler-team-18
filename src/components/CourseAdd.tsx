@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import catalog from "../data/catalog.json";
-//import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
     addCourse,
@@ -101,24 +100,6 @@ export function CourseAdd({
             typ: poss.typ
         };
         return found;
-
-        /*
-        const codeArr = Array.from(id);
-        const letterCodeArr = codeArr.filter(
-            (str: string): boolean => isNaN(parseInt(str)) && str !== " "
-        );
-        const numCodeArr = codeArr.filter(
-            (str: string): boolean => !isNaN(parseInt(str))
-        );
-        const letterCode = letterCodeArr.join("").toUpperCase();
-        const numCode = numCodeArr.join("");
-        const realCode = letterCode + numCode;
-        const log = JSON.parse(JSON.stringify(catalog));
-        const found: Course[] = log.filter((course: Course): boolean =>
-            course.code.includes(realCode)
-        );
-        return found[0];
-        */
     }
     //for Modal
     const close = () => setShow(false);
