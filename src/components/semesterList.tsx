@@ -9,7 +9,7 @@ export function SemesterList({
     semesters,
     deleteSemester,
     editSemester,
-    planId,
+    plan,
     updateEditedSemester,
     updateEditedCourse,
     updateDeletedCourse,
@@ -19,7 +19,7 @@ export function SemesterList({
     semesters: Semester[];
     deleteSemester: (id: string) => void;
     editSemester: (id: string, newSemester: Semester) => void;
-    planId: string;
+    plan: Plan;
     updateEditedSemester: (
         planId: string,
         semId: string,
@@ -54,7 +54,7 @@ export function SemesterList({
                     semester={sem}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
-                    planId={planId}
+                    plan={plan}
                     updateEditedCourse={updateEditedCourse}
                     updateEditedSemester={updateEditedSemester}
                     updateDeletedCourse={updateDeletedCourse}

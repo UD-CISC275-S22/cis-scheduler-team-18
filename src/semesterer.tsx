@@ -96,7 +96,7 @@ export function Semesterer({
                     semesters={semesters}
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
-                    planId={plan.id}
+                    plan={plan}
                     updateEditedSemester={updateEditedSemester}
                     updateEditedCourse={updateEditedCourse}
                     updateDeletedCourse={updateDeletedCourse}

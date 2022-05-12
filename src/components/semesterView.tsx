@@ -12,7 +12,7 @@ export function SemesterView({
     semester,
     editSemester,
     deleteSemester,
-    planId,
+    plan,
     updateEditedSemester,
     updateEditedCourse,
     updateDeletedCourse,
@@ -22,7 +22,7 @@ export function SemesterView({
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    planId: string;
+    plan: Plan;
     updateEditedSemester: (
         planId: string,
         semId: string,
@@ -60,7 +60,7 @@ export function SemesterView({
     return editing ? (
         <div>
             <SemesterEditor
-                planId={planId}
+                planID={plan.id}
                 show={editing}
                 changeSemesterEditing={changeSemesterEditing}
                 semester={semester}
@@ -74,7 +74,7 @@ export function SemesterView({
             <MultipleSemesterTable
                 plans={plans}
                 setPlans={setPlans}
-                planId={planId}
+                plan={plan}
                 semester={semester}
                 updateEditedCourse={updateEditedCourse}
                 updateDeletedCourse={updateDeletedCourse}

@@ -4,7 +4,7 @@ import { Semester } from "../interfaces/semester";
 //change semester to plan
 
 export function SemesterEditor({
-    planId,
+    planID,
     show,
     changeSemesterEditing,
     semester,
@@ -12,7 +12,7 @@ export function SemesterEditor({
     deleteSemester,
     updateEditedSemester
 }: {
-    planId: string;
+    planID: string;
     show: boolean;
     changeSemesterEditing: () => void;
     semester: Semester;
@@ -38,7 +38,7 @@ export function SemesterEditor({
             year: parseInt(year) || 0
         });
         changeSemesterEditing();
-        updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
+        //updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
     }
 
     //will cancel the changes being made

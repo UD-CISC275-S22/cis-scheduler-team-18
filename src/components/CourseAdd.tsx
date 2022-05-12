@@ -8,13 +8,13 @@ import { Plan } from "../interfaces/plan";
 
 export function CourseAdd({
     addCourse,
-    planId,
+    plan,
     semesterId,
     plans,
     setPlans
 }: {
     addCourse: (newCourse: Course) => void;
-    planId: string;
+    plan: Plan;
     semesterId: string;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
@@ -73,13 +73,13 @@ export function CourseAdd({
             };
         }
         addCourse(newCourse);
+        updatePlans(plan, semesterId, newCourse);
         close();
-        updatePlans(planId, semesterId, newCourse);
     }
 
-    function updatePlans(planId: string, semId: string, newCourse: Course) {
+    function updatePlans(PLAN: Plan, semId: string, newCourse: Course) {
         const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planId
+            (plan: Plan): boolean => plan.id === PLAN.id
         );
 
         let updatePlan = { ...plans };
@@ -98,7 +98,7 @@ export function CourseAdd({
 
             updatePlan = plans.map(
                 (plan: Plan): Plan =>
-                    plan.id === planId
+                    plan.id === PLAN.id
                         ? { ...plan, semesters: addedCourse }
                         : { ...plan }
             );

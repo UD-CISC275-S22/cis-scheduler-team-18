@@ -12,14 +12,14 @@ import { Plan } from "../interfaces/plan";
  */
 export function CourseList({
     semester,
-    planId,
+    plan,
     updateEditedCourse,
     updateDeletedCourse,
     plans,
     setPlans
 }: {
     semester: Semester;
-    planId: string;
+    plan: Plan;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -65,7 +65,7 @@ export function CourseList({
     return (
         <div>
             <CourseView
-                planId={planId}
+                planId={plan.id}
                 semId={semester.id}
                 courses={courses}
                 editCourse={editCourse}
@@ -75,7 +75,7 @@ export function CourseList({
                 updateDeletedCourse={updateDeletedCourse}
             ></CourseView>
             <CourseAdd
-                planId={planId}
+                plan={plan}
                 semesterId={semester.id}
                 addCourse={addCourse}
                 plans={plans}

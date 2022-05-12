@@ -6,14 +6,14 @@ import { CourseList } from "./CourseList";
 import { Plan } from "../interfaces/plan";
 
 export function MultipleSemesterTable({
-    planId,
+    plan,
     semester,
     updateEditedCourse,
     updateDeletedCourse,
     plans,
     setPlans
 }: {
-    planId: string;
+    plan: Plan;
     semester: Semester;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
@@ -61,7 +61,7 @@ export function MultipleSemesterTable({
             <CourseList
                 plans={plans}
                 setPlans={setPlans}
-                planId={planId}
+                plan={plan}
                 semester={semester}
                 updateEditedCourse={updateEditedCourse}
                 updateDeletedCourse={updateDeletedCourse}

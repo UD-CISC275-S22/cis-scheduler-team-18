@@ -62,7 +62,6 @@ function App(): JSX.Element {
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
-
     function updateEditedSemester(
         //will update "plans", when a semester is edited
         planId: string,
