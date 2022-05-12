@@ -26,7 +26,6 @@ export function PlanList({
     deletePlan,
     editPlan,
     updateEditedCourse,
-    updateEditedSemester,
     updateDeletedCourse
 }: {
     plans: Plan[];
@@ -40,12 +39,6 @@ export function PlanList({
         newCode: string,
         newName: string,
         newCredits: string
-    ) => void;
-    updateEditedSemester: (
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
     ) => void;
     updateDeletedCourse: (
         planId: string,
@@ -65,7 +58,6 @@ export function PlanList({
                         plan={plan}
                         editPlan={editPlan}
                         deletePlan={deletePlan}
-                        updateEditedSemester={updateEditedSemester}
                         updateEditedCourse={updateEditedCourse}
                         updateDeletedCourse={updateDeletedCourse}
                     ></PlanView>

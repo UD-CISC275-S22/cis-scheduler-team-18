@@ -9,19 +9,12 @@ import "./styleSheets/plan.css";
 
 export function Semesterer({
     plan,
-    updateEditedSemester,
     updateEditedCourse,
     updateDeletedCourse,
     plans,
     setPlans
 }: {
     plan: Plan;
-    updateEditedSemester: (
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
-    ) => void;
     updateEditedCourse: (
         planId: string,
         semId: string,
@@ -97,7 +90,6 @@ export function Semesterer({
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                     plan={plan}
-                    updateEditedSemester={updateEditedSemester}
                     updateEditedCourse={updateEditedCourse}
                     updateDeletedCourse={updateDeletedCourse}
                 ></SemesterList>

@@ -62,44 +62,6 @@ function App(): JSX.Element {
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
-    function updateEditedSemester(
-        //will update "plans", when a semester is edited
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
-    ) {
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planId
-        );
-
-        let updatePlan = { ...plans };
-
-        if (currPlan !== undefined) {
-            const currSems = currPlan.semesters.map(
-                (sem: Semester): Semester => sem
-            );
-
-            //add the edited fields to semester
-            const editedSem = currSems.map(
-                (sem: Semester): Semester =>
-                    sem.id === semId
-                        ? { ...sem, season: newSeason, year: newYear }
-                        : { ...sem }
-            );
-
-            updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planId
-                        ? { ...plan, semesters: editedSem }
-                        : { ...plan }
-            );
-        }
-
-        setPlans(updatePlan);
-        setData(updatePlan);
-    }
-
     function updateEditedCourse(
         //will update 'plans' when a course is edited
         planId: string,
@@ -234,7 +196,6 @@ function App(): JSX.Element {
                     editPlan={editPlan}
                     deletePlan={deletePlan}
                     updateEditedCourse={updateEditedCourse}
-                    updateEditedSemester={updateEditedSemester}
                     updateDeletedCourse={updateDeletedCourse}
                 ></PlanList>
             </div>

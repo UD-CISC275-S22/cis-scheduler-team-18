@@ -1,29 +1,27 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
+import { Plan } from "../interfaces/plan";
 //change semester to plan
 
 export function SemesterEditor({
-    planID,
+    plan,
+    plans,
+    setPlans,
     show,
     changeSemesterEditing,
     semester,
     editSemester,
-    deleteSemester,
-    updateEditedSemester
+    deleteSemester
 }: {
-    planID: string;
+    plan: Plan;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
     show: boolean;
     changeSemesterEditing: () => void;
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    updateEditedSemester: (
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
-    ) => void;
 }): JSX.Element {
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);
@@ -39,11 +37,45 @@ export function SemesterEditor({
         });
         changeSemesterEditing();
         //updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
+        updatePlans(plan, semester, season, parseInt(year) || 0);
     }
 
     //will cancel the changes being made
     function cancel() {
         changeSemesterEditing();
+    }
+
+    function updatePlans(
+        PLAN: Plan,
+        SEM: Semester,
+        newSeason: string,
+        newYear: number
+    ) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === PLAN.id
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSems = currPlan.semesters.map(
+                (sem: Semester): Semester => sem
+            );
+
+            const editedSem = currSems.map(
+                (sem: Semester): Semester =>
+                    sem.id === SEM.id
+                        ? { ...sem, season: newSeason, year: newYear }
+                        : { ...sem }
+            );
+
+            updatePlan = plans.map(
+                (plan: plan): Plan =>
+                    plan.id === PLAN.id
+                        ? { ...plan, semesters: editedSem }
+                        : { ...plan }
+            );
+        }
+
+        setPlans(updatePlan);
     }
 
     return (
