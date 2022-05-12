@@ -1,4 +1,3 @@
-import { stringify } from "querystring";
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
@@ -15,7 +14,7 @@ export function CourseEdit({
     semId,
     course,
     editCourse,
-    deleteCourse,
+    deleteCourse
 }: {
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
@@ -118,7 +117,7 @@ export function CourseEdit({
         setPlans(updatePlan);
     }
 
-    function updateDelPlans(planId: string, semId: string, courseCode: string){
+    function updateDelPlans(planId: string, semId: string, courseCode: string) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
