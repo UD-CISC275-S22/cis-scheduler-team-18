@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
-import { Semester } from "../interfaces/semester";
-import { Course } from "../interfaces/course";
-import { Plan } from "../interfaces/plan";
+import { Semester } from "../interfaces/Semester";
+import { Course } from "../interfaces/Course";
+import { Plan } from "../interfaces/Plan";
 
 export function AddSemesterModal({
     planId,

@@ -1,7 +1,7 @@
 //Yeah this works
 
 import React, { useState } from "react";
-import { Course } from "../interfaces/course";
+import { Course } from "../interfaces/Course";
 //import coreMajorRequirements from "../data/CoreMajorRequirements.json";
 import { Col, Row } from "react-bootstrap";
 import scienceRequirement from "../data/ScienceRequirement.json";

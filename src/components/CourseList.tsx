@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Course } from "../interfaces/course";
-import { Semester } from "../interfaces/semester";
+import { Course } from "../interfaces/Course";
+import { Semester } from "../interfaces/Semester";
 import { CourseAdd } from "./CourseAdd";
 import { CourseView } from "./CourseView";
-import { Plan } from "../interfaces/plan";
+import { Plan } from "../interfaces/Plan";
 
 /**
  * Returns a table that displays all of the courses in a single semester

@@ -1,9 +1,9 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { Course } from "../interfaces/course";
+import { Course } from "../interfaces/Course";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
-import { Plan } from "../interfaces/plan";
+import { Plan } from "../interfaces/Plan";
 
 /**
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit

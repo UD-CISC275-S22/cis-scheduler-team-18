@@ -16,7 +16,6 @@ describe("MultipleSemester Component tests", () => {
                 show={}
                 handleClose={}
                 addSemester={}
-                updateSemesterPlan={}
             />
         );
     });

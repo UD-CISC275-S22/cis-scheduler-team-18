@@ -1,8 +1,8 @@
 import "../styleSheets/degreeReqs.css";
 import React from "react";
-import { Plan } from "../interfaces/plan";
-import { Semester } from "../interfaces/semester";
-import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/Plan";
+import { Semester } from "../interfaces/Semester";
+import { Course } from "../interfaces/Course";
 import coreReqs from "../data/CoreMajorRequirements.json";
 import techReqs from "../data/TechElect.json";
 import scienceReq from "../data/ScienceRequirement.json";
