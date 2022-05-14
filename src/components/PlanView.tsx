@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
 import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
 import "../styleSheets/plan.css";
+import { Drag } from "./Drag";
 
 export function PlanView({
     plan,
@@ -50,6 +51,23 @@ export function PlanView({
                     plans={plans}
                     setPlans={setPlans}
                 ></Semesterer>
+                <Row>
+                    <Col xs={8} className="bg-grey border m-2 p-2">
+                        <Container>
+                            <Semesterer
+                                plan={plan}
+                                updateSemesterPlan={updateSemesterPlan}
+                                updateCoursePlan={updateCoursePlan}
+                                updateEditedSemester={updateEditedSemester}
+                                updateEditedCourse={updateEditedCourse}
+                                updateDeletedCourse={updateDeletedCourse}
+                            ></Semesterer>
+                        </Container>
+                    </Col>
+                    <Col xs={3} className="bg-grey border m-2 p-2">
+                        <Drag></Drag>
+                    </Col>
+                </Row>
             </div>
             <div>
                 <Button variant="info" onClick={changePlanEditing}>
