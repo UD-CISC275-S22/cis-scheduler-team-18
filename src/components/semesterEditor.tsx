@@ -96,7 +96,7 @@ export function SemesterEditor({
                 </Button>
                 {/*Delete*/}
                 <Button
-                    onClick={() => remove()}
+                    onClick={() => deleteSemester(semester.id)}
                     variant="danger"
                     className="me-8"
                 >

@@ -56,6 +56,22 @@ export function Semesterer({
                 (semester: Semester): boolean => semester.id !== id
             )
         );
+        const currPlan = plans.find(
+            (PLAN: Plan): boolean => PLAN.id === plan.id
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const deletedSem = currPlan.semesters.filter(
+                (sem: Semester): boolean => sem.id !== id
+            );
+            updatePlan = plans.map(
+                (PLAN: Plan): Plan =>
+                    PLAN.id === plan.id
+                        ? { ...plan, semesters: deletedSem }
+                        : { ...plan }
+            );
+        }
+        setPlans(updatePlan);
     }
 
     //will add a new semester
