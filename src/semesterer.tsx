@@ -76,42 +76,30 @@ export function Semesterer({
         }
     }
 
-    function clearSemesters(id: string) {
+    function clearSemesters() {
         setSemesters([]);
         //setSemesters(
         //semesters.filter(
         //(semester: Semester): boolean => semester.id === id
         //)
         //);
-        //updateClearSems(plan.id);
+        updateClearSems(plan.id);
     }
 
     function updateClearSems(planId: string) {
-        //go through each semester and clear the courses, then go through each plan and clear the semester
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
-        let updatePlan = { ...plans };
-
-        if (currPlan != undefined) {
-            //an array of semesters without their courses
-            const deleteCourses = currPlan.semesters.map(
-                (sem: Semester): Semester => ({ ...sem, courses: [] })
-            );
-            plans.map(
+        let updatePlans = { ...plans };
+        if (currPlan !== undefined) {
+            updatePlans = plans.map(
                 (plan: Plan): Plan =>
                     plan.id === planId
-                        ? { ...plan, semesters: deleteCourses }
-                        : { ...plan }
-            );
-            updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planId
-                        ? { ...plan, semesters: [] }
+                        ? { ...plan, semesters: [...semesters] }
                         : { ...plan }
             );
         }
-        setPlans(updatePlan);
+        setPlans(updatePlans);
     }
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -133,9 +121,7 @@ export function Semesterer({
                 <Button
                     variant="danger"
                     className="m-4"
-                    onClick={() =>
-                        clearSemesters("4da3fa04-5724-4223-a8ba-40f4a296b3b3")
-                    }
+                    onClick={() => clearSemesters()}
                 >
                     Clear All Semesters
                 </Button>
