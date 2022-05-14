@@ -85,7 +85,7 @@ export function Semesterer({
         updateClearSems(plan.id, id);
     }
 
-    function updateClearSems(planId: string, semId: string){
+    function updateClearSems(planId: string, semId: string) {
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
