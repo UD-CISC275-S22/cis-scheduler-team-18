@@ -5,7 +5,6 @@ import { Semester } from "../interfaces/semester";
 import { SemesterEditor } from "./SemesterEditor";
 import { MultipleSemesterTable } from "./MultipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
-import { Course } from "../interfaces/course";
 import { Plan } from "../interfaces/plan";
 
 export function SemesterView({

@@ -4,7 +4,6 @@ import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/AddSemesterModal";
-import { Course } from "./interfaces/course";
 import "./styleSheets/plan.css";
 
 export function Semesterer({
@@ -83,6 +82,27 @@ export function Semesterer({
                 (semester: Semester): boolean => semester.id === id
             )
         );
+        updateClearSems(plan.id, id);
+    }
+
+    function updateClearSems(planId: string, semId: string){
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSems = currPlan.semesters.filter(
+                (sem: Semester): boolean => sem.id !== semId
+            );
+            updatePlan = plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planId
+                        ? { ...plan, semesters: currSems }
+                        : { ...plan }
+            );
+        }
+        setPlans(updatePlan);
     }
 
     //will generate the pop up box in the case that we were adding a semester
