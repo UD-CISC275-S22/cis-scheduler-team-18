@@ -56,11 +56,8 @@ export function PlanView({
                         <Container>
                             <Semesterer
                                 plan={plan}
-                                updateSemesterPlan={updateSemesterPlan}
-                                updateCoursePlan={updateCoursePlan}
-                                updateEditedSemester={updateEditedSemester}
-                                updateEditedCourse={updateEditedCourse}
-                                updateDeletedCourse={updateDeletedCourse}
+                                plans={plans}
+                                setPlans={setPlans}
                             ></Semesterer>
                         </Container>
                     </Col>
