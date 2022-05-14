@@ -77,34 +77,42 @@ export function Semesterer({
     }
 
     function clearSemesters(id: string) {
-        setSemesters(
-            semesters.filter(
-                (semester: Semester): boolean => semester.id === id
-            )
-        );
-        updateClearSems(plan.id, id);
+        setSemesters([]);
+        //setSemesters(
+        //semesters.filter(
+        //(semester: Semester): boolean => semester.id === id
+        //)
+        //);
+        //updateClearSems(plan.id);
     }
 
-    function updateClearSems(planId: string, semId: string) {
+    function updateClearSems(planId: string) {
+        //go through each semester and clear the courses, then go through each plan and clear the semester
         const currPlan = plans.find(
             (plan: Plan): boolean => plan.id === planId
         );
         let updatePlan = { ...plans };
 
-        if (currPlan !== undefined) {
-            const currSems = currPlan.semesters.filter(
-                (sem: Semester): boolean => sem.id !== semId
+        if (currPlan != undefined) {
+            //an array of semesters without their courses
+            const deleteCourses = currPlan.semesters.map(
+                (sem: Semester): Semester => ({ ...sem, courses: [] })
+            );
+            plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planId
+                        ? { ...plan, semesters: deleteCourses }
+                        : { ...plan }
             );
             updatePlan = plans.map(
                 (plan: Plan): Plan =>
                     plan.id === planId
-                        ? { ...plan, semesters: currSems }
+                        ? { ...plan, semesters: [] }
                         : { ...plan }
             );
         }
         setPlans(updatePlan);
     }
-
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);

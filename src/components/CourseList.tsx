@@ -41,10 +41,36 @@ export function CourseList({
 
     function clearCourses() {
         setCourses([]);
+        updateClearCourses(plan.id, semester.id);
     }
 
     function addCourse(newCourse: Course): void {
         setCourses([...courses, newCourse]);
+    }
+
+    function updateClearCourses(planId: string, semId: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+            if (currSem !== undefined) {
+                const emptyCourses = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId ? { ...sem, courses: [] } : { ...sem }
+                );
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: emptyCourses }
+                            : { ...plan }
+                );
+            }
+        }
+        setPlans(updatePlan);
     }
 
     return (
