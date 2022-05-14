@@ -37,7 +37,7 @@ export function SemesterEditor({
         });
         changeSemesterEditing();
         //updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
-        updatePlans(plan, semester, season, parseInt(year) || 0);
+        //updatePlans(plan, semester, season, parseInt(year) || 0);
     }
 
     //will cancel the changes being made
@@ -45,37 +45,8 @@ export function SemesterEditor({
         changeSemesterEditing();
     }
 
-    function updatePlans(
-        PLAN: Plan,
-        SEM: Semester,
-        newSeason: string,
-        newYear: number
-    ) {
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === PLAN.id
-        );
-        let updatePlan = { ...plans };
-        if (currPlan !== undefined) {
-            const currSems = currPlan.semesters.map(
-                (sem: Semester): Semester => sem
-            );
-
-            const editedSem = currSems.map(
-                (sem: Semester): Semester =>
-                    sem.id === SEM.id
-                        ? { ...sem, season: newSeason, year: newYear }
-                        : { ...sem }
-            );
-
-            updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === PLAN.id
-                        ? { ...plan, semesters: editedSem }
-                        : { ...plan }
-            );
-        }
-
-        setPlans(updatePlan);
+    function remove() {
+        deleteSemester(semester.id);
     }
 
     return (
@@ -125,7 +96,7 @@ export function SemesterEditor({
                 </Button>
                 {/*Delete*/}
                 <Button
-                    onClick={() => deleteSemester(semester.id)}
+                    onClick={() => remove()}
                     variant="danger"
                     className="me-8"
                 >

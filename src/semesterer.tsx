@@ -31,6 +31,22 @@ export function Semesterer({
                     semester.id === id ? newSemester : semester
             )
         );
+        const currPlan = plans.find(
+            (PLAN: Plan): boolean => PLAN.id === plan.id
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const editSem = currPlan.semesters.map(
+                (sem: Semester): Semester => (sem.id === id ? newSemester : sem)
+            );
+            updatePlan = plans.map(
+                (PLAN: Plan): Plan =>
+                    plan.id === PLAN.id
+                        ? { ...plan, semesters: editSem }
+                        : { ...plan }
+            );
+        }
+        setPlans(updatePlan);
     }
 
     //deleteSemester function
@@ -40,30 +56,6 @@ export function Semesterer({
                 (semester: Semester): boolean => semester.id !== id
             )
         );
-        updateDelSem(plan.id, id);
-    }
-
-    function updateDelSem(planId: string, semId: string) {
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planId
-        );
-        let updatePlan = { ...plans };
-        if (currPlan !== undefined) {
-            const currSems = currPlan.semesters.map(
-                (sem: Semester): Semester => sem
-            );
-            const deletedSem = currSems.filter(
-                (sem: Semester): boolean => sem.id !== semId
-            );
-
-            updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planId
-                        ? { ...plan, semesters: deletedSem }
-                        : { ...plan }
-            );
-        }
-        setPlans(updatePlan);
     }
 
     //will add a new semester
@@ -83,23 +75,6 @@ export function Semesterer({
         //(semester: Semester): boolean => semester.id === id
         //)
         //);
-        updateClearSems(plan.id);
-    }
-
-    function updateClearSems(planId: string) {
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planId
-        );
-        let updatePlans = { ...plans };
-        if (currPlan !== undefined) {
-            updatePlans = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planId
-                        ? { ...plan, semesters: [...semesters] }
-                        : { ...plan }
-            );
-        }
-        setPlans(updatePlans);
     }
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
