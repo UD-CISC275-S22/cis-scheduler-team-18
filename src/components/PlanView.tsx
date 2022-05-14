@@ -46,11 +46,11 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
-                <Semesterer
+                {/*<Semesterer
                     plan={plan}
                     plans={plans}
                     setPlans={setPlans}
-                ></Semesterer>
+    ></Semesterer>*/}
                 <Row>
                     <Col xs={8} className="bg-grey border m-2 p-2">
                         <Container>
