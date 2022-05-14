@@ -73,7 +73,16 @@ export function CourseAdd({
             };
         }
         addCourse(newCourse);
-        updatePlans(plan, semesterId, newCourse);
+        updatePlans(plan, semesterId, {
+            code: code,
+            name: title,
+            descr: "",
+            credits: credits,
+            preReq: isPreReq,
+            restrict: "",
+            breadth: "",
+            typ: ""
+        });
         close();
     }
 
