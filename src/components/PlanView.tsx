@@ -5,7 +5,7 @@ import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
 import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
-import "../styleSheets/Plan.css";
+import "../styleSheets/plan.css";
 import { Drag } from "./Drag";
 
 export function PlanView({

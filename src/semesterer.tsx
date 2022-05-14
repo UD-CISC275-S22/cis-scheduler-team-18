@@ -4,7 +4,7 @@ import { Plan } from "./interfaces/plan";
 import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
 import { AddSemesterModal } from "./components/addSemesterModal";
-import "./styleSheets/Plan.css";
+import "./styleSheets/plan.css";
 
 export function Semesterer({
     plan,

@@ -1,7 +1,7 @@
 import React from "react";
 import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
-import "../styleSheets/MultipleSemesterTable.css";
+import "../styleSheets/multipleSemesterTable.css";
 import { CourseList } from "./CourseList";
 import { Plan } from "../interfaces/plan";
 
