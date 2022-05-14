@@ -1,4 +1,4 @@
-import { Semester } from "./Semester";
+import { Semester } from "./semester";
 
 export interface Plan {
     /** A unique identifier for the Degree Plan */

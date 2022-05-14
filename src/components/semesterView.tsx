@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Semester } from "../interfaces/Semester";
-import { SemesterEditor } from "./SemesterEditor";
-import { MultipleSemesterTable } from "./MultipleSemesterTable";
+import { Semester } from "../interfaces/semester";
+import { SemesterEditor } from "./semesterEditor";
+import { MultipleSemesterTable } from "./multipleSemesterTable";
 import "../styleSheets/MultipleSemesterTable.css";
-import { Plan } from "../interfaces/Plan";
+import { Plan } from "../interfaces/plan";
 
 export function SemesterView({
     semester,

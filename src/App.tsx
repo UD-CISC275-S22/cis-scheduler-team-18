@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 import semesterPlan from "./data/SemesterPlan.json";
-import { Plan } from "./interfaces/Plan";
+import { Plan } from "./interfaces/plan";
 import { PlanList } from "./components/PlanList";
 import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";

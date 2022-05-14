@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { Course } from "../interfaces/Course";
+import { Course } from "../interfaces/course";
 import coreReqs from "../data/CoreMajorRequirements.json";
 import techReqs from "../data/TechElect.json";
 import scienceReq from "../data/ScienceRequirement.json";

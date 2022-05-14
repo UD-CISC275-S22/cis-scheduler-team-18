@@ -1,4 +1,4 @@
-import { Course } from "./Course";
+import { Course } from "./course";
 /** A representation of a Semester for a schedule */
 export interface Semester {
     //a representation of the specific semester

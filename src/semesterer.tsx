@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Semester } from "./interfaces/Semester";
-import { Plan } from "./interfaces/Plan";
-import { SemesterList } from "./components/SemesterList";
+import { Semester } from "./interfaces/semester";
+import { Plan } from "./interfaces/plan";
+import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
-import { AddSemesterModal } from "./components/AddSemesterModal";
-import "./styleSheets/plan.css";
+import { AddSemesterModal } from "./components/addSemesterModal";
+import "./styleSheets/Plan.css";
 
 export function Semesterer({
     plan,

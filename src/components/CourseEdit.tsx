@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { Course } from "../interfaces/Course";
-import { Plan } from "../interfaces/Plan";
-import { Semester } from "../interfaces/Semester";
+import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
+import { Semester } from "../interfaces/semester";
 
 /**
  * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information

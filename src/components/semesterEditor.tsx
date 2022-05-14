@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Form, Modal } from "react-bootstrap";
-import { Semester } from "../interfaces/Semester";
-import { Plan } from "../interfaces/Plan";
+import { Semester } from "../interfaces/semester";
+import { Plan } from "../interfaces/plan";
 //change semester to plan
 
 export function SemesterEditor({
