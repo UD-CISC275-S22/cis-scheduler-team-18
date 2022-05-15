@@ -18,7 +18,7 @@ const PLANS = semesterPlan.map(
 
 //load between pages
 let loadedData = PLANS;
-const saveDataKey = "nana";
+const saveDataKey = "team-18-scheduler-data!";
 const previousData = localStorage.getItem(saveDataKey);
 if (previousData !== null) {
     loadedData = JSON.parse(previousData);
