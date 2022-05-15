@@ -4,6 +4,7 @@ import { Course } from "../interfaces/course";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
 import { Plan } from "../interfaces/plan";
+import { Semester } from "../interfaces/semester";
 
 /**
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
@@ -16,7 +17,8 @@ export function CourseView({
     planId,
     semId,
     plans,
-    setPlans
+    setPlans,
+    setSemesters
 }: {
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
@@ -25,6 +27,7 @@ export function CourseView({
     planId: string;
     semId: string;
     plans: Plan[];
+    setSemesters: (s: Semester[]) => void;
     setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     const dragStartHandler = (
@@ -91,6 +94,7 @@ export function CourseView({
                                     semId={semId}
                                     plans={plans}
                                     setPlans={setPlans}
+                                    setSemesters={setSemesters}
                                 ></CourseEdit>
                                 <CourseInfo course={course}></CourseInfo>
                             </td>

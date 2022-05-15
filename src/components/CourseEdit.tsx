@@ -14,7 +14,8 @@ export function CourseEdit({
     semId,
     course,
     editCourse,
-    deleteCourse
+    deleteCourse,
+    setSemesters
 }: {
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
@@ -23,6 +24,7 @@ export function CourseEdit({
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
+    setSemesters: (s: Semester[]) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
     const [title, setTitle] = useState<string>(course.name);
@@ -95,7 +97,7 @@ export function CourseEdit({
                 //add edited fields to the course
                 const editedCourse = currCourses.map(
                     (course: Course): Course =>
-                        course.code === courseCode ? newCourse : { ...course }
+                        course.code === courseCode ? newCourse : course
                 );
 
                 const updateSemester = currPlan.semesters.map(
@@ -104,6 +106,8 @@ export function CourseEdit({
                             ? { ...sem, courses: editedCourse }
                             : { ...sem }
                 );
+
+                setSemesters(updateSemester);
 
                 updatePlan = plans.map(
                     (plan: Plan): Plan =>

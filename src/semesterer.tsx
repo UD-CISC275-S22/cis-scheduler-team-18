@@ -128,6 +128,7 @@ export function Semesterer({
                     editSemester={editSemester}
                     deleteSemester={deleteSemester}
                     plan={plan}
+                    setSemesters={setSemesters}
                 ></SemesterList>
             </div>
             <div>

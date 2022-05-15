@@ -14,12 +14,14 @@ export function CourseList({
     semester,
     plan,
     plans,
-    setPlans
+    setPlans,
+    setSemesters
 }: {
     semester: Semester;
     plan: Plan;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
+    setSemesters: (s: Semester[]) => void;
 }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     /*
@@ -37,7 +39,36 @@ export function CourseList({
         setCourses(
             courses.filter((course: Course): boolean => course.code !== id)
         );
-        updateDelPlans(plan.id, semester.id, id);
+        const currPlan = plans.find(
+            (Plan: Plan): boolean => Plan.id === plan.id
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === sem.id
+            );
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== id
+                );
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === sem.id
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === plan.id
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+        setPlans(updatePlan);
     }
 
     function clearCourses() {
@@ -117,6 +148,7 @@ export function CourseList({
                 addCourse={addCourse}
                 plans={plans}
                 setPlans={setPlans}
+                setSemesters={setSemesters}
             ></CourseView>
             <CourseAdd
                 plan={plan}
