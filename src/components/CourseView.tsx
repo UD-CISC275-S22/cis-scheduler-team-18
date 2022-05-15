@@ -3,8 +3,8 @@ import { Table } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { CourseEdit } from "./CourseEdit";
 import { CourseInfo } from "./CourseInfo";
-import { Plan } from "../interfaces/plan";
-import { Semester } from "../interfaces/semester";
+//import { Plan } from "../interfaces/plan";
+//import { Semester } from "../interfaces/semester";
 
 /**
  * Displays a table of the courses in a semester along with an edit button for each course which calls CourseEdit
