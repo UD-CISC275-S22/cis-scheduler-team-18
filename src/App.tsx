@@ -71,7 +71,7 @@ function App(): JSX.Element {
             <div>
                 <PlanList
                     setPlans={setPlans}
-                    plans={data}
+                    plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
                     setData={setData}

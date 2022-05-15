@@ -33,23 +33,14 @@ export function Semesterer({
                     semester.id === id ? newSemester : semester
             )
         );
-        const currPlan = plans.find(
-            (PLAN: Plan): boolean => PLAN.id === plan.id
+        const editedSem = plans.map(
+            (PLAN: Plan): Plan =>
+                plan.id === PLAN.id
+                    ? { ...PLAN, semesters: semesters }
+                    : { ...PLAN }
         );
-        let updatePlan = { ...plans };
-        if (currPlan !== undefined) {
-            const editSem = currPlan.semesters.map(
-                (sem: Semester): Semester => (sem.id === id ? newSemester : sem)
-            );
-            updatePlan = plans.map(
-                (PLAN: Plan): Plan =>
-                    plan.id === PLAN.id
-                        ? { ...plan, semesters: editSem }
-                        : { ...plan }
-            );
-        }
-        setPlans(updatePlan);
-        setData(updatePlan);
+        setPlans(editedSem);
+        setData(editedSem);
     }
 
     //deleteSemester function
@@ -59,23 +50,15 @@ export function Semesterer({
                 (semester: Semester): boolean => semester.id !== id
             )
         );
-        const currPlan = plans.find(
-            (PLAN: Plan): boolean => PLAN.id === plan.id
+
+        const delPlan = plans.map(
+            (PLAN: Plan): Plan =>
+                plan.id === PLAN.id
+                    ? { ...PLAN, semesters: semesters }
+                    : { ...PLAN }
         );
-        let updatePlan = { ...plans };
-        if (currPlan !== undefined) {
-            const deletedSem = currPlan.semesters.filter(
-                (sem: Semester): boolean => sem.id !== id
-            );
-            updatePlan = plans.map(
-                (PLAN: Plan): Plan =>
-                    PLAN.id === plan.id
-                        ? { ...plan, semesters: deletedSem }
-                        : { ...plan }
-            );
-        }
-        setPlans(updatePlan);
-        setData(updatePlan);
+        setPlans(delPlan);
+        setData(delPlan);
     }
 
     //will add a new semester
