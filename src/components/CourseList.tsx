@@ -206,13 +206,7 @@ export function CourseList({
                 setPlans={setPlans}
                 setSemesters={setSemesters}
             ></CourseView>
-            <CourseAdd
-                plan={plan}
-                semesterId={semester.id}
-                addCourse={addCourse}
-                plans={plans}
-                setPlans={setPlans}
-            ></CourseAdd>
+            <CourseAdd addCourse={addCourse}></CourseAdd>
             <Button variant="danger" onClick={clearCourses}>
                 Clear All Courses
             </Button>

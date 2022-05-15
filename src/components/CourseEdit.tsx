@@ -1,30 +1,20 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
-import { Plan } from "../interfaces/plan";
-import { Semester } from "../interfaces/semester";
+//import { Plan } from "../interfaces/plan";
+//import { Semester } from "../interfaces/semester";
 
 /**
  * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information
  */
 export function CourseEdit({
-    planId,
-    plans,
-    setPlans,
-    semId,
     course,
     editCourse,
-    deleteCourse,
-    setSemesters
+    deleteCourse
 }: {
-    plans: Plan[];
-    setPlans: (p: Plan[]) => void;
-    planId: string;
-    semId: string;
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
-    setSemesters: (s: Semester[]) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
     const [title, setTitle] = useState<string>(course.name);

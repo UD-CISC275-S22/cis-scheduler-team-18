@@ -2,22 +2,14 @@ import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import catalog from "../data/Catalog.json";
-import { Semester } from "../interfaces/semester";
-import { Plan } from "../interfaces/plan";
+//import { Semester } from "../interfaces/semester";
+//import { Plan } from "../interfaces/plan";
 //import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
-    addCourse,
-    plan,
-    semesterId,
-    plans,
-    setPlans
+    addCourse
 }: {
     addCourse: (newCourse: Course) => void;
-    plan: Plan;
-    semesterId: string;
-    plans: Plan[];
-    setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     //use state for each element needed to make a new course
     const [code, setCode] = useState("NEW101");
