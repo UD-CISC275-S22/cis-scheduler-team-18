@@ -1,23 +1,15 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
-import catalog from "../data/catalog.json";
+import catalog from "../data/Catalog.json";
+//import { Semester } from "../interfaces/semester";
+//import { Plan } from "../interfaces/plan";
 //import { Semester } from "../interfaces/semester";
 
 export function CourseAdd({
-    addCourse,
-    updateCoursePlan,
-    planId,
-    semesterId
+    addCourse
 }: {
     addCourse: (newCourse: Course) => void;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
-    planId: string;
-    semesterId: string;
 }): JSX.Element {
     //use state for each element needed to make a new course
     const [code, setCode] = useState("NEW101");
@@ -73,7 +65,6 @@ export function CourseAdd({
             };
         }
         addCourse(newCourse);
-        updateCoursePlan(planId, semesterId, newCourse);
         close();
     }
     //gets course information from catalog based on a course id

@@ -3,73 +3,25 @@ import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
-import { CheckDegreeReq } from "./CheckDegreeReqs";
+// import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
-import { Semester } from "../interfaces/semester";
-import { Course } from "../interfaces/course";
 import "../styleSheets/plan.css";
 import { Drag } from "./Drag";
-
-/*
-Add this later!
-export function PlanView({
-    plan,
-    deletePlan,
-    editPlan
-}: {
-    plan: Plan;
-    deletePlan: (id: string) => void;
-    editPlan: (id: string, newPlan: Plan) => void;
-}): JSX.Element {
-    ...
-    return editing ? (
-        <PlanEditor
-            changeEditing={changeEditing}
-            plan={plan}
-            editPlan={editPlan}
-            deletePlan={deletePlan}
-        ></PlanEditor>
-    ) : (
-*/
 
 export function PlanView({
     plan,
     editPlan,
     deletePlan,
-    updateSemesterPlan,
-    updateCoursePlan,
-    updateEditedCourse,
-    updateEditedSemester,
-    updateDeletedCourse
+    plans,
+    setPlans,
+    setData
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
-    updateSemesterPlan: (planId: string, newSemester: Semester) => void;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
-    updateEditedSemester: (
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
-    ) => void;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -96,16 +48,19 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
+                {/*<Semesterer
+                    plan={plan}
+                    plans={plans}
+                    setPlans={setPlans}
+    ></Semesterer>*/}
                 <Row>
                     <Col xs={8} className="bg-grey border m-2 p-2">
                         <Container>
                             <Semesterer
                                 plan={plan}
-                                updateSemesterPlan={updateSemesterPlan}
-                                updateCoursePlan={updateCoursePlan}
-                                updateEditedSemester={updateEditedSemester}
-                                updateEditedCourse={updateEditedCourse}
-                                updateDeletedCourse={updateDeletedCourse}
+                                plans={plans}
+                                setPlans={setPlans}
+                                setData={setData}
                             ></Semesterer>
                         </Container>
                     </Col>
@@ -119,32 +74,7 @@ export function PlanView({
                     Edit Plan
                 </Button>
             </div>
-            <div>
-                <CheckDegreeReq plan={plan}></CheckDegreeReq>
-            </div>
+            <div>{/*<CheckDegreeReq plan={plan}></CheckDegreeReq>*/}</div>
         </div>
     );
 }
-
-/*
-return editing ? (
-        <div>PlanEditor will go here!!!! {changeEditing}</div>
-    ) : (
-        <div>
-            <div>
-                {" "}
-                <h3>{plan.name}</h3>{" "}
-            </div>
-            <Container>
-                <Row>
-                    <Col>
-                        <MultipleSemesterTable
-                            plan={plan}
-                        ></MultipleSemesterTable>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    );
-}
-*/

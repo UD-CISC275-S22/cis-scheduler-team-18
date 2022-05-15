@@ -4,41 +4,36 @@ import { Semester } from "../interfaces/semester";
 //change semester to plan
 
 export function SemesterEditor({
-    planId,
     show,
     changeSemesterEditing,
     semester,
     editSemester,
-    deleteSemester,
-    updateEditedSemester
+    deleteSemester
 }: {
-    planId: string;
     show: boolean;
     changeSemesterEditing: () => void;
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    updateEditedSemester: (
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
-    ) => void;
 }): JSX.Element {
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);
     const [year, setYear] = useState<string>(semester.year.toString());
+    //const [courses] = useState<Course[]>(semester.courses);
     //const [show, setShow] = useState<boolean>(false);
 
     //will save the changes made
     function save() {
+        //semester.courses.map((course: Course) => (course.semesterId = semester.id))
         editSemester(semester.id, {
             ...semester,
             season: season,
-            year: parseInt(year) || 0
+            year: parseInt(year) || 0,
+            courses: semester.courses
         });
         changeSemesterEditing();
-        updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
+        //updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
+        //updatePlans(plan, semester, season, parseInt(year) || 0);
     }
 
     //will cancel the changes being made
