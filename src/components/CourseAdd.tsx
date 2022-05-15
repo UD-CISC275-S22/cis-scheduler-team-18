@@ -30,6 +30,7 @@ export function CourseAdd({
     //update functions
     function addCode(event: React.ChangeEvent<HTMLInputElement>) {
         setCode(event.target.value);
+        setCodeExists(false);
         const found = findCourse(event.target.value);
         if (found !== undefined) {
             setCodeExists(true);
@@ -174,7 +175,6 @@ export function CourseAdd({
                     <Form.Group controlId="formCredits">
                         <Form.Label>Credits:</Form.Label>
                         <Form.Control
-                            type="number"
                             value={credits}
                             onChange={addCredits}
                         ></Form.Control>
