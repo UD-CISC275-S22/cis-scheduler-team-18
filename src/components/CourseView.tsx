@@ -13,22 +13,12 @@ export function CourseView({
     courses,
     editCourse,
     deleteCourse,
-    addCourse,
-    planId,
-    semId,
-    plans,
-    setPlans,
-    setSemesters
+    addCourse
 }: {
     courses: Course[];
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
     addCourse: (newCourse: Course) => void;
-    planId: string;
-    semId: string;
-    plans: Plan[];
-    setSemesters: (s: Semester[]) => void;
-    setPlans: (p: Plan[]) => void;
 }): JSX.Element {
     const dragStartHandler = (
         event: React.DragEvent<HTMLDivElement>,
@@ -90,11 +80,6 @@ export function CourseView({
                                     course={course}
                                     editCourse={editCourse}
                                     deleteCourse={deleteCourse}
-                                    planId={planId}
-                                    semId={semId}
-                                    plans={plans}
-                                    setPlans={setPlans}
-                                    setSemesters={setSemesters}
                                 ></CourseEdit>
                                 <CourseInfo course={course}></CourseInfo>
                             </td>

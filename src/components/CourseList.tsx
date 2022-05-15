@@ -196,15 +196,10 @@ export function CourseList({
     return (
         <div>
             <CourseView
-                planId={plan.id}
-                semId={semester.id}
                 courses={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
                 addCourse={addCourse}
-                plans={plans}
-                setPlans={setPlans}
-                setSemesters={setSemesters}
             ></CourseView>
             <CourseAdd addCourse={addCourse}></CourseAdd>
             <Button variant="danger" onClick={clearCourses}>
