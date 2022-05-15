@@ -73,47 +73,7 @@ export function CourseAdd({
             };
         }
         addCourse(newCourse);
-        updatePlans(plan, semesterId, {
-            code: code,
-            name: title,
-            descr: "",
-            credits: credits,
-            preReq: isPreReq,
-            restrict: "",
-            breadth: "",
-            typ: ""
-        });
         close();
-    }
-
-    function updatePlans(PLAN: Plan, semId: string, newCourse: Course) {
-        const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === PLAN.id
-        );
-
-        let updatePlan = { ...plans };
-
-        if (currPlan !== undefined) {
-            const currSems = currPlan.semesters.map(
-                (sem: Semester): Semester => sem
-            );
-
-            const addedCourse = currSems.map(
-                (sem: Semester): Semester =>
-                    sem.id === semId
-                        ? { ...sem, courses: [...sem.courses, newCourse] }
-                        : { ...sem }
-            );
-
-            updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === PLAN.id
-                        ? { ...plan, semesters: addedCourse }
-                        : { ...plan }
-            );
-        }
-
-        setPlans(updatePlan);
     }
     //gets course information from catalog based on a course id
     function findCourse(id: string) {

@@ -9,11 +9,13 @@ import "./styleSheets/plan.css";
 export function Semesterer({
     plan,
     plans,
-    setPlans
+    setPlans,
+    setData
 }: {
     plan: Plan;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     //list of degree requirements: base plan, cs BS major
 
@@ -47,6 +49,7 @@ export function Semesterer({
             );
         }
         setPlans(updatePlan);
+        setData(updatePlan);
     }
 
     //deleteSemester function
@@ -72,6 +75,7 @@ export function Semesterer({
             );
         }
         setPlans(updatePlan);
+        setData(updatePlan);
     }
 
     //will add a new semester
@@ -90,6 +94,7 @@ export function Semesterer({
                     : { ...PLAN }
         );
         setPlans(addedSem);
+        setData(addedSem);
     }
 
     function clearSemesters() {
@@ -113,6 +118,7 @@ export function Semesterer({
             );
         }
         setPlans(updatePlan);
+        setData(updatePlan);
     }
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -129,6 +135,7 @@ export function Semesterer({
                     deleteSemester={deleteSemester}
                     plan={plan}
                     setSemesters={setSemesters}
+                    setData={setData}
                 ></SemesterList>
             </div>
             <div>

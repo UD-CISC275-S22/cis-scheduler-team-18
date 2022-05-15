@@ -8,8 +8,6 @@ import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
 import { Drag } from "./components/Drag";
-//import { Semester } from "./interfaces/semester";
-//import { Course } from "./interfaces/course";
 
 //extract plans from data
 const PLANS = semesterPlan.map(
@@ -19,34 +17,35 @@ const PLANS = semesterPlan.map(
 );
 
 //load between pages
-//let loadedData = PLANS;
-//const saveDataKey = "TEAM-18-DATA";
-//const previousData = localStorage.getItem(saveDataKey);
-//if (previousData !== null) {
-//    loadedData = JSON.parse(previousData);
-//}
-//function saveData() {
-//    localStorage.setItem(saveDataKey, JSON.stringify(data));
-//}
+let loadedData = PLANS;
+const saveDataKey = "TEAM-18-LOCAL-DATA";
+const previousData = localStorage.getItem(saveDataKey);
+if (previousData !== null) {
+    loadedData = JSON.parse(previousData);
+}
 
 function App(): JSX.Element {
     //const plans = PLANS;
     const [plans, setPlans] = useState<Plan[]>(PLANS);
     const [showAddModal, setShowAddModal] = useState(false);
-    //const [data, setData] = useState<Plan[]>(loadedData);
+    const [data, setData] = useState<Plan[]>(loadedData);
+
+    function saveData() {
+        localStorage.setItem(saveDataKey, JSON.stringify(data));
+    }
 
     function editPlan(id: string, newPlan: Plan) {
         setPlans(
             plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
         );
-        //setData(
-        //plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
-        //);
+        setData(
+            plans.map((plan: Plan): Plan => (plan.id === id ? newPlan : plan))
+        );
     }
 
     function deletePlan(id: string) {
         setPlans(plans.filter((plan: Plan): boolean => plan.id !== id));
-        //setData(plans.filter((plan: Plan): boolean => plan.id !== id));
+        setData(plans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
     function addPlan(newPlan: Plan) {
@@ -55,7 +54,7 @@ function App(): JSX.Element {
         );
         if (existing === undefined) {
             setPlans([...plans, newPlan]);
-            //setData([...data, newPlan]);
+            setData([...data, newPlan]);
         }
     }
 
@@ -68,13 +67,14 @@ function App(): JSX.Element {
             <div>
                 <Welcome></Welcome>
             </div>
-            {/*<Button onClick={saveData}>Save all Changes</Button>*/}
+            <Button onClick={saveData}>Save all Changes</Button>
             <div>
                 <PlanList
                     setPlans={setPlans}
                     plans={plans}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
+                    setData={setData}
                 ></PlanList>
             </div>
             <div>

@@ -12,7 +12,8 @@ export function SemesterList({
     plan,
     plans,
     setPlans,
-    setSemesters
+    setSemesters,
+    setData
 }: {
     semesters: Semester[];
     deleteSemester: (id: string) => void;
@@ -21,6 +22,7 @@ export function SemesterList({
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
     setSemesters: (s: Semester[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     //make sure the tables stay in a nice format/gridlike
     //calls semesterview which will determine if we're in editing mode
@@ -36,6 +38,7 @@ export function SemesterList({
                     deleteSemester={deleteSemester}
                     plan={plan}
                     setSemesters={setSemesters}
+                    setData={setData}
                 ></SemesterView>
             ))}
         </div>

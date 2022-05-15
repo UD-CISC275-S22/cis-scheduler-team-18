@@ -13,13 +13,15 @@ export function PlanView({
     editPlan,
     deletePlan,
     plans,
-    setPlans
+    setPlans,
+    setData
 }: {
     plan: Plan;
     editPlan: (id: string, newPlan: Plan) => void;
     deletePlan: (id: string) => void;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -58,6 +60,7 @@ export function PlanView({
                                 plan={plan}
                                 plans={plans}
                                 setPlans={setPlans}
+                                setData={setData}
                             ></Semesterer>
                         </Container>
                     </Col>

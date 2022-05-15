@@ -9,13 +9,15 @@ export function MultipleSemesterTable({
     semester,
     plans,
     setPlans,
-    setSemesters
+    setSemesters,
+    setData
 }: {
     plan: Plan;
     semester: Semester;
     plans: Plan[];
     setPlans: (p: Plan[]) => void;
     setSemesters: (s: Semester[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     return (
         <div>
@@ -28,6 +30,7 @@ export function MultipleSemesterTable({
                 plan={plan}
                 semester={semester}
                 setSemesters={setSemesters}
+                setData={setData}
             ></CourseList>
         </div>
     );
