@@ -21,7 +21,6 @@ export function Semesterer({
 
     //list of semesters
     const sems = plan.semesters.map((sem: Semester) => ({ ...sem }));
-    //the useState for the semesters so that everything will stay changed
     const [semesters, setSemesters] = useState<Semester[]>(sems);
     const [showAddModal, setShowAddModal] = useState(false);
 
@@ -33,11 +32,13 @@ export function Semesterer({
                     semester.id === id ? newSemester : semester
             )
         );
+        const edit = plan.semesters.map(
+            (semester: Semester): Semester =>
+                semester.id === id ? newSemester : semester
+        );
         const editedSem = plans.map(
             (PLAN: Plan): Plan =>
-                plan.id === PLAN.id
-                    ? { ...PLAN, semesters: semesters }
-                    : { ...PLAN }
+                plan.id === PLAN.id ? { ...PLAN, semesters: edit } : { ...PLAN }
         );
         setPlans(editedSem);
         setData(editedSem);
@@ -50,11 +51,13 @@ export function Semesterer({
                 (semester: Semester): boolean => semester.id !== id
             )
         );
-
+        const deletedSem = plan.semesters.filter(
+            (sem: Semester): boolean => sem.id !== id
+        );
         const delPlan = plans.map(
             (PLAN: Plan): Plan =>
                 plan.id === PLAN.id
-                    ? { ...PLAN, semesters: semesters }
+                    ? { ...PLAN, semesters: deletedSem }
                     : { ...PLAN }
         );
         setPlans(delPlan);
