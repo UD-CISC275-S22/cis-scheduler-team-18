@@ -3,7 +3,6 @@ import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
-//import { EditableQuestionList } from "./EditableQuestionList";
 
 export function AddPlanModal({
     show,
@@ -17,47 +16,6 @@ export function AddPlanModal({
     const [id, setId] = useState<string>("");
     const [name, setName] = useState<string>("");
     const semesters = [""];
-    /*
-    [
-        {
-            id: "",
-            season: "",
-            year: 0,
-            courses: [
-                {
-                    id: "",
-                    courseName: "",
-                    courseTitle: "",
-                    credits: 0,
-                    required: false,
-                    preReqTo: "",
-                    preReqRequired: false,
-                    requiredPreReq: "",
-                    option: false,
-                    optionsTo: ""
-                }
-            ]
-        },
-        {
-            id: "",
-            season: "",
-            year: 0,
-            courses: [
-                {
-                    id: "",
-                    courseName: "",
-                    courseTitle: "",
-                    credits: 0,
-                    required: false,
-                    preReqTo: "",
-                    preReqRequired: false,
-                    requiredPreReq: "",
-                    option: false,
-                    optionsTo: ""
-                }
-            ]
-        }
-    ];*/
 
     const courses = [""];
 
