@@ -95,6 +95,7 @@ export function CourseList({
                     (sem: Semester): Semester =>
                         sem.id === semId ? { ...sem, courses: [] } : { ...sem }
                 );
+                setSemesters(emptyCourses);
                 updatePlan = plans.map(
                     (plan: Plan): Plan =>
                         plan.id === planId
