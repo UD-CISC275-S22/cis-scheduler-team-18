@@ -45,35 +45,6 @@ export function AddSemesterModal({
             )
         });
         handleClose();
-        //updatePlan(planId);
-    }
-
-    function updatePlan(planId: string) {
-        const newSemester = {
-            id: season + " " + year,
-            season: season,
-            year: parseInt(year) || 0,
-            courses: courses.map(
-                (): Course => ({
-                    code: "Example course",
-                    name: "Example Course Title",
-                    descr: "",
-                    credits: "",
-                    preReq: "",
-                    restrict: "",
-                    breadth: "",
-                    typ: ""
-                })
-            )
-        };
-
-        const addedSem = plans.map(
-            (plan: Plan): Plan =>
-                plan.id === planId
-                    ? { ...plan, semesters: [...plan.semesters, newSemester] }
-                    : { ...plan }
-        );
-        setPlans(addedSem);
     }
 
     return (
