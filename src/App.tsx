@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import semesterPlan from "./data/SemesterPlan.json";
+import semesterPlan from "./data/semesterPlan.json";
 import { Plan } from "./interfaces/plan";
 import { PlanList } from "./components/PlanList";
 import { Welcome } from "./WelcomeMsg";
