@@ -100,7 +100,7 @@
                     "credits": "3",
                     "preReq": "",
                     "restrict": "",
-                    "breadth": "GROUP A: A&S Creative Arts & Humanities",
+                    "breadth": "GROUP A",
                     "typ": "Spring"
                 },
                 {
@@ -110,7 +110,7 @@
                     "credits": "3",
                     "preReq": "",
                     "restrict": "",
-                    "breadth": "GROUP B: A&S History & Cultural Change AND Multicultural",
+                    "breadth": "GROUP B",
                     "typ": "Fall, Summer, Spring"
                 }
             ]

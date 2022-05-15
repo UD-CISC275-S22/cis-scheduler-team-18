@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
-// import { CheckDegreeReq } from "./CheckDegreeReqs";
+import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
 import "../styleSheets/plan.css";
 import { Drag } from "./Drag";
@@ -48,11 +48,6 @@ export function PlanView({
                 <h3>{plan.name}</h3>
             </div>
             <div>
-                {/*<Semesterer
-                    plan={plan}
-                    plans={plans}
-                    setPlans={setPlans}
-    ></Semesterer>*/}
                 <Row>
                     <Col xs={8} className="bg-grey border m-2 p-2">
                         <Container>
@@ -75,10 +70,10 @@ export function PlanView({
                 </Button>
             </div>
             <div>
-                {/*<CheckDegreeReq
+                <CheckDegreeReq
                     plan={plan}
                     data-testid="checkDegreeReqTest"
-></CheckDegreeReq>*/}
+                ></CheckDegreeReq>
             </div>
         </div>
     );
