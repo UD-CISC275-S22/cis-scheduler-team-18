@@ -7,10 +7,11 @@
     column-gap: 10px;
     row-gap: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 900px;
 }
+
 .body{
     text-align: center;
 }

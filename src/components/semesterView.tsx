@@ -2,49 +2,29 @@ import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
-import { SemesterEditor } from "../components/semesterEditor";
-import { MultipleSemesterTable } from "../components/multipleSemesterTable";
+import { SemesterEditor } from "./semesterEditor";
+import { MultipleSemesterTable } from "./multipleSemesterTable";
 import "../styleSheets/multipleSemesterTable.css";
-import { Course } from "../interfaces/course";
+import { Plan } from "../interfaces/plan";
 
 export function SemesterView({
     semester,
     editSemester,
     deleteSemester,
-    updateCoursePlan,
-    planId,
-    updateEditedSemester,
-    updateEditedCourse,
-    updateDeletedCourse
+    plan,
+    plans,
+    setPlans,
+    setSemesters,
+    setData
 }: {
     semester: Semester;
     editSemester: (id: string, newSemester: Semester) => void;
     deleteSemester: (id: string) => void;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
-    planId: string;
-    updateEditedSemester: (
-        planId: string,
-        semId: string,
-        newSeason: string,
-        newYear: number
-    ) => void;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
+    plan: Plan;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
+    setSemesters: (s: Semester[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     //determines whether we're in editing mode for semesters
     const [editing, setEditing] = useState<boolean>(false);
@@ -61,23 +41,22 @@ export function SemesterView({
     return editing ? (
         <div>
             <SemesterEditor
-                planId={planId}
                 show={editing}
                 changeSemesterEditing={changeSemesterEditing}
                 semester={semester}
                 editSemester={editSemester}
                 deleteSemester={deleteSemester}
-                updateEditedSemester={updateEditedSemester}
             ></SemesterEditor>
         </div>
     ) : (
         <div>
             <MultipleSemesterTable
-                planId={planId}
+                plans={plans}
+                setPlans={setPlans}
+                plan={plan}
                 semester={semester}
-                updateCoursePlan={updateCoursePlan}
-                updateEditedCourse={updateEditedCourse}
-                updateDeletedCourse={updateDeletedCourse}
+                setSemesters={setSemesters}
+                setData={setData}
             ></MultipleSemesterTable>
             <div>
                 <Button variant="info" onClick={changeSemesterEditing}>

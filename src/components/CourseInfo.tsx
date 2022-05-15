@@ -3,7 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
 import techReqs from "../data/techElect.json";
-import scienceReq from "../data/scienceRequirement.json";
+import scienceReq from "../data/scienceRequriement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
 import ai from "../data/ai.json";
@@ -11,7 +11,7 @@ import bioInformatics from "../data/bioinformatics.json";
 import cybersecurity from "../data/cybersecurity.json";
 import dataScience from "../data/dataScience.json";
 import highPerformance from "../data/highPerf.json";
-import systemsNetwork from "../data/systemsNetworks.json";
+import systemsNetwork from "../data/systemNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
 /**
  * Displays a popup which lists all course information not seen on main page

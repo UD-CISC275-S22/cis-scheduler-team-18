@@ -4,19 +4,9 @@ import { Course } from "../interfaces/course";
 import catalog from "../data/catalog.json";
 
 export function CourseAdd({
-    addCourse,
-    updateCoursePlan,
-    planId,
-    semesterId
+    addCourse
 }: {
     addCourse: (newCourse: Course) => void;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
-    planId: string;
-    semesterId: string;
 }): JSX.Element {
     //use state for each element needed to make a new course
     const [code, setCode] = useState("NEW101");
@@ -88,7 +78,6 @@ export function CourseAdd({
             };
         }
         addCourse(newCourse);
-        updateCoursePlan(planId, semesterId, newCourse);
         close();
     }
     function printWarnings(): string {

@@ -4,6 +4,7 @@ import { Course } from "../interfaces/course";
 import { Semester } from "../interfaces/semester";
 import { CourseAdd } from "./CourseAdd";
 import { CourseView } from "./CourseView";
+import { Plan } from "../interfaces/plan";
 
 /**
  * Returns a table that displays all of the courses in a single semester
@@ -11,31 +12,18 @@ import { CourseView } from "./CourseView";
  */
 export function CourseList({
     semester,
-    planId,
-    updateCoursePlan,
-    updateEditedCourse,
-    updateDeletedCourse
+    plan,
+    plans,
+    setPlans,
+    setSemesters,
+    setData
 }: {
     semester: Semester;
-    planId: string;
-    updateCoursePlan: (
-        planId: string,
-        semesterId: string,
-        newCourse: Course
-    ) => void;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
+    plan: Plan;
+    plans: Plan[];
+    setPlans: (p: Plan[]) => void;
+    setSemesters: (s: Semester[]) => void;
+    setData: (d: Plan[]) => void;
 }): JSX.Element {
     const [courses, setCourses] = useState<Course[]>([...semester.courses]);
     /*
@@ -47,40 +35,177 @@ export function CourseList({
                 course.code === id ? newCourse : course
             )
         );
+        updateEditPlans(plan.id, semester.id, id, newCourse);
     }
 
     function deleteCourse(id: string) {
         setCourses(
             courses.filter((course: Course): boolean => course.code !== id)
         );
+        updateDelPlans(plan.id, semester.id, id);
     }
 
     function clearCourses() {
         setCourses([]);
+        updateClearCourses(plan.id, semester.id);
     }
 
     function addCourse(newCourse: Course): void {
         setCourses([...courses, newCourse]);
+        updatePlans(plan, semester.id, newCourse);
     }
 
+    function updateDelPlans(planId: string, semId: string, courseCode: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== courseCode
+                );
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
+                setSemesters(updateSemester);
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+        setPlans(updatePlan);
+        setData(updatePlan);
+    }
+
+    function updateClearCourses(planId: string, semId: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+            if (currSem !== undefined) {
+                const emptyCourses = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId ? { ...sem, courses: [] } : { ...sem }
+                );
+                setSemesters(emptyCourses);
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: emptyCourses }
+                            : { ...plan }
+                );
+            }
+        }
+        setPlans(updatePlan);
+        setData(updatePlan);
+    }
+
+    function updatePlans(PLAN: Plan, semId: string, newCourse: Course) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === PLAN.id
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSems = currPlan.semesters.map(
+                (sem: Semester): Semester => sem
+            );
+
+            const addedCourse = currSems.map(
+                (sem: Semester): Semester =>
+                    sem.id === semId
+                        ? { ...sem, courses: [...sem.courses, newCourse] }
+                        : { ...sem }
+            );
+            setSemesters(addedCourse);
+
+            updatePlan = plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === PLAN.id
+                        ? { ...plan, semesters: addedCourse }
+                        : { ...plan }
+            );
+        }
+
+        setPlans(updatePlan);
+        setData(updatePlan);
+    }
+
+    function updateEditPlans(
+        planId: string,
+        semId: string,
+        courseCode: string,
+        newCourse: Course
+    ) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+
+        let updatePlan = { ...plans };
+
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                //add edited fields to the course
+                const editedCourse = currCourses.map(
+                    (course: Course): Course =>
+                        course.code === courseCode ? newCourse : course
+                );
+
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: editedCourse }
+                            : { ...sem }
+                );
+
+                setSemesters(updateSemester);
+
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+
+        setPlans(updatePlan);
+        setData(updatePlan);
+    }
     return (
         <div>
             <CourseView
-                planId={planId}
-                semId={semester.id}
                 courses={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
                 addCourse={addCourse}
-                updateEditedCourse={updateEditedCourse}
-                updateDeletedCourse={updateDeletedCourse}
             ></CourseView>
-            <CourseAdd
-                planId={planId}
-                semesterId={semester.id}
-                addCourse={addCourse}
-                updateCoursePlan={updateCoursePlan}
-            ></CourseAdd>
+            <CourseAdd addCourse={addCourse}></CourseAdd>
             <Button variant="danger" onClick={clearCourses}>
                 Clear All Courses
             </Button>

@@ -1,37 +1,20 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
+//import { Plan } from "../interfaces/plan";
+//import { Semester } from "../interfaces/semester";
 
 /**
  * Displays an "Edit Course" button that when clicked will display a popup that allows the user to edit course information
  */
 export function CourseEdit({
-    planId,
-    semId,
     course,
     editCourse,
-    deleteCourse,
-    updateEditedCourse,
-    updateDeletedCourse
+    deleteCourse
 }: {
-    planId: string;
-    semId: string;
     course: Course;
     editCourse: (id: string, newCourse: Course) => void;
     deleteCourse: (id: string) => void;
-    updateEditedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string,
-        newCode: string,
-        newName: string,
-        newCredits: string
-    ) => void;
-    updateDeletedCourse: (
-        planId: string,
-        semId: string,
-        courseCode: string
-    ) => void;
 }): JSX.Element {
     const [code, setCode] = useState<string>(course.code);
     const [title, setTitle] = useState<string>(course.name);
@@ -56,15 +39,12 @@ export function CourseEdit({
             name: title,
             credits: credits
         });
-        //maybe add update semester here?
         close();
-        updateEditedCourse(planId, semId, course.code, code, title, credits);
     }
 
     //deletes the course
     function remove() {
         deleteCourse(course.code);
-        updateDeletedCourse(planId, semId, course.code);
         close();
     }
 

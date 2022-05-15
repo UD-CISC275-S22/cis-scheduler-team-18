@@ -5,7 +5,7 @@ import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
 import techReqs from "../data/techElect.json";
-import scienceReq from "../data/scienceRequirement.json";
+import scienceReq from "../data/scienceRequriement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
 import { useState } from "react";
@@ -15,20 +15,21 @@ import bioInformatics from "../data/bioinformatics.json";
 import cybersecurity from "../data/cybersecurity.json";
 import dataScience from "../data/dataScience.json";
 import highPerformance from "../data/highPerf.json";
-import systemsNetwork from "../data/systemsNetworks.json";
+import systemsNetwork from "../data/systemNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
 
 //TO DO:
 //implement a check for upper level language courses
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
-    //will be used to chose a concentration
+    //will be used to choose a concentration
     const [concentrat, setConcentrat] = useState<string>("");
     function updateConcentrat(event: React.ChangeEvent<HTMLSelectElement>) {
         setConcentrat(event.target.value);
     }
-
+    //all semesters in the plan
     const SEMS = plan.semesters.map((sem: Semester): Semester => ({ ...sem }));
+    //all courses in a plan
     let COURSES: Course[] = [];
     for (const sem of SEMS) {
         const courselist = sem.courses.map(
@@ -43,7 +44,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
         })
     );
 
-    //DLEReqs: an array of Course Objects that are DLE options -- ANY OF THESE CAN BE TAKEN (3 credits)
+    //DLEReqs: an array of Course Objects that are DLE options -- ANY ONE OF THESE CAN BE TAKEN (3 credits)
     const DLE = DLEReq.map((course: Course): Course => ({ ...course }));
 
     //multiculturalREQ: ONE of these classes need to be taken (3 credits)
@@ -92,142 +93,6 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     const THEORYANDCOMP = theoryandComp.map(
         (course: Course): Course => ({ ...course })
     );
-
-    function checkBreadths(classes: Course[]): void {
-        //find all the breadth requirements in a semester
-        const groupA = classes.filter((course: Course): boolean =>
-            course.breadth.includes(
-                "GROUP A" || "GROUPA" || "group A" || "group a"
-            )
-        );
-
-        const groupB = classes.filter((course: Course): boolean =>
-            course.breadth.includes(
-                "GROUP B" || "GROUPB" || "group B" || "group b"
-            )
-        );
-
-        const groupC = classes.filter((course: Course): boolean =>
-            course.breadth.includes(
-                "GROUP C" || "GROUPC" || "group C" || "group c"
-            )
-        );
-
-        const groupD = classes.filter((course: Course): boolean =>
-            course.breadth.includes(
-                "GROUP D" || "GROUPD" || "group D" || "group d"
-            )
-        );
-        //making a variable to hold teh amount of credits each breadth has
-        let groupACredits = 0;
-        let groupBCredits = 0;
-        let groupCCredits = 0;
-        let groupDCredits = 0;
-        //add credits in groupA
-        for (const cred of groupA) {
-            groupACredits += parseInt(cred.credits);
-        }
-        //add credits in groupB
-        for (const cred of groupB) {
-            groupBCredits += parseInt(cred.credits);
-        }
-        //add credits in groupC
-        for (const cred of groupC) {
-            groupCCredits += parseInt(cred.credits);
-        }
-        //add credits in groupD
-        for (const cred of groupD) {
-            groupDCredits += parseInt(cred.credits);
-        }
-
-        //what do we need
-        //at least 3 credits in group A, group B, group C, group D
-
-        //missing group a
-        if (groupACredits < 3) {
-            missingRequirements = [
-                ...missingRequirements,
-                "University Breadth: Group A"
-            ];
-        }
-
-        //missing group b
-        if (groupBCredits < 3) {
-            missingRequirements = [
-                ...missingRequirements,
-                "University Breadth: Group B"
-            ];
-        }
-
-        //missing group c
-        if (groupCCredits < 3) {
-            missingRequirements = [
-                ...missingRequirements,
-                "University Breadth: Group C"
-            ];
-        }
-
-        //missing group d
-        if (groupDCredits < 3) {
-            missingRequirements = [
-                ...missingRequirements,
-                "University Breadth: Group D"
-            ];
-        }
-
-        //9 additional breadths NOT group D
-        const totalCreds =
-            groupACredits + groupBCredits + groupCCredits + groupDCredits;
-        //test for coe breadths
-        if (totalCreds < 21 || totalCreds - groupDCredits < 18) {
-            missingRequirements = [
-                ...missingRequirements,
-                "College of Engineering Breadths: 9 Credits Necessary NOT Group D"
-            ];
-        } else if (totalCreds >= 21 && totalCreds - groupDCredits >= 18) {
-            //test for 6 credits being upper level
-            //to do: need to implement upper foreign language courses
-            //not a perfect theorem
-            const upperLevelA = groupA.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            const upperLevelB = groupB.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            const upperLevelC = groupC.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            const upperLevelD = groupD.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            //counts the credits for the upper level breadths
-            let upperACredit = 0;
-            let upperBCredit = 0;
-            let upperCCredit = 0;
-            let upperDCredit = 0;
-            for (const cred of upperLevelA) {
-                upperACredit += parseInt(cred.credits);
-            }
-            for (const cred of upperLevelB) {
-                upperBCredit += parseInt(cred.credits);
-            }
-            for (const cred of upperLevelC) {
-                upperCCredit += parseInt(cred.credits);
-            }
-            for (const cred of upperLevelD) {
-                upperDCredit += parseInt(cred.credits);
-            }
-            const totalUpperCred =
-                upperACredit + upperBCredit + upperCCredit + upperDCredit;
-
-            if (totalUpperCred < 6) {
-                missingRequirements = [
-                    ...missingRequirements,
-                    "College of Engineering Breadth: 6 Upper Level Credits Necessary"
-                ];
-            }
-        }
-    }
 
     function checkMultiCultural(classes: Course[]) {
         const multiCodes = MULTICULTURAL.map(
@@ -694,7 +559,7 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     }
 
     function checkAllReqs(classes: Course[]) {
-        checkBreadths(classes);
+        //checkBreadths(classes);
         checkMultiCultural(classes);
         checkDLE(classes);
         checkCapstone(classes);
