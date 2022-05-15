@@ -3,7 +3,7 @@ import { Button, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import coreReqs from "../data/coreMajorRequirements.json";
 import techReqs from "../data/techElect.json";
-import scienceReq from "../data/ScienceRequriement.json";
+import scienceReq from "../data/scienceRequriement.json";
 import multiCultReq from "../data/multiCulturalReq.json";
 import DLEReq from "../data/DLEReq.json";
 import ai from "../data/ai.json";
