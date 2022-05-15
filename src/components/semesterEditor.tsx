@@ -45,10 +45,6 @@ export function SemesterEditor({
         changeSemesterEditing();
     }
 
-    function remove() {
-        deleteSemester(semester.id);
-    }
-
     return (
         <Modal show={show} onHide={changeSemesterEditing} animation={false}>
             <Modal.Header closeButton>

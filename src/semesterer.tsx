@@ -91,6 +91,23 @@ export function Semesterer({
         //(semester: Semester): boolean => semester.id === id
         //)
         //);
+        updateClearSems(plan.id);
+    }
+
+    function updateClearSems(planId: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            updatePlan = plans.map(
+                (plan: Plan): Plan =>
+                    plan.id === planId
+                        ? { ...plan, semesters: [] }
+                        : { ...plan }
+            );
+        }
+        setPlans(updatePlan);
     }
     //will generate the pop up box in the case that we were adding a semester
     const handleCloseAddModal = () => setShowAddModal(false);

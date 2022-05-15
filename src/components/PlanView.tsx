@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Plan } from "../interfaces/plan";
 import { Semesterer } from "../semesterer";
-import { CheckDegreeReq } from "./CheckDegreeReqs";
+// import { CheckDegreeReq } from "./CheckDegreeReqs";
 import { PlanEditor } from "./PlanEditor";
 import "../styleSheets/plan.css";
 import { Drag } from "./Drag";
