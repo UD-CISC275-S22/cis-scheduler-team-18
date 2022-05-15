@@ -37,6 +37,7 @@ export function CourseList({
         setCourses(
             courses.filter((course: Course): boolean => course.code !== id)
         );
+        updateDelPlans(plan.id, semester.id, id);
     }
 
     function clearCourses() {
@@ -73,6 +74,38 @@ export function CourseList({
         setPlans(updatePlan);
     }
 
+    function updateDelPlans(planId: string, semId: string, courseCode: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== courseCode
+                );
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+        setPlans(updatePlan);
+    }
     return (
         <div>
             <CourseView
