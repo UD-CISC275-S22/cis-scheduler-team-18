@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { Course } from "../interfaces/course";
-import catalog from "../data/Catalog.json";
+import catalog from "../data/catalog.json";
 //import { Semester } from "../interfaces/semester";
 //import { Plan } from "../interfaces/plan";
 //import { Semester } from "../interfaces/semester";
