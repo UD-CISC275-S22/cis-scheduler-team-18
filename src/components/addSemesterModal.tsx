@@ -45,7 +45,7 @@ export function AddSemesterModal({
             )
         });
         handleClose();
-        updatePlan(planId);
+        //updatePlan(planId);
     }
 
     function updatePlan(planId: string) {

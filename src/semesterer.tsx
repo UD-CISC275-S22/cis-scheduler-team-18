@@ -82,6 +82,14 @@ export function Semesterer({
         if (existing === undefined) {
             setSemesters([...semesters, newSemester]);
         }
+
+        const addedSem = plans.map(
+            (PLAN: Plan): Plan =>
+                plan.id === PLAN.id
+                    ? { ...PLAN, semesters: [...PLAN.semesters, newSemester] }
+                    : { ...PLAN }
+        );
+        setPlans(addedSem);
     }
 
     function clearSemesters() {
@@ -91,20 +99,17 @@ export function Semesterer({
         //(semester: Semester): boolean => semester.id === id
         //)
         //);
-        updateClearSems(plan.id);
-    }
-
-    function updateClearSems(planId: string) {
+        //updateClearSems(plan.id);
         const currPlan = plans.find(
-            (plan: Plan): boolean => plan.id === planId
+            (PLAN: Plan): boolean => PLAN.id === plan.id
         );
         let updatePlan = { ...plans };
         if (currPlan !== undefined) {
             updatePlan = plans.map(
-                (plan: Plan): Plan =>
-                    plan.id === planId
-                        ? { ...plan, semesters: [] }
-                        : { ...plan }
+                (PLAN: Plan): Plan =>
+                    PLAN.id === plan.id
+                        ? { ...PLAN, semesters: [] }
+                        : { ...PLAN }
             );
         }
         setPlans(updatePlan);
