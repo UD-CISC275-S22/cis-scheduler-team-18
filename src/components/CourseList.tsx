@@ -42,38 +42,7 @@ export function CourseList({
         setCourses(
             courses.filter((course: Course): boolean => course.code !== id)
         );
-        const currPlan = plans.find(
-            (Plan: Plan): boolean => Plan.id === plan.id
-        );
-        let updatePlan = { ...plans };
-        if (currPlan !== undefined) {
-            const currSem = currPlan.semesters.find(
-                (sem: Semester): boolean => sem.id === sem.id
-            );
-            if (currSem !== undefined) {
-                const currCourses = currSem.courses.map(
-                    (course: Course): Course => course
-                );
-                const deletedCourse = currCourses.filter(
-                    (course: Course): boolean => course.code !== id
-                );
-                const updateSemester = currPlan.semesters.map(
-                    (sem: Semester): Semester =>
-                        sem.id === sem.id
-                            ? { ...sem, courses: deletedCourse }
-                            : { ...sem }
-                );
-                setSemesters(updateSemester);
-                updatePlan = plans.map(
-                    (plan: Plan): Plan =>
-                        plan.id === plan.id
-                            ? { ...plan, semesters: updateSemester }
-                            : { ...plan }
-                );
-            }
-        }
-        setPlans(updatePlan);
-        setData(updatePlan);
+        updateDelPlans(plan.id, semester.id, id);
     }
 
     function clearCourses() {
@@ -84,6 +53,40 @@ export function CourseList({
     function addCourse(newCourse: Course): void {
         setCourses([...courses, newCourse]);
         updatePlans(plan, semester.id, newCourse);
+    }
+
+    function updateDelPlans(planId: string, semId: string, courseCode: string) {
+        const currPlan = plans.find(
+            (plan: Plan): boolean => plan.id === planId
+        );
+        let updatePlan = { ...plans };
+        if (currPlan !== undefined) {
+            const currSem = currPlan.semesters.find(
+                (sem: Semester): boolean => sem.id === semId
+            );
+            if (currSem !== undefined) {
+                const currCourses = currSem.courses.map(
+                    (course: Course): Course => course
+                );
+                const deletedCourse = currCourses.filter(
+                    (course: Course): boolean => course.code !== courseCode
+                );
+                const updateSemester = currPlan.semesters.map(
+                    (sem: Semester): Semester =>
+                        sem.id === semId
+                            ? { ...sem, courses: deletedCourse }
+                            : { ...sem }
+                );
+                updatePlan = plans.map(
+                    (plan: Plan): Plan =>
+                        plan.id === planId
+                            ? { ...plan, semesters: updateSemester }
+                            : { ...plan }
+                );
+            }
+        }
+        setPlans(updatePlan);
+        setData(updatePlan);
     }
 
     function updateClearCourses(planId: string, semId: string) {
