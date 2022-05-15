@@ -71,9 +71,7 @@ export function PlanView({
                     Edit Plan
                 </Button>
             </div>
-            <div>
-                <CheckDegreeReq plan={plan}></CheckDegreeReq>
-            </div>
+            <div>{/*<CheckDegreeReq plan={plan}></CheckDegreeReq>*/}</div>
         </div>
     );
 }
