@@ -3,7 +3,7 @@ import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Course } from "../interfaces/course";
 import { Plan } from "../interfaces/plan";
 import { Semester } from "../interfaces/semester";
-import { EditableQuestionList } from "./EditableQuestionList";
+//import { EditableQuestionList } from "./EditableQuestionList";
 
 export function AddPlanModal({
     show,
