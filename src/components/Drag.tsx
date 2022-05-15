@@ -6,14 +6,14 @@ import scienceRequirement from "../data/scienceRequriement.json";
 import { Form } from "react-bootstrap";
 import coreMajorRequirements from "../data/coreMajorRequirements.json";
 import DLEReq from "../data/DLEReq.json";
-import highPerf from "../data/highPerf.json";
+//import highPerf from "../data/highPerf.json";
 import multiCulturalReq from "../data/multiCulturalReq.json";
 //import scienceRequirement from "../data/ScienceRequirement.json";
-import { Form } from "react-bootstrap";
-import coreMajorRequirements from "../data/coreMajorRequirements.json";
-import DLEReq from "../data/DLEReq.json";
-import multiCulturalReq from "../data/multiCulturalReq.json";
-import scienceRequirement from "../data/scienceRequirement.json";
+//import { Form } from "react-bootstrap";
+//import coreMajorRequirements from "../data/coreMajorRequirements.json";
+//import DLEReq from "../data/DLEReq.json";
+//import multiCulturalReq from "../data/multiCulturalReq.json";
+//import scienceRequirement from "../data/scienceRequirement.json";
 import techElect from "../data/techElect.json";
 
 type ChangeEvent = React.ChangeEvent<

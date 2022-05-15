@@ -75,10 +75,10 @@ export function PlanView({
                 </Button>
             </div>
             <div>
-                <CheckDegreeReq
+                {/*<CheckDegreeReq
                     plan={plan}
                     data-testid="checkDegreeReqTest"
-                ></CheckDegreeReq>
+></CheckDegreeReq>*/}
             </div>
         </div>
     );

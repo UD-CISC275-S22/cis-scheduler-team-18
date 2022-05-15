@@ -7,8 +7,8 @@ import { PlanList } from "./components/PlanList";
 import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
-import { Semester } from "./interfaces/semester";
-import { Course } from "./interfaces/course";
+//import { Semester } from "./interfaces/semester";
+//import { Course } from "./interfaces/course";
 
 //extract plans from data
 const PLANS = semesterPlan.map(
