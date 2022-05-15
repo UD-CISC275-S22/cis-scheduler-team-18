@@ -18,7 +18,7 @@ const PLANS = semesterPlan.map(
 
 //load between pages
 let loadedData = PLANS;
-const saveDataKey = "TEAM-18-LOCAL-DATA";
+const saveDataKey = "TEAM-18";
 const previousData = localStorage.getItem(saveDataKey);
 if (previousData !== null) {
     loadedData = JSON.parse(previousData);
@@ -71,7 +71,7 @@ function App(): JSX.Element {
             <div>
                 <PlanList
                     setPlans={setPlans}
-                    plans={plans}
+                    plans={data}
                     editPlan={editPlan}
                     deletePlan={deletePlan}
                     setData={setData}
