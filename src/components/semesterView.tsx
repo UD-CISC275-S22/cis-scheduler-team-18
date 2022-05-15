@@ -39,9 +39,6 @@ export function SemesterView({
     return editing ? (
         <div>
             <SemesterEditor
-                plan={plan}
-                plans={plans}
-                setPlans={setPlans}
                 show={editing}
                 changeSemesterEditing={changeSemesterEditing}
                 semester={semester}

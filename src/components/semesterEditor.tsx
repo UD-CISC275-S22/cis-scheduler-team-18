@@ -1,23 +1,15 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Form, Modal } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
-import { Plan } from "../interfaces/plan";
-import { Course } from "../interfaces/course";
 //change semester to plan
 
 export function SemesterEditor({
-    plan,
-    plans,
-    setPlans,
     show,
     changeSemesterEditing,
     semester,
     editSemester,
     deleteSemester
 }: {
-    plan: Plan;
-    plans: Plan[];
-    setPlans: (p: Plan[]) => void;
     show: boolean;
     changeSemesterEditing: () => void;
     semester: Semester;
