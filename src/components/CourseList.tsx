@@ -60,6 +60,7 @@ export function CourseList({
                             ? { ...sem, courses: deletedCourse }
                             : { ...sem }
                 );
+                setSemesters(updateSemester);
                 updatePlan = plans.map(
                     (plan: Plan): Plan =>
                         plan.id === plan.id
