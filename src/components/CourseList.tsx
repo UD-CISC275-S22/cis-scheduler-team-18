@@ -131,6 +131,7 @@ export function CourseList({
                         ? { ...sem, courses: [...sem.courses, newCourse] }
                         : { ...sem }
             );
+            setSemesters(addedCourse);
 
             updatePlan = plans.map(
                 (plan: Plan): Plan =>
