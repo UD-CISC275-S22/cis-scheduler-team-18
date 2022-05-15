@@ -142,12 +142,9 @@ export function Semesterer({
                     Add Semester
                 </Button>
                 <AddSemesterModal
-                    planId={plan.id}
                     show={showAddModal}
                     handleClose={handleCloseAddModal}
                     addSemester={addSemester}
-                    plans={plans}
-                    setPlans={setPlans}
                 ></AddSemesterModal>
             </div>
         </div>

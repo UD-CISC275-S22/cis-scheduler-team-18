@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Course } from "../interfaces/course";
 //import coreMajorRequirements from "../data/CoreMajorRequirements.json";
-import { Col, Row } from "react-bootstrap";
+//import { Col, Row } from "react-bootstrap";
 import scienceRequirement from "../data/ScienceRequirement.json";
 import { Form } from "react-bootstrap";
 import coreMajorRequirements from "../data/CoreMajorRequirements.json";
