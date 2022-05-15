@@ -7,7 +7,6 @@ import { PlanList } from "./components/PlanList";
 import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
-import { Drag } from "./components/Drag";
 import { Semester } from "./interfaces/semester";
 import { Course } from "./interfaces/course";
 
@@ -310,9 +309,6 @@ function App(): JSX.Element {
                     handleClose={handleCloseAddModal}
                     addPlan={addPlan}
                 ></AddPlanModal>
-            </div>
-            <div>
-                <Drag></Drag>
             </div>
         </div>
     );

@@ -10,28 +10,6 @@ import { Course } from "../interfaces/course";
 import "../styleSheets/plan.css";
 import { Drag } from "./Drag";
 
-/*
-Add this later!
-export function PlanView({
-    plan,
-    deletePlan,
-    editPlan
-}: {
-    plan: Plan;
-    deletePlan: (id: string) => void;
-    editPlan: (id: string, newPlan: Plan) => void;
-}): JSX.Element {
-    ...
-    return editing ? (
-        <PlanEditor
-            changeEditing={changeEditing}
-            plan={plan}
-            editPlan={editPlan}
-            deletePlan={deletePlan}
-        ></PlanEditor>
-    ) : (
-*/
-
 export function PlanView({
     plan,
     editPlan,
@@ -120,31 +98,11 @@ export function PlanView({
                 </Button>
             </div>
             <div>
-                <CheckDegreeReq plan={plan}></CheckDegreeReq>
+                <CheckDegreeReq
+                    plan={plan}
+                    data-testid="checkDegreeReqTest"
+                ></CheckDegreeReq>
             </div>
         </div>
     );
 }
-
-/*
-return editing ? (
-        <div>PlanEditor will go here!!!! {changeEditing}</div>
-    ) : (
-        <div>
-            <div>
-                {" "}
-                <h3>{plan.name}</h3>{" "}
-            </div>
-            <Container>
-                <Row>
-                    <Col>
-                        <MultipleSemesterTable
-                            plan={plan}
-                        ></MultipleSemesterTable>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    );
-}
-*/
