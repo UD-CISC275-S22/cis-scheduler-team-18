@@ -11,13 +11,16 @@ import { AddPlanModal } from "./components/AddPlanModal";
 //import { Course } from "./interfaces/course";
 
 //extract plans from data
+/*
 const PLANS = semesterPlan.map(
     (plan: Plan): Plan => ({
         ...plan
     })
 );
+*/
 
 //load between pages
+const PLANS: Plan[] | (() => Plan[]) = [];
 let loadedData = PLANS;
 const saveDataKey = "team-18-scheduler-data!";
 const previousData = localStorage.getItem(saveDataKey);
@@ -64,11 +67,15 @@ function App(): JSX.Element {
 
     return (
         <div className="App">
-            <header className="App-header">Team 18 Page</header>
+            <header className="App-header">
+                CISC275: Team 18 - Mycah Detorres, Brielle Hina, Abigail Walters
+            </header>
             <div>
                 <Welcome></Welcome>
             </div>
-            <Button onClick={saveData}>Save all Changes</Button>
+            <div>
+                <Button onClick={saveData}>Save All Changes</Button>
+            </div>
             <div>
                 <PlanList
                     setPlans={setPlans}

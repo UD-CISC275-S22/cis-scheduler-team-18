@@ -65,15 +65,15 @@ export function PlanView({
                 </Row>
             </div>
             <div>
-                <Button variant="info" onClick={changePlanEditing}>
-                    Edit Plan
-                </Button>
-            </div>
-            <div>
                 <CheckDegreeReq
                     plan={plan}
                     data-testid="checkDegreeReqTest"
                 ></CheckDegreeReq>
+            </div>
+            <div>
+                <Button variant="info" onClick={changePlanEditing}>
+                    Edit Plan
+                </Button>
             </div>
         </div>
     );
