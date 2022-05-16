@@ -9,8 +9,16 @@ import { SemesterEditor } from "./semesterEditor";
 import semesterPlan from "../data/semesterPlan.json";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
+import { Semesterer } from "../semesterer";
+import { Plan } from "../interfaces/plan";
+import { PlanView } from "./PlanView";
+import { PlanList } from "./PlanList";
+import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { SemesterView } from "./semesterView";
+import { SemesterList } from "./semesterList";
 
 const plan = semesterPlan[0];
+const plans = semesterPlan.map((plan: Plan): Plan => plan);
 const semester = plan.semesters[0];
 
 test("There is one input Box", () => {
@@ -189,6 +197,8 @@ test("You Can Edit a Semester (Save Changes Button Works)", () => {
     render(<App />);
     const addNewPlanBtn = screen.getByRole("button", { name: /Add New Plan/i });
     addNewPlanBtn.click();
+    //const sem1 = screen.getByText("Summer 2020");
+    //expect(sem1).toBeInTheDocument();
     //const modal = screen.getByRole("dialog");
     //expect(modal).toBeInTheDocument();
     const newPlanId = screen.getByRole("textbox", { name: /ID of New Plan:/i });
@@ -205,5 +215,130 @@ test("You Can Edit a Semester (Save Changes Button Works)", () => {
     //expect(saveChangesBtn).toBeInTheDocument();
     saveChangesBtn.click();
     const editSemBtn = screen.getByRole("button", { name: /Edit Semester/i });
-    expect(editSemBtn).toBeInTheDocument();
+    //expect(editSemBtn).toBeInTheDocument();
+    editSemBtn.click();
+    const semSeasonTb = screen.getByRole("textbox", {
+        name: /Semester Season:/i
+    });
+    //expect(semSeasonTb).toBeInTheDocument();
+    //userEvent.type(semSeasonTb, "");
+    // semSeasonTb.userEvent.type(semSeasonTb, "Winter");
+    userEvent.type(semSeasonTb, "{selectall}Winter");
+    const semYear = screen.getByRole("spinbutton", { name: /Semester Year:/i });
+    //expect(semYear).toBeInTheDocument();
+    //userEvent.type(semYear, "");
+    //semYear.value = "";
+    userEvent.type(semYear, "{selectall}2028");
+    const saveBtn = screen.getAllByRole("button", { name: /Save/i });
+    //expect(saveBtn).toHaveLength(2);
+    //save[0].click();
+    userEvent.click(saveBtn[1]);
+    /*render(
+        <PlanList
+            plans={plans}
+            setPlans={function (p: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            deletePlan={function (id: string): void {
+                throw new Error("Function not implemented.");
+            }}
+            editPlan={function (id: string, newPlan: Plan): void {
+                throw new Error("Function not implemented.");
+            }}
+            setData={function (d: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+        />
+    );
+    render(
+        <PlanView
+            plan={plan}
+            editPlan={function (id: string, newPlan: Plan): void {
+                throw new Error("Function not implemented.");
+            }}
+            deletePlan={function (id: string): void {
+                throw new Error("Function not implemented.");
+            }}
+            plans={plans}
+            setPlans={function (p: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setData={function (d: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+        />
+    );
+    render(
+        <Semesterer
+            plan={plan}
+            plans={plans}
+            setPlans={function (p: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setData={function (d: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+        />
+    );
+    render(
+        <SemesterList
+            semesters={[]}
+            deleteSemester={function (id: string): void {
+                throw new Error("Function not implemented.");
+            }}
+            editSemester={function (id: string, newSemester: Semester): void {
+                throw new Error("Function not implemented.");
+            }}
+            plan={plan}
+            plans={plans}
+            setPlans={function (p: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setSemesters={function (s: Semester[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setData={function (d: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+        />
+    );
+    render(
+        <SemesterView
+            semester={semester}
+            editSemester={function (id: string, newSemester: Semester): void {
+                throw new Error("Function not implemented.");
+            }}
+            deleteSemester={function (id: string): void {
+                throw new Error("Function not implemented.");
+            }}
+            plan={plan}
+            plans={plans}
+            setPlans={function (p: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setSemesters={function (s: Semester[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setData={function (d: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+        />
+    );*/
+    render(
+        <MultipleSemesterTable
+            plan={plan}
+            semester={semester}
+            plans={[]}
+            setPlans={function (p: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setSemesters={function (s: Semester[]): void {
+                throw new Error("Function not implemented.");
+            }}
+            setData={function (d: Plan[]): void {
+                throw new Error("Function not implemented.");
+            }}
+        />
+    );
+    expect(screen.getByText(/Winter 2028/i)).toBeInTheDocument();
 });
