@@ -17,6 +17,7 @@ import dataScience from "../data/dataScience.json";
 import highPerformance from "../data/highPerf.json";
 import systemsNetwork from "../data/systemNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
+import { groupCollapsed } from "console";
 
 //TO DO:
 //implement a check for upper level language courses
@@ -174,74 +175,44 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             ];
         }
 
-        //9 additional breadths NOT group D
-        //const totalCreds =
-            /*groupACredits + groupBCredits + groupCCredits + groupDCredits;
-        //test for coe breadths
-        if (totalCreds < 21 || totalCreds - groupDCredits < 18) {
+        //find 9 additional breadths that are NOT group d
+        //9 credits = 3 classes, that aren't group D
+        //total amount of breadth classes
+
+        //9 additional breadths
+        const totalBreadths = groupA.length + groupB.length + groupC.length;
+
+        //totalBreadths should be at least 9
+        //there should be AT LEAST 12 credits
+        if (totalBreadths < 6) {
             missingRequirements = [
                 ...missingRequirements,
-                "College of Engineering Breadths: 9 Credits Necessary NOT Group D"
+                "9 Additional Breadth Credits NOT Group D"
             ];
-        } else if (totalCreds >= 21 && totalCreds - groupDCredits >= 18) {
-            //test for 6 credits being upper level
-            //to do: need to implement upper foreign language courses
-            //not a perfect theorem - think of something better for this
-            const upperLevelA = groupA.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            const upperLevelB = groupB.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            const upperLevelC = groupC.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            const upperLevelD = groupD.filter((course: Course): boolean =>
-                course.code.includes("3" || "4" || "5" || "6" || "7" || "8")
-            );
-            //counts the credits for the upper level breadths
-            //a
-            const groupACredArray = upperLevelA.map((course: Course): number =>
-                parseInt(course.credits)
-            );
-            const uppperACred = groupACredArray.reduce(
-                (sum: number, cred: number) => sum + cred
-            );
+        }
 
-            //b
-            const groupBCredArray = upperLevelB.map((course: Course): number =>
-                parseInt(course.credits)
-            );
-            const uppperBCred = groupBCredArray.reduce(
-                (sum: number, cred: number) => sum + cred
-            );
+        //6 credits (2 classes) must be at the upper level
+        //300 level +
+        //extract the number from the course code
+        //this is a list of all the breadth requirements in the plan
+        const allBreadths = [...groupA, ...groupB, ...groupC, ...groupD];
+        //filter the course codes > 301
+        const courseCodes = allBreadths.map(
+            (course: Course): number =>
+                parseInt(course.code.replace(/\D/g, "")) || 0
+        );
 
-            //c
-            const groupCCredArray = upperLevelC.map((course: Course): number =>
-                parseInt(course.credits)
-            );
-            const uppperCCred = groupCCredArray.reduce(
-                (sum: number, cred: number) => sum + cred
-            );
+        const upperLevel = courseCodes.filter(
+            (number: number): boolean => number > 300
+        );
 
-            //d
-            const groupDCredArray = upperLevelD.map((course: Course): number =>
-                parseInt(course.credits)
-            );
-            const uppperDCred = groupDCredArray.reduce(
-                (sum: number, cred: number) => sum + cred
-            );
-
-            const totalUpperCred =
-                uppperACred + uppperBCred + uppperCCred + uppperDCred;
-
-            if (totalUpperCred < 6) {
-                missingRequirements = [
-                    ...missingRequirements,
-                    "College of Engineering Breadth: 6 Upper Level Credits Necessary"
-                ];
-            }
-        }*/
+        //upper level length > 2
+        if (upperLevel.length < 2) {
+            missingRequirements = [
+                ...missingRequirements,
+                "6 Upper Level Breadth Credits (300+)"
+            ];
+        }
     }
 
     function checkDLE(classes: Course[]) {
