@@ -14,5 +14,5 @@ describe("CheckDegreeReqs Component Tests", () => {
     });
     test("Figure out what to test", () => {
         //to do
-    })
+    });
 });
