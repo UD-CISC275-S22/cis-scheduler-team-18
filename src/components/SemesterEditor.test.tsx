@@ -324,7 +324,7 @@ test("You Can Edit a Semester (Save Changes Button Works)", () => {
             }}
         />
     );*/
-    render(
+    /*render(
         <MultipleSemesterTable
             plan={plan}
             semester={semester}
@@ -339,6 +339,6 @@ test("You Can Edit a Semester (Save Changes Button Works)", () => {
                 throw new Error("Function not implemented.");
             }}
         />
-    );
+    );*/
     expect(screen.getByText(/Winter 2028/i)).toBeInTheDocument();
 });
