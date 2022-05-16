@@ -75,7 +75,6 @@ describe("CourseEdit Component test", () => {
     test("'Change Course Credits:' is on the screen", () => {
         expect(screen.getByText(/Change Course Credits:/i)).toBeInTheDocument();
     });
-    /*
     test("Course Code Can be edited", () => {
         const editCodeBox = screen.getByRole("textbox", {
             name: /Change Course Code:/i
@@ -87,5 +86,4 @@ describe("CourseEdit Component test", () => {
         saveButton.click();
         expect(testCourse.code).toEqual("TEST102");
     });
-    */
 });
