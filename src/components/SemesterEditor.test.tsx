@@ -9,16 +9,8 @@ import { SemesterEditor } from "./semesterEditor";
 import semesterPlan from "../data/semesterPlan.json";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
-import { Semesterer } from "../semesterer";
-import { Plan } from "../interfaces/plan";
-import { PlanView } from "./PlanView";
-import { PlanList } from "./PlanList";
-import { MultipleSemesterTable } from "./multipleSemesterTable";
-import { SemesterView } from "./semesterView";
-import { SemesterList } from "./semesterList";
 
 const plan = semesterPlan[0];
-const plans = semesterPlan.map((plan: Plan): Plan => plan);
 const semester = plan.semesters[0];
 
 test("There is one input Box", () => {
@@ -191,8 +183,8 @@ test("Semester Year is on Screen", () => {
 });
 //test:
 //you can edit a semester and save changes - done
-//you can delete a semester
-//Cancel works (does nothing)
+//you can delete a semester - done
+//Cancel works (does nothing) - done
 test("You Can Edit a Semester (Save Changes Button Works)", () => {
     render(<App />);
     const addNewPlanBtn = screen.getByRole("button", { name: /Add New Plan/i });
@@ -243,8 +235,29 @@ test("Cancel Button Works", () => {
     const semYear = screen.getByRole("spinbutton", { name: /Semester Year:/i });
     userEvent.type(semYear, "{selectall}2028");
     const cancelBtn = screen.getByRole("button", { name: /Cancel/i });
-    //const saveBtn = screen.getAllByRole("button", { name: /Save/i });
     userEvent.click(cancelBtn);
     expect(screen.getByText(/Summer 2020/i)).toBeInTheDocument();
     expect(screen.queryByText(/Winter 2028/i)).not.toBeInTheDocument();
+});
+test("You Can Delete A Semester", () => {
+    render(<App />);
+    const addNewPlanBtn = screen.getByRole("button", { name: /Add New Plan/i });
+    addNewPlanBtn.click();
+    const newPlanId = screen.getByRole("textbox", { name: /ID of New Plan:/i });
+    userEvent.type(newPlanId, "testing-2022");
+    const nameNewPlan = screen.getByRole("textbox", {
+        name: /Name of New Plan:/i
+    });
+    userEvent.type(nameNewPlan, "Tester Plan");
+    const saveChangesBtn = screen.getByRole("button", {
+        name: /Save Changes/i
+    });
+    saveChangesBtn.click();
+    const editSemBtn = screen.getByRole("button", { name: /Edit Semester/i });
+    editSemBtn.click();
+    const deleteSemBtn = screen.getByRole("button", {
+        name: /Delete Semester/i
+    });
+    deleteSemBtn.click();
+    expect(screen.queryByText(/Summer 2020/i)).not.toBeInTheDocument();
 });
