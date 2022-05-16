@@ -127,7 +127,7 @@ export function Semesterer({
             <div>
                 <Button
                     variant="danger"
-                    className="m-4"
+                    className="m-1"
                     onClick={() => clearSemesters()}
                 >
                     Clear All Semesters
@@ -136,7 +136,7 @@ export function Semesterer({
             <div>
                 <Button
                     variant="success"
-                    className="m-4"
+                    className="m-1"
                     onClick={handleShowAddModal}
                 >
                     Add Semester

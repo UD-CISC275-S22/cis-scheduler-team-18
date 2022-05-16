@@ -19,9 +19,6 @@ import systemsNetwork from "../data/systemNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
 //import { groupCollapsed } from "console";
 
-//TO DO:
-//implement a check for upper level language courses
-
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //will be used to choose a concentration
     const [concentrat, setConcentrat] = useState<string>("");

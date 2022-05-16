@@ -138,7 +138,7 @@ export function CourseAdd({
     return (
         <>
             <div>
-                <Button variant="success" onClick={open}>
+                <Button variant="success" className="m-1" onClick={open}>
                     Add New Course
                 </Button>
             </div>
