@@ -17,7 +17,7 @@ import dataScience from "../data/dataScience.json";
 import highPerformance from "../data/highPerf.json";
 import systemsNetwork from "../data/systemNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
-import { groupCollapsed } from "console";
+//import { groupCollapsed } from "console";
 
 //TO DO:
 //implement a check for upper level language courses
