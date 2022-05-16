@@ -220,3 +220,31 @@ test("You Can Edit a Semester (Save Changes Button Works)", () => {
     expect(screen.getByText(/Winter 2028/i)).toBeInTheDocument();
     expect(screen.queryByText(/Summer 2020/i)).not.toBeInTheDocument();
 });
+test("Cancel Button Works", () => {
+    render(<App />);
+    const addNewPlanBtn = screen.getByRole("button", { name: /Add New Plan/i });
+    addNewPlanBtn.click();
+    const newPlanId = screen.getByRole("textbox", { name: /ID of New Plan:/i });
+    userEvent.type(newPlanId, "testing-2022");
+    const nameNewPlan = screen.getByRole("textbox", {
+        name: /Name of New Plan:/i
+    });
+    userEvent.type(nameNewPlan, "Tester Plan");
+    const saveChangesBtn = screen.getByRole("button", {
+        name: /Save Changes/i
+    });
+    saveChangesBtn.click();
+    const editSemBtn = screen.getByRole("button", { name: /Edit Semester/i });
+    editSemBtn.click();
+    const semSeasonTb = screen.getByRole("textbox", {
+        name: /Semester Season:/i
+    });
+    userEvent.type(semSeasonTb, "{selectall}Winter");
+    const semYear = screen.getByRole("spinbutton", { name: /Semester Year:/i });
+    userEvent.type(semYear, "{selectall}2028");
+    const cancelBtn = screen.getByRole("button", { name: /Cancel/i });
+    //const saveBtn = screen.getAllByRole("button", { name: /Save/i });
+    userEvent.click(cancelBtn);
+    expect(screen.getByText(/Summer 2020/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Winter 2028/i)).not.toBeInTheDocument();
+});
