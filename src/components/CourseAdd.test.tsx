@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CourseAdd } from "./CourseAdd";
+import userEvent from "@testing-library/user-event";
 
 describe("CourseAdd Component test", () => {
     beforeEach(() => {
@@ -24,11 +25,11 @@ describe("CourseAdd Component test", () => {
         const myButtons = screen.queryAllByRole("button");
         expect(myButtons).toHaveLength(3);
     });
-    test("There is a button labeled Add New Course", () => {
-        const addNewButton = screen.getByRole("button", {
+    test("There are 2 buttons labeled Add New Course", () => {
+        const addNewButton = screen.queryAllByRole("button", {
             name: /Add New Course/i
         });
-        expect(addNewButton).toBeInTheDocument();
+        expect(addNewButton).toHaveLength(2);
     });
     test("There is a button labeled Cancel", () => {
         const cancelButton = screen.getByRole("button", { name: /Cancel/i });
@@ -40,7 +41,19 @@ describe("CourseAdd Component test", () => {
     test("'Course Title:' is on the screen", () => {
         expect(screen.getByText(/Course Title:/i)).toBeInTheDocument();
     });
-    test("'Course Credits:' is on the screen", () => {
-        expect(screen.getByText(/Course Credits:/i)).toBeInTheDocument();
+    test("'Credits:' is on the screen", () => {
+        expect(screen.getByText(/Credits:/i)).toBeInTheDocument();
     });
+    /*
+    test("Autofill works when user types in course code", () => {
+        const codeTextBox = screen.getByRole("textbox", {
+            name: /Course Code:/i
+        });
+        userEvent.type(codeTextBox, "CISC210");
+        expect(
+            screen.getByText(/Introduction to Systems Programming/i)
+        ).toBeInTheDocument();
+        expect(screen.getByText(/3/i)).toBeInTheDocument();
+    });
+    */
 });
