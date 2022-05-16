@@ -2,6 +2,8 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
+PASS src/components/CourseEdit.test.tsx
+PASS src/components/CourseAdd.test.tsx
 PASS src/components/PlanEditor.test.tsx
 PASS src/components/Drag.test.tsx
   ● Console
@@ -2097,6 +2099,36 @@ PASS src/components/Drag.test.tsx
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
 PASS src/components/AddPlanModal.test.tsx
+PASS src/components/CourseInfo.test.tsx
+  ● Console
+
+    console.error
+      Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
+          at div
+          at p
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/createWithBsPrefix.js:31:5
+          at div
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/ModalDialog.js:21:3
+          at div
+          at Transition (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-transition-group/cjs/Transition.js:133:30)
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/TransitionWrapper.js:24:3
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Fade.js:38:3
+          at DialogTransition
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/@restart/ui/cjs/Modal.js:75:5
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Modal.js:85:3
+          at CourseInfo (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/CourseInfo.tsx:19:30)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
 PASS src/components/PlanView.test.tsx
   ● Console
 
@@ -3419,17 +3451,17 @@ PASS src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                      
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------
-All files                   |   42.04 |    32.18 |   35.98 |   41.68 |                                                                                                        
+All files                   |   42.54 |    32.18 |   37.23 |   41.68 |                                                                                                        
  src                        |      28 |    14.28 |    14.7 |   29.41 |                                                                                                        
   App.tsx                   |   39.28 |     12.5 |    8.33 |   45.83 | 27,37-60                                                                                               
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                                                                                      
   semesterer.tsx            |   16.27 |        0 |   10.52 |      15 | 29-107,131                                                                                             
- src/components             |   44.06 |    34.33 |   39.51 |   43.33 |                                                                                                        
+ src/components             |   44.63 |    34.33 |   40.97 |   43.33 |                                                                                                        
   AddPlanModal.tsx          |   45.45 |      100 |   16.66 |   45.45 | 24-47,66-80                                                                                            
   CheckDegreeReqs.tsx       |   53.02 |    37.58 |   54.76 |   51.69 | 28,110,145-151,157-163,187,205,260-285,289,314,333,340-351,358-376,404-558,574,576,578,580,582,584,586 
-  CourseAdd.tsx             |      20 |        5 |   18.18 |   20.68 | 22-81,87-129                                                                                           
-  CourseEdit.tsx            |   40.74 |       50 |   11.11 |      44 | 36-73                                                                                                  
-  CourseInfo.tsx            |   89.28 |    84.61 |    87.5 |   91.83 | 37,59,74,98                                                                                            
+  CourseAdd.tsx             |   21.66 |        5 |   27.27 |   20.68 | 22-81,87-129                                                                                           
+  CourseEdit.tsx            |   44.44 |       50 |   22.22 |      44 | 34-71                                                                                                  
+  CourseInfo.tsx            |   91.07 |    84.61 |   93.75 |   91.83 | 37,59,74,98                                                                                            
   CourseList.tsx            |    2.66 |        0 |    3.22 |    2.66 | 33-198                                                                                                 
   CourseView.tsx            |    37.5 |      100 |   22.22 |    37.5 | 27-28,32-34,38,45,59,66-71                                                                             
   Drag.tsx                  |   58.33 |      100 |   38.46 |   58.33 | 41,45-47,53,60-61,82,97-100                                                                            
@@ -3447,8 +3479,8 @@ All files                   |   42.04 |    32.18 |   35.98 |   41.68 |
   semester.ts               |       0 |        0 |       0 |       0 |                                                                                                        
 ----------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------
 
-Test Suites: 6 passed, 6 total
-Tests:       25 passed, 25 total
+Test Suites: 9 passed, 9 total
+Tests:       49 passed, 49 total
 Snapshots:   0 total
-Time:        8.223 s
+Time:        10.973 s
 Ran all test suites.
