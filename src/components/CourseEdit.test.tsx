@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CourseEdit } from "./CourseEdit";
 import { Course } from "../interfaces/course";
+//import userEvent from "@testing-library/user-event";
 
 const testCourse: Course = {
     code: "TEST101",
@@ -26,14 +27,22 @@ describe("CourseEdit Component test", () => {
                 }}
             />
         );
+        const editButton = screen.getByRole("button", {
+            name: /Edit Course/i
+        });
+        editButton.click();
     });
-    test("There are 3 input boxes", () => {
+    test("There are 2 input boxes", () => {
         const inputBoxes = screen.queryAllByRole("textbox");
-        expect(inputBoxes).toHaveLength(3);
+        expect(inputBoxes).toHaveLength(2);
     });
-    test("There are 4 buttons", () => {
+    test("There is a number input box", () => {
+        const numberBox = screen.queryAllByRole("spinbutton");
+        expect(numberBox).toHaveLength(1);
+    });
+    test("There are 5 buttons", () => {
         const myButtons = screen.queryAllByRole("button");
-        expect(myButtons).toHaveLength(4);
+        expect(myButtons).toHaveLength(5);
     });
     test("There is a button labeled Save Changes", () => {
         const saveButton = screen.getByRole("button", {
@@ -41,7 +50,7 @@ describe("CourseEdit Component test", () => {
         });
         expect(saveButton).toBeInTheDocument();
     });
-    test("There is a button labels Cancel", () => {
+    test("There is a button labeled Cancel", () => {
         const cancelButton = screen.getByRole("button", { name: /Cancel/i });
         expect(cancelButton).toBeInTheDocument();
     });
@@ -66,4 +75,17 @@ describe("CourseEdit Component test", () => {
     test("'Change Course Credits:' is on the screen", () => {
         expect(screen.getByText(/Change Course Credits:/i)).toBeInTheDocument();
     });
+    /*
+    test("Course Code Can be edited", () => {
+        const editCodeBox = screen.getByRole("textbox", {
+            name: /Change Course Code:/i
+        });
+        const saveButton = screen.getByRole("button", {
+            name: /Save Changes/i
+        });
+        userEvent.type(editCodeBox, "TEST102");
+        saveButton.click();
+        expect(testCourse.code).toEqual("TEST102");
+    });
+    */
 });
