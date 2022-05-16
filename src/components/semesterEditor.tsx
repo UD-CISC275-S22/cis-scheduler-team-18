@@ -19,12 +19,9 @@ export function SemesterEditor({
     //need useStates for each field that can be changed
     const [season, setSeason] = useState<string>(semester.season);
     const [year, setYear] = useState<string>(semester.year.toString());
-    //const [courses] = useState<Course[]>(semester.courses);
-    //const [show, setShow] = useState<boolean>(false);
 
     //will save the changes made
     function save() {
-        //semester.courses.map((course: Course) => (course.semesterId = semester.id))
         editSemester(semester.id, {
             ...semester,
             season: season,
@@ -32,8 +29,6 @@ export function SemesterEditor({
             courses: semester.courses
         });
         changeSemesterEditing();
-        //updateEditedSemester(planId, semester.id, season, parseInt(year) || 0);
-        //updatePlans(plan, semester, season, parseInt(year) || 0);
     }
 
     //will cancel the changes being made

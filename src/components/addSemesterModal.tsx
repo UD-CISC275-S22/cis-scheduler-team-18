@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 import { Semester } from "../interfaces/semester";
 import { Course } from "../interfaces/course";
-//import { Plan } from "../interfaces/plan";
 
 export function AddSemesterModal({
     show,
@@ -14,7 +13,6 @@ export function AddSemesterModal({
     addSemester: (newSemester: Semester) => void;
 }) {
     const [id, setId] = useState<string>("");
-    //const [courses, setCourses] = useState<string[]>([]);
     const [season, setSeason] = useState<string>("");
     const [year, setYear] = useState<string>("");
 
