@@ -18,7 +18,7 @@ export function Welcome(): JSX.Element {
     return (
         <div>
             {visible && message()}
-            <Button onClick={flipVisibility}>
+            <Button className="m-1" onClick={flipVisibility}>
                 {visible ? "Hide" : "Show Instructions"}
             </Button>
         </div>

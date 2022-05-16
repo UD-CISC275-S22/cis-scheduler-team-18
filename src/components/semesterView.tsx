@@ -59,7 +59,11 @@ export function SemesterView({
                 setData={setData}
             ></MultipleSemesterTable>
             <div>
-                <Button variant="info" onClick={changeSemesterEditing}>
+                <Button
+                    variant="info"
+                    className="m-1"
+                    onClick={changeSemesterEditing}
+                >
                     Edit Semester
                 </Button>
             </div>
