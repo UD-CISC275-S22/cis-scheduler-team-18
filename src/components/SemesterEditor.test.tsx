@@ -8,6 +8,7 @@ import { render, screen } from "@testing-library/react";
 import { SemesterEditor } from "./semesterEditor";
 import semesterPlan from "../data/semesterPlan.json";
 import userEvent from "@testing-library/user-event";
+import App from "../App";
 
 const plan = semesterPlan[0];
 const semester = plan.semesters[0];
@@ -179,4 +180,30 @@ test("Semester Year is on Screen", () => {
         />
     );
     expect(screen.getByText(/Semester Year/i)).toBeInTheDocument();
+});
+//test:
+//you can edit a semester and save changes
+//you can delete a semester
+//Cancel works (does nothing)
+test("You Can Edit a Semester (Save Changes Button Works)", () => {
+    render(<App />);
+    const addNewPlanBtn = screen.getByRole("button", { name: /Add New Plan/i });
+    addNewPlanBtn.click();
+    //const modal = screen.getByRole("dialog");
+    //expect(modal).toBeInTheDocument();
+    const newPlanId = screen.getByRole("textbox", { name: /ID of New Plan:/i });
+    //expect(newPlanId).toBeInTheDocument();
+    userEvent.type(newPlanId, "testing-2022");
+    const nameNewPlan = screen.getByRole("textbox", {
+        name: /Name of New Plan:/i
+    });
+    //expect(nameNewPlan).toBeInTheDocument();
+    userEvent.type(nameNewPlan, "Tester Plan");
+    const saveChangesBtn = screen.getByRole("button", {
+        name: /Save Changes/i
+    });
+    //expect(saveChangesBtn).toBeInTheDocument();
+    saveChangesBtn.click();
+    const editSemBtn = screen.getByRole("button", { name: /Edit Semester/i });
+    expect(editSemBtn).toBeInTheDocument();
 });
