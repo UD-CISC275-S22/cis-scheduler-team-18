@@ -56,13 +56,13 @@ describe("SemesterEditor Component Tests", () => {
         expect(DeleteSemBtn).toBeInTheDocument();
     });
     test("Edit A Semester is On Screen", () => {
-        expect(screen.getByText(/Edit a Semester/)).toBeInTheDocument();
+        expect(screen.getByText(/Edit a Semester/i)).toBeInTheDocument();
     });
     test("Semster Season is on Screen", () => {
-        expect(screen.getByText(/Semester Season/)).toBeInTheDocument();
+        expect(screen.getByText(/Semester Season/i)).toBeInTheDocument();
     });
     test("Semester Year is on Screen", () => {
-        expect(screen.getByText(/Semester Year/)).toBeInTheDocument();
+        expect(screen.getByText(/Semester Year/i)).toBeInTheDocument();
     });
     //figure out how to test if cancel, delete semester, and save work
 });
