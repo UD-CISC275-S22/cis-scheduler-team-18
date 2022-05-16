@@ -15,7 +15,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -33,7 +32,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -53,7 +51,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -71,7 +68,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -91,7 +87,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -109,7 +104,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -129,7 +123,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -147,7 +140,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -167,7 +159,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -186,7 +177,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -204,7 +194,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -224,7 +213,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -242,7 +230,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -262,7 +249,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -280,7 +266,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -300,7 +285,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -318,7 +302,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -338,7 +321,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -356,7 +338,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -376,7 +357,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -395,7 +375,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -413,7 +392,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -433,7 +411,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -451,7 +428,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -471,7 +447,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -489,7 +464,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -509,7 +483,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -527,7 +500,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -547,7 +519,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -565,7 +536,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -585,7 +555,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -604,7 +573,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -622,7 +590,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -642,7 +609,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -660,7 +626,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -680,7 +645,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -698,7 +662,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -718,7 +681,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -736,7 +698,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -756,7 +717,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -774,7 +734,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -794,7 +753,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -813,7 +771,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -831,7 +788,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -851,7 +807,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -869,7 +824,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -889,7 +843,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -907,7 +860,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -927,7 +879,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -945,7 +896,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -965,7 +915,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -983,7 +932,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1003,7 +951,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1022,7 +969,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1040,7 +986,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1060,7 +1005,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1078,7 +1022,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1098,7 +1041,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1116,7 +1058,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1136,7 +1077,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1154,7 +1094,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1174,7 +1113,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1192,7 +1130,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1212,7 +1149,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1231,7 +1167,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1249,7 +1184,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1269,7 +1203,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1287,7 +1220,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1307,7 +1239,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1325,7 +1256,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1345,7 +1275,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1363,7 +1292,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1383,7 +1311,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1401,7 +1328,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1421,7 +1347,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1440,7 +1365,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1458,7 +1382,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1478,7 +1401,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1496,7 +1418,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1516,7 +1437,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1534,7 +1454,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1554,7 +1473,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1572,7 +1490,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1592,7 +1509,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1610,7 +1526,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1630,7 +1545,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1649,7 +1563,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1667,7 +1580,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1687,7 +1599,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1705,7 +1616,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1725,7 +1635,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1743,7 +1652,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1763,7 +1671,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1781,7 +1688,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1801,7 +1707,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1819,7 +1724,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1839,7 +1743,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1858,7 +1761,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1876,7 +1778,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1896,7 +1797,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1914,7 +1814,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1934,7 +1833,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1952,7 +1850,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -1972,7 +1869,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -1990,7 +1886,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -2010,7 +1905,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -2028,7 +1922,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -2048,7 +1941,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -2067,7 +1959,6 @@ PASS src/components/Drag.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
@@ -2085,7 +1976,6 @@ PASS src/components/Drag.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
@@ -2177,7 +2067,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2202,7 +2091,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2229,7 +2117,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2254,7 +2141,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2281,7 +2167,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2306,7 +2191,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2333,7 +2217,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2358,7 +2241,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2385,7 +2267,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2411,7 +2292,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2436,7 +2316,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2463,7 +2342,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2488,7 +2366,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2515,7 +2392,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2540,7 +2416,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2567,7 +2442,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2592,7 +2466,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2619,7 +2492,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2644,7 +2516,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2671,7 +2542,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2697,7 +2567,6 @@ PASS src/components/PlanView.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2722,7 +2591,6 @@ PASS src/components/PlanView.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2794,7 +2662,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2823,7 +2690,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2854,7 +2720,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2883,7 +2748,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2914,7 +2778,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -2943,7 +2806,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -2974,7 +2836,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3003,7 +2864,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3034,7 +2894,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3064,7 +2923,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3093,7 +2951,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3124,7 +2981,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3153,7 +3009,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3184,7 +3039,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3213,7 +3067,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3244,7 +3097,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3273,7 +3125,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3304,7 +3155,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3333,7 +3183,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3364,7 +3213,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3394,7 +3242,6 @@ PASS src/components/PlanList.test.tsx
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
           at div
-          at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/Col.js:72:8
@@ -3423,7 +3270,6 @@ PASS src/components/PlanList.test.tsx
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
           at div
           at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
-          at div
           at div
           at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
           at div
@@ -3464,7 +3310,7 @@ All files                   |   42.54 |    32.18 |   37.23 |   41.68 |
   CourseInfo.tsx            |   91.07 |    84.61 |   93.75 |   91.83 | 37,59,74,98                                                                                            
   CourseList.tsx            |    2.66 |        0 |    3.22 |    2.66 | 33-198                                                                                                 
   CourseView.tsx            |    37.5 |      100 |   22.22 |    37.5 | 27-28,32-34,38,45,59,66-71                                                                             
-  Drag.tsx                  |   58.33 |      100 |   38.46 |   58.33 | 32,36-38,43,50-51,72,87-90                                                                             
+  Drag.tsx                  |   58.33 |      100 |   38.46 |   58.33 | 32,36-38,43,50-51,71,86-88                                                                             
   PlanEditor.tsx            |   28.57 |      100 |      20 |   28.57 | 20-29,46-59                                                                                            
   PlanList.tsx              |     100 |      100 |     100 |     100 |                                                                                                        
   PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 31                                                                                                     
@@ -3482,5 +3328,5 @@ All files                   |   42.54 |    32.18 |   37.23 |   41.68 |
 Test Suites: 9 passed, 9 total
 Tests:       49 passed, 49 total
 Snapshots:   0 total
-Time:        13.215 s
+Time:        10.187 s
 Ran all test suites.
