@@ -11,11 +11,11 @@ import semesterPlan from "../data/semesterPlan.json";
 const plan = semesterPlan[0];
 const semester = plan.semesters[0];
 
-describe("PlanEditor Component Tests", () => {
+describe("SemesterEditor Component Tests", () => {
     beforeEach(() => {
         render(
             <SemesterEditor
-                show={false}
+                show={true}
                 changeSemesterEditing={function (): void {
                     throw new Error("Function not implemented.");
                 }}
@@ -29,7 +29,40 @@ describe("PlanEditor Component Tests", () => {
             />
         );
     });
-    test("Figure out how to test modals", () => {
-        //to do
+    test("There are two input boxes", () => {
+        const inputBoxes = screen.queryAllByRole("textbox");
+        expect(inputBoxes).toHaveLength(2);
     });
+    test("There are 3 buttons.", () => {
+        const buttons = screen.queryAllByRole("button");
+        expect(buttons).toHaveLength(4);
+    });
+    test("There is a button labeled Save", () => {
+        const SaveButton = screen.queryAllByRole("button", {
+            name: /Save/i
+        });
+        expect(SaveButton).toBeInTheDocument();
+    });
+    test("There is a Cancel Button", () => {
+        const CancelButton = screen.queryAllByRole("button", {
+            name: /Cancel/i
+        });
+        expect(CancelButton).toBeInTheDocument();
+    });
+    test("There is a delete Semester Button", () => {
+        const DeleteSemBtn = screen.queryAllByRole("button", {
+            name: /Delete Semester/i
+        });
+        expect(DeleteSemBtn).toBeInTheDocument();
+    });
+    test("Edit A Semester is On Screen", () => {
+        expect(screen.getByText(/Edit a Semester/)).toBeInTheDocument();
+    });
+    test("Semster Season is on Screen", () => {
+        expect(screen.getByText(/Semester Season/)).toBeInTheDocument();
+    });
+    test("Semester Year is on Screen", () => {
+        expect(screen.getByText(/Semester Year/)).toBeInTheDocument();
+    });
+    //figure out how to test if cancel, delete semester, and save work
 });
