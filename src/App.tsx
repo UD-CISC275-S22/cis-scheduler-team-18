@@ -61,7 +61,9 @@ function App(): JSX.Element {
                 <Welcome></Welcome>
             </div>
             <div>
-                <Button onClick={saveData}>Save All Changes</Button>
+                <Button className="m-1" onClick={saveData}>
+                    Save All Changes
+                </Button>
             </div>
             <div>
                 <PlanList

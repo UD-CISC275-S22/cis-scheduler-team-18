@@ -71,7 +71,11 @@ export function PlanView({
                 ></CheckDegreeReq>
             </div>
             <div>
-                <Button variant="info" onClick={changePlanEditing}>
+                <Button
+                    variant="info"
+                    className="m-4"
+                    onClick={changePlanEditing}
+                >
                     Edit Plan
                 </Button>
             </div>

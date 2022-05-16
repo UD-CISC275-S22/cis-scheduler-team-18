@@ -206,7 +206,7 @@ export function CourseList({
                 addCourse={addCourse}
             ></CourseView>
             <CourseAdd addCourse={addCourse}></CourseAdd>
-            <Button variant="danger" onClick={clearCourses}>
+            <Button variant="danger" className="m-1" onClick={clearCourses}>
                 Clear All Courses
             </Button>
         </div>
