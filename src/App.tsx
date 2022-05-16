@@ -6,17 +6,6 @@ import { PlanList } from "./components/PlanList";
 import { Welcome } from "./WelcomeMsg";
 import { Button } from "react-bootstrap";
 import { AddPlanModal } from "./components/AddPlanModal";
-//import { Semester } from "./interfaces/semester";
-//import { Course } from "./interfaces/course";
-
-//extract plans from data
-/*
-const PLANS = semesterPlan.map(
-    (plan: Plan): Plan => ({
-        ...plan
-    })
-);
-*/
 
 //load between pages
 const PLANS: Plan[] | (() => Plan[]) = [];
@@ -28,7 +17,6 @@ if (previousData !== null) {
 }
 
 function App(): JSX.Element {
-    //const plans = PLANS;
     const [plans, setPlans] = useState<Plan[]>(PLANS);
     const [showAddModal, setShowAddModal] = useState(false);
     const [data, setData] = useState<Plan[]>(loadedData);

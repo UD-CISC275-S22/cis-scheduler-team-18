@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import { Course } from "../interfaces/course";
-//import coreMajorRequirements from "../data/CoreMajorRequirements.json";
-//import { Col, Row } from "react-bootstrap";
 import scienceRequirement from "../data/scienceRequriement.json";
 import { Form } from "react-bootstrap";
 import coreMajorRequirements from "../data/coreMajorRequirements.json";
 import DLEReq from "../data/DLEReq.json";
-//import highPerf from "../data/highPerf.json";
 import multiCulturalReq from "../data/multiCulturalReq.json";
-//import scienceRequirement from "../data/ScienceRequirement.json";
-//import { Form } from "react-bootstrap";
-//import coreMajorRequirements from "../data/coreMajorRequirements.json";
-//import DLEReq from "../data/DLEReq.json";
-//import multiCulturalReq from "../data/multiCulturalReq.json";
-//import scienceRequirement from "../data/scienceRequirement.json";
 import techElect from "../data/techElect.json";
 
 type ChangeEvent = React.ChangeEvent<
@@ -45,7 +36,6 @@ export function Drag(): JSX.Element {
         event.preventDefault();
         const data = event.dataTransfer.getData("text");
         setPool([...pool, JSON.parse(data)]);
-        //deleteCourseFromSem(JSON.parse(data));
     };
 
     // This makes the third box become droppable
