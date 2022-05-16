@@ -31,7 +31,7 @@ describe("MultipleSemester Component Tests", () => {
             />
         );
     });
-    test("Work on this", () => {
-        //to do
+    test("Semester Season and Year are visible", () => {
+        expect(screen.getByText(/fall 2020/i)).toBeInTheDocument();
     });
 });

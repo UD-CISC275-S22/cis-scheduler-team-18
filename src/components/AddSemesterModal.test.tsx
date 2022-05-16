@@ -23,25 +23,29 @@ describe("AddSemesterModal Component Tests", () => {
             />
         );
     });
-    test("There are 3 input boxes", () => {
+    test("There are 2 input boxes", () => {
         const inputBoxes = screen.queryAllByRole("textbox");
-        expect(inputBoxes).toHaveLength(3);
+        expect(inputBoxes).toHaveLength(2);
     });
+    /*test("There is a number box for year", () => {
+        const numBox = screen.queryAllByRole("spinBox");
+        expect(numBox).toBeInTheDocument();
+    });*/
     test("There are 3 Buttons", () => {
         const buttons = screen.queryAllByRole("button");
         expect(buttons).toHaveLength(3);
     });
     test("There is a Button Labeled Save Changes", () => {
-        const saveBtn = screen.queryAllByRole("button", {
+        const saveBtn = screen.getByRole("button", {
             name: /Save Changes/i
         });
         expect(saveBtn).toBeInTheDocument();
     });
-    test("There is a Cancel Button", () => {
+    test("There is a Close Button", () => {
         const cancelBtn = screen.queryAllByRole("button", {
-            name: /Cancel/i
+            name: /Close/i
         });
-        expect(cancelBtn).toBeInTheDocument();
+        expect(cancelBtn).toHaveLength(2);
     });
     test("Add a Semester is On Screen", () => {
         expect(screen.getByText(/Add a Semester/i)).toBeInTheDocument();

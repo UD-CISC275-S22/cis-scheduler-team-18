@@ -29,28 +29,32 @@ describe("SemesterEditor Component Tests", () => {
             />
         );
     });
-    test("There are two input boxes", () => {
+    test("There is one input boxes", () => {
         const inputBoxes = screen.queryAllByRole("textbox");
-        expect(inputBoxes).toHaveLength(2);
+        expect(inputBoxes).toHaveLength(1);
     });
-    test("There are 3 buttons.", () => {
+    /*test("There is one number inputbox", () => {
+        const numBox = screen.queryAllByRole("spinbox");
+        expect(numBox).toBeInTheDocument();
+    });*/
+    test("There are 4 buttons.", () => {
         const buttons = screen.queryAllByRole("button");
         expect(buttons).toHaveLength(4);
     });
     test("There is a button labeled Save", () => {
-        const SaveButton = screen.queryAllByRole("button", {
+        const SaveButton = screen.getByRole("button", {
             name: /Save/i
         });
         expect(SaveButton).toBeInTheDocument();
     });
     test("There is a Cancel Button", () => {
-        const CancelButton = screen.queryAllByRole("button", {
+        const CancelButton = screen.getByRole("button", {
             name: /Cancel/i
         });
         expect(CancelButton).toBeInTheDocument();
     });
     test("There is a delete Semester Button", () => {
-        const DeleteSemBtn = screen.queryAllByRole("button", {
+        const DeleteSemBtn = screen.getByRole("button", {
             name: /Delete Semester/i
         });
         expect(DeleteSemBtn).toBeInTheDocument();

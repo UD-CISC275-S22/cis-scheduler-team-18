@@ -34,7 +34,7 @@ describe("SemesterList Component tests", () => {
             />
         );
     });
-    test("I'm not sure what to test", () => {
+    test("SemesterList just calls SemesterView, not much to test here. This is probably not the most useful component", () => {
         //do something
     });
 });
