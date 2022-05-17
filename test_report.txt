@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/components/CheckDegreeReqs.test.tsx (8.137 s)
+FAIL src/components/CheckDegreeReqs.test.tsx (9.756 s)
   ● Console
 
     console.error
@@ -2810,168 +2810,6 @@ FAIL src/components/CheckDegreeReqs.test.tsx (8.137 s)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-  ● Empty plan: No Requirements Met
-
-    TestingLibraryElementError: Unable to find an element with the text: CISC108. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body[39m
-      [33mclass[39m=[32m""[39m
-      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
-    [36m>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mCISC275: Team 18 - Mycah Detorres, Brielle Hina, Abigail Walters[0m
-          [36m</header>[39m
-          [36m<div>[39m
-            [36m<div>[39m
-              [36m<div[39m
-                [33mstyle[39m=[32m"border: 1px solid blue;"[39m
-              [36m>[39m
-                [0mHello CS Student! Welcome to your scheduler! Here you can create multiple graduation plans to help you decide the best way for you to schedule your classes in future semesters. Click the Add Plan button below to begin.[0m
-              [36m</div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mHide[0m
-              [36m</button>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mSave All Changes[0m
-            [36m</button>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-              [33mdata-testid[39m=[32m"PlanListTest"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [36m<h3>[39m
-                      [0mEmpty Plan[0m
-                    [36m</h3>[39m
-                  [36m</div>[39m
-                  [36m<div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"row"[39m
-                    [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"bg-grey border m-2 p-2 col-8"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"container"[39m
-                        [36m>[39m
-                          [36m<div[39m
-                            [33mclass[39m=[32m"mySems"[39m
-                          [36m>[39m
-                            [36m<div[39m
-                              [33mclass[39m=[32m"mySemList"[39m
-                            [36m>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"container"[39m
-                              [36m>[39m
-                                [36m<div>[39m
-                                  [36m<div[39m
-                                    [33mdata-testid[39m=[32m"multipleSemTest"[39m
-                                  [36m>[39m
-                                    [36m<h4[39m
-                                      [33mclass[39m=[32m"semester"[39m
-                                    [36m>[39m
-                                      [0mSummer[0m
-                                      [0m [0m
-                                      [0m2020[0m
-                                    [36m</h4>[39m
-                                    [36m<div>[39m
-                                      [36m<div>[39m
-                                        [36m<table[39m
-                                          [33mclass[39m=[32m"table"[39m
-                                        [36m>[39m
-                                          [36m<thead>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Name[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Title[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCredits[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mEdit Course[0m
-                                            [36m</th>[39m
-                                          [36m</thead>[39m
-                                          [36m<tbody>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"filler Course"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mfiller Course[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mExample Course Title[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0m0[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [36m<div>[39m
-                                                  [36m<button[39m
-                                                    [33mclass[39m=[32m"btn btn-info"[39m
-                                                    [33mtype[39m=[32m"button"[39m
-                                                  [36m>[39m
-                                                    [0mEdit Course[0m
-                                                  [36m</button>[39m
-                                                [36m</div>[39m
-                                                [36m<button[39m
-                                                  [33mclass[39m=[32m"btn btn-secondary"[39m
-                                                  [33mtype[39m=[32m"button"[39m
-                                                [36m>[39m
-                                                  [0mCourse Info[0m
-                                                [36m</button>[39m
-                                              [36m</td>[39m
-                                            [36m</tr>[39m
-                                          [36m</tbody>[39m
-                                        [36m</table>[39m
-                                      [36m</div>[39m
-                                      [36m<div>[39m
-                                        [36m<button[39m
-                                          [33mclass[39m=[32m"m-1 btn btn-success"[39m
-                                          [33mtype[39m=[32m"button"[39m
-                                        [36m>[39m
-                                          [0mAdd New Course[0m
-                                        [36m</button>[39m
-                                      [36m</div>[39m
-                                      [36m<button[39m
-                                        [33...
-
-      128 |     ).toBeInTheDocument();
-      129 |     //this throws an error because there are multiple ones
-    > 130 |     expect(screen.getAllByText("CISC108")).toHaveLength(2);
-          |                   ^
-      131 |     expect(screen.getAllByText("CISC181")).toHaveLength(2);
-      132 |     expect(screen.getAllByText("CISC210")).toHaveLength(2);
-      133 |     expect(screen.getAllByText("CISC220")).toHaveLength(2);
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByText (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/components/CheckDegreeReqs.test.tsx:130:19)
-
   ● Group A Req Met
 
     TestingLibraryElementError: Unable to find an element with the text: University Requirement: Multicultural. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
@@ -3295,329 +3133,6 @@ FAIL src/components/CheckDegreeReqs.test.tsx (8.137 s)
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/components/CheckDegreeReqs.test.tsx:248:16)
-
-  ● Group C Req Met
-
-    TestingLibraryElementError: Unable to find an element with the text: CISC108. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body[39m
-      [33mclass[39m=[32m"modal-open"[39m
-      [33mdata-rr-ui-modal-open[39m=[32m""[39m
-      [33mstyle[39m=[32m"padding-right: 2048px;"[39m
-    [36m>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mCISC275: Team 18 - Mycah Detorres, Brielle Hina, Abigail Walters[0m
-          [36m</header>[39m
-          [36m<div>[39m
-            [36m<div>[39m
-              [36m<div[39m
-                [33mstyle[39m=[32m"border: 1px solid blue;"[39m
-              [36m>[39m
-                [0mHello CS Student! Welcome to your scheduler! Here you can create multiple graduation plans to help you decide the best way for you to schedule your classes in future semesters. Click the Add Plan button below to begin.[0m
-              [36m</div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mHide[0m
-              [36m</button>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mSave All Changes[0m
-            [36m</button>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-              [33mdata-testid[39m=[32m"PlanListTest"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [36m<h3>[39m
-                      [0mEmpty Plan[0m
-                    [36m</h3>[39m
-                  [36m</div>[39m
-                  [36m<div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"row"[39m
-                    [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"bg-grey border m-2 p-2 col-8"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"container"[39m
-                        [36m>[39m
-                          [36m<div[39m
-                            [33mclass[39m=[32m"mySems"[39m
-                          [36m>[39m
-                            [36m<div[39m
-                              [33mclass[39m=[32m"mySemList"[39m
-                            [36m>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"container"[39m
-                              [36m>[39m
-                                [36m<div>[39m
-                                  [36m<div[39m
-                                    [33mdata-testid[39m=[32m"multipleSemTest"[39m
-                                  [36m>[39m
-                                    [36m<h4[39m
-                                      [33mclass[39m=[32m"semester"[39m
-                                    [36m>[39m
-                                      [0mSummer[0m
-                                      [0m [0m
-                                      [0m2020[0m
-                                    [36m</h4>[39m
-                                    [36m<div>[39m
-                                      [36m<div>[39m
-                                        [36m<table[39m
-                                          [33mclass[39m=[32m"table"[39m
-                                        [36m>[39m
-                                          [36m<thead>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Name[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Title[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCredits[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mEdit Course[0m
-                                            [36m</th>[39m
-                                          [36m</thead>[39m
-                                          [36m<tbody>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"filler Course"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mfiller Course[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mExample Course Title[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0m0[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [36m<div>[39m
-                                                  [36m<button[39m
-                                                    [33mclass[39m=[32m"btn btn-info"[39m
-                                                    [33mtype[39m=[32m"button"[39m
-                                                  [36m>[39m
-                                                    [0mEdit Course[0m
-                                                  [36m</button>[39m
-                                                [36m</div>[39m
-                                                [36m<button[39m
-                                                  [33mclass[39m=[32m"btn btn-secondary"[39m
-                                                  [33mtype[39m=[32m"button"[39m
-                                                [36m>[39m
-                                                  [0mCourse Info[0m
-                                                [36m</button>[39m
-                                              [36m</td>[39m
-                                            [36m</tr>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"AFRA 215"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mAFRA 215[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mRace in Society[0m
-                                              [36m</td>[39m
-                                              [36m<td>[...
-
-      358 |     ).toBeInTheDocument();
-      359 |     //this throws an error because there are multiple ones
-    > 360 |     expect(screen.getAllByText("CISC108")).toHaveLength(2);
-          |                   ^
-      361 |     expect(screen.getAllByText("CISC181")).toHaveLength(2);
-      362 |     expect(screen.getAllByText("CISC210")).toHaveLength(2);
-      363 |     expect(screen.getAllByText("CISC220")).toHaveLength(2);
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByText (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/components/CheckDegreeReqs.test.tsx:360:19)
-
-  ● Group D Req Met
-
-    TestingLibraryElementError: Unable to find an element with the text: CISC108. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body[39m
-      [33mclass[39m=[32m"modal-open"[39m
-      [33mdata-rr-ui-modal-open[39m=[32m""[39m
-      [33mstyle[39m=[32m"padding-right: 2048px;"[39m
-    [36m>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mCISC275: Team 18 - Mycah Detorres, Brielle Hina, Abigail Walters[0m
-          [36m</header>[39m
-          [36m<div>[39m
-            [36m<div>[39m
-              [36m<div[39m
-                [33mstyle[39m=[32m"border: 1px solid blue;"[39m
-              [36m>[39m
-                [0mHello CS Student! Welcome to your scheduler! Here you can create multiple graduation plans to help you decide the best way for you to schedule your classes in future semesters. Click the Add Plan button below to begin.[0m
-              [36m</div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mHide[0m
-              [36m</button>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mSave All Changes[0m
-            [36m</button>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-              [33mdata-testid[39m=[32m"PlanListTest"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [36m<h3>[39m
-                      [0mEmpty Plan[0m
-                    [36m</h3>[39m
-                  [36m</div>[39m
-                  [36m<div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"row"[39m
-                    [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"bg-grey border m-2 p-2 col-8"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"container"[39m
-                        [36m>[39m
-                          [36m<div[39m
-                            [33mclass[39m=[32m"mySems"[39m
-                          [36m>[39m
-                            [36m<div[39m
-                              [33mclass[39m=[32m"mySemList"[39m
-                            [36m>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"container"[39m
-                              [36m>[39m
-                                [36m<div>[39m
-                                  [36m<div[39m
-                                    [33mdata-testid[39m=[32m"multipleSemTest"[39m
-                                  [36m>[39m
-                                    [36m<h4[39m
-                                      [33mclass[39m=[32m"semester"[39m
-                                    [36m>[39m
-                                      [0mSummer[0m
-                                      [0m [0m
-                                      [0m2020[0m
-                                    [36m</h4>[39m
-                                    [36m<div>[39m
-                                      [36m<div>[39m
-                                        [36m<table[39m
-                                          [33mclass[39m=[32m"table"[39m
-                                        [36m>[39m
-                                          [36m<thead>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Name[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Title[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCredits[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mEdit Course[0m
-                                            [36m</th>[39m
-                                          [36m</thead>[39m
-                                          [36m<tbody>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"filler Course"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mfiller Course[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mExample Course Title[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0m0[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [36m<div>[39m
-                                                  [36m<button[39m
-                                                    [33mclass[39m=[32m"btn btn-info"[39m
-                                                    [33mtype[39m=[32m"button"[39m
-                                                  [36m>[39m
-                                                    [0mEdit Course[0m
-                                                  [36m</button>[39m
-                                                [36m</div>[39m
-                                                [36m<button[39m
-                                                  [33mclass[39m=[32m"btn btn-secondary"[39m
-                                                  [33mtype[39m=[32m"button"[39m
-                                                [36m>[39m
-                                                  [0mCourse Info[0m
-                                                [36m</button>[39m
-                                              [36m</td>[39m
-                                            [36m</tr>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"ANTH 300"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mANTH 300[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mPrimatology[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-    ...
-
-      434 |     ).toBeInTheDocument();
-      435 |     //this throws an error because there are multiple ones
-    > 436 |     expect(screen.getAllByText("CISC108")).toHaveLength(2);
-          |                   ^
-      437 |     expect(screen.getAllByText("CISC181")).toHaveLength(2);
-      438 |     expect(screen.getAllByText("CISC210")).toHaveLength(2);
-      439 |     expect(screen.getAllByText("CISC220")).toHaveLength(2);
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByText (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/components/CheckDegreeReqs.test.tsx:436:19)
 
 PASS src/components/SemesterEditor.test.tsx
   ● Console
@@ -5107,7 +4622,7 @@ PASS src/components/SemesterEditor.test.tsx
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-PASS src/components/CourseEdit.test.tsx (5.118 s)
+PASS src/components/CourseEdit.test.tsx (6.163 s)
   ● Console
 
     console.error
@@ -10099,7 +9614,7 @@ PASS src/components/AddSemesterModal.test.tsx
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-FAIL src/components/CourseAdd.test.tsx
+PASS src/components/CourseAdd.test.tsx (5.315 s)
   ● Console
 
     console.error
@@ -11874,167 +11389,6 @@ FAIL src/components/CourseAdd.test.tsx
       at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
-
-  ● CourseAdd functionalitly test › Can autofill a course from just the code
-
-    TestingLibraryElementError: Unable to find an element with the text: /CISC181/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body[39m
-      [33mclass[39m=[32m"modal-open"[39m
-      [33mdata-rr-ui-modal-open[39m=[32m""[39m
-      [33mstyle[39m=[32m"padding-right: 2048px;"[39m
-    [36m>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mCISC275: Team 18 - Mycah Detorres, Brielle Hina, Abigail Walters[0m
-          [36m</header>[39m
-          [36m<div>[39m
-            [36m<div>[39m
-              [36m<div[39m
-                [33mstyle[39m=[32m"border: 1px solid blue;"[39m
-              [36m>[39m
-                [0mHello CS Student! Welcome to your scheduler! Here you can create multiple graduation plans to help you decide the best way for you to schedule your classes in future semesters. Click the Add Plan button below to begin.[0m
-              [36m</div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mHide[0m
-              [36m</button>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"m-1 btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mSave All Changes[0m
-            [36m</button>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"vstack gap-3"[39m
-              [33mdata-testid[39m=[32m"PlanListTest"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"bg-light border m-2 p-2"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [36m<h3>[39m
-                      [0mTest Plan[0m
-                    [36m</h3>[39m
-                  [36m</div>[39m
-                  [36m<div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"row"[39m
-                    [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"bg-grey border m-2 p-2 col-8"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"container"[39m
-                        [36m>[39m
-                          [36m<div[39m
-                            [33mclass[39m=[32m"mySems"[39m
-                          [36m>[39m
-                            [36m<div[39m
-                              [33mclass[39m=[32m"mySemList"[39m
-                            [36m>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"container"[39m
-                              [36m>[39m
-                                [36m<div>[39m
-                                  [36m<div[39m
-                                    [33mdata-testid[39m=[32m"multipleSemTest"[39m
-                                  [36m>[39m
-                                    [36m<h4[39m
-                                      [33mclass[39m=[32m"semester"[39m
-                                    [36m>[39m
-                                      [0mSummer[0m
-                                      [0m [0m
-                                      [0m2020[0m
-                                    [36m</h4>[39m
-                                    [36m<div>[39m
-                                      [36m<div>[39m
-                                        [36m<table[39m
-                                          [33mclass[39m=[32m"table"[39m
-                                        [36m>[39m
-                                          [36m<thead>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Name[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCourse Title[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mCredits[0m
-                                            [36m</th>[39m
-                                            [36m<th>[39m
-                                              [0mEdit Course[0m
-                                            [36m</th>[39m
-                                          [36m</thead>[39m
-                                          [36m<tbody>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"filler Course"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mfiller Course[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mExample Course Title[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0m0[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [36m<div>[39m
-                                                  [36m<button[39m
-                                                    [33mclass[39m=[32m"btn btn-info"[39m
-                                                    [33mtype[39m=[32m"button"[39m
-                                                  [36m>[39m
-                                                    [0mEdit Course[0m
-                                                  [36m</button>[39m
-                                                [36m</div>[39m
-                                                [36m<button[39m
-                                                  [33mclass[39m=[32m"btn btn-secondary"[39m
-                                                  [33mtype[39m=[32m"button"[39m
-                                                [36m>[39m
-                                                  [0mCourse Info[0m
-                                                [36m</button>[39m
-                                              [36m</td>[39m
-                                            [36m</tr>[39m
-                                            [36m<tr[39m
-                                              [33mclass[39m=[32m"CISC 181"[39m
-                                              [33mdraggable[39m=[32m"true"[39m
-                                            [36m>[39m
-                                              [36m<td>[39m
-                                                [0mCISC 181[0m
-                                              [36m</td>[39m
-                                              [36m<td>[39m
-                                                [0mIntroduction to Computer Science II[0m
-                                              [36m</td>[39m
-                                      ...
-
-      101 |         });
-      102 |         userEvent.click(addCourseButton[1]);
-    > 103 |         expect(screen.getAllByText(/CISC181/i)).toHaveLength(2);
-          |                       ^
-      104 |         expect(
-      105 |             screen.getByText(/Introduction to Computer Science II/i)
-      106 |         ).toBeInTheDocument();
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByText (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/components/CourseAdd.test.tsx:103:23)
 
 PASS src/Semesterer.test.tsx
   ● Console
@@ -13221,7 +12575,7 @@ PASS src/Semesterer.test.tsx
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
 PASS src/components/PlanEditor.test.tsx
-FAIL src/components/Drag.test.tsx
+PASS src/components/Drag.test.tsx
   ● Console
 
     console.error
@@ -13724,7 +13078,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13742,7 +13096,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13760,7 +13114,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13778,7 +13132,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13796,7 +13150,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13814,7 +13168,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13832,7 +13186,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13850,7 +13204,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -13868,7 +13222,7 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
-      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
@@ -14048,6 +13402,168 @@ FAIL src/components/Drag.test.tsx
       at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
       at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
       at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 232`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 375`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `CRJU 452`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `HIST 304`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `HOSP 355`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `PHIL 338`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `SOCI 471`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `CISC 475`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `PSYC 365`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
       at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
@@ -14196,1397 +13712,491 @@ FAIL src/components/Drag.test.tsx
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-  ● PlanEditor Component tests › a) Can choose a course and add it to the pool
+    console.error
+      Warning: Encountered two children with the same key, `PSYC 365`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-    TestingLibraryElementError: Value "CISC220" not found in options
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-    Ignored nodes: comments, <script />, <style />
-    [36m<select[39m
-      [33mclass[39m=[32m"form-select"[39m
-    [36m>[39m
-      [36m<option>[39m
-        [0mCISC 108[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 181[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 220[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 260[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 275[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 303[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 320[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 361[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 372[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 241[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 242[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 355[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mENGL 110[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mEGGG 101[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 363[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 417[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 418[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 421[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 218[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 232[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 334[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 338[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 341[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 350[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 375[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 463[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 486[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 489[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 430[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 480[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 482[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 416[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTC 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTH 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBHAN 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 312[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 413[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 484[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBMEG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBREG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 444[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 445[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 448[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 478[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 420[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 432[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 402[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 461[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 465[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 491[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 357[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC3 74[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 475[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 498[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 499[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 326[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 351[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 388[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 427[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 490[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 460[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 368[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 495[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 401[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 200[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 345[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mECON 436[0m
-      [36m</option>[39m
-      [36m<option>[3...
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 232`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-      17 |     test("a) Can choose a course and add it to the pool", () => {
-      18 |         const select = screen.getByRole("combobox");
-    > 19 |         userEvent.selectOptions(select, "CISC220");
-         |                   ^
-      20 |         expect(
-      21 |             screen.getByText(/CISC220: Data Structures/i)
-      22 |         ).toBeInTheDocument();
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/user-event/dist/select-options.js:36:37
-          at Array.map (<anonymous>)
-      at selectOptions (node_modules/@testing-library/user-event/dist/select-options.js:27:36)
-      at Object.<anonymous> (src/components/Drag.test.tsx:19:19)
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 375`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-  ● PlanEditor Component tests › b) Can choose a course and add it to the pool
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-    TestingLibraryElementError: Value "CISC260" not found in options
+    console.error
+      Warning: Encountered two children with the same key, `CRJU 452`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-    Ignored nodes: comments, <script />, <style />
-    [36m<select[39m
-      [33mclass[39m=[32m"form-select"[39m
-    [36m>[39m
-      [36m<option>[39m
-        [0mCISC 108[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 181[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 220[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 260[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 275[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 303[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 320[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 361[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 372[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 241[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 242[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 355[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mENGL 110[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mEGGG 101[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 363[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 417[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 418[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 421[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 218[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 232[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 334[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 338[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 341[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 350[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 375[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 463[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 486[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 489[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 430[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 480[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 482[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 416[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTC 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTH 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBHAN 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 312[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 413[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 484[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBMEG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBREG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 444[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 445[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 448[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 478[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 420[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 432[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 402[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 461[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 465[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 491[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 357[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC3 74[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 475[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 498[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 499[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 326[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 351[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 388[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 427[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 490[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 460[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 368[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 495[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 401[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 200[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 345[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mECON 436[0m
-      [36m</option>[39m
-      [36m<option>[3...
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-      24 |     test("b) Can choose a course and add it to the pool", () => {
-      25 |         const select = screen.getByRole("combobox");
-    > 26 |         userEvent.selectOptions(select, "CISC260");
-         |                   ^
-      27 |         expect(
-      28 |             screen.getByText(
-      29 |                 /CISC260: Machine Organization and Assembly Language/i
+    console.error
+      Warning: Encountered two children with the same key, `HIST 304`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/user-event/dist/select-options.js:36:37
-          at Array.map (<anonymous>)
-      at selectOptions (node_modules/@testing-library/user-event/dist/select-options.js:27:36)
-      at Object.<anonymous> (src/components/Drag.test.tsx:26:19)
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-  ● PlanEditor Component tests › c) Can choose a course and add it to the pool
+    console.error
+      Warning: Encountered two children with the same key, `HOSP 355`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-    TestingLibraryElementError: Value "CISC210" not found in options
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-    Ignored nodes: comments, <script />, <style />
-    [36m<select[39m
-      [33mclass[39m=[32m"form-select"[39m
-    [36m>[39m
-      [36m<option>[39m
-        [0mCISC 108[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 181[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 220[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 260[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 275[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 303[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 320[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 361[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 372[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 241[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 242[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 355[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mENGL 110[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mEGGG 101[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 363[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 417[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 418[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 421[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 218[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 232[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 334[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 338[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 341[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 350[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 375[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 463[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 486[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 489[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 430[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 480[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 482[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 416[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTC 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTH 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBHAN 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 312[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 413[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 484[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBMEG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBREG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 444[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 445[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 448[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 478[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 420[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 432[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 402[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 461[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 465[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 491[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 357[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC3 74[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 475[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 498[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 499[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 326[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 351[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 388[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 427[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 490[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 460[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 368[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 495[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 401[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 200[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 345[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mECON 436[0m
-      [36m</option>[39m
-      [36m<option>[3...
+    console.error
+      Warning: Encountered two children with the same key, `PHIL 338`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-      33 |     test("c) Can choose a course and add it to the pool", () => {
-      34 |         const select = screen.getByRole("combobox");
-    > 35 |         userEvent.selectOptions(select, "CISC210");
-         |                   ^
-      36 |         expect(
-      37 |             screen.getByText(/CISC210: Introduction to Systems Programming/i)
-      38 |         ).toBeInTheDocument();
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/user-event/dist/select-options.js:36:37
-          at Array.map (<anonymous>)
-      at selectOptions (node_modules/@testing-library/user-event/dist/select-options.js:27:36)
-      at Object.<anonymous> (src/components/Drag.test.tsx:35:19)
+    console.error
+      Warning: Encountered two children with the same key, `SOCI 471`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-  ● PlanEditor Component tests › d) Can choose a course and add it to the pool
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-    TestingLibraryElementError: Value "CISC275" not found in options
+    console.error
+      Warning: Encountered two children with the same key, `CISC 475`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-    Ignored nodes: comments, <script />, <style />
-    [36m<select[39m
-      [33mclass[39m=[32m"form-select"[39m
-    [36m>[39m
-      [36m<option>[39m
-        [0mCISC 108[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 181[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 220[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 260[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 275[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 303[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 320[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 361[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 372[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 241[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mMATH 242[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 355[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mENGL 110[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mEGGG 101[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 363[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mACCT 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFRA 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAFSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 417[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 418[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 421[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANFS 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 218[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 232[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 334[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 338[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 341[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 350[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 375[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 404[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 463[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 486[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mANTH 489[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mAPEC 430[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 480[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARSC 482[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mART 416[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTC 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mARTH 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBHAN 464[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 312[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 316[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 411[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 412[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 413[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBISC 484[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBMEG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBREG 450[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 444[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 445[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 448[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mBUAD 478[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 310[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCGSC 420[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 432[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEG 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 402[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCHEM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 461[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 465[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCIEG 491[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 357[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC3 74[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 475[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 498[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCISC 499[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 326[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 351[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 364[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 388[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 408[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 409[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 426[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 427[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 468[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCOMM 490[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 422[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCPEG 460[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 368[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 424[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 451[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 452[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mCRJU 495[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 210[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDANC 401[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 200[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 345[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mDIST 400[0m
-      [36m</option>[39m
-      [36m<option>[39m
-        [0mECON 436[0m
-      [36m</option>[39m
-      [36m<option>[3...
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-      40 |     test("d) Can choose a course and add it to the pool", () => {
-      41 |         const select = screen.getByRole("combobox");
-    > 42 |         userEvent.selectOptions(select, "CISC275");
-         |                   ^
-      43 |         expect(
-      44 |             screen.getByText(/CISC275: Introduction to Software Engineering/i)
-      45 |         ).toBeInTheDocument();
+    console.error
+      Warning: Encountered two children with the same key, `PSYC 365`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
 
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/user-event/dist/select-options.js:36:37
-          at Array.map (<anonymous>)
-      at selectOptions (node_modules/@testing-library/user-event/dist/select-options.js:27:36)
-      at Object.<anonymous> (src/components/Drag.test.tsx:42:19)
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 232`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 375`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `CRJU 452`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `HIST 304`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `HOSP 355`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `PHIL 338`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `SOCI 471`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `CISC 475`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16990:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `PSYC 365`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 232`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `ANTH 375`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `CRJU 452`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `HIST 304`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `HOSP 355`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `PHIL 338`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `SOCI 471`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
+
+    console.error
+      Warning: Encountered two children with the same key, `CISC 475`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+          at select
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormSelect.js:23:3
+          at div
+          at /home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/node_modules/react-bootstrap/cjs/FormGroup.js:19:3
+          at div
+          at Drag (/home/runner/work/cis-scheduler-team-18/cis-scheduler-team-18/src/components/Drag.tsx:23:33)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at warnOnInvalidKey (node_modules/react-dom/cjs/react-dom.development.js:13620:11)
+      at reconcileChildrenArray (node_modules/react-dom/cjs/react-dom.development.js:13651:21)
+      at reconcileChildFibers (node_modules/react-dom/cjs/react-dom.development.js:14125:14)
+      at reconcileChildren (node_modules/react-dom/cjs/react-dom.development.js:16997:28)
+      at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
 PASS src/components/AddPlanModal.test.tsx
 PASS src/components/CourseInfo.test.tsx
@@ -16762,12 +15372,12 @@ PASS src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                               
 ----------------------------|---------|----------|---------|---------|-------------------------------------------------
-All files                   |   84.72 |    46.46 |   84.27 |   84.56 |                                                 
+All files                   |   85.51 |    46.46 |   85.48 |   85.38 |                                                 
  src                        |   70.66 |    39.28 |   61.76 |   70.58 |                                                 
   App.tsx                   |   60.71 |       25 |   33.33 |    62.5 | 16,25-39,44                                     
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                               
   semesterer.tsx            |   76.74 |     37.5 |   78.94 |      75 | 87-101,125                                      
- src/components             |    86.6 |    47.21 |   87.85 |   86.32 |                                                 
+ src/components             |    87.5 |    47.21 |   89.25 |   87.24 |                                                 
   AddPlanModal.tsx          |     100 |      100 |     100 |     100 |                                                 
   CheckDegreeReqs.tsx       |    87.6 |    37.42 |    97.8 |   87.17 | 243-249,255-261,358-383,394-431,438-449,456-474 
   CourseAdd.tsx             |    98.5 |     92.3 |     100 |   98.46 | 101                                             
@@ -16775,7 +15385,7 @@ All files                   |   84.72 |    46.46 |   84.27 |   84.56 |
   CourseInfo.tsx            |   79.68 |    57.14 |   94.44 |   78.94 | 43,48,55,60,65,70,77,85,93,100,109,117          
   CourseList.tsx            |     100 |       50 |     100 |     100 | 35-190                                          
   CourseView.tsx            |    37.5 |      100 |   22.22 |    37.5 | 27-28,32-34,38,45,59,66-71                      
-  Drag.tsx                  |    37.5 |      100 |   15.38 |    37.5 | 32,36-38,43,50-60,71,83-88                      
+  Drag.tsx                  |   58.33 |      100 |   38.46 |   58.33 | 32,36-38,43,50-51,71,86-88                      
   PlanEditor.tsx            |   28.57 |      100 |      20 |   28.57 | 20-29,46-59                                     
   PlanList.tsx              |     100 |      100 |     100 |     100 |                                                 
   PlanView.tsx              |   66.66 |       50 |      50 |   66.66 | 31                                              
@@ -16790,8 +15400,8 @@ All files                   |   84.72 |    46.46 |   84.27 |   84.56 |
   semester.ts               |       0 |        0 |       0 |       0 |                                                 
 ----------------------------|---------|----------|---------|---------|-------------------------------------------------
 
-Test Suites: 3 failed, 13 passed, 16 total
-Tests:       10 failed, 95 passed, 105 total
+Test Suites: 1 failed, 15 passed, 16 total
+Tests:       2 failed, 103 passed, 105 total
 Snapshots:   0 total
-Time:        31.898 s
+Time:        40.003 s
 Ran all test suites.
