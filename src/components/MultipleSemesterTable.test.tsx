@@ -4,7 +4,7 @@
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { MultipleSemesterTable } from "./multipleSemesterTable";
+import { MultipleSemesterTable } from "./MultipleSemesterTable";
 import semesterPlan from "../data/semesterPlan.json";
 import { Plan } from "../interfaces/plan";
 

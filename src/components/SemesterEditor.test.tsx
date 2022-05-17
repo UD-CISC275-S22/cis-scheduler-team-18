@@ -5,7 +5,7 @@
 //delete button
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { SemesterEditor } from "./semesterEditor";
+import { SemesterEditor } from "./SemesterEditor";
 import semesterPlan from "../data/semesterPlan.json";
 import userEvent from "@testing-library/user-event";
 import App from "../App";

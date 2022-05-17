@@ -4,10 +4,10 @@
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { Semesterer } from "../src/semesterer";
-import semesterPlan from "./data/semesterPlan.json";
-import { Plan } from "./interfaces/plan";
-import App from "./App";
+import { Semesterer } from "./Semesterer";
+import semesterPlan from "../data/semesterPlan.json";
+import { Plan } from "../interfaces/plan";
+import App from "../App";
 import userEvent from "@testing-library/user-event";
 
 const plan = semesterPlan[0];

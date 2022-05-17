@@ -3,7 +3,7 @@
 //edit semester button
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { SemesterView } from "./semesterView";
+import { SemesterView } from "./SemesterView";
 import semesterPlan from "../data/semesterPlan.json";
 
 const plan = semesterPlan[0];
