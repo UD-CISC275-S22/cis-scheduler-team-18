@@ -1,7 +1,7 @@
 //Semester List: returns SemesterView
 //Test to make sure there are semester's in the website
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { SemesterList } from "./SemesterList";
 import semesterPlan from "../data/semesterPlan.json";
 import { Semester } from "../interfaces/semester";
