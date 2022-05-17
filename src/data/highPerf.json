@@ -9,24 +9,6 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC 361",
-        "name": "Operating Systems",
-        "descr": "",
-        "credits": "3",
-        "preReq": "",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
-    },{
-        "code": "CISC 372",
-        "name": "Parallel Computing",
-        "descr": "",
-        "credits": "3",
-        "preReq": "",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
-    },{
         "code": "CISC 450",
         "name": "Computer Networsk I",
         "descr": "",
@@ -40,15 +22,6 @@
         "name": "Compiler Design",
         "descr": "",
         "credits": "3",
-        "preReq": "",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
-    },{
-        "code": "MATH 242",
-        "name": "Analytic Geometry and Calculus B",
-        "descr": "",
-        "credits": "4",
         "preReq": "",
         "restrict": "",
         "breadth": "",

@@ -9,15 +9,6 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC361",
-        "name": "Operating Systems",
-        "descr": "",
-        "credits": "3",
-        "preReq": "",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
-    },{
         "code": "CISC372",
         "name": "Parallel Computing",
         "descr": "",

@@ -18,15 +18,6 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MATH242",
-        "name": "Analytic Geometry and Calculus B",
-        "descr": "",
-        "credits": "3",
-        "preReq": "",
-        "restrict": "",
-        "breadth": "",
-        "typ": ""
-    },{
         "code": "MATH349",
         "name": "Elementary Linear Algebra",
         "descr": "",
