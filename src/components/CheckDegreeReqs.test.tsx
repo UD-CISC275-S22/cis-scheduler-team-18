@@ -168,8 +168,8 @@ test("Group A Req Met", () => {
     });
     userEvent.click(modalAddCourse[1]);
     expect(
-        screen.getByText("University Requirement: Multicultural")
-    ).toBeInTheDocument();
+        screen.queryByText("University Requirement: Multicultural")
+    ).not.toBeInTheDocument();
     expect(screen.getByText("University Requirement: DLE")).toBeInTheDocument();
     expect(
         screen.getByText(
