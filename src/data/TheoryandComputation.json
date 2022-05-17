@@ -1,6 +1,6 @@
 [
     {
-        "code": "CISC304",
+        "code": "CISC 304",
         "name": "Logic for Programming",
         "descr": "",
         "credits": "3",
@@ -8,8 +8,9 @@
         "restrict": "",
         "breadth": "",
         "typ": ""
-    },{
-        "code": "CISC401",
+    },
+    {
+        "code": "CISC 401",
         "name": "Elements of the Theory of Computation",
         "descr": "",
         "credits": "3",
@@ -17,8 +18,9 @@
         "restrict": "",
         "breadth": "",
         "typ": ""
-    },{
-        "code": "MATH242",
+    },
+    {
+        "code": "MATH 242",
         "name": "Analytic Geometry and Calculus B",
         "descr": "",
         "credits": "3",
@@ -26,8 +28,9 @@
         "restrict": "",
         "breadth": "",
         "typ": ""
-    },{
-        "code": "MATH349",
+    },
+    {
+        "code": "MATH 349",
         "name": "Elementary Linear Algebra",
         "descr": "",
         "credits": "3",

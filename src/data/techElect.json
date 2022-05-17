@@ -1,6 +1,6 @@
 [
     {
-        "code": "CISC410",
+        "code": "CISC 410",
         "name": "Computational Mathematics I",
         "descr": "Floating point numbers; conditioning and stability; LU, Cholesky, and QR factorizations; square and overdetermined linear systems; Newton and quasi- Newton rootfinding methods; piecewise polynomials for interpolation, integration, and finite differences; explicit methods for initial-value problems.",
         "credits": "3",
@@ -10,7 +10,7 @@
         "typ": ""
     },
     {
-        "code": "CISC304",
+        "code": "CISC 304",
         "name": "Logic for Programming",
         "descr": "Propositional and predicate logic for general reasoning and advanced applications in knowledge representation in artificial intelligence and database, program correctness and programming semantics. Models, resolution, logic programming, and natural deduction.",
         "credits": "3",
@@ -18,8 +18,9 @@
         "restrict": "",
         "breadth": "",
         "typ": "Fall and Spring"
-    },{
-        "code": "CISC360",
+    },
+    {
+        "code": "CISC 360",
         "name": "Computer Architecture",
         "descr": "Principles and techniques used in the architecture of digital computers. Machine elements and their interrelation. Instruction sets, risc vs cisc, registers, busses and switches.",
         "credits": "3",
@@ -27,248 +28,275 @@
         "restrict": "",
         "breadth": "",
         "typ": "Fall and Spring"
-    },{
-        "code": "CISC401",
+    },
+    {
+        "code": "CISC 401",
         "name": "Elements of the Theory of Computation",
         "descr": "General models of computation, formal languages and automata theory and algorithmic unsolvability.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who recieved credit in CISC601 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."       
-    },{
-        "code": "CISC411",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 411",
         "name": "Formal Mehtods in Software Engineering",
         "descr": "Formal approaches to the specification, verification, and design of software systems. Topics include representing programs as transition systems; liveness and safety properties; state space reachability; explicit, symbolic and automata-based model checking; temporal logics; symbolic execution; automated theorem-proving; and relational calculus. Learn to use state-of-the-art tools based on these methods, such as the model checker Spin.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC614 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."         
-    },{
-        "code": "CISC404",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 404",
         "name": "Logic in Computer Science",
         "descr": "Formal introduction to first-order logic with emphasis on its relevance to computer science. Syntax, semantics, models, formal proofs and results on soundness, consistency, completeness, compactness and undecidability. Automated theorem proving also covered.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC604 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."          
-    },{
-        "code": "CISC437",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 437",
         "name": "Database Systems",
         "descr": "Physical and logical organization of databases. Data retrieval languages, relational database languages, security and integrity, concurrency, distributed databases.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC637 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Fall and Spring"        
-    },{
-        "code": "CISC440",
+        "typ": "Fall and Spring"
+    },
+    {
+        "code": "CISC 440",
         "name": "Computer Graphics",
         "descr": "Computer graphics technology, two- and three-dimensional systems, graphics software systems, modeling and object hierarchy, and animation.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC640 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."           
-    },{
-        "code": "CISC449",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 449",
         "name": "Topics in Computer Applications",
         "descr": "Contents will vary to coincide with the interests of students and current faculty.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC649 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": ""             
-    },{
-        "code": "CISC450",
+        "typ": ""
+    },
+    {
+        "code": "CISC 450",
         "name": "Computer Networks I",
         "descr": "Foundation principles, architectures and techniques employed in computer and communication networks. Focuses on mechanisms used in TCP/IP protocol suite. Topics include connection management, end-to-end reliable data transfer, sliding window protocols, quality of service, flow control, congestion control, routing, LANs, framing, error control, analog versus digital transmission, packet versus circuit switching, multiplexing.",
         "credits": "3",
         "preReq": "",
         "restrict": "Knowledge of probability and statistics recommended. Students who received credit in CISC250, CPEG419, CISC650, or ELEG651 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Fall and Spring"           
-    },{
-        "code": "CISC459",
+        "typ": "Fall and Spring"
+    },
+    {
+        "code": "CISC 459",
         "name": "Topics in Communications, Distributed Computing and Networks",
         "descr": "Contents vary to coincide with the interests of students and current faculty.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC659 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Fall and Spring"         
-    },{
-        "code": "CISC471",
+        "typ": "Fall and Spring"
+    },
+    {
+        "code": "CISC 471",
         "name": "Compiler Design",
         "descr": "Introduction to the design and implementation of compilers, with a focus on lexical analysis, parsing and syntax directed translation.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept"            
-    },{
-        "code": "CISC473",
+        "typ": "Verify offering with Dept"
+    },
+    {
+        "code": "CISC 473",
         "name": "Computer Science Projects",
         "descr": "Experimental, theoretical and literature studies of computer science problems.",
         "credits": "3",
         "preReq": "",
         "restrict": "Open to majors only. Requires permission of instructor. May be taken twice for credit when topics very",
         "breadth": "",
-        "typ": ""        
-    },{
-        "code": "CISC474",
+        "typ": ""
+    },
+    {
+        "code": "CISC 474",
         "name": "Advanced Web Technologies",
         "descr": "Programming and architecture of web servers and the technologies for implementing high performance, sophisticated web sites for applications like e-commerce. Students learn how to install and set-up a web server, how to write and install programs for a web server, and how to design and implement multi-tier client/server applications with database backends.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept."         
-    },{
-        "code": "CISC475",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 475",
         "name": "Advanced Software Engineering",
         "descr": "Understand and apply a complete modern software engineering process. Topics include requirements analysis, specification, design, implementation, verification, and project management. Real-life team projects cover all aspects of the software development lifecycle, from the requirements to acceptance testing.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC675 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."            
-    },{
-        "code": "CISC479",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 479",
         "name": "Topics in Architecture and Software",
         "descr": "Contents will vary to coincide with the interests of students and faculty.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC679 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."          
-    },{
-        "code": "CISC481",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 481",
         "name": "Artificial Intelligence",
         "descr": "Programming techniques for problems not amenable to algorithmic solutions. Problem formulation, search strategies, state spaces, applications of logic, knowledge representation, planning and application areas.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC681 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Fall and Spring"          
-    },{
-        "code": "CISC489",
+        "typ": "Fall and Spring"
+    },
+    {
+        "code": "CISC 489",
         "name": "Topics: Artifical Intelligence",
         "descr": "Contents vary to coincide with the interests of students and current faculty.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC689 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."         
-    },{
-        "code": "CISC464",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 464",
         "name": "Introduction to Network Security",
         "descr": "Practical introduction to network security field. Covers material on cryptography, intrusions, denial-of-service attacks, worms, honeynets and other hot topics in network security.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept."        
-    },{
-        "code": "CISC436",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 436",
         "name": "Computational Biology and Bioinformatics",
         "descr": "Concepts, methodologies, and tools in bioinformatics. Abstraction of biological problems for computational solutions. Genome sequencing and assembly, bio-sequence analysis and comparison and database search, dynamics programming, hidden Markov models, and phylogenetic trees.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept." 
-    },{
-        "code": "CISC453",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 453",
         "name": "Simulation of Computer Networks",
         "descr": "Modeling and computer simulation of discrete systems using discrete event simulation techniques. Application to the performance evaluation and modeling of computer networks and networking protocols. Study and use of simulation systems such as OPNET, Qualnet, and ns-2.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept." 
-    },{
-        "code": "CISC483",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 483",
         "name": "Introduction to Data Mining",
         "descr": "Concepts, techniques, and algorithms for mining large data sets to discover structural patterns that can be used to make subsequent predictions. Emphasis on practical approaches and empirical evaluation. Use of a workbench of data mining tools, such as the Weka toolkit.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept."         
-    },{
-        "code": "CISC442",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 442",
         "name": "Introduction to Computer Vision",
         "descr": "Analysis of images and video to recognize, reconstruct, model, and otherwise infer static and dynamic properties of objects in the three-dimensional world. Geometry of image formation; image processing such as smoothing, edge and feature detection, color, and texture; segmentation; shape representation including deformable templates; stereo vision; motion estimation and tracking; techniques for 3-D reconstruction; image registration methods.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC642 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Verify offering with Dept."            
-    },{
-        "code": "CISC374",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 374",
         "name": "Educational Game Development",
         "descr": "Experience the software engineering process through creating educational games for youth; open-ended, project-oriented team learning while assisting regional teachers in integrating computing and computational thinking into the classroom; interact with teachers as clients, hone communication skills and experience design-studio-based critiques of your ideas.",
         "credits": "3",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Spring"         
-    },{
-        "code": "CISC484",
+        "typ": "Spring"
+    },
+    {
+        "code": "CISC 484",
         "name": "Introduction to Machine Learning",
         "descr": "Development of methods to learn to solve a task using examples. Explore different machine learning algorithms/techniques and discuss their strengths and weaknesses and situations they are or are not suited for.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC684 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": "Fall and Spring"         
-    },{
-        "code": "CISC367",
+        "typ": "Fall and Spring"
+    },
+    {
+        "code": "CISC 367",
         "name": "Seminar",
         "descr": "Seminar",
         "credits": "1-6",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept."        
-    },{
-        "code": "CISC467",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 467",
         "name": "Seminar",
         "descr": "Seminar",
         "credits": "1-6",
         "preReq": "",
         "restrict": "",
         "breadth": "",
-        "typ": "Verify offering with Dept."         
-    },{
-        "code": "CISC482",
+        "typ": "Verify offering with Dept."
+    },
+    {
+        "code": "CISC 482",
         "name": "Introduction to Human-Computer Interaction",
         "descr": "Research and theoretical methods for the study, design, implementation, and evaluation of effective user-interactive systems, including requirements for gathering, survey design, and rapid prototyping. Hands-on group projects supplement theoretical knowledge.",
         "credits": "3",
         "preReq": "",
         "restrict": "Students who received credit in CISC682 are not eligible to take this course without permission",
         "breadth": "",
-        "typ": ""         
-    },{
-        "code": "CISC472",
+        "typ": ""
+    },
+    {
+        "code": "CISC 472",
         "name": "Web Applications Security",
         "descr": "This seminar-style cybersecurity course covers one specific discipline of information security known as application security. This discipline (APPSEC) refers to the development of software that can continue to function correctly even under constant scrutiny and attack by determined adversaries.",
         "credits": "3",
         "preReq": "",
         "restrict": "Programming experience in a high level language. Graduate or upper level software course recommended",
         "breadth": "",
-        "typ": ""          
-    },{
-        "code": "CISC476",
+        "typ": ""
+    },
+    {
+        "code": "CISC 476",
         "name": "Secure Software Design",
         "descr": "This cybersecurity course introduce the theory and practices used to help make a computer program secure and provide the skills needed to implement programs that are free from vulnerabilities.",
         "credits": "3",
         "preReq": "",
         "restrict": "Programming experience in a high level language. Graduate or upper level software course recommended",
         "breadth": "",
-        "typ": ""        
+        "typ": ""
     }
 ]
