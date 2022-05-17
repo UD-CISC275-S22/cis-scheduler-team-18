@@ -1,6 +1,6 @@
 [
     {
-        "code": "CISC361",
+        "code": "CISC 361",
         "name": "Operating Systems",
         "descr": "",
         "credits": "3",
@@ -9,7 +9,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC372",
+        "code": "CISC 372",
         "name": "Parallel Computing",
         "descr": "",
         "credits": "3",
@@ -18,7 +18,7 @@
         "breadth": "",
         "typ": ""
     },    {
-        "code": "CISC304",
+        "code": "CISC 304",
         "name": "Logic for Programming",
         "descr": "",
         "credits": "3",
@@ -27,7 +27,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC450",
+        "code": "CISC 450",
         "name": "Computer Networks I",
         "descr": "",
         "credits": "3",
@@ -36,7 +36,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC464",
+        "code": "CISC 464",
         "name": "Introduction to Network Security",
         "descr": "",
         "credits": "3",
@@ -45,7 +45,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CPEG465",
+        "code": "CPEG 465",
         "name": "Introduction to Cybersecurity",
         "descr": "",
         "credits": "3",
@@ -54,7 +54,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CPEG494",
+        "code": "CPEG 494",
         "name": "Systems Hardening and Protection",
         "descr": "",
         "credits": "3",

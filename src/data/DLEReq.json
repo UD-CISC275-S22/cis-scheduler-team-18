@@ -1,6 +1,6 @@
 [
     {
-        "code": "ACCT363",
+        "code": "ACCT 363",
         "name": "Service Learning and Earned Income Tax Credit",
         "descr": "",
         "credits": "1-3",
@@ -9,7 +9,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ACCT364",
+        "code": "ACCT 364",
         "name": "Accounting in Practice",
         "descr": "",
         "credits": "1-3",
@@ -18,7 +18,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "AFRA464",
+        "code": "AFRA 464",
         "name": "Internship",
         "descr": "",
         "credits": "1-3",
@@ -27,7 +27,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "AFRA468",
+        "code": "AFRA 468",
         "name": "Undergraduate Research in Africana Studies",
         "descr": "",
         "credits": "1-3",
@@ -36,7 +36,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "AFSC310",
+        "code": "AFSC 310",
         "name": "Leadership Studies I",
         "descr": "",
         "credits": "3",
@@ -45,7 +45,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS404",
+        "code": "ANFS 404",
         "name": "Dairy Production",
         "descr": "",
         "credits": "3",
@@ -54,7 +54,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS411",
+        "code": "ANFS 411",
         "name": "Food Science Capstone",
         "descr": "",
         "credits": "3",
@@ -63,7 +63,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS417",
+        "code": "ANFS 417",
         "name": "Beef Cattle and Sheep Production",
         "descr": "",
         "credits": "3",
@@ -72,7 +72,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS418",
+        "code": "ANFS 418",
         "name": "Swine Production",
         "descr": "",
         "credits": "4",
@@ -81,7 +81,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS421",
+        "code": "ANFS 421",
         "name": "Poultry Production",
         "descr": "",
         "credits": "3",
@@ -90,7 +90,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS422",
+        "code": "ANFS 422",
         "name": "Poultry Production Laboratory",
         "descr": "",
         "credits": "1",
@@ -99,7 +99,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS426",
+        "code": "ANFS 426",
         "name": "Equine Management",
         "descr": "",
         "credits": "4",
@@ -108,7 +108,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANFS464",
+        "code": "ANFS 464",
         "name": "Animal and Food Science Experience",
         "descr": "",
         "credits": "1-3",
@@ -117,7 +117,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH218",
+        "code": "ANTH 218",
         "name": "Solving Archaeological Mysteries",
         "descr": "",
         "credits": "3",
@@ -126,7 +126,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH232",
+        "code": "ANTH 232",
         "name": "The Anthropology of Global Youth",
         "descr": "",
         "credits": "3",
@@ -135,7 +135,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH334",
+        "code": "ANTH 334",
         "name": "Peoples and Cultures of Argentina",
         "descr": "",
         "credits": "3",
@@ -144,7 +144,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH338",
+        "code": "ANTH 338",
         "name": "Arts and Crafts of Native South America",
         "descr": "",
         "credits": "3",
@@ -153,7 +153,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH341",
+        "code": "ANTH 341",
         "name": "Issues, Methods Arcaheological Research",
         "descr": "",
         "credits": "3",
@@ -162,7 +162,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH350",
+        "code": "ANTH 350",
         "name": "Contemporary Topics in Anthropology",
         "descr": "",
         "credits": "3",
@@ -171,7 +171,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH375",
+        "code": "ANTH 375",
         "name": "Peoples and Cultures of Modern Latin America",
         "descr": "",
         "credits": "3",
@@ -180,7 +180,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH404",
+        "code": "ANTH 404",
         "name": "Human Osteology",
         "descr": "",
         "credits": "4",
@@ -189,7 +189,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH424",
+        "code": "ANTH 424",
         "name": "Introduction to Archaeological Field Methods",
         "descr": "",
         "credits": "1-6",
@@ -198,7 +198,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH463",
+        "code": "ANTH 463",
         "name": "Historical Archaeology and the Public",
         "descr": "",
         "credits": "3",
@@ -207,7 +207,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH486",
+        "code": "ANTH 486",
         "name": "Tutorial in Social and Cultural Anthropology",
         "descr": "",
         "credits": "3",
@@ -216,7 +216,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ANTH489",
+        "code": "ANTH 489",
         "name": "Tutorial in Applied Anthropology",
         "descr": "",
         "credits": "3",
@@ -225,7 +225,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "APEC409",
+        "code": "APEC 409",
         "name": "Surveys and Economic Experiments",
         "descr": "",
         "credits": "3",
@@ -234,7 +234,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "APEC412",
+        "code": "APEC 412",
         "name": "Strategic Marketing Competition",
         "descr": "",
         "credits": "1-3",
@@ -243,7 +243,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "APEC430",
+        "code": "APEC 430",
         "name": "Establishing and Managing a Food and Agribusiness Enterprise",
         "descr": "",
         "credits": "3",
@@ -252,7 +252,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ARSC316",
+        "code": "ARSC 316",
         "name": "Peer Tutoring/Advanced Composition",
         "descr": "",
         "credits": "3",
@@ -261,7 +261,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ARSC480",
+        "code": "ARSC 480",
         "name": "Issues in Healthcare for Children and Families",
         "descr": "",
         "credits": "3",
@@ -270,7 +270,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ARSC482",
+        "code": "ARSC 482",
         "name": "Issues in Public Healthcare - Economics",
         "descr": "",
         "credits": "3",
@@ -279,7 +279,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ART408",
+        "code": "ART 408",
         "name": "Internship",
         "descr": "",
         "credits": "3",
@@ -288,7 +288,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ART416",
+        "code": "ART 416",
         "name": "Junior Seminar",
         "descr": "",
         "credits": "3",
@@ -297,7 +297,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ARTC464",
+        "code": "ARTC 464",
         "name": "Intenship in Art History",
         "descr": "",
         "credits": "3-6",
@@ -306,7 +306,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ARTH464",
+        "code": "ARTH 464",
         "name": "Intenship in Art History",
         "descr": "",
         "credits": "1-3",
@@ -315,7 +315,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BHAN464",
+        "code": "BHAN 464",
         "name": "Health Behavior Science Internship",
         "descr": "",
         "credits": "6-9",
@@ -324,7 +324,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC312",
+        "code": "BISC 312",
         "name": "Field Ecology",
         "descr": "",
         "credits": "3",
@@ -333,7 +333,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC316",
+        "code": "BISC 316",
         "name": "Experimental PHysiology",
         "descr": "",
         "credits": "3",
@@ -342,7 +342,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC411",
+        "code": "BISC 411",
         "name": "Experimental Molecular Biology",
         "descr": "",
         "credits": "4",
@@ -351,7 +351,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC412",
+        "code": "BISC 412",
         "name": "Developmental & Molecular Lab",
         "descr": "",
         "credits": "3",
@@ -360,7 +360,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC413",
+        "code": "BISC 413",
         "name": "Advanced Genetics Lab",
         "descr": "",
         "credits": "3",
@@ -369,7 +369,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC451",
+        "code": "BISC 451",
         "name": "Undergraduate Thesis I",
         "descr": "",
         "credits": "3",
@@ -378,7 +378,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC452",
+        "code": "BISC 452",
         "name": "Undergraduate Thesis II",
         "descr": "",
         "credits": "3",
@@ -387,7 +387,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC468",
+        "code": "BISC 468",
         "name": "Research",
         "descr": "",
         "credits": "1-6",
@@ -396,7 +396,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BISC484",
+        "code": "BISC 484",
         "name": "Computer Based Genetics Lab",
         "descr": "",
         "credits": "3",
@@ -405,7 +405,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BMEG450",
+        "code": "BMEG 450",
         "name": "Biomedical Engineering Design",
         "descr": "",
         "credits": "6",
@@ -414,7 +414,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BREG450",
+        "code": "BREG 450",
         "name": "Technical Practicum in Industry",
         "descr": "",
         "credits": "1-3",
@@ -423,7 +423,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BUAD364",
+        "code": "BUAD 364",
         "name": "Business Administration in Practice",
         "descr": "",
         "credits": "3",
@@ -432,7 +432,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BUAD444",
+        "code": "BUAD 444",
         "name": "Small Business Management",
         "descr": "",
         "credits": "3",
@@ -441,7 +441,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BUAD445",
+        "code": "BUAD 445",
         "name": "Business Analytics Capstone",
         "descr": "",
         "credits": "3",
@@ -450,7 +450,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BUAD448",
+        "code": "BUAD 448",
         "name": "Project Management: Consulting Practicum",
         "descr": "",
         "credits": "3",
@@ -459,7 +459,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BUAD468",
+        "code": "BUAD 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-6",
@@ -468,7 +468,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "BUAD478",
+        "code": "BUAD 478",
         "name": "Field Projects in Marketing",
         "descr": "",
         "credits": "3",
@@ -477,7 +477,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CGSC310",
+        "code": "CGSC 310",
         "name": "Cognitive Science Internship",
         "descr": "",
         "credits": "1-3",
@@ -486,7 +486,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CGSC420",
+        "code": "CGSC 420",
         "name": "Research Methods in Cognitive Science",
         "descr": "",
         "credits": "3",
@@ -495,7 +495,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CHEG432",
+        "code": "CHEG 432",
         "name": "Chemical Process Analysis",
         "descr": "",
         "credits": "3",
@@ -504,7 +504,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CHEG468",
+        "code": "CHEG 468",
         "name": "Research",
         "descr": "",
         "credits": "1-9",
@@ -513,7 +513,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CHEM402",
+        "code": "CHEM 402",
         "name": "Teaching Experience",
         "descr": "",
         "credits": "1-3",
@@ -522,7 +522,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CHEM468",
+        "code": "CHEM 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-6",
@@ -531,7 +531,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CIEG461",
+        "code": "CIEG 461",
         "name": "Senior Design Project",
         "descr": "",
         "credits": "2",
@@ -540,7 +540,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CIEG465",
+        "code": "CIEG 465",
         "name": "Global Sustainable Engineering",
         "descr": "",
         "credits": "3",
@@ -549,7 +549,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CIEG491",
+        "code": "CIEG 491",
         "name": "Senior Design - Construction Engineering",
         "descr": "",
         "credits": "4",
@@ -558,7 +558,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC357",
+        "code": "CISC 357",
         "name": "Engaging Youth in Computing",
         "descr": "",
         "credits": "1-3",
@@ -567,7 +567,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC374",
+        "code": "CISC3 74",
         "name": "Educational Game Development",
         "descr": "",
         "credits": "3",
@@ -576,7 +576,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC475",
+        "code": "CISC 475",
         "name": "Advanced Software Engineering",
         "descr": "",
         "credits": "3",
@@ -585,7 +585,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC498",
+        "code": "CISC 498",
         "name": "Computer Science Senior Design Project I",
         "descr": "",
         "credits": "3",
@@ -594,7 +594,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC499",
+        "code": "CISC 499",
         "name": "Computer Science Senior Design Project II",
         "descr": "",
         "credits": "3",
@@ -603,7 +603,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM326",
+        "code": "COMM 326",
         "name": "Field Television Production",
         "descr": "",
         "credits": "3",
@@ -612,7 +612,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM351",
+        "code": "COMM 351",
         "name": "Oral Communication Consultants",
         "descr": "",
         "credits": "3",
@@ -621,7 +621,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM364",
+        "code": "COMM 364",
         "name": "Internship",
         "descr": "",
         "credits": "1-3",
@@ -630,7 +630,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM388",
+        "code": "COMM 388",
         "name": "Video Production Practicum",
         "descr": "",
         "credits": "1-4",
@@ -639,7 +639,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM408",
+        "code": "COMM 408",
         "name": "New Media Project Development",
         "descr": "",
         "credits": "3",
@@ -648,7 +648,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM409",
+        "code": "COMM 409",
         "name": "Public Relations Campaign Planning",
         "descr": "",
         "credits": "3",
@@ -657,7 +657,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM424",
+        "code": "COMM 424",
         "name": "Media Message Analysis",
         "descr": "",
         "credits": "3",
@@ -666,7 +666,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM426",
+        "code": "COMM 426",
         "name": "Broadcast News Documentary",
         "descr": "",
         "credits": "3",
@@ -675,7 +675,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM427",
+        "code": "COMM 427",
         "name": "Broadcast News",
         "descr": "",
         "credits": "4",
@@ -684,7 +684,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM468",
+        "code": "COMM 468",
         "name": "Undergraduate Research in Communication",
         "descr": "",
         "credits": "1-6",
@@ -693,7 +693,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "COMM490",
+        "code": "COMM 490",
         "name": "Honors Capstone",
         "descr": "",
         "credits": "3",
@@ -702,7 +702,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CPEG422",
+        "code": "CPEG 422",
         "name": "Embedded Systems Hardware/Software Co-Design",
         "descr": "",
         "credits": "3",
@@ -711,7 +711,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CPEG460",
+        "code": "CPEG 460",
         "name": "Introduction to VLSI Systems",
         "descr": "",
         "credits": "3",
@@ -720,7 +720,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CRJU368",
+        "code": "CRJU 368",
         "name": "Independent Research",
         "descr": "",
         "credits": "1-6",
@@ -729,7 +729,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CRJU424",
+        "code": "CRJU 424",
         "name": "Women in Literature and Society",
         "descr": "",
         "credits": "3",
@@ -738,7 +738,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CRJU451",
+        "code": "CRJU 451",
         "name": "Topics in Crime, Law and Society: inside/out",
         "descr": "",
         "credits": "3",
@@ -747,7 +747,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CRJU452",
+        "code": "CRJU 452",
         "name": "Drugs and the Criminal Justice System",
         "descr": "",
         "credits": "3",
@@ -756,7 +756,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CRJU495",
+        "code": "CRJU 495",
         "name": "Field Experience in Criminal Justice",
         "descr": "",
         "credits": "4",
@@ -765,7 +765,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "DANC210",
+        "code": "DANC 210",
         "name": "Performance Practicum in Dance",
         "descr": "",
         "credits": "1",
@@ -774,7 +774,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "DANC400",
+        "code": "DANC 400",
         "name": "Dance in School and Community Settings",
         "descr": "",
         "credits": "1-3",
@@ -783,7 +783,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "DANC401",
+        "code": "DANC 401",
         "name": "Dance Capstone Experience",
         "descr": "",
         "credits": "1-3",
@@ -792,7 +792,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "DIST200",
+        "code": "DIST 200",
         "name": "Access: ABILITY Experience",
         "descr": "",
         "credits": "1-3",
@@ -801,7 +801,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "DIST345",
+        "code": "DIST 345",
         "name": "Mentoring Students: Int & Dev Disab",
         "descr": "",
         "credits": "3",
@@ -810,7 +810,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "DIST400",
+        "code": "DIST 400",
         "name": "Access: ABILITY Senior Project",
         "descr": "",
         "credits": "3",
@@ -819,7 +819,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ECON436",
+        "code": "ECON 436",
         "name": "Seminar in Public Policy Economics",
         "descr": "",
         "credits": "3",
@@ -828,7 +828,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "EDUC205",
+        "code": "EDUC 205",
         "name": "Human Development: Grades K-8",
         "descr": "",
         "credits": "3",
@@ -837,7 +837,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "EDUC310",
+        "code": "EDUC 310",
         "name": "Reading and Writing in Elementary School",
         "descr": "",
         "credits": "3",
@@ -846,7 +846,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "EDUC400",
+        "code": "EDUC 400",
         "name": "Student Teaching",
         "descr": "",
         "credits": "3-12",
@@ -855,7 +855,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "EDUC413",
+        "code": "EDUC 413",
         "name": "Adolescent Development and Educational Psychology",
         "descr": "",
         "credits": "4",
@@ -864,7 +864,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "EDUC450",
+        "code": "EDUC 450",
         "name": "Semiconductor Device Design and Fabrication",
         "descr": "",
         "credits": "4",
@@ -873,7 +873,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ELEG498",
+        "code": "ELEG 498",
         "name": "Senior Design I",
         "descr": "",
         "credits": "3",
@@ -882,7 +882,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ELEG499",
+        "code": "ELEG 499",
         "name": "Senior Design II",
         "descr": "",
         "credits": "3",
@@ -891,7 +891,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENEP364",
+        "code": "ENEP 364",
         "name": "Research Internship",
         "descr": "",
         "credits": "3",
@@ -900,7 +900,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENEP472",
+        "code": "ENEP 472",
         "name": "Senior Thesis",
         "descr": "",
         "credits": "2-6",
@@ -909,7 +909,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENGL308",
+        "code": "ENGL 308",
         "name": "Reporter's Practicum",
         "descr": "",
         "credits": "3",
@@ -918,7 +918,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENGL462",
+        "code": "ENGL 462",
         "name": "Experimental Learning",
         "descr": "",
         "credits": "3",
@@ -927,7 +927,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENGL464",
+        "code": "ENGL 464",
         "name": "Internship in Professional Writing",
         "descr": "",
         "credits": "3",
@@ -936,7 +936,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENGL468",
+        "code": "ENGL 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-3",
@@ -945,7 +945,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENGL469",
+        "code": "ENGL 469",
         "name": "Internship",
         "descr": "",
         "credits": "1-3",
@@ -954,7 +954,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENGL480",
+        "code": "ENGL 480",
         "name": "Literary Studies Seminar",
         "descr": "",
         "credits": "3",
@@ -963,7 +963,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENSC425",
+        "code": "ENSC 425",
         "name": "Environmental Field MEthods",
         "descr": "",
         "credits": "3",
@@ -972,7 +972,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENSC426",
+        "code": "ENSC 426",
         "name": "Alpine Environmental Field Methods",
         "descr": "",
         "credits": "3",
@@ -981,7 +981,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENSC464",
+        "code": "ENSC 464",
         "name": "Environmental Internship",
         "descr": "",
         "credits": "1-6",
@@ -990,7 +990,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR353",
+        "code": "ENTR 353",
         "name": "ENTR Apprentince: Leadership & Influence",
         "descr": "",
         "credits": "3",
@@ -999,7 +999,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR364",
+        "code": "ENTR 364",
         "name": "Entrepreneurship in Practice: Internship",
         "descr": "",
         "credits": "3",
@@ -1008,7 +1008,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR420",
+        "code": "ENTR 420",
         "name": "Social Entrepreneurship",
         "descr": "",
         "credits": "3",
@@ -1017,7 +1017,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR450",
+        "code": "ENTR 450",
         "name": "Business Accelerator for New Ventures",
         "descr": "",
         "credits": "1-6",
@@ -1026,7 +1026,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR455",
+        "code": "ENTR 455",
         "name": "Startup Experience I",
         "descr": "",
         "credits": "3",
@@ -1035,7 +1035,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR456",
+        "code": "ENTR 456",
         "name": "Startup Experience II",
         "descr": "",
         "credits": "3",
@@ -1044,7 +1044,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR458",
+        "code": "ENTR 458",
         "name": "Developing New Technology-Based Products",
         "descr": "",
         "credits": "3",
@@ -1053,7 +1053,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR464",
+        "code": "ENTR 464",
         "name": "Social Entrepreneurship Practicum",
         "descr": "",
         "credits": "3",
@@ -1062,7 +1062,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENTR489",
+        "code": "ENTR 489",
         "name": "Eco-Entrepreneurship Practicum",
         "descr": "",
         "credits": "3",
@@ -1071,7 +1071,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENWC408",
+        "code": "ENWC 408",
         "name": "Insect Field Taxonomy",
         "descr": "",
         "credits": "3",
@@ -1080,7 +1080,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENWC415",
+        "code": "ENWC 415",
         "name": "Wildlife Techniques",
         "descr": "",
         "credits": "3",
@@ -1089,7 +1089,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENWC423",
+        "code": "ENWC 423",
         "name": "Pollination Ecology",
         "descr": "",
         "credits": "3",
@@ -1098,7 +1098,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENWC426",
+        "code": "ENWC 426",
         "name": "Aquatic Entomology",
         "descr": "",
         "credits": "3",
@@ -1107,7 +1107,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "ENWC468",
+        "code": "ENWC 468",
         "name": "Research",
         "descr": "",
         "credits": "1-6",
@@ -1116,7 +1116,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FASH320",
+        "code": "FASH 320",
         "name": "Fashion and Apparel Internship",
         "descr": "",
         "credits": "1-3",
@@ -1125,7 +1125,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FASH417",
+        "code": "FASH 417",
         "name": "Fashion and Apparel Studies Research and Discovery",
         "descr": "",
         "credits": "3",
@@ -1134,7 +1134,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FASH419",
+        "code": "FASH 419",
         "name": "Social Psychology of Fashion",
         "descr": "",
         "credits": "3",
@@ -1143,7 +1143,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FASH425",
+        "code": "FASH 425",
         "name": "Wearable Product Design",
         "descr": "",
         "credits": "3",
@@ -1152,7 +1152,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FINC364",
+        "code": "FINC 364",
         "name": "Finance in Practice",
         "descr": "",
         "credits": "3",
@@ -1161,7 +1161,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FINC418",
+        "code": "FINC 418",
         "name": "Seminar in Coporate Governance",
         "descr": "",
         "credits": "3",
@@ -1170,7 +1170,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FINC425",
+        "code": "FINC 425",
         "name": "Financial Plan Development",
         "descr": "",
         "credits": "3",
@@ -1179,7 +1179,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "FREN456",
+        "code": "FREN 456",
         "name": "French Theater Workshop",
         "descr": "",
         "credits": "3",
@@ -1188,7 +1188,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "GEOG309",
+        "code": "GEOG 309",
         "name": "Geography of Central and Western Europe",
         "descr": "",
         "credits": "3",
@@ -1197,7 +1197,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "GEOG315",
+        "code": "GEOG 315",
         "name": "People. Politics and Place",
         "descr": "",
         "credits": "3",
@@ -1206,7 +1206,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "GEOL306",
+        "code": "GEOL 306",
         "name": "Geoscience Field MEthods",
         "descr": "",
         "credits": "4",
@@ -1215,7 +1215,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "GEOL434",
+        "code": "GEOL 434",
         "name": "Geology of Coasts",
         "descr": "",
         "credits": "3",
@@ -1224,7 +1224,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HDFS225",
+        "code": "HDFS 225",
         "name": "Special Olympics Relationship Experience",
         "descr": "",
         "credits": "1",
@@ -1233,7 +1233,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HDFS334",
+        "code": "HDFS 334",
         "name": "Experimental Education",
         "descr": "",
         "credits": "3",
@@ -1242,7 +1242,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HDFS335",
+        "code": "HDFS 335",
         "name": "Culture in Context",
         "descr": "",
         "credits": "1-3",
@@ -1251,7 +1251,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HDFS436",
+        "code": "HDFS 436",
         "name": "Practicum I in Early Childhood Development",
         "descr": "",
         "credits": "4",
@@ -1260,7 +1260,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HIST268",
+        "code": "HIST 268",
         "name": "Seminar",
         "descr": "",
         "credits": "3",
@@ -1269,7 +1269,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HIST304",
+        "code": "HIST 304",
         "name": "Jews and Food",
         "descr": "",
         "credits": "3",
@@ -1278,7 +1278,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HIST464",
+        "code": "HIST 464",
         "name": "Internship in History",
         "descr": "",
         "credits": "1-6",
@@ -1287,7 +1287,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HIST468",
+        "code": "HIST 468",
         "name": "Undergraduate Research in History",
         "descr": "",
         "credits": "1-3",
@@ -1296,7 +1296,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HIST491",
+        "code": "HIST 491",
         "name": "Planning a Course of instruction",
         "descr": "",
         "credits": "3",
@@ -1305,7 +1305,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HLTH215",
+        "code": "HLTH 215",
         "name": "Healthcare Communication: UDSP",
         "descr": "",
         "credits": "3",
@@ -1314,7 +1314,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HLTH320",
+        "code": "HLTH 320",
         "name": "Chronic Illness in America",
         "descr": "",
         "credits": "3",
@@ -1323,7 +1323,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HLTH395",
+        "code": "HLTH 395",
         "name": "Global Internship in Health Sciences",
         "descr": "",
         "credits": "1-6",
@@ -1332,7 +1332,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HLTH490",
+        "code": "HLTH 490",
         "name": "Clinical Research Practicum",
         "descr": "",
         "credits": "1-6",
@@ -1341,7 +1341,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HLTH491",
+        "code": "HLTH 491",
         "name": "Care Coordination Practicum",
         "descr": "",
         "credits": "1-6",
@@ -1350,7 +1350,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HLTH495",
+        "code": "HLTH 495",
         "name": "Health Sciences Practicum",
         "descr": "",
         "credits": "6",
@@ -1359,7 +1359,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HOSP300",
+        "code": "HOSP 300",
         "name": "Hospitality in Healthcare Management",
         "descr": "",
         "credits": "3",
@@ -1368,7 +1368,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HOSP355",
+        "code": "HOSP 355",
         "name": "Ecotourism Entrepreneurship",
         "descr": "",
         "credits": "3",
@@ -1377,7 +1377,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HOSP364",
+        "code": "HOSP 364",
         "name": "Event and Meeting Management Practicum",
         "descr": "",
         "credits": "1-3",
@@ -1386,7 +1386,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HOSP488",
+        "code": "HOSP 488",
         "name": "Management of Lodging Operations Practicum",
         "descr": "",
         "credits": "1-4",
@@ -1395,7 +1395,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HOSP489",
+        "code": "HOSP 489",
         "name": "Management of Restaurant Operations Practicum",
         "descr": "",
         "credits": "7",
@@ -1404,7 +1404,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "HOSP495",
+        "code": "HOSP 495",
         "name": "Hospitality Feasibility Studies",
         "descr": "",
         "credits": "3",
@@ -1413,7 +1413,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "JAPN490",
+        "code": "JAPN 490",
         "name": "Research Thesis in Japanese",
         "descr": "",
         "credits": "3",
@@ -1422,7 +1422,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "JOUR464",
+        "code": "JOUR 464",
         "name": "Internship in Journalism",
         "descr": "",
         "credits": "3",
@@ -1431,7 +1431,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP106",
+        "code": "KAAP 106",
         "name": "Seminar for Pre-Athletic Training I",
         "descr": "",
         "credits": "1",
@@ -1440,7 +1440,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP107",
+        "code": "KAAP 107",
         "name": "Seminar for Pre-Athletic Training II",
         "descr": "",
         "credits": "1",
@@ -1449,7 +1449,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP206",
+        "code": "KAAP 206",
         "name": "Seminar for Pre-Athletic Training III",
         "descr": "",
         "credits": "1",
@@ -1458,7 +1458,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP207",
+        "code": "KAAP 207",
         "name": "Seminar for Pre-Athletic Training IV",
         "descr": "",
         "credits": "1",
@@ -1467,7 +1467,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP257",
+        "code": "KAAP 257",
         "name": "Athletic Training Practicum I",
         "descr": "",
         "credits": "3",
@@ -1476,7 +1476,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP285",
+        "code": "KAAP 285",
         "name": "Introduction to Research in Health Sciences",
         "descr": "",
         "credits": "3",
@@ -1485,7 +1485,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP301",
+        "code": "KAAP 301",
         "name": "Lifespan Motor Development",
         "descr": "",
         "credits": "3",
@@ -1494,7 +1494,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP306",
+        "code": "KAAP 306",
         "name": "Seminar for Pre-Athletic Training V",
         "descr": "",
         "credits": "1",
@@ -1503,7 +1503,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP307",
+        "code": "KAAP 307",
         "name": "Seminar for Pre-Athletic Training VI",
         "descr": "",
         "credits": "1",
@@ -1512,7 +1512,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP357",
+        "code": "KAAP 357",
         "name": "Athletic Training Practicum II",
         "descr": "",
         "credits": "3",
@@ -1521,7 +1521,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP358",
+        "code": "KAAP 358",
         "name": "Athletic Training Practicum III",
         "descr": "",
         "credits": "3",
@@ -1530,7 +1530,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP400",
+        "code": "KAAP 400",
         "name": "Research Methods",
         "descr": "",
         "credits": "3",
@@ -1539,7 +1539,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP457",
+        "code": "KAAP 457",
         "name": "Athletic Training Practicum IV",
         "descr": "",
         "credits": "3",
@@ -1548,7 +1548,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP458",
+        "code": "KAAP 458",
         "name": "Athletic Training Practicum V",
         "descr": "",
         "credits": "3",
@@ -1557,7 +1557,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "KAAP459",
+        "code": "KAAP 459",
         "name": "Athletic Training Practicum VI",
         "descr": "",
         "credits": "3",
@@ -1566,7 +1566,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LAMS464",
+        "code": "LAMS 464",
         "name": "Internship in Latin American Studies",
         "descr": "",
         "credits": "1-3",
@@ -1575,7 +1575,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LARC332",
+        "code": "LARC 332",
         "name": "Landscape Architecture Symposium I",
         "descr": "",
         "credits": "1",
@@ -1584,7 +1584,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LARC364",
+        "code": "LARC3 64",
         "name": "Landscape Architecture Internship",
         "descr": "",
         "credits": "1-6",
@@ -1593,7 +1593,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LARC456",
+        "code": "LARC 456",
         "name": "Studio 6: Senior Design",
         "descr": "",
         "credits": "6",
@@ -1602,7 +1602,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LEAD268",
+        "code": "LEAD 268",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-3",
@@ -1611,7 +1611,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LEAD340",
+        "code": "LEAD 340",
         "name": "Leadership Internship",
         "descr": "",
         "credits": "3-6",
@@ -1620,7 +1620,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LEAD390",
+        "code": "LEAD 390",
         "name": "Teaching Assistant",
         "descr": "",
         "credits": "1-3",
@@ -1629,7 +1629,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LEAD468",
+        "code": "LEAD 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-3",
@@ -1638,7 +1638,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LEAD490",
+        "code": "LEAD 490",
         "name": "Senior Capstone",
         "descr": "",
         "credits": "3",
@@ -1647,7 +1647,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LING353",
+        "code": "LING 353",
         "name": "Introduction to Speech and Hearing Science",
         "descr": "",
         "credits": "3",
@@ -1656,7 +1656,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "LING471",
+        "code": "LING 471",
         "name": "Discovering Human Language",
         "descr": "",
         "credits": "3",
@@ -1665,7 +1665,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MAST407",
+        "code": "MAST 407",
         "name": "Research Experience in Biodiversity",
         "descr": "",
         "credits": "4",
@@ -1674,7 +1674,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MAST421",
+        "code": "MAST 421",
         "name": "Coastal Field Biology",
         "descr": "",
         "credits": "3",
@@ -1683,7 +1683,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MAST432",
+        "code": "MAST 432",
         "name": "Environmental Feild Robotics",
         "descr": "",
         "credits": "4",
@@ -1692,7 +1692,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MAST443",
+        "code": "MAST 443",
         "name": "Field Studies Coral Reef Environments",
         "descr": "",
         "credits": "3",
@@ -1701,7 +1701,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MAST468",
+        "code": "MAST 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-6",
@@ -1710,7 +1710,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MCST464",
+        "code": "MCST 464",
         "name": "Material Culture Studies Internship",
         "descr": "",
         "credits": "3-6",
@@ -1719,7 +1719,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MEEG401",
+        "code": "MEEG 401",
         "name": "Senior Design",
         "descr": "",
         "credits": "6",
@@ -1728,7 +1728,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MEEG402",
+        "code": "MEEG 402",
         "name": "Senior Design FSAE",
         "descr": "",
         "credits": "6",
@@ -1737,7 +1737,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MISY364",
+        "code": "MISY 364",
         "name": "Management Information Systems in Practice",
         "descr": "",
         "credits": "3",
@@ -1746,7 +1746,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MISY375",
+        "code": "MISY 375",
         "name": "GET Immersion Experience Internship",
         "descr": "",
         "credits": "3",
@@ -1755,7 +1755,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MISY420",
+        "code": "MISY 420",
         "name": "Global IT Enabled Innovation and Change",
         "descr": "",
         "credits": "3",
@@ -1764,7 +1764,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC105",
+        "code": "MLSC 105",
         "name": "Introduction to Leadership I",
         "descr": "",
         "credits": "1",
@@ -1773,7 +1773,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC106",
+        "code": "MLSC 106",
         "name": "Introduction to Leadership II",
         "descr": "",
         "credits": "1",
@@ -1782,7 +1782,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC205",
+        "code": "MLSC 205",
         "name": "Basic Leadership I",
         "descr": "",
         "credits": "1",
@@ -1791,7 +1791,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC206",
+        "code": "MLSC 206",
         "name": "Basic Leaderhship II",
         "descr": "",
         "credits": "3",
@@ -1800,7 +1800,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC305",
+        "code": "MLSC 305",
         "name": "Applied Leadership I",
         "descr": "",
         "credits": "2",
@@ -1809,7 +1809,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC306",
+        "code": "MLSC 306",
         "name": "Applied Leadership II",
         "descr": "",
         "credits": "2",
@@ -1818,7 +1818,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC405",
+        "code": "MLSC 405",
         "name": "Advanced Leadership I",
         "descr": "",
         "credits": "2",
@@ -1827,7 +1827,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MLSC406",
+        "code": "MLSC 406",
         "name": "Advanced Leadership II",
         "descr": "",
         "credits": "2",
@@ -1836,7 +1836,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC410",
+        "code": "MMSC 410",
         "name": "Genetic Counseling Practicum",
         "descr": "",
         "credits": "1-3",
@@ -1845,7 +1845,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC444",
+        "code": "MMSC 444",
         "name": "Biotechnology Practicum IV",
         "descr": "",
         "credits": "3",
@@ -1854,7 +1854,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC455",
+        "code": "MMSC 455",
         "name": "Forensic Science Practicum",
         "descr": "",
         "credits": "3",
@@ -1863,7 +1863,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC462",
+        "code": "MMSC 462",
         "name": "Interdisciploinary Healthcare Perspectives",
         "descr": "",
         "credits": "3",
@@ -1872,7 +1872,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC473",
+        "code": "MMSC 473",
         "name": "Clinical Chemistry Practicum",
         "descr": "",
         "credits": "3",
@@ -1881,7 +1881,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC474",
+        "code": "MMS C474",
         "name": "Honors Clinical Chemistry Practicum",
         "descr": "",
         "credits": "3",
@@ -1890,7 +1890,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC475",
+        "code": "MMSC 475",
         "name": "Clinical Hematology Practicum",
         "descr": "",
         "credits": "3",
@@ -1899,7 +1899,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC476",
+        "code": "MMSC 476",
         "name": "Honors Clinical Hematology Practicum",
         "descr": "",
         "credits": "3",
@@ -1908,7 +1908,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC477",
+        "code": "MMSC 477",
         "name": "Clinical Microbiology and Immunology Practicum",
         "descr": "",
         "credits": "3",
@@ -1917,7 +1917,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC478",
+        "code": "MMSC 478",
         "name": "Honors Clinical Microbiology and Immunology Practicum",
         "descr": "",
         "credits": "3",
@@ -1926,7 +1926,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC479",
+        "code": "MMSC 479",
         "name": "Clinical Immunohematology Practicum",
         "descr": "",
         "credits": "3",
@@ -1935,7 +1935,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MMSC481",
+        "code": "MMSC 481",
         "name": "HNRS Clinical Immunohematology Practicum",
         "descr": "",
         "credits": "3",
@@ -1944,7 +1944,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MSEG401",
+        "code": "MSEG 401",
         "name": "Design of Materials and Their Application",
         "descr": "",
         "credits": "6",
@@ -1953,7 +1953,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MSST464",
+        "code": "MSST 464",
         "name": "Museum Studies Internship",
         "descr": "",
         "credits": "3",
@@ -1962,7 +1962,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MUSC401",
+        "code": "MUSC 401",
         "name": "Senior Recital",
         "descr": "",
         "credits": "0",
@@ -1971,7 +1971,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MUSC423",
+        "code": "MUSC 423",
         "name": "Private Study Capstone for Advanced Composition",
         "descr": "",
         "credits": "3",
@@ -1980,7 +1980,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MUSC457",
+        "code": "MUSC 457",
         "name": "Private Study for Applied Music VII",
         "descr": "",
         "credits": "4",
@@ -1989,7 +1989,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MUSC458",
+        "code": "MUSC 458",
         "name": "Private Study for Applied Music VII",
         "descr": "",
         "credits": "4",
@@ -1998,7 +1998,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MUSC464",
+        "code": "MUSC 464",
         "name": "Internship",
         "descr": "",
         "credits": "1-3",
@@ -2007,7 +2007,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MUSC499",
+        "code": "MUSC 499",
         "name": "Music Portfolio Capstone Project",
         "descr": "",
         "credits": "1-3",
@@ -2016,7 +2016,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NSCI368",
+        "code": "NSCI 368",
         "name": "Research",
         "descr": "",
         "credits": "1-6",
@@ -2025,7 +2025,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NSCI468",
+        "code": "NSCI 468",
         "name": "Advanced Research",
         "descr": "",
         "credits": "1-6",
@@ -2034,7 +2034,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NTDT350",
+        "code": "NTDT 350",
         "name": "Nutrition and Older Adults",
         "descr": "",
         "credits": "3",
@@ -2043,7 +2043,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NTDT460",
+        "code": "NTDT 460",
         "name": "Community Nutrition",
         "descr": "",
         "credits": "3",
@@ -2052,7 +2052,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS353",
+        "code": "NURS 353",
         "name": "Nursing Care of Adults Practicum I",
         "descr": "",
         "credits": "4",
@@ -2061,7 +2061,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS355",
+        "code": "NURS 355",
         "name": "Psychiatric Mental Health Nursing Practicum",
         "descr": "",
         "credits": "3",
@@ -2070,7 +2070,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS357",
+        "code": "NURS 357",
         "name": "Nursing Care of Children Practicum",
         "descr": "",
         "credits": "3",
@@ -2079,7 +2079,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS375",
+        "code": "NURS 375",
         "name": "Nursing care of Adults II",
         "descr": "",
         "credits": "3",
@@ -2088,7 +2088,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS443",
+        "code": "NURS 443",
         "name": "BRN Role Practicum",
         "descr": "",
         "credits": "4",
@@ -2097,7 +2097,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS453",
+        "code": "NURS 453",
         "name": "Clinical Applications Adult Health Nursing I",
         "descr": "",
         "credits": "3",
@@ -2106,7 +2106,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS457",
+        "code": "NURS 457",
         "name": "Clinical Applications: Maternal Child Nursing",
         "descr": "",
         "credits": "3",
@@ -2115,7 +2115,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS459",
+        "code": "NURS 459",
         "name": "Clinical Applications: Psychosocail Nursing",
         "descr": "",
         "credits": "3",
@@ -2124,7 +2124,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS478",
+        "code": "NURS 478",
         "name": "Honors: Care of Populations",
         "descr": "",
         "credits": "3",
@@ -2133,7 +2133,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "NURS485",
+        "code": "NURS 485",
         "name": "Integrative Practicum - Capstone Preceptorship",
         "descr": "",
         "credits": "3",
@@ -2142,7 +2142,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PHIL338",
+        "code": "PHIL 338",
         "name": "Religion at the Crossroads of Culture",
         "descr": "",
         "credits": "3",
@@ -2151,7 +2151,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PHYS468",
+        "code": "PHYS 468",
         "name": "Introduction to Research",
         "descr": "",
         "credits": "1-6",
@@ -2160,7 +2160,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PLSC364",
+        "code": "PLSC 364",
         "name": "Plant Science and Sustainable Food System Internship",
         "descr": "",
         "credits": "1-6",
@@ -2169,7 +2169,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PLSC405",
+        "code": "PLSC 405",
         "name": "Environmental Forensics and Society",
         "descr": "",
         "credits": "3",
@@ -2178,7 +2178,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC423",
+        "code": "POSC 423",
         "name": "Congress",
         "descr": "",
         "credits": "3",
@@ -2187,7 +2187,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC447",
+        "code": "POSC 447",
         "name": "National Agenda",
         "descr": "",
         "credits": "3",
@@ -2196,7 +2196,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC464",
+        "code": "POSC 464",
         "name": "Internship in Political Science and International Relations",
         "descr": "",
         "credits": "1-6",
@@ -2205,7 +2205,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC468",
+        "code": "POSC 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-6",
@@ -2214,7 +2214,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC469",
+        "code": "POSC 469",
         "name": "Social Justice Practicum",
         "descr": "",
         "credits": "3",
@@ -2223,7 +2223,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC471",
+        "code": "POSC 471",
         "name": "Polling Research and Analysis",
         "descr": "",
         "credits": "3",
@@ -2232,7 +2232,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC475",
+        "code": "POSC 475",
         "name": "Model United Nations",
         "descr": "",
         "credits": "3",
@@ -2241,7 +2241,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "POSC498",
+        "code": "POSC 498",
         "name": "Capstone Internship",
         "descr": "",
         "credits": "1-6",
@@ -2250,7 +2250,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PSYC365",
+        "code": "PSYC 365",
         "name": "Psychology Field Placement",
         "descr": "",
         "credits": "1-6",
@@ -2259,7 +2259,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PSYC365",
+        "code": "PSYC 365",
         "name": "Research Seminar",
         "descr": "",
         "credits": "3-6",
@@ -2268,7 +2268,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PSYC369",
+        "code": "PSYC 369",
         "name": "Research Seminar",
         "descr": "",
         "credits": "3-6",
@@ -2277,7 +2277,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PSYC405",
+        "code": "PSYC 405",
         "name": "Advanced Research Methods",
         "descr": "",
         "credits": "3",
@@ -2286,7 +2286,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "PSYC468",
+        "code": "PSYC 468",
         "name": "Thesis Research",
         "descr": "",
         "credits": "3",
@@ -2295,7 +2295,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SCEN105",
+        "code": "SCEN 105",
         "name": "Science on the Scene",
         "descr": "",
         "credits": "4",
@@ -2304,7 +2304,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SCEN111",
+        "code": "SCEN 111",
         "name": "Revolutionary Science",
         "descr": "",
         "credits": "4",
@@ -2313,7 +2313,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SCEN117",
+        "code": "SCEN 117",
         "name": "Citizen Science",
         "descr": "",
         "credits": "4",
@@ -2322,7 +2322,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SCEN119",
+        "code": "SCEN 119",
         "name": "Transforming Solar Energy",
         "descr": "",
         "credits": "4",
@@ -2331,7 +2331,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SOCI368",
+        "code": "SOCI 368",
         "name": "Independent Research",
         "descr": "",
         "credits": "1-6",
@@ -2340,7 +2340,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SOCI410",
+        "code": "SOCI 410",
         "name": "Health Services Practicum and Seminar",
         "descr": "",
         "credits": "4",
@@ -2349,7 +2349,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SOCI441",
+        "code": "SOCI 441",
         "name": "Social Welfare Practicum and Seminar",
         "descr": "",
         "credits": "4",
@@ -2358,7 +2358,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SOCI449",
+        "code": "SOCI 449",
         "name": "Sociology of Art and Culture",
         "descr": "",
         "credits": "3",
@@ -2367,7 +2367,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SOCI464",
+        "code": "SOCI 464",
         "name": "Internship",
         "descr": "",
         "credits": "1-4",
@@ -2376,7 +2376,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SOCI471",
+        "code": "SOCI 471",
         "name": "Disasters, Vulnerability & Development",
         "descr": "",
         "credits": "3",
@@ -2385,7 +2385,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SPAN318",
+        "code": "SPAN 318",
         "name": "Spanish Service Learning",
         "descr": "",
         "credits": "1-3",
@@ -2394,7 +2394,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "SPTM420",
+        "code": "SPTM 420",
         "name": "Applied Sport Event Management",
         "descr": "",
         "credits": "3",
@@ -2403,7 +2403,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "THEA408",
+        "code": "THEA 408",
         "name": "Theatre Practicum for Minors",
         "descr": "",
         "credits": "1-4",
@@ -2412,7 +2412,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UAPP268",
+        "code": "UAPP 268",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-3",
@@ -2421,7 +2421,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UAPP300",
+        "code": "UAPP 300",
         "name": "Public Policy Field Experience",
         "descr": "",
         "credits": "1-9",
@@ -2430,7 +2430,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UAPP390",
+        "code": "UAPP 390",
         "name": "Teaching Assistant",
         "descr": "",
         "credits": "1-3",
@@ -2439,7 +2439,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UAPP468",
+        "code": "UAPP 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "1-3",
@@ -2448,7 +2448,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV118",
+        "code": "UNIV 118",
         "name": "Learning, Serving, Giving Back",
         "descr": "",
         "credits": "1",
@@ -2457,7 +2457,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV240",
+        "code": "UNIV 240",
         "name": "Peer Tutor Practicum I",
         "descr": "",
         "credits": "0-1",
@@ -2466,7 +2466,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV260",
+        "code": "UNIV 260",
         "name": "Experiential Teaching",
         "descr": "",
         "credits": "0-3",
@@ -2475,7 +2475,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV262",
+        "code": "UNIV 262",
         "name": "Experiential Teaching",
         "descr": "",
         "credits": "0-6",
@@ -2484,7 +2484,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV268",
+        "code": "UNIV 268",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "0-6",
@@ -2493,7 +2493,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV301",
+        "code": "UNIV 301",
         "name": "Peer Practicum I",
         "descr": "",
         "credits": "1",
@@ -2502,7 +2502,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV302",
+        "code": "UNIV 302",
         "name": "Peer Practicum II",
         "descr": "",
         "credits": "1",
@@ -2511,7 +2511,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV303",
+        "code": "UNIV 303",
         "name": "Peer Practicum III",
         "descr": "",
         "credits": "1",
@@ -2520,7 +2520,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV304",
+        "code": "UNIV 304",
         "name": "Peer Practicum IV",
         "descr": "",
         "credits": "1",
@@ -2529,7 +2529,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV305",
+        "code": "UNIV 305",
         "name": "Peer Practicum V",
         "descr": "",
         "credits": "3",
@@ -2538,7 +2538,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV320",
+        "code": "UNIV 320",
         "name": "Contemporary Issues for Resident Assistants I",
         "descr": "",
         "credits": "1",
@@ -2547,7 +2547,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV321",
+        "code": "UNIV 321",
         "name": "Contemporary Issues for Resident Assistants II",
         "descr": "",
         "credits": "1",
@@ -2556,7 +2556,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV322",
+        "code": "UNIV 322",
         "name": "Contemporary Issues for Resident Assistants III",
         "descr": "",
         "credits": "1",
@@ -2565,7 +2565,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV340",
+        "code": "UNIV 340",
         "name": "Peer Tutor Practicum II",
         "descr": "",
         "credits": "0-1",
@@ -2574,7 +2574,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV360",
+        "code": "UNIV 360",
         "name": "Experiential Teaching",
         "descr": "",
         "credits": "0-3",
@@ -2583,7 +2583,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV361",
+        "code": "UNIV 361",
         "name": "Service-Learning",
         "descr": "",
         "credits": "0",
@@ -2592,7 +2592,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV362",
+        "code": "UNIV 362",
         "name": "Experiential Learning",
         "descr": "",
         "credits": "0-6",
@@ -2601,7 +2601,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV364",
+        "code": "UNIV 364",
         "name": "Experiential Internship",
         "descr": "",
         "credits": "3",
@@ -2610,7 +2610,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV365",
+        "code": "UNIV 365",
         "name": "Engaging for Change: Co-curricular Immersion and Community Engagement",
         "descr": "",
         "credits": "1-6",
@@ -2619,7 +2619,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV368",
+        "code": "UNIV 368",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "0-6",
@@ -2628,7 +2628,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV370",
+        "code": "UNIV 370",
         "name": "Study Abroad Winter/Summer",
         "descr": "",
         "credits": "0",
@@ -2637,7 +2637,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV371",
+        "code": "UNIV 371",
         "name": "Domestic Travel Study",
         "descr": "",
         "credits": "0",
@@ -2646,7 +2646,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV372",
+        "code": "UNIV 372",
         "name": "International Exchange",
         "descr": "",
         "credits": "0",
@@ -2655,7 +2655,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV373",
+        "code": "UNIV 373",
         "name": "Study Abroad Fall/Spring",
         "descr": "",
         "credits": "0",
@@ -2664,7 +2664,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV401",
+        "code": "UNIV 401",
         "name": "Senior Thesis",
         "descr": "",
         "credits": "2-4",
@@ -2673,7 +2673,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV402",
+        "code": "UNIV 402",
         "name": "Senior Thesis",
         "descr": "",
         "credits": "2-4",
@@ -2682,7 +2682,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV440",
+        "code": "UNIV 440",
         "name": "Peer Tutor Practicum III",
         "descr": "",
         "credits": "0-1",
@@ -2691,7 +2691,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV460",
+        "code": "UNIV 460",
         "name": "Experiential Teaching",
         "descr": "",
         "credits": "0-3",
@@ -2700,7 +2700,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV462",
+        "code": "UNIV 462",
         "name": "Experiential Learning",
         "descr": "",
         "credits": "0-6",
@@ -2709,7 +2709,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "UNIV468",
+        "code": "UNIV 468",
         "name": "Undergraduate Research",
         "descr": "",
         "credits": "0-6",
@@ -2718,7 +2718,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "WOMS498",
+        "code": "WOMS 498",
         "name": "Internship in Women's Studies",
         "descr": "",
         "credits": "3",

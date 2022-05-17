@@ -1,6 +1,6 @@
 [
     {
-        "code": "CISC304",
+        "code": "CISC 304",
         "name": "Logic for Programming",
         "descr": "",
         "credits": "3",
@@ -9,7 +9,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC442",
+        "code": "CISC 442",
         "name": "Introduction to Computer Vision",
         "descr": "",
         "credits": "3",
@@ -18,7 +18,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC481",
+        "code": "CISC 481",
         "name": "Artificial Intelligence",
         "descr": "",
         "credits": "3",
@@ -27,7 +27,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC483",
+        "code": "CISC 483",
         "name": "Introduction to Data Mining",
         "descr": "",
         "credits": "3",
@@ -36,7 +36,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC484",
+        "code": "CISC 484",
         "name": "Introduction to Machine Learning",
         "descr": "",
         "credits": "3",
