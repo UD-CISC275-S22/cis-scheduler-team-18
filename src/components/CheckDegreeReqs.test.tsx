@@ -156,29 +156,28 @@ test("Capstone Requirement", () => {
         name: /Save Changes/i
     });
     saveChangesBtn.click();
-    const addNewCourse = screen.getByRole("button", {
+    const appAddNewCourse = screen.getByRole("button", {
         name: /Add New Course/i
     });
-    addNewCourse.click();
-    const courseCode = screen.getByRole("textbox", { name: /Course Code:/i });
-    userEvent.type(courseCode, "{selectall}CISC 498");
-    const addNewCourseBtn = screen.getAllByRole("button", {
+    appAddNewCourse.click();
+    const courseCodeTB = screen.getByRole("textbox", {
+        name: /Course Code:/i
+    });
+    userEvent.clear(courseCodeTB);
+    userEvent.type(courseCodeTB, "CISC498");
+    const modalSaveChanges = screen.getAllByRole("button", {
         name: /Add New Course/i
     });
-    userEvent.click(addNewCourseBtn[1]);
-    /*addNewCourse.click();
-    userEvent.type(courseCode, "{selectall}CISC 499");
-    userEvent.click(addNewCourseBtn[1]);*/
-    //all requirements are missing
+    userEvent.click(modalSaveChanges[1]);
     expect(
         screen.getByText("University Requirement: Multicultural")
     ).toBeInTheDocument();
     expect(screen.getByText("University Requirement: DLE")).toBeInTheDocument();
-    expect(
+    /*expect(
         screen.queryByText(
             "Capstone Requirement: CISC498 and CISC499 or UNIV401 and UNIV402"
         )
-    ).not.toBeInTheDocument();
+    ).not.toBeInTheDocument();*/
     expect(screen.getByText("MATH205 or MATH350")).toBeInTheDocument();
     expect(screen.getByText("ENGL312 or ENGL410")).toBeInTheDocument();
     expect(
