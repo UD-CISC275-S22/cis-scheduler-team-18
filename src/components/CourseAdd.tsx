@@ -77,6 +77,10 @@ export function CourseAdd({
                 typ: ""
             };
         }
+        //save course into to local data for "revert" in courseEdit
+        const saveDataKey = newCourse.descr;
+        localStorage.setItem(saveDataKey, JSON.stringify(newCourse));
+
         addCourse(newCourse);
         close();
     }
