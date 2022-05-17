@@ -144,6 +144,83 @@ test("Empty plan: No Requirements Met", () => {
     expect(screen.getAllByText("ENGL110")).toHaveLength(2);
     expect(screen.getAllByText("EGGG101")).toHaveLength(2);
 });
+test("Group A Req Met", () => {
+    render(<App />);
+    const addPlanBtn = screen.getByRole("button", { name: /Add New plan/i });
+    addPlanBtn.click();
+    const idTB = screen.getByRole("textbox", { name: /ID of New Plan:/i });
+    userEvent.type(idTB, "Tester-Plan");
+    const nameTB = screen.getByRole("textbox", { name: /Name of New Plan/i });
+    userEvent.type(nameTB, "Empty Plan");
+    const saveChangesBtn = screen.getByRole("button", {
+        name: /Save Changes/i
+    });
+    saveChangesBtn.click();
+    //add AFRA215
+    const appAddCourse = screen.getByRole("button", {
+        name: /Add New Course/i
+    });
+    appAddCourse.click();
+    const courseCodeTB = screen.getByRole("textbox", { name: /Course Code:/i });
+    userEvent.type(courseCodeTB, "{selectall}AFRA 206");
+    const modalAddCourse = screen.getAllByRole("button", {
+        name: /Add New Course/i
+    });
+    userEvent.click(modalAddCourse[1]);
+    expect(
+        screen.getByText("University Requirement: Multicultural")
+    ).toBeInTheDocument();
+    expect(screen.getByText("University Requirement: DLE")).toBeInTheDocument();
+    expect(
+        screen.getByText(
+            "Capstone Requirement: CISC498 and CISC499 or UNIV401 and UNIV402"
+        )
+    ).toBeInTheDocument();
+    expect(screen.getByText("MATH205 or MATH350")).toBeInTheDocument();
+    expect(screen.getByText("ENGL312 or ENGL410")).toBeInTheDocument();
+    expect(
+        screen.getByText("Science Sequence Requirement")
+    ).toBeInTheDocument();
+    expect(
+        screen.getByText("4 Credits Additional Science")
+    ).toBeInTheDocument();
+    expect(
+        screen.queryByText("University Breadth: Group A")
+    ).not.toBeInTheDocument();
+    expect(screen.getByText("University Breadth: Group B")).toBeInTheDocument();
+    expect(screen.getByText("University Breadth: Group C")).toBeInTheDocument();
+    expect(screen.getByText("University Breadth: Group D")).toBeInTheDocument();
+    expect(screen.getByText("124 Credits Needed")).toBeInTheDocument();
+    expect(
+        screen.getByText(
+            "Major Requirement: Tech Electives - CISC301+ (6 credits)"
+        )
+    ).toBeInTheDocument();
+    expect(
+        screen.getByText("9 Additional Breadth Credits NOT Group D")
+    ).toBeInTheDocument();
+    expect(
+        screen.getByText("6 Upper Level Breadth Credits (300+)")
+    ).toBeInTheDocument();
+    //this throws an error because there are multiple ones
+    expect(screen.getAllByText("CISC108")).toHaveLength(2);
+    expect(screen.getAllByText("CISC181")).toHaveLength(2);
+    expect(screen.getAllByText("CISC210")).toHaveLength(2);
+    expect(screen.getAllByText("CISC220")).toHaveLength(2);
+    expect(screen.getAllByText("CISC260")).toHaveLength(2);
+    expect(screen.getAllByText("CISC275")).toHaveLength(2);
+    expect(screen.getAllByText("CISC303")).toHaveLength(2);
+    expect(screen.getAllByText("CISC320")).toHaveLength(2);
+    expect(screen.getAllByText("CISC361")).toHaveLength(2);
+    expect(screen.getAllByText("CISC372")).toHaveLength(2);
+    expect(screen.getAllByText("MATH210")).toHaveLength(2);
+    expect(screen.getAllByText("MATH241")).toHaveLength(2);
+    expect(screen.getAllByText("MATH242")).toHaveLength(2);
+    expect(screen.getAllByText("CISC355")).toHaveLength(2);
+    expect(screen.getAllByText("ENGL110")).toHaveLength(2);
+    expect(screen.getAllByText("EGGG101")).toHaveLength(2);
+});
+
 test("Group B Req Met", () => {
     render(<App />);
     const addPlanBtn = screen.getByRole("button", { name: /Add New plan/i });
