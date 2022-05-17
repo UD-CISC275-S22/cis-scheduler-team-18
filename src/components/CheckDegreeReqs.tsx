@@ -17,6 +17,7 @@ import dataScience from "../data/dataScience.json";
 import highPerformance from "../data/highPerf.json";
 import systemsNetwork from "../data/systemNetworks.json";
 import theoryandComp from "../data/TheoryandComputation.json";
+//import { groupCollapsed } from "console";
 
 export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     //will be used to choose a concentration
@@ -107,6 +108,106 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
             missingRequirements = [
                 ...missingRequirements,
                 "University Requirement: Multicultural"
+            ];
+        }
+    }
+    function checkBreadths(classes: Course[]): void {
+        //find all the breadth requirements in a semester
+        //groupX = an array of the classes that are of that breadth
+        const groupA = classes.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP A" || "GROUPA" || "group A" || "group a",
+                0
+            )
+        );
+        const groupB = classes.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP B" || "GROUPB" || "group B" || "group b",
+                0
+            )
+        );
+        const groupC = classes.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP C" || "GROUPC" || "group C" || "group c",
+                0
+            )
+        );
+        const groupD = classes.filter((course: Course): boolean =>
+            course.breadth.includes(
+                "GROUP D" || "GROUPD" || "group D" || "group d",
+                0
+            )
+        );
+        //what do we need
+        //at least 3 credits in group A, group B, group C, group D
+        //missing group a
+        if (groupA.length < 1) {
+            missingRequirements = [
+                ...missingRequirements,
+                "University Breadth: Group A"
+            ];
+        }
+
+        //missing group b
+        if (groupB.length < 1) {
+            missingRequirements = [
+                ...missingRequirements,
+                "University Breadth: Group B"
+            ];
+        }
+
+        //missing group c
+        if (groupC.length < 1) {
+            missingRequirements = [
+                ...missingRequirements,
+                "University Breadth: Group C"
+            ];
+        }
+
+        //missing group d
+        if (groupD.length < 1) {
+            missingRequirements = [
+                ...missingRequirements,
+                "University Breadth: Group D"
+            ];
+        }
+
+        //find 9 additional breadths that are NOT group d
+        //9 credits = 3 classes, that aren't group D
+        //total amount of breadth classes
+
+        //9 additional breadths
+        const totalBreadths = groupA.length + groupB.length + groupC.length;
+
+        //totalBreadths should be at least 9
+        //there should be AT LEAST 12 credits
+        if (totalBreadths < 6) {
+            missingRequirements = [
+                ...missingRequirements,
+                "9 Additional Breadth Credits NOT Group D"
+            ];
+        }
+
+        //6 credits (2 classes) must be at the upper level
+        //300 level +
+        //extract the number from the course code
+        //this is a list of all the breadth requirements in the plan
+        const allBreadths = [...groupA, ...groupB, ...groupC, ...groupD];
+        //filter the course codes > 301
+        const courseCodes = allBreadths.map(
+            (course: Course): number =>
+                parseInt(course.code.replace(/\D/g, "")) || 0
+        );
+
+        const upperLevel = courseCodes.filter(
+            (number: number): boolean => number > 300
+        );
+
+        //upper level length > 2
+        if (upperLevel.length < 2) {
+            missingRequirements = [
+                ...missingRequirements,
+                "6 Upper Level Breadth Credits (300+)"
             ];
         }
     }
@@ -556,7 +657,8 @@ export function CheckDegreeReq({ plan }: { plan: Plan }): JSX.Element {
     }
 
     function checkAllReqs(classes: Course[]) {
-        //checkBreadths(classes);
+        checkBreadths(classes);
+        //checkUnivGroupA(classes);
         checkMultiCultural(classes);
         checkDLE(classes);
         checkCapstone(classes);
