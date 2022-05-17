@@ -137,18 +137,62 @@ describe("CourseEdit functionalitly test", () => {
         saveButton.click();
         expect(screen.getByText(/9999/i)).toBeInTheDocument();
     });
-    test("Can revert Course Code", () => {
-        const codeTextbox = screen.getByRole("textbox", {
-            name: /Change Course Code:/i
+    test("Can delete a course", () => {
+        const deleteButton = screen.getByRole("button", {
+            name: /Delete Course/i
         });
+        deleteButton.click();
+        expect(screen.queryByText(/filler/i)).not.toBeInTheDocument();
+    });
+    test("Can revert Course Code", () => {
+        const deleteButton = screen.getByRole("button", {
+            name: /Delete Course/i
+        });
+        deleteButton.click();
+        const addButton = screen.getByRole("button", {
+            name: /Add New Course/i
+        });
+        addButton.click();
+        const codeBox = screen.getByRole("textbox", { name: /Course Code:/i });
+        userEvent.clear(codeBox);
+        userEvent.type(codeBox, "CISC275");
+        const addCourseButton = screen.getAllByRole("button", {
+            name: /Add New Course/i
+        });
+        userEvent.click(addCourseButton[1]);
+        const editButton = screen.getByRole("button", { name: /Edit Course/i });
+        editButton.click();
+        const titleTextbox = screen.getByRole("textbox", {
+            name: /Change Course Title:/i
+        });
+        userEvent.clear(titleTextbox);
+        userEvent.type(titleTextbox, "Testing Revert");
         const saveButton = screen.getByRole("button", {
             name: /Save Changes/i
         });
-        userEvent.type(codeTextbox, "TEST101");
         saveButton.click();
-        const editButton = screen.getByRole("button", {
-            name: /Edit Course/i
-        });
         editButton.click();
+        const revertButton = screen.getByRole("button", {
+            name: /Revert to original/i
+        });
+        revertButton.click();
+        saveButton.click();
+        expect(screen.queryByText(/Testing Revert/i)).not.toBeInTheDocument();
+        expect(
+            screen.getByText(/Introduction to Software Engineering/i)
+        ).toBeInTheDocument();
+    });
+    test("cancel button does not save changes", () => {
+        const titleTextbox = screen.getByRole("textbox", {
+            name: /Change Course Title:/i
+        });
+        const cancelButton = screen.getByRole("button", {
+            name: /Cancel/i
+        });
+        userEvent.type(titleTextbox, "Course used for testing");
+        cancelButton.click();
+        expect(
+            screen.queryByText(/Course used for testing/i)
+        ).not.toBeInTheDocument();
     });
 });

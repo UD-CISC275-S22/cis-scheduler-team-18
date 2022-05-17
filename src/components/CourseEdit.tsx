@@ -19,13 +19,6 @@ export function CourseEdit({
     const [credits, setCredits] = useState<string>(course.credits);
     const [show, setShow] = useState(false);
 
-    //saves original course information
-    const saveDataKey = course.descr;
-    const prevData = localStorage.getItem(saveDataKey);
-    if (prevData === null) {
-        localStorage.setItem(saveDataKey, JSON.stringify(course));
-    }
-
     //Open Close and Save functions for popup
     const close = () => setShow(false);
     const open = () => setShow(true);
