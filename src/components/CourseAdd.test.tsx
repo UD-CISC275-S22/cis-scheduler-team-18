@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CourseAdd } from "./CourseAdd";
-//import userEvent from "@testing-library/user-event";
-//import App from "../App";
+import userEvent from "@testing-library/user-event";
+import App from "../App";
 
 describe("CourseAdd Component test", () => {
     beforeEach(() => {
@@ -46,7 +46,7 @@ describe("CourseAdd Component test", () => {
         expect(screen.getByText(/Credits:/i)).toBeInTheDocument();
     });
 });
-/*
+
 describe("CourseAdd functionalitly test", () => {
     beforeEach(() => {
         render(<App />);
@@ -72,7 +72,7 @@ describe("CourseAdd functionalitly test", () => {
         });
         addCourseButton.click();
     });
-    test("Can add a course that doesnt actually exist", () => {
+    test("Can add a course", () => {
         const codeBox = screen.getByRole("textbox", { name: /Course Code:/i });
         const titleBox = screen.getByRole("textbox", {
             name: /Course Title:/i
@@ -92,39 +92,29 @@ describe("CourseAdd functionalitly test", () => {
         expect(screen.getByText(/Test Course/i)).toBeInTheDocument();
         expect(screen.getByText(/9999/i)).toBeInTheDocument();
     });
-    test("Can add a course that exists in catalog", () => {
-        const codeBox = screen.getByRole("textbox", { name: /Course Code:/i });
-        const titleBox = screen.getByRole("textbox", {
-            name: /Course Title:/i
-        });
-        const creditsBox = screen.getByRole("textbox", { name: /Credits:/i });
-        const addCourseButton = screen.getAllByRole("button", {
-            name: /Add New Course/i
-        });
-        userEvent.clear(codeBox);
-        userEvent.type(codeBox, "CISC275");
-        userEvent.clear(titleBox);
-        userEvent.type(titleBox, "Introduction to Software Engineering");
-        userEvent.clear(creditsBox);
-        userEvent.type(creditsBox, "3");
-        userEvent.click(addCourseButton[1]);
-        expect(screen.getByText(/CISC275/i)).toBeInTheDocument();
-        expect(
-            screen.getByText(/Introduction to Software Engineering/i)
-        ).toBeInTheDocument();
-    });
     test("Can autofill a course from just the code", () => {
         const codeBox = screen.getByRole("textbox", { name: /Course Code:/i });
+        userEvent.clear(codeBox);
+        userEvent.type(codeBox, "CISC181");
         const addCourseButton = screen.getAllByRole("button", {
             name: /Add New Course/i
         });
-        userEvent.clear(codeBox);
-        userEvent.type(codeBox, "CISC181");
         userEvent.click(addCourseButton[1]);
-        expect(screen.getByText(/CISC181/i)).toBeInTheDocument();
+        expect(screen.getAllByText(/CISC181/i)).toHaveLength(2);
         expect(
             screen.getByText(/Introduction to Computer Science II/i)
         ).toBeInTheDocument();
     });
+    test("Cancel button wont add a course", () => {
+        const codeBox = screen.getByRole("textbox", { name: /Course Code:/i });
+        userEvent.clear(codeBox);
+        userEvent.type(codeBox, "CISC181");
+        const cancelButton = screen.getByRole("button", {
+            name: /Cancel/i
+        });
+        cancelButton.click();
+        expect(
+            screen.queryByText(/Introduction to Computer Science II/i)
+        ).not.toBeInTheDocument();
+    });
 });
-*/
