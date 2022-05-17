@@ -16,32 +16,32 @@ describe("PlanEditor Component tests", () => {
     });
     test("a) Can choose a course and add it to the pool", () => {
         const select = screen.getByRole("combobox");
-        userEvent.selectOptions(select, "CISC220");
+        userEvent.selectOptions(select, "CISC 220");
         expect(
-            screen.getByText(/CISC220: Data Structures/i)
+            screen.getByText(/CISC 220: Data Structures/i)
         ).toBeInTheDocument();
     });
     test("b) Can choose a course and add it to the pool", () => {
         const select = screen.getByRole("combobox");
-        userEvent.selectOptions(select, "CISC260");
+        userEvent.selectOptions(select, "CISC 260");
         expect(
             screen.getByText(
-                /CISC260: Machine Organization and Assembly Language/i
+                /CISC 260: Machine Organization and Assembly Language/i
             )
         ).toBeInTheDocument();
     });
     test("c) Can choose a course and add it to the pool", () => {
         const select = screen.getByRole("combobox");
-        userEvent.selectOptions(select, "CISC210");
+        userEvent.selectOptions(select, "CISC 210");
         expect(
-            screen.getByText(/CISC210: Introduction to Systems Programming/i)
+            screen.getByText(/CISC 210: Introduction to Systems Programming/i)
         ).toBeInTheDocument();
     });
     test("d) Can choose a course and add it to the pool", () => {
         const select = screen.getByRole("combobox");
-        userEvent.selectOptions(select, "CISC275");
+        userEvent.selectOptions(select, "CISC 275");
         expect(
-            screen.getByText(/CISC275: Introduction to Software Engineering/i)
+            screen.getByText(/CISC 275: Introduction to Software Engineering/i)
         ).toBeInTheDocument();
     });
 });

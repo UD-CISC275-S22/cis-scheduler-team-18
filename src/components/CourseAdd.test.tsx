@@ -100,7 +100,7 @@ describe("CourseAdd functionalitly test", () => {
             name: /Add New Course/i
         });
         userEvent.click(addCourseButton[1]);
-        expect(screen.getAllByText(/CISC181/i)).toHaveLength(2);
+        expect(screen.getAllByText(/CISC 181/i)).toHaveLength(2);
         expect(
             screen.getByText(/Introduction to Computer Science II/i)
         ).toBeInTheDocument();

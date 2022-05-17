@@ -127,22 +127,22 @@ test("Empty plan: No Requirements Met", () => {
         screen.getByText("6 Upper Level Breadth Credits (300+)")
     ).toBeInTheDocument();
     //this throws an error because there are multiple ones
-    expect(screen.getAllByText("CISC108")).toHaveLength(2);
-    expect(screen.getAllByText("CISC181")).toHaveLength(2);
-    expect(screen.getAllByText("CISC210")).toHaveLength(2);
-    expect(screen.getAllByText("CISC220")).toHaveLength(2);
-    expect(screen.getAllByText("CISC260")).toHaveLength(2);
-    expect(screen.getAllByText("CISC275")).toHaveLength(2);
-    expect(screen.getAllByText("CISC303")).toHaveLength(2);
-    expect(screen.getAllByText("CISC320")).toHaveLength(2);
-    expect(screen.getAllByText("CISC361")).toHaveLength(2);
-    expect(screen.getAllByText("CISC372")).toHaveLength(2);
-    expect(screen.getAllByText("MATH210")).toHaveLength(2);
-    expect(screen.getAllByText("MATH241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH242")).toHaveLength(2);
-    expect(screen.getAllByText("CISC355")).toHaveLength(2);
-    expect(screen.getAllByText("ENGL110")).toHaveLength(2);
-    expect(screen.getAllByText("EGGG101")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 108")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 181")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 210")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 220")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 260")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 275")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 303")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 320")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 361")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 372")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 210")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 241")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 355")).toHaveLength(2);
+    expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
+    expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
 });
 test("Group A Req Met", () => {
     render(<App />);
@@ -203,22 +203,22 @@ test("Group A Req Met", () => {
         screen.getByText("6 Upper Level Breadth Credits (300+)")
     ).toBeInTheDocument();
     //this throws an error because there are multiple ones
-    expect(screen.getAllByText("CISC108")).toHaveLength(2);
-    expect(screen.getAllByText("CISC181")).toHaveLength(2);
-    expect(screen.getAllByText("CISC210")).toHaveLength(2);
-    expect(screen.getAllByText("CISC220")).toHaveLength(2);
-    expect(screen.getAllByText("CISC260")).toHaveLength(2);
-    expect(screen.getAllByText("CISC275")).toHaveLength(2);
-    expect(screen.getAllByText("CISC303")).toHaveLength(2);
-    expect(screen.getAllByText("CISC320")).toHaveLength(2);
-    expect(screen.getAllByText("CISC361")).toHaveLength(2);
-    expect(screen.getAllByText("CISC372")).toHaveLength(2);
-    expect(screen.getAllByText("MATH210")).toHaveLength(2);
-    expect(screen.getAllByText("MATH241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH242")).toHaveLength(2);
-    expect(screen.getAllByText("CISC355")).toHaveLength(2);
-    expect(screen.getAllByText("ENGL110")).toHaveLength(2);
-    expect(screen.getAllByText("EGGG101")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 108")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 181")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 210")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 220")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 260")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 275")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 303")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 320")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 361")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 372")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 210")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 241")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 355")).toHaveLength(2);
+    expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
+    expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
 });
 
 test("Group B Req Met", () => {
@@ -280,22 +280,22 @@ test("Group B Req Met", () => {
         screen.getByText("6 Upper Level Breadth Credits (300+)")
     ).toBeInTheDocument();
     //this throws an error because there are multiple ones
-    expect(screen.getAllByText("CISC108")).toHaveLength(2);
-    expect(screen.getAllByText("CISC181")).toHaveLength(2);
-    expect(screen.getAllByText("CISC210")).toHaveLength(2);
-    expect(screen.getAllByText("CISC220")).toHaveLength(2);
-    expect(screen.getAllByText("CISC260")).toHaveLength(2);
-    expect(screen.getAllByText("CISC275")).toHaveLength(2);
-    expect(screen.getAllByText("CISC303")).toHaveLength(2);
-    expect(screen.getAllByText("CISC320")).toHaveLength(2);
-    expect(screen.getAllByText("CISC361")).toHaveLength(2);
-    expect(screen.getAllByText("CISC372")).toHaveLength(2);
-    expect(screen.getAllByText("MATH210")).toHaveLength(2);
-    expect(screen.getAllByText("MATH241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH242")).toHaveLength(2);
-    expect(screen.getAllByText("CISC355")).toHaveLength(2);
-    expect(screen.getAllByText("ENGL110")).toHaveLength(2);
-    expect(screen.getAllByText("EGGG101")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 108")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 181")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 210")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 220")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 260")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 275")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 303")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 320")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 361")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 372")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 210")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 241")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 355")).toHaveLength(2);
+    expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
+    expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
 });
 
 test("Group C Req Met", () => {
@@ -357,22 +357,22 @@ test("Group C Req Met", () => {
         screen.getByText("6 Upper Level Breadth Credits (300+)")
     ).toBeInTheDocument();
     //this throws an error because there are multiple ones
-    expect(screen.getAllByText("CISC108")).toHaveLength(2);
-    expect(screen.getAllByText("CISC181")).toHaveLength(2);
-    expect(screen.getAllByText("CISC210")).toHaveLength(2);
-    expect(screen.getAllByText("CISC220")).toHaveLength(2);
-    expect(screen.getAllByText("CISC260")).toHaveLength(2);
-    expect(screen.getAllByText("CISC275")).toHaveLength(2);
-    expect(screen.getAllByText("CISC303")).toHaveLength(2);
-    expect(screen.getAllByText("CISC320")).toHaveLength(2);
-    expect(screen.getAllByText("CISC361")).toHaveLength(2);
-    expect(screen.getAllByText("CISC372")).toHaveLength(2);
-    expect(screen.getAllByText("MATH210")).toHaveLength(2);
-    expect(screen.getAllByText("MATH241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH242")).toHaveLength(2);
-    expect(screen.getAllByText("CISC355")).toHaveLength(2);
-    expect(screen.getAllByText("ENGL110")).toHaveLength(2);
-    expect(screen.getAllByText("EGGG101")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 108")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 181")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 210")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 220")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 260")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 275")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 303")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 320")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 361")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 372")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 210")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 241")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 355")).toHaveLength(2);
+    expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
+    expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
 });
 test("Group D Req Met", () => {
     render(<App />);
@@ -433,20 +433,20 @@ test("Group D Req Met", () => {
         screen.getByText("6 Upper Level Breadth Credits (300+)")
     ).toBeInTheDocument();
     //this throws an error because there are multiple ones
-    expect(screen.getAllByText("CISC108")).toHaveLength(2);
-    expect(screen.getAllByText("CISC181")).toHaveLength(2);
-    expect(screen.getAllByText("CISC210")).toHaveLength(2);
-    expect(screen.getAllByText("CISC220")).toHaveLength(2);
-    expect(screen.getAllByText("CISC260")).toHaveLength(2);
-    expect(screen.getAllByText("CISC275")).toHaveLength(2);
-    expect(screen.getAllByText("CISC303")).toHaveLength(2);
-    expect(screen.getAllByText("CISC320")).toHaveLength(2);
-    expect(screen.getAllByText("CISC361")).toHaveLength(2);
-    expect(screen.getAllByText("CISC372")).toHaveLength(2);
-    expect(screen.getAllByText("MATH210")).toHaveLength(2);
-    expect(screen.getAllByText("MATH241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH242")).toHaveLength(2);
-    expect(screen.getAllByText("CISC355")).toHaveLength(2);
-    expect(screen.getAllByText("ENGL110")).toHaveLength(2);
-    expect(screen.getAllByText("EGGG101")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 108")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 181")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 210")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 220")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 260")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 275")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 303")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 320")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 361")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 372")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 210")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 241")).toHaveLength(2);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
+    expect(screen.getAllByText("CISC 355")).toHaveLength(2);
+    expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
+    expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
 });
