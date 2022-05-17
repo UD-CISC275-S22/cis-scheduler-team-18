@@ -139,7 +139,7 @@ test("Empty plan: No Requirements Met", () => {
     expect(screen.getAllByText("CISC 372")).toHaveLength(2);
     expect(screen.getAllByText("MATH 210")).toHaveLength(2);
     expect(screen.getAllByText("MATH 241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH 242")).toHaveLength(1);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
     expect(screen.getAllByText("CISC 355")).toHaveLength(2);
     expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
     expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
@@ -215,7 +215,7 @@ test("Group A Req Met", () => {
     expect(screen.getAllByText("CISC 372")).toHaveLength(2);
     expect(screen.getAllByText("MATH 210")).toHaveLength(2);
     expect(screen.getAllByText("MATH 241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH 242")).toHaveLength(1);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
     expect(screen.getAllByText("CISC 355")).toHaveLength(2);
     expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
     expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
@@ -292,7 +292,7 @@ test("Group B Req Met", () => {
     expect(screen.getAllByText("CISC 372")).toHaveLength(2);
     expect(screen.getAllByText("MATH 210")).toHaveLength(2);
     expect(screen.getAllByText("MATH 241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH 242")).toHaveLength(1);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
     expect(screen.getAllByText("CISC 355")).toHaveLength(2);
     expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
     expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
@@ -369,7 +369,7 @@ test("Group C Req Met", () => {
     expect(screen.getAllByText("CISC 372")).toHaveLength(2);
     expect(screen.getAllByText("MATH 210")).toHaveLength(2);
     expect(screen.getAllByText("MATH 241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH 242")).toHaveLength(1);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
     expect(screen.getAllByText("CISC 355")).toHaveLength(2);
     expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
     expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
@@ -445,7 +445,7 @@ test("Group D Req Met", () => {
     expect(screen.getAllByText("CISC 372")).toHaveLength(2);
     expect(screen.getAllByText("MATH 210")).toHaveLength(2);
     expect(screen.getAllByText("MATH 241")).toHaveLength(2);
-    expect(screen.getAllByText("MATH 242")).toHaveLength(1);
+    expect(screen.getAllByText("MATH 242")).toHaveLength(2);
     expect(screen.getAllByText("CISC 355")).toHaveLength(2);
     expect(screen.getAllByText("ENGL 110")).toHaveLength(2);
     expect(screen.getAllByText("EGGG 101")).toHaveLength(2);
