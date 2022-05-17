@@ -2,7 +2,8 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { CourseEdit } from "./CourseEdit";
 import { Course } from "../interfaces/course";
-//import userEvent from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
+import App from "../App";
 
 const testCourse: Course = {
     code: "TEST101",
@@ -75,17 +76,79 @@ describe("CourseEdit Component test", () => {
     test("'Change Course Credits:' is on the screen", () => {
         expect(screen.getByText(/Change Course Credits:/i)).toBeInTheDocument();
     });
-    /*
-    test("Course Code Can be edited", () => {
-        const editCodeBox = screen.getByRole("textbox", {
+});
+describe("CourseEdit functionalitly test", () => {
+    beforeEach(() => {
+        render(<App />);
+        const addPlanButton = screen.getByRole("button", {
+            name: /Add New Plan/i
+        });
+        addPlanButton.click();
+
+        const planIdBox = screen.getByRole("textbox", {
+            name: /ID of New Plan:/i
+        });
+        const planNameBox = screen.getByRole("textbox", {
+            name: /Name of New Plan:/i
+        });
+        const savePlanButton = screen.getByRole("button", {
+            name: /Save Changes/i
+        });
+        userEvent.type(planIdBox, "0000");
+        userEvent.type(planNameBox, "Test Plan");
+        savePlanButton.click();
+        const editCourseButton = screen.getByRole("button", {
+            name: /Edit Course/i
+        });
+        editCourseButton.click();
+    });
+    test("Can edit Course Code", () => {
+        const codeTextbox = screen.getByRole("textbox", {
             name: /Change Course Code:/i
         });
         const saveButton = screen.getByRole("button", {
             name: /Save Changes/i
         });
-        userEvent.type(editCodeBox, "TEST102");
+        userEvent.type(codeTextbox, "TEST101");
         saveButton.click();
-        expect(testCourse.code).toEqual("TEST102");
+        expect(screen.getByText(/TEST101/i)).toBeInTheDocument();
     });
-    */
+    test("Can edit Course Title", () => {
+        const titleTextbox = screen.getByRole("textbox", {
+            name: /Change Course Title:/i
+        });
+        const saveButton = screen.getByRole("button", {
+            name: /Save Changes/i
+        });
+        userEvent.type(titleTextbox, "Course used for testing");
+        saveButton.click();
+        expect(
+            screen.getByText(/Course used for testing/i)
+        ).toBeInTheDocument();
+    });
+    test("Can edit Course Credits", () => {
+        const creditsBox = screen.getByRole("spinbutton", {
+            name: /Change Course Credits:/i
+        });
+        const saveButton = screen.getByRole("button", {
+            name: /Save Changes/i
+        });
+        userEvent.type(creditsBox, "9999");
+        saveButton.click();
+        expect(screen.getByText(/9999/i)).toBeInTheDocument();
+    });
+    test("Can revert Course Code", () => {
+        const codeTextbox = screen.getByRole("textbox", {
+            name: /Change Course Code:/i
+        });
+        const saveButton = screen.getByRole("button", {
+            name: /Save Changes/i
+        });
+        userEvent.type(codeTextbox, "TEST101");
+        saveButton.click();
+        const editButton = screen.getByRole("button", {
+            name: /Edit Course/i
+        });
+        editButton.click();
+    });
 });

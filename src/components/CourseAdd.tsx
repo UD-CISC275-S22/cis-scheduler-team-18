@@ -22,7 +22,7 @@ export function CourseAdd({
         setCode(event.target.value);
         setCodeExists(false);
         const found = findCourse(event.target.value);
-        if (found !== undefined) {
+        if (found.code !== "") {
             setCodeExists(true);
             setTitle(found.name);
             setCredits(found.credits);
@@ -54,7 +54,7 @@ export function CourseAdd({
     function makeCourse() {
         let newCourse: Course;
         const found = findCourse(code);
-        if (found !== undefined) {
+        if (found.code !== "") {
             newCourse = {
                 code: found.code,
                 name: title,
@@ -115,17 +115,47 @@ export function CourseAdd({
         const numCode = numCodeArr.join("");
         const realCode = letterCode + " " + numCode;
         const log = JSON.parse(JSON.stringify(catalog));
-        const poss: Course = log[letterCode][realCode];
-        const found: Course = {
-            code: poss.code,
-            name: poss.name,
-            descr: poss.descr,
-            credits: poss.credits,
-            preReq: poss.preReq,
-            restrict: poss.restrict,
-            breadth: poss.breadth,
-            typ: poss.typ
+        let poss: Course = {
+            code: "",
+            name: "",
+            descr: "",
+            credits: "",
+            preReq: "",
+            restrict: "",
+            breadth: "",
+            typ: ""
         };
+        if (letterCode in log) {
+            if (realCode in log[letterCode]) {
+                poss = log[letterCode][realCode];
+            }
+        }
+
+        let found: Course;
+        if (poss.code !== "") {
+            found = {
+                code: poss.code,
+                name: poss.name,
+                descr: poss.descr,
+                credits: poss.credits,
+                preReq: poss.preReq,
+                restrict: poss.restrict,
+                breadth: poss.breadth,
+                typ: poss.typ
+            };
+        } else {
+            found = {
+                code: "",
+                name: "",
+                descr: "",
+                credits: "",
+                preReq: "",
+                restrict: "",
+                breadth: "",
+                typ: ""
+            };
+        }
+
         return found;
     }
     //for Modal

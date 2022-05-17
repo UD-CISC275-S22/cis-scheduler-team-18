@@ -85,12 +85,6 @@ export function Semesterer({
 
     function clearSemesters() {
         setSemesters([]);
-        //setSemesters(
-        //semesters.filter(
-        //(semester: Semester): boolean => semester.id === id
-        //)
-        //);
-        //updateClearSems(plan.id);
         const currPlan = plans.find(
             (PLAN: Plan): boolean => PLAN.id === plan.id
         );
