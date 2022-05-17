@@ -7,7 +7,7 @@
 //save changes button
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { AddSemesterModal } from "./AddSemesterModal";
+import { AddSemesterModal } from "./addSemesterModal";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 

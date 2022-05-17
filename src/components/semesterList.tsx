@@ -3,7 +3,7 @@ import { Semester } from "../interfaces/semester";
 import "../styleSheets/multipleSemesterTable.css";
 //import { Course } from "../interfaces/Course";
 import { Plan } from "../interfaces/plan";
-import { SemesterView } from "./SemesterView";
+import { SemesterView } from "./semesterView";
 
 export function SemesterList({
     semesters,
