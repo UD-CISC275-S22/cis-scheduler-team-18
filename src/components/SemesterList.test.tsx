@@ -2,7 +2,7 @@
 //Test to make sure there are semester's in the website
 import React from "react";
 import { render } from "@testing-library/react";
-import { SemesterList } from "./SemesterList";
+import { SemesterList } from "./semesterList";
 import semesterPlan from "../data/semesterPlan.json";
 import { Semester } from "../interfaces/semester";
 
