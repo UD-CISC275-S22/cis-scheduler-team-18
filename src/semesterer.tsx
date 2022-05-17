@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Semester } from "../interfaces/semester";
-import { Plan } from "../interfaces/plan";
-import { SemesterList } from "./semesterList";
+import { Semester } from "./interfaces/semester";
+import { Plan } from "./interfaces/plan";
+import { SemesterList } from "./components/semesterList";
 import { Button } from "react-bootstrap";
-import { AddSemesterModal } from "./addSemesterModal";
+import { AddSemesterModal } from "./components/addSemesterModal";
 import "../styleSheets/plan.css";
 
 export function Semesterer({
