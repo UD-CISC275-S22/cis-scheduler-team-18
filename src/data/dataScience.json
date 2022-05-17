@@ -1,6 +1,6 @@
 [
     {
-        "code": "CISC304",
+        "code": "CISC 304",
         "name": "Logic for Programming",
         "descr": "",
         "credits": "3",
@@ -9,7 +9,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC372",
+        "code": "CISC 372",
         "name": "Parallel Computing",
         "descr": "",
         "credits": "3",
@@ -18,7 +18,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC437",
+        "code": "CISC 437",
         "name": "Database Systems",
         "descr": "",
         "credits": "3",
@@ -27,7 +27,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "CISC481",
+        "code": "CISC 481",
         "name": "Artificial Intelligence",
         "descr": "",
         "credits": "3",
@@ -36,7 +36,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MATH205",
+        "code": "MATH 205",
         "name": "Statistical Methods",
         "descr": "",
         "credits": "3",
@@ -45,7 +45,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MATH242",
+        "code": "MATH 242",
         "name": "Analytic Geometry and Calculus B",
         "descr": "",
         "credits": "3",
@@ -54,7 +54,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MATH243",
+        "code": "MATH 243",
         "name": "Analytic Geometry and Calc C",
         "descr": "",
         "credits": "3",
@@ -63,7 +63,7 @@
         "breadth": "",
         "typ": ""
     },{
-        "code": "MATH349",
+        "code": "MATH 349",
         "name": "Elementary Linear Algebra",
         "descr": "",
         "credits": "3",
