@@ -20,7 +20,7 @@ export function MultipleSemesterTable({
     setData: (d: Plan[]) => void;
 }): JSX.Element {
     return (
-        <div>
+        <div data-testid="multipleSemTest">
             <h4 className="semester">
                 {semester.season} {semester.year}
             </h4>

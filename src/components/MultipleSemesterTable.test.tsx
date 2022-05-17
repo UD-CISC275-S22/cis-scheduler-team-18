@@ -34,4 +34,7 @@ describe("MultipleSemester Component Tests", () => {
     test("Semester Season and Year are visible", () => {
         expect(screen.getByText(/Fall 2020/i)).toBeInTheDocument();
     });
+    test("There is at Least One Semester", () => {
+        expect(screen.getByTestId("multipleSemTest")).toBeInTheDocument();
+    });
 });
