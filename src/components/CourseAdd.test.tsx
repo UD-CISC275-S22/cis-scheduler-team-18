@@ -117,4 +117,10 @@ describe("CourseAdd functionalitly test", () => {
             screen.queryByText(/Introduction to Computer Science II/i)
         ).not.toBeInTheDocument();
     });
+    test("Warning message if course doesnt exist", () => {
+        const codeBox = screen.getByRole("textbox", { name: /Course Code:/i });
+        userEvent.clear(codeBox);
+        userEvent.type(codeBox, "TEST200");
+        expect(screen.getByText(/Warning/i)).toBeInTheDocument();
+    });
 });
