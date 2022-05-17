@@ -1,5 +1,24 @@
+
 [
-   {
+    {
+        "code": "CISC 361",
+        "name": "Operating Systems",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },{
+        "code": "CISC 372",
+        "name": "Parallel Computing",
+        "descr": "",
+        "credits": "3",
+        "preReq": "",
+        "restrict": "",
+        "breadth": "",
+        "typ": ""
+    },    {
         "code": "CISC 304",
         "name": "Logic for Programming",
         "descr": "",
