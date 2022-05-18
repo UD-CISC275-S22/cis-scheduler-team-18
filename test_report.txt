@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/components/CheckDegreeReqs.test.tsx (8.06 s)
+PASS src/components/CheckDegreeReqs.test.tsx (8.843 s)
   ● Console
 
     console.error
@@ -15079,5 +15079,5 @@ All files                   |   86.77 |    49.15 |   85.48 |   86.69 |
 Test Suites: 16 passed, 16 total
 Tests:       105 passed, 105 total
 Snapshots:   0 total
-Time:        30.044 s
+Time:        32.712 s
 Ran all test suites.
