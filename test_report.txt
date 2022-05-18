@@ -2,7 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/components/CheckDegreeReqs.test.tsx (8.439 s)
+PASS src/components/CheckDegreeReqs.test.tsx (8.204 s)
   ● Console
 
     console.error
@@ -15048,17 +15048,17 @@ PASS src/App.test.tsx
 ----------------------------|---------|----------|---------|---------|-------------------------------------------------
 File                        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                               
 ----------------------------|---------|----------|---------|---------|-------------------------------------------------
-All files                   |   85.51 |    46.46 |   85.48 |   85.38 |                                                 
+All files                   |   86.77 |    49.15 |   85.48 |   86.69 |                                                 
  src                        |   70.66 |    39.28 |   61.76 |   70.58 |                                                 
   App.tsx                   |   60.71 |       25 |   33.33 |    62.5 | 16,25-39,44                                     
   WelcomeMsg.tsx            |      75 |       75 |   66.66 |      75 | 6                                               
   semesterer.tsx            |   76.74 |     37.5 |   78.94 |      75 | 87-101,125                                      
- src/components             |    87.5 |    47.21 |   89.25 |   87.24 |                                                 
+ src/components             |   88.92 |    50.18 |   89.25 |   88.72 |                                                 
   AddPlanModal.tsx          |     100 |      100 |     100 |     100 |                                                 
   CheckDegreeReqs.tsx       |    87.6 |    37.42 |    97.8 |   87.17 | 243-249,255-261,358-383,394-431,438-449,456-474 
   CourseAdd.tsx             |    98.5 |     92.3 |     100 |   98.46 | 101                                             
   CourseEdit.tsx            |     100 |       50 |     100 |     100 | 59                                              
-  CourseInfo.tsx            |   79.68 |    57.14 |   94.44 |   78.94 | 43,48,55,60,65,70,77,85,93,100,109,117          
+  CourseInfo.tsx            |   92.18 |    85.71 |   94.44 |   92.98 | 48,70,85,109                                    
   CourseList.tsx            |     100 |       50 |     100 |     100 | 35-190                                          
   CourseView.tsx            |    37.5 |      100 |   22.22 |    37.5 | 27-28,32-34,38,45,59,66-71                      
   Drag.tsx                  |   58.33 |      100 |   38.46 |   58.33 | 32,36-38,43,50-51,71,86-88                      
@@ -15079,5 +15079,5 @@ All files                   |   85.51 |    46.46 |   85.48 |   85.38 |
 Test Suites: 16 passed, 16 total
 Tests:       105 passed, 105 total
 Snapshots:   0 total
-Time:        31.469 s
+Time:        30.214 s
 Ran all test suites.
