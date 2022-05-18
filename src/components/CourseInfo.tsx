@@ -35,7 +35,7 @@ export function CourseInfo({ course }: { course: Course }): JSX.Element {
         );
         const letterCode = letterCodeArr.join("").toUpperCase();
         const numCode = numCodeArr.join("");
-        const realCode = letterCode + numCode;
+        const realCode = letterCode + " " + numCode;
         let requirements = "";
         //core requirements: an array of Course Objects that are the coreReqs -- THESE NEED TO BE TAKEN
         const CORES = coreReqs.map((course: Course): string => course.code);
